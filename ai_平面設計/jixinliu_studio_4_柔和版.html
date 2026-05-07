@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>極心流能量工作室｜羅氏自癒力系統</title>
+<meta name="description" content="羅紹綸老師主持，融合古法武學、中醫經絡與量子能量學，引導個案六階段身心靈平衡轉化，重啟天賦自癒力。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f1e8;
+    --bg-soft: #efe9dc;
+    --bg-warm: #ebe3d1;
+    --paper: #faf7ef;
+    --ink: #2b2a26;
+    --ink-soft: #4a4842;
+    --ink-mute: #7a7670;
+    --gold: #a07e3b;
+    --gold-deep: #7a5d24;
+    --gold-soft: #c9a96a;
+    --jade: #4a6157;
+    --jade-deep: #2f4138;
+    --vermilion: #a44d3a;
+    --line: #d6cdb8;
+    --line-soft: #e6dfcd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Serif TC', 'Cormorant Garamond', serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.85;
+    overflow-x: hidden;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(160, 126, 59, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(74, 97, 87, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* SVG icon 共用 */
+  .svg-icon { stroke: currentColor; fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* === 導覽列 === */
+  nav.main-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 3rem;
+    background: rgba(245, 241, 232, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line-soft);
+    display: flex; justify-content: space-between; align-items: center;
+    transition: padding 0.3s ease;
+  }
+  .nav-brand {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    color: var(--ink);
+    display: flex; align-items: center; gap: 0.7rem;
+  }
+  .nav-brand .seal {
+    width: 28px; height: 28px;
+    background: var(--vermilion);
+    color: var(--paper);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 700;
+    border-radius: 4px; letter-spacing: 0;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.88rem;
+    letter-spacing: 0.18em;
+    position: relative;
+    transition: color 0.3s;
+    font-weight: 500;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute;
+    bottom: -6px; left: 50%; transform: translateX(-50%);
+    width: 0; height: 1px; background: var(--gold);
+    transition: width 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold-deep); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: var(--ink);
+    color: var(--paper) !important;
+    padding: 0.65rem 1.4rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    transition: all 0.3s;
+    border: 1px solid var(--ink);
+  }
+  .nav-cta:hover { background: transparent; color: var(--ink) !important; }
+  .nav-cta::after { display: none; }
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 1.5rem; color: var(--ink); }
+
+  /* === Hero === */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    z-index: 2;
+    gap: 3rem;
+  }
+  .hero-text { position: relative; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.8rem;
+    font-size: 0.85rem; letter-spacing: 0.4em;
+    color: var(--gold-deep); margin-bottom: 2rem; font-weight: 500;
+  }
+  .hero-eyebrow::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+  .hero h1 {
+    font-size: clamp(2.6rem, 5.4vw, 4.8rem);
+    font-weight: 600; line-height: 1.2;
+    letter-spacing: 0.08em; margin-bottom: 1.5rem; color: var(--ink);
+  }
+  .hero h1 .accent {
+    color: var(--gold-deep); font-style: italic;
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    margin: 0 0.2em;
+  }
+  .hero h1 .vertical-line {
+    display: inline-block; width: 1px; height: 0.85em;
+    background: var(--gold); margin: 0 0.4em; vertical-align: middle;
+  }
+  .hero-sub {
+    font-size: 1.05rem; color: var(--ink-soft); line-height: 2;
+    max-width: 540px; margin-bottom: 2.5rem; letter-spacing: 0.05em;
+  }
+  .hero-tags {
+    display: flex; gap: 0.7rem; flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+  .hero-tag {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.9rem;
+    background: var(--bg-warm);
+    color: var(--gold-deep);
+    letter-spacing: 0.2em;
+    border: 1px solid var(--line);
+  }
+  .hero-actions { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .btn-primary, .btn-secondary {
+    padding: 1rem 2rem; font-size: 0.95rem;
+    letter-spacing: 0.2em; text-decoration: none;
+    transition: all 0.3s;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    cursor: pointer; border: none; font-family: inherit;
+  }
+  .btn-primary { background: var(--ink); color: var(--paper); border: 1px solid var(--ink); }
+  .btn-primary:hover { background: var(--gold-deep); border-color: var(--gold-deep); }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn-secondary:hover { background: var(--ink); color: var(--paper); }
+
+  .hero-visual {
+    position: relative;
+    height: 580px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ink-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    opacity: 0.35;
+    animation: breathe 8s ease-in-out infinite;
+  }
+  .ink-circle.c1 { width: 480px; height: 480px; }
+  .ink-circle.c2 { width: 360px; height: 360px; animation-delay: 1s; opacity: 0.45; border-color: var(--jade); }
+  .ink-circle.c3 { width: 240px; height: 240px; animation-delay: 2s; opacity: 0.55; }
+  .ink-circle.c4 { width: 120px; height: 120px; animation-delay: 3s; background: radial-gradient(circle, rgba(164, 77, 58, 0.15), transparent 70%); border-color: var(--vermilion); opacity: 0.7; }
+  @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+  .hero-seal {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px; height: 60px;
+    background: var(--vermilion); color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700; font-size: 1.3rem; letter-spacing: 0;
+    box-shadow: 0 6px 24px rgba(164, 77, 58, 0.3);
+    z-index: 2;
+  }
+  .hero-vertical {
+    position: absolute; right: -20px; top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1rem; letter-spacing: 0.5em;
+    color: var(--ink-mute); line-height: 1;
+  }
+  .hero-decoration {
+    position: absolute; top: 12%; left: 4rem;
+    writing-mode: vertical-rl;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.85rem; letter-spacing: 0.3em;
+    color: var(--ink-mute); opacity: 0.6;
+  }
+
+  /* === 區塊共用 === */
+  section { position: relative; z-index: 2; }
+  .section-header {
+    text-align: center; margin-bottom: 5rem; position: relative;
+  }
+  .section-eyebrow {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1rem; letter-spacing: 0.3em;
+    color: var(--gold-deep); margin-bottom: 1rem; display: block;
+  }
+  .section-title {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 600; letter-spacing: 0.15em;
+    color: var(--ink); margin-bottom: 1.2rem;
+  }
+  .section-divider {
+    width: 60px; height: 1px; background: var(--gold);
+    margin: 0 auto 1.5rem; position: relative;
+  }
+  .section-divider::before, .section-divider::after {
+    content: ''; position: absolute; top: 50%;
+    transform: translateY(-50%);
+    width: 4px; height: 4px;
+    background: var(--gold); border-radius: 50%;
+  }
+  .section-divider::before { left: -10px; }
+  .section-divider::after { right: -10px; }
+  .section-subtitle {
+    font-size: 1.05rem; color: var(--ink-soft);
+    max-width: 720px; margin: 0 auto; line-height: 2;
+  }
+
+  /* === 願景區（新） === */
+  .vision {
+    padding: 7rem 4rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--paper) 100%);
+    position: relative;
+  }
+  .vision-marquee {
+    text-align: center;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.6em;
+    color: var(--gold-deep);
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .vision-marquee span {
+    display: inline-block;
+    margin: 0 0.6rem;
+    color: var(--ink);
+  }
+  .vision-marquee em {
+    font-style: normal;
+    color: var(--vermilion);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    margin: 0 0.4rem;
+    letter-spacing: 0.1em;
+    vertical-align: middle;
+  }
+  .vision-grid {
+    max-width: 1100px;
+    margin: 4rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .vision-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    position: relative;
+  }
+  .vision-icon-wrap {
+    width: 64px; height: 64px;
+    margin: 0 auto 1.2rem;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-deep);
+    background: var(--paper);
+    transition: all 0.4s ease;
+  }
+  .vision-item:hover .vision-icon-wrap {
+    background: var(--gold-deep);
+    color: var(--paper);
+    transform: scale(1.05);
+  }
+  .vision-item h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.8rem;
+  }
+  .vision-item p {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+  .vision-quote {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--line-soft);
+  }
+  .vision-quote .big {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.3rem;
+    color: var(--ink);
+    letter-spacing: 0.15em;
+    line-height: 2;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+  .vision-quote .sub {
+    font-size: 0.95rem;
+    color: var(--ink-mute);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    letter-spacing: 0.2em;
+  }
+
+  /* === 理念區 === */
+  .philosophy {
+    padding: 8rem 4rem;
+    background: var(--paper);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .philo-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; margin-top: 4rem;
+  }
+  .philo-pillar {
+    text-align: center; padding: 2.5rem 1rem;
+    border-right: 1px solid var(--line);
+    transition: all 0.4s ease;
+    position: relative;
+  }
+  .philo-pillar:last-child { border-right: none; }
+  .philo-pillar:hover { transform: translateY(-6px); }
+  .philo-pillar-icon {
+    width: 48px; height: 48px;
+    margin: 0 auto 1rem;
+    color: var(--gold);
+  }
+  .philo-pillar .ch {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 3rem; color: var(--gold-deep);
+    font-weight: 600; margin-bottom: 0.3rem; letter-spacing: 0;
+    line-height: 1;
+  }
+  .philo-pillar .label {
+    font-size: 0.85rem; color: var(--ink-mute);
+    letter-spacing: 0.3em; margin-bottom: 1rem;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+  }
+  .philo-pillar .desc {
+    font-size: 0.95rem; color: var(--ink-soft); line-height: 1.9;
+  }
+  .philo-quote {
+    text-align: center; margin-top: 5rem;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.4rem; font-weight: 300;
+    color: var(--ink); letter-spacing: 0.15em;
+    line-height: 2; position: relative;
+  }
+  .philo-quote::before, .philo-quote::after {
+    content: '「'; color: var(--gold);
+    font-size: 2rem; vertical-align: top;
+  }
+  .philo-quote::after { content: '」'; }
+
+  /* === 羅老師簡介 === */
+  .master { padding: 8rem 4rem; background: var(--bg); position: relative; }
+  .master-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 0.9fr 1.1fr;
+    gap: 5rem; align-items: center;
+  }
+  .master-portrait {
+    position: relative; aspect-ratio: 3/4;
+    background: linear-gradient(180deg, var(--bg-warm), var(--bg-soft));
+    border: 1px solid var(--line); overflow: hidden;
+  }
+  .portrait-placeholder {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: var(--ink-mute);
+    background:
+      linear-gradient(135deg, transparent 49%, var(--line-soft) 49%, var(--line-soft) 51%, transparent 51%),
+      linear-gradient(180deg, var(--bg-warm), var(--bg-soft));
+  }
+  .portrait-placeholder .seal-large {
+    width: 90px; height: 90px;
+    background: var(--vermilion); color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700; font-size: 2rem;
+    box-shadow: 0 8px 32px rgba(164, 77, 58, 0.25);
+    margin-bottom: 1.5rem;
+  }
+  .portrait-placeholder .ph-text { font-size: 0.85rem; letter-spacing: 0.3em; text-align: center; }
+  .master-frame {
+    position: absolute; inset: -12px;
+    border: 1px solid var(--gold); pointer-events: none; opacity: 0.5;
+  }
+  .master-content h2 {
+    font-size: 2.4rem; font-weight: 600; line-height: 1.4;
+    margin-bottom: 1rem; letter-spacing: 0.1em;
+  }
+  .master-title {
+    font-size: 0.95rem; color: var(--gold-deep);
+    letter-spacing: 0.25em; margin-bottom: 2rem; font-weight: 500;
+  }
+  .master-bio { color: var(--ink-soft); line-height: 2; margin-bottom: 1.5rem; font-size: 1rem; }
+  .master-creds {
+    margin-top: 2.5rem; padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem 2rem;
+  }
+  .cred-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .cred-num {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1.3rem; color: var(--gold-deep);
+    font-weight: 500; line-height: 1; padding-top: 0.2rem;
+  }
+  .cred-text { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.7; }
+  .cred-text strong { color: var(--ink); font-weight: 500; }
+
+  /* === 六階段課程 === */
+  .stages {
+    padding: 8rem 4rem; background: var(--paper);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .stages-grid {
+    max-width: 1280px; margin: 5rem auto 0;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .stage-card {
+    background: var(--bg);
+    border: 1px solid var(--line-soft);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: all 0.4s ease;
+    display: flex; flex-direction: column;
+    cursor: default;
+  }
+  .stage-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; width: 100%; height: 2px;
+    background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+  .stage-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 16px 48px rgba(43, 42, 38, 0.08);
+    transform: translateY(-4px);
+  }
+  .stage-card:hover::before { transform: scaleX(1); }
+  .stage-icon {
+    width: 38px; height: 38px;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .stage-num {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.85rem; letter-spacing: 0.4em;
+    color: var(--gold-deep); margin-bottom: 0.5rem;
+  }
+  .stage-ch {
+    font-size: 1.4rem; font-weight: 600; color: var(--ink);
+    margin-bottom: 0.4rem; letter-spacing: 0.05em; line-height: 1.5;
+  }
+  .stage-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.95rem; color: var(--ink-mute);
+    margin-bottom: 1.5rem; letter-spacing: 0.1em;
+  }
+  .stage-desc {
+    font-size: 0.92rem; color: var(--ink-soft);
+    line-height: 1.85; margin-bottom: 1.5rem; flex-grow: 1;
+  }
+  .stage-effect {
+    background: var(--bg-soft);
+    padding: 0.9rem 1rem; margin-bottom: 1.5rem;
+    border-left: 2px solid var(--jade);
+    font-size: 0.85rem; color: var(--jade-deep); line-height: 1.7;
+  }
+  .stage-price {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-top: 1.2rem; border-top: 1px solid var(--line-soft);
+  }
+  .price-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; color: var(--gold-deep); font-weight: 500;
+  }
+  .price-amount span { font-family: 'Noto Serif TC'; font-size: 0.85rem; color: var(--ink-mute); margin-left: 0.3rem; }
+  .price-unit { font-size: 0.8rem; color: var(--ink-mute); letter-spacing: 0.15em; }
+
+  /* === 極心三元 === */
+  .trinity { padding: 8rem 4rem; background: var(--bg); position: relative; }
+  .trinity-grid {
+    max-width: 1280px; margin: 5rem auto 0;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem;
+  }
+  .trinity-card {
+    background: var(--paper); padding: 3rem 2.2rem;
+    position: relative; border: 1px solid var(--line-soft);
+    transition: all 0.4s ease; overflow: hidden;
+  }
+  .trinity-card::after {
+    content: ''; position: absolute;
+    bottom: 0; right: 0; width: 100px; height: 100px;
+    background: radial-gradient(circle at bottom right, var(--bg-warm), transparent 70%);
+    pointer-events: none;
+  }
+  .trinity-card:hover { box-shadow: 0 20px 60px rgba(43, 42, 38, 0.1); transform: translateY(-6px); }
+  .trinity-icon-svg {
+    width: 52px; height: 52px;
+    color: var(--gold-deep);
+    margin-bottom: 1.2rem;
+  }
+  .trinity-icon {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 2.2rem; color: var(--gold-deep);
+    font-weight: 700; line-height: 1;
+    margin-bottom: 0.8rem; letter-spacing: 0.1em;
+    display: flex; align-items: center;
+  }
+  .trinity-icon-tag {
+    display: inline-block; font-size: 0.72rem;
+    color: var(--paper); background: var(--vermilion);
+    padding: 0.2rem 0.7rem; letter-spacing: 0.2em;
+    margin-left: 0.8rem; vertical-align: middle; font-weight: 400;
+  }
+  .trinity-name {
+    font-size: 1.4rem; font-weight: 600;
+    margin-bottom: 0.5rem; letter-spacing: 0.1em;
+  }
+  .trinity-tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--ink-mute); font-size: 0.95rem;
+    margin-bottom: 1.5rem; letter-spacing: 0.1em;
+  }
+  .trinity-desc { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.9; margin-bottom: 2rem; }
+  .trinity-plans { list-style: none; border-top: 1px solid var(--line-soft); padding-top: 1.5rem; }
+  .trinity-plans li {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 0.7rem 0; font-size: 0.9rem; color: var(--ink-soft);
+    border-bottom: 1px dashed var(--line-soft);
+  }
+  .trinity-plans li:last-child { border: none; }
+  .trinity-plans .plan-price {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold-deep); font-weight: 500; font-size: 1rem;
+  }
+
+  /* === 商品展示 === */
+  .products {
+    padding: 8rem 4rem; background: var(--paper);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .products-grid {
+    max-width: 1280px; margin: 5rem auto 0;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+  }
+  .product-card {
+    background: var(--bg);
+    border: 1px solid var(--line-soft);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex; flex-direction: column;
+  }
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(43, 42, 38, 0.08);
+    border-color: var(--gold);
+  }
+  .product-img {
+    aspect-ratio: 4/3;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .product-img.lavender {
+    background: linear-gradient(135deg, #e8e0ec, #d4cae0);
+  }
+  .product-img.mugwort {
+    background: linear-gradient(135deg, #d8dcc8, #b8c0a3);
+  }
+  .product-img.health {
+    background: linear-gradient(135deg, #d8e3dc, #b8c8be);
+  }
+  .product-img.wealth {
+    background: linear-gradient(135deg, #ebd9b8, #d4bb86);
+  }
+  .product-img.fortune {
+    background: linear-gradient(135deg, #ecd4cc, #d8a899);
+  }
+  .product-img.money {
+    background: linear-gradient(135deg, #ead8b8, #c9a96a, #ead8b8);
+  }
+  .product-img-art {
+    width: 100%; height: 100%;
+    position: absolute; inset: 0;
+    color: var(--ink-soft);
+    opacity: 0.85;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .product-img-art svg { width: 60%; height: 60%; }
+  .product-tag {
+    position: absolute;
+    top: 1rem; left: 1rem;
+    background: var(--vermilion); color: var(--paper);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem; letter-spacing: 0.2em;
+    z-index: 2;
+  }
+  .product-body { padding: 1.8rem; display: flex; flex-direction: column; flex-grow: 1; }
+  .product-cat {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.85rem; color: var(--gold-deep);
+    letter-spacing: 0.2em; margin-bottom: 0.5rem;
+  }
+  .product-name {
+    font-size: 1.2rem; font-weight: 600;
+    margin-bottom: 0.6rem; letter-spacing: 0.05em;
+  }
+  .product-desc {
+    font-size: 0.88rem; color: var(--ink-mute);
+    line-height: 1.7; margin-bottom: 1.2rem; flex-grow: 1;
+  }
+  .product-foot {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 1.2rem; border-top: 1px solid var(--line-soft);
+  }
+  .product-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; color: var(--ink); font-weight: 500;
+  }
+  .product-cart {
+    background: var(--ink); color: var(--paper);
+    border: none; padding: 0.5rem 1.1rem;
+    font-size: 0.8rem; letter-spacing: 0.2em;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.3s;
+  }
+  .product-cart:hover { background: var(--gold-deep); }
+
+  /* === 活動行事曆（新） === */
+  .events {
+    padding: 8rem 4rem;
+    background: var(--bg);
+  }
+  .events-tabs {
+    max-width: 1100px; margin: 0 auto 3rem;
+    display: flex; justify-content: center;
+    gap: 0.5rem; flex-wrap: wrap;
+    border-bottom: 1px solid var(--line-soft);
+    padding-bottom: 1.5rem;
+  }
+  .event-tab {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    padding: 0.6rem 1.4rem;
+    font-family: inherit;
+    font-size: 0.88rem;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .event-tab.active, .event-tab:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .events-list {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex; flex-direction: column; gap: 1.2rem;
+  }
+  .event-item {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    padding: 2rem 2.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2.5rem;
+    align-items: center;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .event-item:hover {
+    border-color: var(--gold);
+    transform: translateX(4px);
+  }
+  .event-date {
+    text-align: center;
+    padding-right: 2rem;
+    border-right: 1px solid var(--line-soft);
+    min-width: 110px;
+  }
+  .event-date .month {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-deep);
+    margin-bottom: 0.3rem;
+  }
+  .event-date .day {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .event-date .weekday {
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+    letter-spacing: 0.2em;
+  }
+  .event-info-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 0.2rem 0.7rem;
+    background: var(--bg-warm);
+    color: var(--gold-deep);
+    letter-spacing: 0.2em;
+    margin-bottom: 0.6rem;
+  }
+  .event-info-tag.workshop { background: #e6dfcd; color: var(--gold-deep); }
+  .event-info-tag.meditation { background: #d8e0d4; color: var(--jade-deep); }
+  .event-info-tag.healing { background: #ecd4cc; color: var(--vermilion); }
+  .event-info h3 {
+    font-size: 1.2rem; font-weight: 600;
+    margin-bottom: 0.4rem; letter-spacing: 0.05em;
+  }
+  .event-info-meta {
+    font-size: 0.85rem;
+    color: var(--ink-mute);
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.4rem;
+  }
+  .event-info-meta span {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .event-info-meta svg { width: 14px; height: 14px; color: var(--gold); }
+  .event-action {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;
+  }
+  .event-status {
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    color: var(--jade-deep);
+  }
+  .event-status.few { color: var(--vermilion); }
+  .event-status.full { color: var(--ink-mute); }
+  .event-btn {
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 0.6rem 1.3rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .event-btn:hover { background: var(--gold-deep); }
+  .event-btn.disabled { background: var(--line); color: var(--ink-mute); cursor: not-allowed; }
+
+  /* === 案例見證 === */
+  .testimonials { padding: 8rem 4rem; background: var(--paper); position: relative; }
+  .testimonials::before {
+    content: ''; position: absolute;
+    top: 8rem; left: 50%; transform: translateX(-50%);
+    width: 1px; height: 60px;
+    background: linear-gradient(180deg, var(--gold), transparent);
+  }
+  .testi-grid {
+    max-width: 1200px; margin: 5rem auto 0;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;
+  }
+  .testi-card {
+    background: var(--bg); padding: 2.5rem;
+    border: 1px solid var(--line-soft); position: relative;
+  }
+  .testi-mark {
+    position: absolute;
+    top: 1.2rem; right: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem; color: var(--gold-soft);
+    line-height: 1; opacity: 0.4;
+  }
+  .testi-loc {
+    display: inline-block;
+    background: var(--bg-warm); color: var(--gold-deep);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.78rem; letter-spacing: 0.2em;
+    margin-bottom: 1.2rem;
+  }
+  .testi-content {
+    font-size: 1rem; color: var(--ink-soft);
+    line-height: 2; margin-bottom: 1.5rem;
+  }
+  .testi-content strong { color: var(--ink); font-weight: 600; }
+  .testi-attr {
+    font-size: 0.85rem; color: var(--ink-mute);
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    letter-spacing: 0.1em;
+  }
+
+  /* === 文章/知識庫 === */
+  .articles {
+    padding: 8rem 4rem; background: var(--bg);
+    border-top: 1px solid var(--line-soft);
+  }
+  .articles-grid {
+    max-width: 1200px; margin: 5rem auto 0;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+  }
+  .article-card {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  .article-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+  .article-img {
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, var(--bg-soft), var(--bg-warm));
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .article-img-icon {
+    width: 60px; height: 60px;
+    color: var(--gold-deep);
+    opacity: 0.7;
+  }
+  .article-img-text {
+    position: absolute;
+    bottom: 1rem; right: 1.2rem;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.6rem; color: var(--gold-deep);
+    opacity: 0.4; letter-spacing: 0.2em;
+  }
+  .article-body { padding: 1.8rem; }
+  .article-meta {
+    display: flex; gap: 1rem;
+    font-size: 0.78rem; color: var(--ink-mute);
+    letter-spacing: 0.15em; margin-bottom: 0.8rem;
+  }
+  .article-meta .cat { color: var(--gold-deep); font-weight: 500; }
+  .article-title {
+    font-size: 1.15rem; font-weight: 600;
+    line-height: 1.6; margin-bottom: 0.8rem; letter-spacing: 0.05em;
+  }
+  .article-excerpt {
+    font-size: 0.88rem; color: var(--ink-mute); line-height: 1.8;
+  }
+
+  /* === Q&A（新） === */
+  .faq {
+    padding: 8rem 4rem;
+    background: var(--paper);
+    border-top: 1px solid var(--line-soft);
+  }
+  .faq-list {
+    max-width: 900px;
+    margin: 4rem auto 0;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 1.8rem 0;
+    transition: all 0.3s;
+  }
+  .faq-item:first-child { border-top: 1px solid var(--line); }
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+  }
+  .faq-q-text {
+    display: flex; align-items: flex-start; gap: 1rem;
+    flex-grow: 1;
+  }
+  .faq-q-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 28px;
+  }
+  .faq-q-content {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+  .faq-toggle {
+    width: 32px; height: 32px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s;
+    color: var(--ink-soft);
+  }
+  .faq-item.open .faq-toggle {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+    transform: rotate(45deg);
+  }
+  .faq-toggle svg { width: 14px; height: 14px; }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .faq-item.open .faq-answer { max-height: 600px; }
+  .faq-a-content {
+    padding: 1.5rem 0 0.5rem 2.6rem;
+    color: var(--ink-soft);
+    line-height: 2;
+    font-size: 0.95rem;
+  }
+  .faq-a-content strong { color: var(--gold-deep); }
+
+  /* === 預約諮詢 === */
+  .booking {
+    padding: 8rem 4rem; background: var(--ink);
+    color: var(--paper); position: relative; overflow: hidden;
+  }
+  .booking::before {
+    content: ''; position: absolute;
+    top: -200px; left: -200px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(160, 126, 59, 0.1), transparent 60%);
+  }
+  .booking::after {
+    content: ''; position: absolute;
+    bottom: -200px; right: -200px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(74, 97, 87, 0.1), transparent 60%);
+  }
+  .booking-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 5rem; position: relative; z-index: 2;
+  }
+  .booking-text .section-eyebrow { color: var(--gold-soft); }
+  .booking-text h2 {
+    font-size: 2.5rem; font-weight: 600; line-height: 1.4;
+    margin-bottom: 1.5rem; letter-spacing: 0.1em;
+  }
+  .booking-text p {
+    color: rgba(250, 247, 239, 0.7);
+    line-height: 2; margin-bottom: 2rem;
+  }
+  .booking-info { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+  .booking-info-item {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(250, 247, 239, 0.1);
+  }
+  .booking-info-icon {
+    width: 22px; height: 22px;
+    color: var(--gold-soft);
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+  .booking-info-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--gold-soft); font-size: 0.85rem;
+    letter-spacing: 0.3em; min-width: 80px;
+  }
+  .booking-info-val { color: rgba(250, 247, 239, 0.9); font-size: 0.95rem; }
+
+  .booking-form {
+    background: rgba(250, 247, 239, 0.04);
+    border: 1px solid rgba(250, 247, 239, 0.1);
+    padding: 3rem;
+    backdrop-filter: blur(8px);
+  }
+  .form-row {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.2rem; margin-bottom: 1.2rem;
+  }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label {
+    display: block;
+    font-size: 0.82rem; color: var(--gold-soft);
+    letter-spacing: 0.2em; margin-bottom: 0.6rem;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(250, 247, 239, 0.05);
+    border: 1px solid rgba(250, 247, 239, 0.15);
+    padding: 0.85rem 1rem;
+    color: var(--paper);
+    font-family: inherit; font-size: 0.95rem;
+    transition: all 0.3s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none; border-color: var(--gold-soft);
+    background: rgba(250, 247, 239, 0.08);
+  }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    width: 100%;
+    background: var(--paper); color: var(--ink);
+    border: 1px solid var(--paper);
+    padding: 1.1rem; font-size: 0.95rem;
+    letter-spacing: 0.3em; font-family: inherit;
+    cursor: pointer; transition: all 0.3s;
+    margin-top: 1rem; font-weight: 500;
+  }
+  .form-submit:hover { background: transparent; color: var(--paper); }
+
+  /* === Footer === */
+  footer {
+    background: #1a1916;
+    color: rgba(250, 247, 239, 0.5);
+    padding: 5rem 4rem 2rem;
+    position: relative; z-index: 2;
+  }
+  .footer-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem; margin-bottom: 3rem;
+  }
+  .footer-brand h3 {
+    font-size: 1.3rem; color: var(--paper);
+    margin-bottom: 1rem; letter-spacing: 0.15em;
+  }
+  .footer-brand p { line-height: 1.9; font-size: 0.9rem; }
+  .footer-col h4 {
+    font-size: 0.9rem; color: var(--gold-soft);
+    margin-bottom: 1.2rem; letter-spacing: 0.25em;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.6rem; }
+  .footer-col a {
+    color: rgba(250, 247, 239, 0.5);
+    text-decoration: none; font-size: 0.88rem;
+    transition: color 0.3s;
+  }
+  .footer-col a:hover { color: var(--paper); }
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(250, 247, 239, 0.1);
+    display: flex; justify-content: space-between;
+    font-size: 0.82rem; letter-spacing: 0.15em;
+    color: rgba(250, 247, 239, 0.4);
+    flex-wrap: wrap; gap: 1rem;
+  }
+
+  /* === 響應式 === */
+  @media (max-width: 1024px) {
+    nav.main-nav { padding: 1rem 2rem; }
+    .hero { grid-template-columns: 1fr; padding: 7rem 2rem 4rem; gap: 2rem; }
+    .hero-visual { height: 380px; }
+    .ink-circle.c1 { width: 320px; height: 320px; }
+    .ink-circle.c2 { width: 240px; height: 240px; }
+    .ink-circle.c3 { width: 160px; height: 160px; }
+    .ink-circle.c4 { width: 80px; height: 80px; }
+    .hero-vertical, .hero-decoration { display: none; }
+    .vision, .philosophy, .master, .stages, .trinity, .products, .events, .testimonials, .articles, .faq, .booking { padding: 5rem 2rem; }
+    .vision-grid { grid-template-columns: 1fr; }
+    .philo-grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
+    .philo-pillar { border-right: none; border-bottom: 1px solid var(--line); padding: 2rem; }
+    .philo-pillar:nth-child(2n) { border-right: none; }
+    .philo-pillar:nth-child(odd) { border-right: 1px solid var(--line); }
+    .master-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .master-creds { grid-template-columns: 1fr; }
+    .stages-grid, .trinity-grid, .products-grid, .articles-grid { grid-template-columns: repeat(2, 1fr); }
+    .testi-grid { grid-template-columns: 1fr; }
+    .booking-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .event-item { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.8rem; }
+    .event-date { display: flex; align-items: center; gap: 1rem; padding-right: 0; border-right: none; border-bottom: 1px solid var(--line-soft); padding-bottom: 1rem; }
+    .event-date .day { font-size: 2rem; }
+    .event-action { flex-direction: row; justify-content: space-between; align-items: center; }
+  }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    .nav-links.open {
+      display: flex;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: var(--paper);
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--line);
+      gap: 1.2rem;
+    }
+    .stages-grid, .trinity-grid, .products-grid, .articles-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+    .booking-form { padding: 2rem 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .vision-marquee { font-size: 0.95rem; letter-spacing: 0.3em; }
+    .events-tabs { gap: 0.3rem; }
+    .event-tab { padding: 0.5rem 1rem; font-size: 0.78rem; letter-spacing: 0.1em; }
+  }
+
+  .reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- SVG 圖示定義（精選的東方雅致線條圖示） -->
+<svg width="0" height="0" style="position: absolute;">
+  <defs>
+    <!-- 化學/分子 -->
+    <symbol id="ico-chem" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="3" class="svg-icon"/>
+      <circle cx="6" cy="8" r="2" class="svg-icon"/>
+      <circle cx="26" cy="8" r="2" class="svg-icon"/>
+      <circle cx="6" cy="24" r="2" class="svg-icon"/>
+      <circle cx="26" cy="24" r="2" class="svg-icon"/>
+      <line x1="13.5" y1="14.5" x2="7.5" y2="9.5" class="svg-icon"/>
+      <line x1="18.5" y1="14.5" x2="24.5" y2="9.5" class="svg-icon"/>
+      <line x1="13.5" y1="17.5" x2="7.5" y2="22.5" class="svg-icon"/>
+      <line x1="18.5" y1="17.5" x2="24.5" y2="22.5" class="svg-icon"/>
+    </symbol>
+    <!-- 結構/中軸 -->
+    <symbol id="ico-axis" viewBox="0 0 32 32">
+      <line x1="16" y1="3" x2="16" y2="29" class="svg-icon"/>
+      <circle cx="16" cy="7" r="2" class="svg-icon"/>
+      <circle cx="16" cy="13" r="1.6" class="svg-icon"/>
+      <circle cx="16" cy="19" r="1.6" class="svg-icon"/>
+      <circle cx="16" cy="25" r="2" class="svg-icon"/>
+      <line x1="11" y1="16" x2="21" y2="16" class="svg-icon" stroke-dasharray="2 2"/>
+    </symbol>
+    <!-- 氣脈 -->
+    <symbol id="ico-meridian" viewBox="0 0 32 32">
+      <path d="M8 4 Q 16 12 8 20 Q 0 28 8 28" class="svg-icon"/>
+      <path d="M16 4 Q 24 12 16 20 Q 8 28 16 28" class="svg-icon"/>
+      <path d="M24 4 Q 32 12 24 20 Q 16 28 24 28" class="svg-icon"/>
+    </symbol>
+    <!-- 神/光 -->
+    <symbol id="ico-spirit" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="6" class="svg-icon"/>
+      <line x1="16" y1="2" x2="16" y2="6" class="svg-icon"/>
+      <line x1="16" y1="26" x2="16" y2="30" class="svg-icon"/>
+      <line x1="2" y1="16" x2="6" y2="16" class="svg-icon"/>
+      <line x1="26" y1="16" x2="30" y2="16" class="svg-icon"/>
+      <line x1="6" y1="6" x2="9" y2="9" class="svg-icon"/>
+      <line x1="23" y1="23" x2="26" y2="26" class="svg-icon"/>
+      <line x1="6" y1="26" x2="9" y2="23" class="svg-icon"/>
+      <line x1="23" y1="9" x2="26" y2="6" class="svg-icon"/>
+    </symbol>
+    <!-- 量子掃描 -->
+    <symbol id="ico-scan" viewBox="0 0 32 32">
+      <rect x="6" y="6" width="20" height="20" class="svg-icon" rx="1"/>
+      <line x1="6" y1="11" x2="26" y2="11" class="svg-icon"/>
+      <line x1="6" y1="16" x2="26" y2="16" class="svg-icon" stroke-dasharray="1 1"/>
+      <line x1="6" y1="21" x2="26" y2="21" class="svg-icon"/>
+      <circle cx="16" cy="16" r="2" class="svg-icon"/>
+    </symbol>
+    <!-- 中軸/校正 -->
+    <symbol id="ico-align" viewBox="0 0 32 32">
+      <line x1="16" y1="4" x2="16" y2="28" class="svg-icon"/>
+      <path d="M10 10 L 16 8 L 22 10" class="svg-icon"/>
+      <path d="M10 22 L 16 24 L 22 22" class="svg-icon"/>
+      <circle cx="16" cy="16" r="3" class="svg-icon"/>
+    </symbol>
+    <!-- 經絡 -->
+    <symbol id="ico-flow" viewBox="0 0 32 32">
+      <path d="M4 8 Q 12 14 16 16 Q 20 18 28 24" class="svg-icon"/>
+      <path d="M4 14 Q 12 18 16 18 Q 20 18 28 14" class="svg-icon"/>
+      <path d="M4 24 Q 12 18 16 16 Q 20 14 28 8" class="svg-icon"/>
+      <circle cx="16" cy="16" r="2" class="svg-icon"/>
+    </symbol>
+    <!-- 脈輪 -->
+    <symbol id="ico-chakra" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="10" class="svg-icon"/>
+      <circle cx="16" cy="16" r="6" class="svg-icon"/>
+      <circle cx="16" cy="16" r="2" class="svg-icon"/>
+      <line x1="16" y1="3" x2="16" y2="29" class="svg-icon"/>
+      <line x1="3" y1="16" x2="29" y2="16" class="svg-icon"/>
+    </symbol>
+    <!-- 拙火 -->
+    <symbol id="ico-fire" viewBox="0 0 32 32">
+      <path d="M16 4 Q 22 10 22 16 Q 22 22 16 28 Q 10 22 10 16 Q 10 10 16 4 Z" class="svg-icon"/>
+      <path d="M16 12 Q 19 16 16 22 Q 13 16 16 12 Z" class="svg-icon"/>
+    </symbol>
+    <!-- 內功/陰陽 -->
+    <symbol id="ico-yinyang" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="12" class="svg-icon"/>
+      <path d="M16 4 Q 22 10 16 16 Q 10 22 16 28" class="svg-icon"/>
+      <circle cx="16" cy="10" r="1.5" class="svg-icon" fill="currentColor"/>
+      <circle cx="16" cy="22" r="1.5" class="svg-icon"/>
+    </symbol>
+    <!-- 寵物（爪印） -->
+    <symbol id="ico-paw" viewBox="0 0 32 32">
+      <ellipse cx="16" cy="20" rx="6" ry="5" class="svg-icon"/>
+      <ellipse cx="9" cy="13" rx="2.2" ry="3" class="svg-icon"/>
+      <ellipse cx="23" cy="13" rx="2.2" ry="3" class="svg-icon"/>
+      <ellipse cx="13" cy="8" rx="1.8" ry="2.5" class="svg-icon"/>
+      <ellipse cx="19" cy="8" rx="1.8" ry="2.5" class="svg-icon"/>
+    </symbol>
+    <!-- 豐盛/錢幣 -->
+    <symbol id="ico-coin" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="11" class="svg-icon"/>
+      <circle cx="16" cy="16" r="7" class="svg-icon"/>
+      <line x1="11" y1="16" x2="21" y2="16" class="svg-icon"/>
+      <line x1="16" y1="11" x2="16" y2="21" class="svg-icon"/>
+    </symbol>
+    <!-- 御守/盾牌 -->
+    <symbol id="ico-shield" viewBox="0 0 32 32">
+      <path d="M16 4 L 26 8 V 17 Q 26 24 16 28 Q 6 24 6 17 V 8 Z" class="svg-icon"/>
+      <path d="M12 16 L 15 19 L 21 13" class="svg-icon"/>
+    </symbol>
+    <!-- 連結加 -->
+    <symbol id="ico-plus" viewBox="0 0 32 32">
+      <line x1="16" y1="6" x2="16" y2="26" class="svg-icon"/>
+      <line x1="6" y1="16" x2="26" y2="16" class="svg-icon"/>
+    </symbol>
+    <!-- 行事曆 -->
+    <symbol id="ico-calendar" viewBox="0 0 32 32">
+      <rect x="5" y="7" width="22" height="20" rx="1" class="svg-icon"/>
+      <line x1="5" y1="13" x2="27" y2="13" class="svg-icon"/>
+      <line x1="11" y1="4" x2="11" y2="10" class="svg-icon"/>
+      <line x1="21" y1="4" x2="21" y2="10" class="svg-icon"/>
+    </symbol>
+    <!-- 時鐘 -->
+    <symbol id="ico-clock" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="11" class="svg-icon"/>
+      <line x1="16" y1="10" x2="16" y2="16" class="svg-icon"/>
+      <line x1="16" y1="16" x2="20" y2="19" class="svg-icon"/>
+    </symbol>
+    <!-- 地點 -->
+    <symbol id="ico-pin" viewBox="0 0 32 32">
+      <path d="M16 3 Q 24 3 24 12 Q 24 19 16 29 Q 8 19 8 12 Q 8 3 16 3 Z" class="svg-icon"/>
+      <circle cx="16" cy="12" r="3" class="svg-icon"/>
+    </symbol>
+    <!-- 人 -->
+    <symbol id="ico-user" viewBox="0 0 32 32">
+      <circle cx="16" cy="11" r="5" class="svg-icon"/>
+      <path d="M5 28 Q 5 18 16 18 Q 27 18 27 28" class="svg-icon"/>
+    </symbol>
+    <!-- 電話 -->
+    <symbol id="ico-phone" viewBox="0 0 32 32">
+      <path d="M7 5 H 12 L 14 11 L 11 13 Q 13 19 19 21 L 21 18 L 27 20 V 25 Q 27 27 25 27 Q 11 27 5 13 Q 5 11 7 11 Z" class="svg-icon"/>
+    </symbol>
+    <!-- 願景：天地 -->
+    <symbol id="ico-heaven" viewBox="0 0 32 32">
+      <line x1="4" y1="10" x2="28" y2="10" class="svg-icon"/>
+      <line x1="4" y1="22" x2="28" y2="22" class="svg-icon"/>
+      <circle cx="16" cy="16" r="3" class="svg-icon"/>
+      <line x1="16" y1="3" x2="16" y2="7" class="svg-icon"/>
+      <line x1="16" y1="25" x2="16" y2="29" class="svg-icon"/>
+    </symbol>
+    <!-- 願景：眼 -->
+    <symbol id="ico-eye" viewBox="0 0 32 32">
+      <path d="M3 16 Q 10 7 16 7 Q 22 7 29 16 Q 22 25 16 25 Q 10 25 3 16 Z" class="svg-icon"/>
+      <circle cx="16" cy="16" r="4" class="svg-icon"/>
+      <circle cx="16" cy="16" r="1.5" fill="currentColor" class="svg-icon"/>
+    </symbol>
+    <!-- 願景：種子/萌芽 -->
+    <symbol id="ico-seed" viewBox="0 0 32 32">
+      <path d="M16 28 V 16" class="svg-icon"/>
+      <path d="M16 16 Q 8 14 6 8 Q 14 8 16 16" class="svg-icon"/>
+      <path d="M16 16 Q 24 14 26 8 Q 18 8 16 16" class="svg-icon"/>
+    </symbol>
+    <!-- 文章圖示 -->
+    <symbol id="ico-doc" viewBox="0 0 32 32">
+      <path d="M8 4 H 20 L 24 8 V 28 H 8 Z" class="svg-icon"/>
+      <line x1="12" y1="13" x2="20" y2="13" class="svg-icon"/>
+      <line x1="12" y1="17" x2="20" y2="17" class="svg-icon"/>
+      <line x1="12" y1="21" x2="18" y2="21" class="svg-icon"/>
+    </symbol>
+    <!-- 葉/草本 -->
+    <symbol id="ico-leaf" viewBox="0 0 32 32">
+      <path d="M5 27 Q 5 8 27 5 Q 24 27 5 27 Z" class="svg-icon"/>
+      <path d="M5 27 Q 14 18 27 5" class="svg-icon"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- 導覽列 -->
+<nav class="main-nav">
+  <div class="nav-brand">
+    <span class="seal">心</span>
+    <span>極心流能量工作室</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#vision">願景</a></li>
+    <li><a href="#master">羅老師</a></li>
+    <li><a href="#stages">六階段</a></li>
+    <li><a href="#trinity">極心三元</a></li>
+    <li><a href="#products">能量商品</a></li>
+    <li><a href="#events">活動</a></li>
+    <li><a href="#faq">Q&A</a></li>
+    <li><a href="#booking" class="nav-cta">預約</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">≡</button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-decoration">Self-Healing · Energy Medicine · Awakening</div>
+  <div class="hero-text">
+    <div class="hero-eyebrow">羅氏自癒力系統 ｜ 二十餘年實證傳承</div>
+    <h1>
+      天人合一<span class="vertical-line"></span>啟動<br>
+      <span class="accent">與生俱來</span>的<br>
+      自癒奇蹟
+    </h1>
+    <p class="hero-sub">
+      融合古法武學、中醫經絡與當代量子能量學，<br>
+      透過六階段身心靈平衡轉化課程，<br>
+      引導您排除身心阻塞，重啟生命原本的流動與豐盛。
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">療癒</span>
+      <span class="hero-tag">轉化</span>
+      <span class="hero-tag">覺醒</span>
+      <span class="hero-tag">豐盛富足</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#booking" class="btn-primary">預約量子檢測 →</a>
+      <a href="#stages" class="btn-secondary">了解六階段</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="ink-circle c1"></div>
+    <div class="ink-circle c2"></div>
+    <div class="ink-circle c3"></div>
+    <div class="ink-circle c4"></div>
+    <div class="hero-seal">極心</div>
+    <div class="hero-vertical">調形・調氣・調神</div>
+  </div>
+</section>
+
+<!-- 願景 -->
+<section class="vision" id="vision">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">— Master's Vision —</span>
+    <h2 class="section-title">敬天地 ・ 愛眾生</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      羅老師致力於以利他志業推廣全人療癒，<br>
+      為地球與全人類奉獻一份心力。
+    </p>
+  </div>
+
+  <div class="vision-marquee reveal">
+    <span>療癒</span><em>·</em><span>轉化</span><em>·</em><span>覺醒</span><em>·</em><span>豐盛富足</span><em>·</em><span>地球環保</span><em>·</em><span>綠能生活</span>
+  </div>
+
+  <div class="vision-grid reveal">
+    <div class="vision-item">
+      <div class="vision-icon-wrap">
+        <svg width="32" height="32"><use href="#ico-heaven"/></svg>
+      </div>
+      <h3>敬天愛地</h3>
+      <p>敬天地、愛宇宙、護地球，為全人類奉獻。利人利己利天下，福慧兼備、自主生死。</p>
+    </div>
+    <div class="vision-item">
+      <div class="vision-icon-wrap">
+        <svg width="32" height="32"><use href="#ico-eye"/></svg>
+      </div>
+      <h3>打開靈性之眼</h3>
+      <p>看見自己蘊藏的力量，領悟宇宙實相，洞悉生命全貌，領受無限的豐盛與本俱智慧。</p>
+    </div>
+    <div class="vision-item">
+      <div class="vision-icon-wrap">
+        <svg width="32" height="32"><use href="#ico-seed"/></svg>
+      </div>
+      <h3>身心重建工程</h3>
+      <p>從「內臟去角質」開始，徹底排除累積的身心阻塞，開啟天賦，創造更多生命的可能性。</p>
+    </div>
+  </div>
+
+  <div class="vision-quote reveal">
+    <div class="big">
+      心氣合一<span style="color:var(--gold);"> ・ </span>身心不二<span style="color:var(--gold);"> ・ </span>體用合一
+    </div>
+    <div class="sub">
+      Heart and Qi as One · Body and Mind Inseparable · Essence and Function Unified
+    </div>
+  </div>
+</section>
+
+<!-- 理念區（四維） -->
+<section class="philosophy" id="philosophy">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">— Core Philosophy —</span>
+    <h2 class="section-title">四維平衡 ・ 全人療癒</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      真正的健康，源於化學（營養）、物理（結構、循環）、能量（經絡、脈輪）<br>
+      與心靈（情緒、意識）四者的整體平衡。
+    </p>
+  </div>
+  <div class="philo-grid reveal">
+    <div class="philo-pillar">
+      <svg class="philo-pillar-icon"><use href="#ico-chem"/></svg>
+      <div class="ch">化</div>
+      <div class="label">Chemical</div>
+      <div class="desc">營養代謝與生化平衡，提供細胞修復所需基底</div>
+    </div>
+    <div class="philo-pillar">
+      <svg class="philo-pillar-icon"><use href="#ico-axis"/></svg>
+      <div class="ch">形</div>
+      <div class="label">Physical</div>
+      <div class="desc">中軸結構、骨架筋膜與血液循環的物理層校正</div>
+    </div>
+    <div class="philo-pillar">
+      <svg class="philo-pillar-icon"><use href="#ico-meridian"/></svg>
+      <div class="ch">氣</div>
+      <div class="label">Energetic</div>
+      <div class="desc">經絡氣血、七大脈輪與生物光子的能量場流動</div>
+    </div>
+    <div class="philo-pillar">
+      <svg class="philo-pillar-icon"><use href="#ico-spirit"/></svg>
+      <div class="ch">神</div>
+      <div class="label">Spiritual</div>
+      <div class="desc">情緒、意識、累世印記與靈性覺醒的深層轉化</div>
+    </div>
+  </div>
+  <div class="philo-quote reveal">
+    身體，就是您生命中最強大的風水場
+  </div>
+</section>
+
+<!-- 羅老師簡介 -->
+<section class="master" id="master">
+  <div class="master-inner">
+    <div class="master-portrait reveal">
+      <div class="portrait-placeholder">
+        <div class="seal-large">羅</div>
+        <div class="ph-text">羅 老 師 ・ 肖 像</div>
+      </div>
+      <div class="master-frame"></div>
+    </div>
+    <div class="master-content reveal">
+      <span class="section-eyebrow">— About Master Lo —</span>
+      <h2>羅紹綸 老師</h2>
+      <div class="master-title">身心靈整合療癒導師 ｜ 極心流能量學・羅氏自癒力系統 創始人</div>
+      <p class="master-bio">
+        擁有超過二十餘年修證與實踐經驗，自幼深耕東方哲學與中醫，從跌傷久治不癒的內在指引、到拜師道途，鑽研全人醫學逾三十載。曾憑古法智慧與能量醫學治癒自身癌末重症，重獲新生的切身感動，遂將這份生命的恩惠轉化為利他志業。
+      </p>
+      <p class="master-bio">
+        秉持「天人合一」的宇宙觀，透過獨創的羅氏自癒力系統，以「調形、調氣、調神」之整合教學，協助有緣人重啟天賦的自癒力量。
+      </p>
+      <div class="master-creds">
+        <div class="cred-item">
+          <span class="cred-num">i.</span>
+          <span class="cred-text"><strong>董氏奇穴針法</strong>第三代真傳傳人（師承李國政教授）</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-num">ii.</span>
+          <span class="cred-text"><strong>南宗少林</strong>第九代傳人親傳弟子｜白鶴拳第四代親傳</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-num">iii.</span>
+          <span class="cred-text"><strong>安徽中醫藥大學</strong>中醫專業｜大陸中醫執照</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-num">iv.</span>
+          <span class="cred-text"><strong>日本臼井靈氣</strong>資深導師｜頌缽音灸專業教師</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-num">v.</span>
+          <span class="cred-text">日本遠絡醫學專業醫師結業｜MCT 全息能量導引講師</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-num">vi.</span>
+          <span class="cred-text">2014 年印度應邀為十七世大寶法王診療，獲賜法名「噶瑪寶醫」</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 六階段課程 -->
+<section class="stages" id="stages">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">— Six Stages of Transformation —</span>
+    <h2 class="section-title">六階段 ・ 身心靈平衡轉化課程</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      從量子檢測到深層釋放，將艱澀的能量運作<br>
+      拆解為六個精準、可落實、可感知的轉化階梯。
+    </p>
+  </div>
+  <div class="stages-grid reveal">
+    <article class="stage-card">
+      <svg class="stage-icon"><use href="#ico-scan"/></svg>
+      <div class="stage-num">— STAGE 01 —</div>
+      <h3 class="stage-ch">量子全息能量諮詢檢測</h3>
+      <div class="stage-en">Quantum Holographic Diagnosis</div>
+      <p class="stage-desc">
+        運用量子場掃描技術，深入「核心中脈」與神經系統電位，捕捉細微能量阻滯，進行一次深度健康大掃描。<strong style="color:var(--vermilion);">初次到訪必備。</strong>
+      </p>
+      <div class="stage-effect">立刻看見身體顯性與潛在的能量阻斷點，不再盲目保養。</div>
+      <div class="stage-price">
+        <span class="price-amount">NT$ 1,500</span>
+        <span class="price-unit">/ 30 分鐘</span>
+      </div>
+    </article>
+
+    <article class="stage-card">
+      <svg class="stage-icon"><use href="#ico-align"/></svg>
+      <div class="stage-num">— STAGE 02 —</div>
+      <h3 class="stage-ch">核心中軸歸正・結構平衡</h3>
+      <div class="stage-en">Core Axis Realignment</div>
+      <p class="stage-desc">
+        針對中軸電磁場、核心中脈、脊椎、骨架結構與自律神經，進行物理與能量的雙重校正。中軸一正，百脈皆通。
+      </p>
+      <div class="stage-effect">呼吸變得深沉、身體輕盈，感覺「腳踏實地」，重心穩定。</div>
+      <div class="stage-price">
+        <span class="price-amount">NT$ 1,500</span>
+        <span class="price-unit">/ 30 分鐘</span>
+      </div>
+    </article>
+
+    <article class="stage-card">
+      <svg class="stage-icon"><use href="#ico-flow"/></svg>
+      <div class="stage-num">— STAGE 03 —</div>
+      <h3 class="stage-ch">陰陽五行氣脈調和</h3>
+      <div class="stage-en">Meridian Energy Balancing</div>
+      <p class="stage-desc">
+        結合氣功、能量指針點穴與遠絡療法，不需侵入，直接對五臟六腑進行能量補充與釋放，導入生物光子、電子。
+      </p>
+      <div class="stage-effect">清除濁氣、補氣排毒，平衡痠麻脹痛，釋放手腳冰冷。</div>
+      <div class="stage-price">
+        <span class="price-amount">NT$ 1,500</span>
+        <span class="price-unit">/ 30 分鐘</span>
+      </div>
+    </article>
+
+    <article class="stage-card">
+      <svg class="stage-icon"><use href="#ico-chakra"/></svg>
+      <div class="stage-num">— STAGE 04 —</div>
+      <h3 class="stage-ch">脈輪清理・音波能量修復</h3>
+      <div class="stage-en">Chakra Cleansing & Sound Healing</div>
+      <p class="stage-desc">
+        頌缽音波頻率共振 + 神聖靈氣與 Prana 能量導引，瓦解陳舊情緒與能量印記，掃除焦慮與精神耗損。
+      </p>
+      <div class="stage-effect">心靈恢復如大海般的深層平靜，平衡失眠與焦慮。</div>
+      <div class="stage-price">
+        <span class="price-amount">NT$ 1,500</span>
+        <span class="price-unit">/ 30 分鐘</span>
+      </div>
+    </article>
+
+    <article class="stage-card">
+      <svg class="stage-icon"><use href="#ico-fire"/></svg>
+      <div class="stage-num">— STAGE 05 —</div>
+      <h3 class="stage-ch">光體開啟・拙火轉化課程</h3>
+      <div class="stage-en">Light Body & Kundalini Awakening</div>
+      <p class="stage-desc">
+        透過「光體開啟」與「拙火開啟」，深度清理累世傷痕、原生家庭、親密關係與財富能量場，重新編碼生命場。
+      </p>
+      <div class="stage-effect">徹底翻轉生命格局，開啟由內而外的吸引力與豐盛流動。</div>
+      <div class="stage-price">
+        <span class="price-amount">NT$ 6,000</span>
+        <span class="price-unit">/ 1 小時</span>
+      </div>
+    </article>
+
+    <article class="stage-card">
+      <svg class="stage-icon"><use href="#ico-yinyang"/></svg>
+      <div class="stage-num">— STAGE 06 —</div>
+      <h3 class="stage-ch">自癒力內功功法班</h3>
+      <div class="stage-en">Inner Qi Cultivation</div>
+      <p class="stage-desc">
+        親授太極內功、白鶴氣功、易筋經、八段錦、道家六字訣與週天靜功。將「氣」從理論轉化為體感，練出先天之炁。
+      </p>
+      <div class="stage-effect">擁有「帶得走的健康」，從被動療癒轉為主動進階。</div>
+      <div class="stage-price">
+        <span class="price-amount">NT$ 3,000</span>
+        <span class="price-unit">/ 1 小時</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 極心三元 -->
+<section class="trinity" id="trinity">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">— Trinity of Resonance —</span>
+    <h2 class="section-title">極心三元 ・ 專項能量服務</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      將療癒的觸角延伸至生命中最重要的三個面向，<br>
+      讓平衡與豐盛滲透進生活的每一個角落。
+    </p>
+  </div>
+  <div class="trinity-grid reveal">
+    <article class="trinity-card">
+      <svg class="trinity-icon-svg"><use href="#ico-paw"/></svg>
+      <div class="trinity-icon">極感<span class="trinity-icon-tag">寵物</span></div>
+      <div class="trinity-name">萬物共振</div>
+      <div class="trinity-tagline">Cross-Species Healing</div>
+      <p class="trinity-desc">
+        萬物有靈，生命共振。針對家中毛孩，運用量子能量掃描精準對齊光子粒子能量場，提供現場與線上遠距療癒。
+      </p>
+      <ul class="trinity-plans">
+        <li><span>單次體驗｜30 分鐘</span><span class="plan-price">NT$ 1,200</span></li>
+        <li><span>包月調理｜每週 2 次</span><span class="plan-price">NT$ 8,000</span></li>
+        <li><span>年度全能守護｜限量</span><span class="plan-price">NT$ 88,000</span></li>
+      </ul>
+    </article>
+
+    <article class="trinity-card">
+      <svg class="trinity-icon-svg"><use href="#ico-coin"/></svg>
+      <div class="trinity-icon">極盛<span class="trinity-icon-tag">豐盛</span></div>
+      <div class="trinity-name">豐盛心流</div>
+      <div class="trinity-tagline">Abundance Resonance</div>
+      <p class="trinity-desc">
+        融合金錢靈氣、藥師佛願成、黃財神財富頻率調頻，磁化專屬錢母，啟動千百萬倍回流的能量循環。
+      </p>
+      <ul class="trinity-plans">
+        <li><span>單月結緣方案</span><span class="plan-price">NT$ 680</span></li>
+        <li><span>包季守護專案｜3 個月</span><span class="plan-price">NT$ 1,880</span></li>
+        <li><span>年度豐盛專案｜12 個月</span><span class="plan-price">NT$ 6,800</span></li>
+      </ul>
+    </article>
+
+    <article class="trinity-card">
+      <svg class="trinity-icon-svg"><use href="#ico-shield"/></svg>
+      <div class="trinity-icon">極守<span class="trinity-icon-tag">護身</span></div>
+      <div class="trinity-name">護身御守</div>
+      <div class="trinity-tagline">24-Hour Energy Shield</div>
+      <p class="trinity-desc">
+        福運／財運／健康能量卡，將守護能量封存於能量卡中，建立 24 小時隨身的隱形防護罩。
+      </p>
+      <ul class="trinity-plans">
+        <li><span>單月體驗方案</span><span class="plan-price">NT$ 680</span></li>
+        <li><span>包季守護方案｜3 個月</span><span class="plan-price">NT$ 1,880</span></li>
+        <li><span>年度守護方案｜12 個月</span><span class="plan-price">NT$ 6,800</span></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- 能量商品 -->
+<section class="products" id="products">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">— Energy Goods —</span>
+    <h2 class="section-title">能量黑科技 ・ 隨身的療癒場</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      經羅老師親自能量加持的草本貼片與隨身物件，<br>
+      讓守護能量延伸至您生活的每一個現場。
+    </p>
+  </div>
+  <div class="products-grid reveal">
+
+    <!-- 艾糾能量貼片 -->
+    <article class="product-card">
+      <div class="product-img mugwort">
+        <span class="product-tag">主打</span>
+        <div class="product-img-art">
+          <svg viewBox="0 0 100 100">
+            <!-- 艾草葉片造型 -->
+            <path d="M50 15 Q 70 25 75 50 Q 70 80 50 88 Q 30 80 25 50 Q 30 25 50 15 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M50 15 L 50 88" fill="none" stroke="currentColor" stroke-width="1"/>
+            <path d="M50 30 Q 60 35 65 45" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M50 30 Q 40 35 35 45" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M50 50 Q 62 55 68 65" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M50 50 Q 38 55 32 65" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M50 70 Q 58 73 62 80" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M50 70 Q 42 73 38 80" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <circle cx="50" cy="50" r="3" fill="currentColor" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-cat">— Mugwort Patch —</div>
+        <h3 class="product-name">艾糾能量貼片</h3>
+        <p class="product-desc">融合古法艾草智慧與量子能量導引，溫養經絡、驅寒除濕，舒緩身體痠痛與氣滯點，啟動深層自癒力。</p>
+        <div class="product-foot">
+          <span class="product-price">NT$ 880<span style="font-size:0.7rem; color:var(--ink-mute); margin-left:0.3rem;">/盒</span></span>
+          <button class="product-cart">加入購物車</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 薰衣草能量貼片 -->
+    <article class="product-card">
+      <div class="product-img lavender">
+        <span class="product-tag">熱門</span>
+        <div class="product-img-art">
+          <svg viewBox="0 0 100 100">
+            <!-- 薰衣草穗造型 -->
+            <line x1="50" y1="30" x2="50" y2="90" stroke="currentColor" stroke-width="1.2"/>
+            <ellipse cx="50" cy="20" rx="3" ry="6" fill="currentColor" opacity="0.6"/>
+            <ellipse cx="46" cy="28" rx="2.5" ry="5" fill="currentColor" opacity="0.6"/>
+            <ellipse cx="54" cy="28" rx="2.5" ry="5" fill="currentColor" opacity="0.6"/>
+            <ellipse cx="44" cy="36" rx="2.5" ry="5" fill="currentColor" opacity="0.5"/>
+            <ellipse cx="56" cy="36" rx="2.5" ry="5" fill="currentColor" opacity="0.5"/>
+            <ellipse cx="50" cy="33" rx="2.5" ry="5" fill="currentColor" opacity="0.5"/>
+            <ellipse cx="42" cy="44" rx="2.5" ry="4" fill="currentColor" opacity="0.45"/>
+            <ellipse cx="58" cy="44" rx="2.5" ry="4" fill="currentColor" opacity="0.45"/>
+            <ellipse cx="50" cy="42" rx="2.5" ry="4" fill="currentColor" opacity="0.45"/>
+            <path d="M50 60 Q 35 65 30 80" fill="none" stroke="currentColor" stroke-width="1"/>
+            <path d="M50 60 Q 65 65 70 80" fill="none" stroke="currentColor" stroke-width="1"/>
+            <path d="M30 80 Q 28 78 25 78" fill="none" stroke="currentColor" stroke-width="1"/>
+            <path d="M70 80 Q 72 78 75 78" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-cat">— Lavender Patch —</div>
+        <h3 class="product-name">薰衣草能量貼片</h3>
+        <p class="product-desc">薰衣草高頻香氣搭配能量加持，舒緩焦慮、改善失眠、平衡情緒體，是現代壓力族群的隨身舒心方。</p>
+        <div class="product-foot">
+          <span class="product-price">NT$ 880<span style="font-size:0.7rem; color:var(--ink-mute); margin-left:0.3rem;">/盒</span></span>
+          <button class="product-cart">加入購物車</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 健康能量卡 -->
+    <article class="product-card">
+      <div class="product-img health">
+        <span class="product-tag">經典</span>
+        <div class="product-img-art">
+          <svg viewBox="0 0 100 100">
+            <rect x="20" y="28" width="60" height="44" rx="3" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <text x="50" y="56" text-anchor="middle" font-family="Noto Serif TC, serif" font-size="20" font-weight="600" fill="currentColor">健</text>
+            <line x1="28" y1="64" x2="42" y2="64" stroke="currentColor" stroke-width="0.8"/>
+            <line x1="58" y1="64" x2="72" y2="64" stroke="currentColor" stroke-width="0.8"/>
+            <circle cx="50" cy="50" r="22" fill="none" stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-cat">— Health Card —</div>
+        <h3 class="product-name">健康能量卡</h3>
+        <p class="product-desc">針對微細循環系統注入平衡頻率，穩定生理電磁場，協助身體重拾自然修復律動。</p>
+        <div class="product-foot">
+          <span class="product-price">NT$ 680<span style="font-size:0.7rem; color:var(--ink-mute); margin-left:0.3rem;">/月</span></span>
+          <button class="product-cart">加入購物車</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 財運能量卡 -->
+    <article class="product-card">
+      <div class="product-img wealth">
+        <span class="product-tag">熱門</span>
+        <div class="product-img-art">
+          <svg viewBox="0 0 100 100">
+            <rect x="20" y="28" width="60" height="44" rx="3" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <text x="50" y="56" text-anchor="middle" font-family="Noto Serif TC, serif" font-size="20" font-weight="600" fill="currentColor">財</text>
+            <line x1="28" y1="64" x2="42" y2="64" stroke="currentColor" stroke-width="0.8"/>
+            <line x1="58" y1="64" x2="72" y2="64" stroke="currentColor" stroke-width="0.8"/>
+            <circle cx="50" cy="50" r="22" fill="none" stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-cat">— Wealth Card —</div>
+        <h3 class="product-name">財運能量卡</h3>
+        <p class="product-desc">對齊金錢靈氣與無限豐盛頻率，優化商機感應力，維持清明的判斷與決策。</p>
+        <div class="product-foot">
+          <span class="product-price">NT$ 680<span style="font-size:0.7rem; color:var(--ink-mute); margin-left:0.3rem;">/月</span></span>
+          <button class="product-cart">加入購物車</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 福運能量卡 -->
+    <article class="product-card">
+      <div class="product-img fortune">
+        <span class="product-tag">推薦</span>
+        <div class="product-img-art">
+          <svg viewBox="0 0 100 100">
+            <rect x="20" y="28" width="60" height="44" rx="3" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <text x="50" y="56" text-anchor="middle" font-family="Noto Serif TC, serif" font-size="20" font-weight="600" fill="currentColor">福</text>
+            <line x1="28" y1="64" x2="42" y2="64" stroke="currentColor" stroke-width="0.8"/>
+            <line x1="58" y1="64" x2="72" y2="64" stroke="currentColor" stroke-width="0.8"/>
+            <circle cx="50" cy="50" r="22" fill="none" stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-cat">— Fortune Card —</div>
+        <h3 class="product-name">福運能量卡</h3>
+        <p class="product-desc">提升氣場的和諧度與厚度，自動排除周遭負能量干擾，讓生活回歸平穩流動的心流軌道。</p>
+        <div class="product-foot">
+          <span class="product-price">NT$ 680<span style="font-size:0.7rem; color:var(--ink-mute); margin-left:0.3rem;">/月</span></span>
+          <button class="product-cart">加入購物車</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 磁化錢母 -->
+    <article class="product-card">
+      <div class="product-img money">
+        <span class="product-tag">限量</span>
+        <div class="product-img-art">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" stroke-width="1"/>
+            <rect x="44" y="44" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <text x="50" y="55" text-anchor="middle" font-family="Noto Serif TC, serif" font-size="9" font-weight="700" fill="currentColor">財</text>
+            <circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="1 2" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="product-body">
+        <div class="product-cat">— Money Mother —</div>
+        <h3 class="product-name">磁化錢母（單位）</h3>
+        <p class="product-desc">融合黃財神、藥師佛與金錢靈氣加持，金銀比例源自古老易經吉數，成為財富吸引力中心。</p>
+        <div class="product-foot">
+          <span class="product-price">NT$ 2,600<span style="font-size:0.7rem; color:var(--ink-mute); margin-left:0.3rem;">/單位</span></span>
+          <button class="product-cart">加入購物車</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- 活動行事曆 -->
+<section class="events" id="events">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">— Upcoming Events —</span>
+    <h2 class="section-title">活動行事曆</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      工作坊・課程・讀書會・遠距療癒場次<br>
+      與羅老師近距離學習東方智慧與能量療癒。
+    </p>
+  </div>
+
+  <div class="events-tabs reveal">
+    <button class="event-tab active" onclick="filterEvents(event, 'all')">全部</button>
+    <button class="event-tab" onclick="filterEvents(event, 'workshop')">工作坊</button>
+    <button class="event-tab" onclick="filterEvents(event, 'meditation')">靜心課程</button>
+    <button class="event-tab" onclick="filterEvents(event, 'healing')">能量療癒</button>
+  </div>
+
+  <div class="events-list reveal" id="eventsList">
+
+    <article class="event-item" data-cat="workshop">
+      <div class="event-date">
+        <div class="month">— MAY —</div>
+        <div class="day">17</div>
+        <div class="weekday">SAT</div>
+      </div>
+      <div class="event-info">
+        <span class="event-info-tag workshop">工作坊</span>
+        <h3>頌缽音波療癒入門體驗</h3>
+        <p style="color:var(--ink-mute); font-size:0.9rem; line-height:1.7;">透過頌缽音頻共振，親身感受七大脈輪的清理與療癒，初學者友善體驗場次。</p>
+        <div class="event-info-meta">
+          <span><svg><use href="#ico-clock"/></svg>14:00 – 17:00</span>
+          <span><svg><use href="#ico-pin"/></svg>工作室現場</span>
+          <span><svg><use href="#ico-user"/></svg>限額 8 人</span>
+        </div>
+      </div>
+      <div class="event-action">
+        <span class="event-status">尚有名額</span>
+        <a href="#booking" class="event-btn">立即報名</a>
+      </div>
+    </article>
+
+    <article class="event-item" data-cat="meditation">
+      <div class="event-date">
+        <div class="month">— MAY —</div>
+        <div class="day">24</div>
+        <div class="weekday">SAT</div>
+      </div>
+      <div class="event-info">
+        <span class="event-info-tag meditation">靜心</span>
+        <h3>週天靜功・觀心守念禪修</h3>
+        <p style="color:var(--ink-mute); font-size:0.9rem; line-height:1.7;">羅老師親授靜功心法，從呼吸調息進入深層意識，培養內在覺察與穩定。</p>
+        <div class="event-info-meta">
+          <span><svg><use href="#ico-clock"/></svg>09:00 – 12:00</span>
+          <span><svg><use href="#ico-pin"/></svg>工作室現場</span>
+          <span><svg><use href="#ico-user"/></svg>限額 12 人</span>
+        </div>
+      </div>
+      <div class="event-action">
+        <span class="event-status few">名額有限</span>
+        <a href="#booking" class="event-btn">立即報名</a>
+      </div>
+    </article>
+
+    <article class="event-item" data-cat="healing">
+      <div class="event-date">
+        <div class="month">— JUN —</div>
+        <div class="day">07</div>
+        <div class="weekday">SAT</div>
+      </div>
+      <div class="event-info">
+        <span class="event-info-tag healing">能量療癒</span>
+        <h3>遠距量子神針・能量調頻場次</h3>
+        <p style="color:var(--ink-mute); font-size:0.9rem; line-height:1.7;">線上進行的遠距能量調頻，突破空間限制，讓守護能量直達您所在之處。</p>
+        <div class="event-info-meta">
+          <span><svg><use href="#ico-clock"/></svg>20:00 – 21:00</span>
+          <span><svg><use href="#ico-pin"/></svg>線上 Zoom</span>
+          <span><svg><use href="#ico-user"/></svg>不限人數</span>
+        </div>
+      </div>
+      <div class="event-action">
+        <span class="event-status">開放報名</span>
+        <a href="#booking" class="event-btn">立即報名</a>
+      </div>
+    </article>
+
+    <article class="event-item" data-cat="workshop">
+      <div class="event-date">
+        <div class="month">— JUN —</div>
+        <div class="day">14</div>
+        <div class="weekday">SAT</div>
+      </div>
+      <div class="event-info">
+        <span class="event-info-tag workshop">工作坊</span>
+        <h3>八段錦・易筋經 古法養生工作坊</h3>
+        <p style="color:var(--ink-mute); font-size:0.9rem; line-height:1.7;">親授南宗少林傳承之古法養生功法，從動作到內氣導引，全方位學習。</p>
+        <div class="event-info-meta">
+          <span><svg><use href="#ico-clock"/></svg>09:30 – 12:30</span>
+          <span><svg><use href="#ico-pin"/></svg>工作室現場</span>
+          <span><svg><use href="#ico-user"/></svg>限額 10 人</span>
+        </div>
+      </div>
+      <div class="event-action">
+        <span class="event-status">尚有名額</span>
+        <a href="#booking" class="event-btn">立即報名</a>
+      </div>
+    </article>
+
+    <article class="event-item" data-cat="meditation">
+      <div class="event-date">
+        <div class="month">— JUN —</div>
+        <div class="day">21</div>
+        <div class="weekday">SAT</div>
+      </div>
+      <div class="event-info">
+        <span class="event-info-tag meditation">靜心</span>
+        <h3>夏至・脈輪平衡冥想會</h3>
+        <p style="color:var(--ink-mute); font-size:0.9rem; line-height:1.7;">借夏至高陽能量，進行七大脈輪深度清理與平衡冥想，迎接下半年的豐盛流動。</p>
+        <div class="event-info-meta">
+          <span><svg><use href="#ico-clock"/></svg>14:00 – 16:30</span>
+          <span><svg><use href="#ico-pin"/></svg>工作室現場</span>
+          <span><svg><use href="#ico-user"/></svg>限額 15 人</span>
+        </div>
+      </div>
+      <div class="event-action">
+        <span class="event-status full">已額滿</span>
+        <a class="event-btn disabled">候補登記</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- 案例見證 -->
+<section class="testimonials">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">— Healing Stories —</span>
+    <h2 class="section-title">經典療癒案例</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">立竿見影的轉化實例</p>
+  </div>
+  <div class="testi-grid reveal">
+    <article class="testi-card">
+      <span class="testi-mark">"</span>
+      <span class="testi-loc">印度・2014</span>
+      <p class="testi-content">
+        羅老師受邀至印度為<strong>十七世大寶法王</strong>診療，身體明顯好轉，親獲賜予法名 <strong>「噶瑪寶醫」</strong>。這份來自尊貴上師的肯定，是對二十餘年修證最深的見證。
+      </p>
+      <div class="testi-attr">— Personal Endorsement from H.H. Karmapa</div>
+    </article>
+
+    <article class="testi-card">
+      <span class="testi-mark">"</span>
+      <span class="testi-loc">義大利・2025</span>
+      <p class="testi-content">
+        羅老師於義大利巡迴診療，<strong>兩個月內療癒逾 40 人次</strong>。包含嚴重車禍術後劇痛個案當場感受前所未有的輕鬆；某市長夫人經調理後決定取消預定手術。
+      </p>
+      <div class="testi-attr">— Italian Tour, Press Coverage</div>
+    </article>
+
+    <article class="testi-card">
+      <span class="testi-mark">"</span>
+      <span class="testi-loc">遠距・跨海療癒</span>
+      <p class="testi-content">
+        義大利<strong>黑色素瘤與腫瘤個案</strong>，透過每週一次遠距能量調頻，6 個月後黑色素瘤消失，主治醫師深感驚訝。突破空間限制的奇蹟轉化。
+      </p>
+      <div class="testi-attr">— Long-distance Quantum Healing</div>
+    </article>
+
+    <article class="testi-card">
+      <span class="testi-mark">"</span>
+      <span class="testi-loc">急症・即時療癒</span>
+      <p class="testi-content">
+        運用董氏針法，<strong>落枕個案當場恢復 8 成</strong>，3 次完全復原。突發性頑固皮膚病經結合特殊針法與量子藥酒，僅治療 1 次即收口復原。
+      </p>
+      <div class="testi-attr">— Tung's Acupuncture Cases</div>
+    </article>
+  </div>
+</section>
+
+<!-- 文章/知識庫 -->
+<section class="articles" id="articles">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">— Wisdom Journal —</span>
+    <h2 class="section-title">能量學習 ・ 文章與洞見</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">將深奧的古法化為現代人可操作的智慧</p>
+  </div>
+  <div class="articles-grid reveal">
+    <article class="article-card">
+      <div class="article-img">
+        <svg class="article-img-icon"><use href="#ico-axis"/></svg>
+        <span class="article-img-text">中軸</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span class="cat">能量解析</span><span>5 分鐘閱讀</span></div>
+        <h3 class="article-title">中軸一正，百脈皆通：脊椎為何是靈魂的通道？</h3>
+        <p class="article-excerpt">脊椎不只是身體的支柱，更是能量流動的核心通道。當物理結構壓迫神經，能量便無法流動⋯⋯</p>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-img">
+        <svg class="article-img-icon"><use href="#ico-chakra"/></svg>
+        <span class="article-img-text">脈輪</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span class="cat">脈輪指南</span><span>8 分鐘閱讀</span></div>
+        <h3 class="article-title">七大脈輪與生命七大功課：身體儲存著你的生命藍圖</h3>
+        <p class="article-excerpt">生命七大業力課題儲存在七脈輪中，並記憶在身體筋膜、心血管系統、中樞神經與細胞中⋯⋯</p>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-img">
+        <svg class="article-img-icon"><use href="#ico-yinyang"/></svg>
+        <span class="article-img-text">氣功</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span class="cat">古法養生</span><span>6 分鐘閱讀</span></div>
+        <h3 class="article-title">先天之炁與後天呼吸：練功與體操的根本差別</h3>
+        <p class="article-excerpt">練功若練不出「先天之炁」，終究只是體操。內氣運行如何讓能量在你的經絡中真實跑動⋯⋯</p>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-img">
+        <svg class="article-img-icon"><use href="#ico-coin"/></svg>
+        <span class="article-img-text">豐盛</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span class="cat">豐盛心法</span><span>7 分鐘閱讀</span></div>
+        <h3 class="article-title">金錢即流動的愛與祝福：從匱乏到豐盛的能量轉化</h3>
+        <p class="article-excerpt">當我們清理了內在的匱乏與恐懼，財富便會如流水般自然匯聚成「心流」⋯⋯</p>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-img">
+        <svg class="article-img-icon"><use href="#ico-flow"/></svg>
+        <span class="article-img-text">頌缽</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span class="cat">音波療癒</span><span>5 分鐘閱讀</span></div>
+        <h3 class="article-title">頌缽音波如何震碎細胞中陳舊的情緒印記？</h3>
+        <p class="article-excerpt">運用特定頻率的頌缽音波與身體水分及細胞產生物理共鳴，精準震碎代謝積壓的能量瘀結⋯⋯</p>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-img">
+        <svg class="article-img-icon"><use href="#ico-leaf"/></svg>
+        <span class="article-img-text">草本</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span class="cat">草本智慧</span><span>6 分鐘閱讀</span></div>
+        <h3 class="article-title">艾草與薰衣草：兩種古老植物的能量療癒密碼</h3>
+        <p class="article-excerpt">艾溫陽、薰寧心，從中西方古老草本智慧理解貼片背後的能量原理⋯⋯</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Q&A -->
+<section class="faq" id="faq">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">— Frequently Asked —</span>
+    <h2 class="section-title">常見問答 ・ Q&A</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">關於羅氏自癒力系統、療癒流程與能量商品的常見疑問</p>
+  </div>
+
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-q-text">
+          <span class="faq-q-mark">Q.</span>
+          <span class="faq-q-content">第一次到訪一定要做量子全息能量檢測嗎？</span>
+        </div>
+        <span class="faq-toggle"><svg><use href="#ico-plus"/></svg></span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-a-content">
+          <strong>是的，這是首次到訪的必備流程。</strong>羅老師需要透過 30 分鐘的量子場掃描，先掌握您核心中脈、脊椎電磁場、神經系統電位與經絡能量的整體狀態，才能依顯性與隱藏性問題量身規劃後續六階段的調整方案。沒有檢測就直接進行療癒，如同沒有藍圖就動工，無法精準對症。
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-q-text">
+          <span class="faq-q-mark">Q.</span>
+          <span class="faq-q-content">六階段課程一定要從頭到尾依序完成嗎？</span>
+        </div>
+        <span class="faq-toggle"><svg><use href="#ico-plus"/></svg></span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-a-content">
+          不一定。第一階段（量子檢測）是必要起點，後續第二至第六階段會依您個人狀態彈性調整。<strong>結構性問題會優先處理第二階段；內臟氣血問題會以第三階段為主軸；情緒能量阻塞則進入第四階段。</strong>第五、六階段屬於進階靈性與功法修煉，適合追求生命質量跳躍與長期自主健康者。
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-q-text">
+          <span class="faq-q-mark">Q.</span>
+          <span class="faq-q-content">遠距能量調頻真的有效嗎？我人在國外可以預約嗎？</span>
+        </div>
+        <span class="faq-toggle"><svg><use href="#ico-plus"/></svg></span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-a-content">
+          可以。羅老師曾為義大利黑色素瘤個案進行為期 6 個月的<strong>遠距量子神針</strong>調頻，腫瘤最終消失，主治醫師深感驚訝。能量本身不受空間限制，重點是個案在約定時段保持安靜與接收狀態。<strong>無論您身在何處，都可預約線上遠距療癒場次。</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-q-text">
+          <span class="faq-q-mark">Q.</span>
+          <span class="faq-q-content">能量檢測與療癒會取代正規醫療嗎？</span>
+        </div>
+        <span class="faq-toggle"><svg><use href="#ico-plus"/></svg></span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-a-content">
+          <strong>不會也不應該取代。</strong>羅氏自癒力系統定位為輔助與整合性的全人療癒，目的是排除身心阻塞、活化自癒力，與西醫、中醫並非對立關係而是互補。如您正在接受醫療，建議持續配合主治醫師的治療計畫，能量療癒可作為加強生命品質與促進恢復的輔助方式。
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-q-text">
+          <span class="faq-q-mark">Q.</span>
+          <span class="faq-q-content">艾糾與薰衣草能量貼片要怎麼使用？多久換一次？</span>
+        </div>
+        <span class="faq-toggle"><svg><use href="#ico-plus"/></svg></span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-a-content">
+          貼片可貼於對應穴位或不適部位，<strong>艾糾貼片建議用於溫養經絡、寒濕痠痛部位（如肩頸、腰腹、膝蓋）；薰衣草貼片建議用於穩定情緒之處（如心輪、太陽穴、足底）。</strong>建議每片使用 8–12 小時後更換，避免敏感部位與傷口處。詳細穴位指南會隨產品附贈。
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-q-text">
+          <span class="faq-q-mark">Q.</span>
+          <span class="faq-q-content">能量卡與磁化錢母可以一起使用嗎？</span>
+        </div>
+        <span class="faq-toggle"><svg><use href="#ico-plus"/></svg></span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-a-content">
+          可以，且兩者性質互補。<strong>能量卡屬於「隨身防護與場域穩定」</strong>，建立 24 小時不間斷的氣場結界；<strong>磁化錢母屬於「主動吸引與循環啟動」</strong>，透過錢母的流通實踐佈施與倍增的能量循環。許多個案將兩者搭配使用，體驗到守護與豐盛同步到位的整體效果。
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-q-text">
+          <span class="faq-q-mark">Q.</span>
+          <span class="faq-q-content">寵物療癒適合什麼狀況？我家毛孩會抗拒嗎？</span>
+        </div>
+        <span class="faq-toggle"><svg><use href="#ico-plus"/></svg></span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-a-content">
+          適合<strong>老化、術後虛弱、慢性病、突發性生理失衡，或長期累積情緒卡點的毛孩</strong>。能量療癒不需侵入也不引起疼痛，過程中毛孩通常會自然放鬆甚至入眠。線上遠距療癒更不需移動，特別適合敏感、緊張或無法外出的寵物。多寵家庭與環境淨化需求可洽詢客製化方案。
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <div class="faq-q-text">
+          <span class="faq-q-mark">Q.</span>
+          <span class="faq-q-content">如何取消或改期已預約的場次？</span>
+        </div>
+        <span class="faq-toggle"><svg><use href="#ico-plus"/></svg></span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-a-content">
+          請於預約時段<strong>至少 24 小時前</strong>透過 LINE 或電話告知工作室，我們會協助您改期或退費。每位個案的時段為專屬保留，臨時取消會影響其他個案的預約權益，敬請諒解。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 預約諮詢 -->
+<section class="booking" id="booking">
+  <div class="booking-inner">
+    <div class="booking-text reveal">
+      <span class="section-eyebrow">— Book a Session —</span>
+      <h2>開啟屬於您的<br>六階段轉化之旅</h2>
+      <p>
+        真正的療癒，是協助您找回與生俱來的強大力量。<br>
+        填寫下方表單，我們將盡快與您聯繫，<br>
+        為您安排首次量子全息能量檢測諮詢。
+      </p>
+      <div class="booking-info">
+        <div class="booking-info-item">
+          <svg class="booking-info-icon"><use href="#ico-pin"/></svg>
+          <span class="booking-info-label">Studio</span>
+          <span class="booking-info-val">極心流能量工作室</span>
+        </div>
+        <div class="booking-info-item">
+          <svg class="booking-info-icon"><use href="#ico-phone"/></svg>
+          <span class="booking-info-label">Phone</span>
+          <span class="booking-info-val">請於表單留下聯絡電話</span>
+        </div>
+        <div class="booking-info-item">
+          <svg class="booking-info-icon"><use href="#ico-clock"/></svg>
+          <span class="booking-info-label">Hours</span>
+          <span class="booking-info-val">採完全預約制 ・ 每位個案專屬時段</span>
+        </div>
+        <div class="booking-info-item">
+          <svg class="booking-info-icon"><use href="#ico-calendar"/></svg>
+          <span class="booking-info-label">Modes</span>
+          <span class="booking-info-val">現場療癒 ／ 遠距量子調頻 兩種服務</span>
+        </div>
+      </div>
+    </div>
+    <form class="booking-form reveal" onsubmit="event.preventDefault(); alert('感謝您的預約，我們將盡快與您聯繫。');">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">姓 名 ・ Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">電 話 ・ Phone</label>
+          <input type="tel" id="phone" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">電子郵件 ・ Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="service">預約項目 ・ Service</label>
+        <select id="service" required>
+          <option value="">— 請選擇 —</option>
+          <option>第一階段：量子全息能量諮詢檢測（首次必備）</option>
+          <option>第二階段：核心中軸歸正・結構平衡</option>
+          <option>第三階段：陰陽五行氣脈調和</option>
+          <option>第四階段：脈輪清理・音波能量修復</option>
+          <option>第五階段：光體開啟・拙火轉化課程</option>
+          <option>第六階段：自癒力內功功法班</option>
+          <option>極感｜寵物身心靈療癒</option>
+          <option>極盛｜豐盛心流・錢母磁化</option>
+          <option>極守｜護身御守能量卡</option>
+          <option>活動工作坊報名</option>
+          <option>商品訂購諮詢</option>
+          <option>其他諮詢</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">想分享的狀況 ・ Message</label>
+        <textarea id="message" placeholder="請簡述您想處理的身心狀況、困擾或希望了解的部分（可選填）"></textarea>
+      </div>
+      <button type="submit" class="form-submit">送 出 預 約 →</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>極心流能量工作室</h3>
+      <p>
+        羅紹綸 老師主持<br>
+        融合古法武學、中醫經絡與量子能量學，<br>
+        引導身心靈整合療癒，<br>
+        重啟您與生俱來的自癒力量。
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#stages">六階段課程</a></li>
+        <li><a href="#trinity">極心三元</a></li>
+        <li><a href="#products">能量商品</a></li>
+        <li><a href="#events">活動行事曆</a></li>
+        <li><a href="#booking">預約諮詢</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#vision">願景</a></li>
+        <li><a href="#master">羅老師簡介</a></li>
+        <li><a href="#philosophy">核心理念</a></li>
+        <li><a href="#articles">文章知識庫</a></li>
+        <li><a href="#faq">常見問答</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#booking">線上預約</a></li>
+        <li><a href="#">LINE 官方帳號</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 極心流能量工作室・羅氏自癒力系統</span>
+    <span>Crafted with 心 ・ 義 ・ 志 ・ 身</span>
+  </div>
+</footer>
+
+<script>
+  // 滾動入場動畫
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // 點擊導覽連結後關閉手機選單
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+
+  // Q&A 展開
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+
+  // 活動篩選
+  function filterEvents(e, cat) {
+    document.querySelectorAll('.event-tab').forEach(t => t.classList.remove('active'));
+    e.currentTarget.classList.add('active');
+    document.querySelectorAll('.event-item').forEach(item => {
+      if (cat === 'all' || item.dataset.cat === cat) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

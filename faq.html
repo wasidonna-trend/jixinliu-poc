@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>常見問題 Q&A ｜ 極心流能量工作室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+.faq-hero { padding: 140px 0 60px; background: var(--paper-warm); text-align: center; border-bottom: 1px solid var(--line); }
+.faq-hero .crumb { font-family: var(--serif-en); font-style: italic; font-size: 13px; color: var(--ink-mute); letter-spacing: 0.18em; margin-bottom: 18px; }
+.faq-hero .crumb a { color: var(--ink-mute); }
+.faq-hero h1 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: clamp(36px, 4.5vw, 56px); letter-spacing: 0.16em;
+  color: var(--ink); margin-bottom: 12px;
+}
+.faq-hero .en {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 18px;
+  letter-spacing: 0.06em; margin-bottom: 22px; display: block;
+}
+.faq-hero p { color: var(--ink-soft); font-size: 16px; max-width: 640px; margin: 0 auto; line-height: 1.95; }
+
+/* Search */
+.faq-search {
+  max-width: 580px; margin: 36px auto 0;
+  position: relative;
+}
+.faq-search input {
+  width: 100%;
+  padding: 16px 22px 16px 56px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  font-family: var(--sans-tc);
+  font-size: 14px; color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.faq-search input:focus { outline: none; border-color: var(--cinnabar); }
+.faq-search::before {
+  content: '';
+  position: absolute; left: 22px; top: 50%; transform: translateY(-50%);
+  width: 16px; height: 16px;
+  border: 1.5px solid var(--ink-mute);
+  border-radius: 50%;
+}
+.faq-search::after {
+  content: '';
+  position: absolute; left: 35px; top: 50%; margin-top: 4px;
+  width: 8px; height: 1.5px;
+  background: var(--ink-mute);
+  transform: rotate(45deg);
+}
+
+/* Body grid */
+.faq-body { background: var(--paper); padding: 60px 0 80px; }
+.faq-grid { display: grid; grid-template-columns: 240px 1fr; gap: 60px; align-items: start; }
+@media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+/* Sidebar nav */
+.faq-nav {
+  position: sticky; top: 90px;
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+}
+.faq-nav .nav-label {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; margin-bottom: 18px;
+}
+.faq-nav ul { list-style: none; }
+.faq-nav ul li { margin-bottom: 6px; }
+.faq-nav ul li a {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 0;
+  font-family: var(--serif-tc); font-weight: 400;
+  font-size: 14px; color: var(--ink-soft);
+  letter-spacing: 0.06em; transition: all .25s var(--ease);
+}
+.faq-nav ul li a:hover { color: var(--ink); padding-left: 6px; }
+.faq-nav ul li a.active { color: var(--cinnabar); font-weight: 500; padding-left: 6px; }
+.faq-nav ul li a .ord { font-family: var(--serif-en); font-style: italic; font-size: 12px; color: var(--gold-deep); letter-spacing: 0.12em; }
+
+/* FAQ sections */
+.faq-section { margin-bottom: 56px; scroll-margin-top: 90px; }
+.faq-section .sec-head {
+  display: flex; align-items: baseline; gap: 14px;
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.faq-section .sec-head .ord {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--cinnabar); font-size: 18px; letter-spacing: 0.16em;
+}
+.faq-section .sec-head h2 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 24px; color: var(--ink);
+  letter-spacing: 0.1em;
+}
+.faq-section .sec-head .en {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 13px;
+  letter-spacing: 0.14em; margin-left: auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+  cursor: pointer;
+}
+.faq-item .q {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 24px;
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 16px; color: var(--ink);
+  letter-spacing: 0.04em; line-height: 1.6;
+  transition: color .25s;
+}
+.faq-item .q .q-num {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 14px;
+  letter-spacing: 0.12em; flex-shrink: 0; padding-top: 2px;
+}
+.faq-item .q .q-text { flex-grow: 1; }
+.faq-item .q .q-toggle {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border: 1px solid var(--line);
+  display: grid; place-items: center;
+  font-family: var(--serif-en);
+  color: var(--ink); font-size: 16px;
+  transition: all .3s var(--ease);
+}
+.faq-item:hover .q { color: var(--cinnabar); }
+.faq-item:hover .q .q-toggle { border-color: var(--cinnabar); color: var(--cinnabar); }
+.faq-item.open .q .q-toggle { background: var(--cinnabar); color: var(--paper); border-color: var(--cinnabar); transform: rotate(45deg); }
+
+.faq-item .a {
+  display: none;
+  padding: 18px 56px 6px 32px;
+  color: var(--ink-soft); font-size: 14.5px; line-height: 2;
+}
+.faq-item.open .a { display: block; }
+.faq-item .a p { margin-bottom: 12px; }
+.faq-item .a strong { color: var(--ink); font-weight: 500; }
+.faq-item .a a { color: var(--cinnabar); border-bottom: 1px dashed var(--cinnabar); }
+.faq-item .a ul { list-style: none; margin: 8px 0 12px; }
+.faq-item .a ul li { padding-left: 18px; position: relative; padding-bottom: 6px; }
+.faq-item .a ul li::before { content: '·'; position: absolute; left: 4px; color: var(--cinnabar); font-size: 24px; line-height: 0.6; }
+
+/* Bottom CTA */
+.faq-cta-block {
+  margin-top: 60px;
+  padding: 48px;
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+.faq-cta-block h3 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 22px; color: var(--ink);
+  letter-spacing: 0.1em; margin-bottom: 8px;
+}
+.faq-cta-block .en {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 13px;
+  letter-spacing: 0.14em; margin-bottom: 18px; display: block;
+}
+.faq-cta-block p { color: var(--ink-soft); font-size: 14px; max-width: 480px; margin: 0 auto 22px; line-height: 1.85; }
+.faq-cta-block .ctas { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+</style>
+</head>
+<body class="lang-zh">
+<div data-mount="nav"></div>
+
+<section class="faq-hero">
+  <div class="container">
+    <div class="crumb"><a href="index.html">首頁</a> / <span>常見問題</span></div>
+    <h1>常見問題</h1>
+    <span class="en">Frequently Asked Questions</span>
+    <p>關於極心流能量學體系的常見疑問，由羅紹綸老師親自整理回覆。<br>若您未在此找到答案，歡迎直接預約諮詢。</p>
+    <div class="faq-search">
+      <input type="text" placeholder="搜尋問題關鍵字 ・ Search keywords">
+    </div>
+  </div>
+</section>
+
+<section class="faq-body">
+  <div class="container">
+    <div class="faq-grid">
+      <aside class="faq-nav">
+        <div class="nav-label">Categories</div>
+        <ul>
+          <li><a href="#sec1" class="active"><span>關於體系</span><span class="ord">壹</span></a></li>
+          <li><a href="#sec2"><span>初次體驗</span><span class="ord">貳</span></a></li>
+          <li><a href="#sec3"><span>六階段課程</span><span class="ord">參</span></a></li>
+          <li><a href="#sec4"><span>極心三元</span><span class="ord">肆</span></a></li>
+          <li><a href="#sec5"><span>預約與退費</span><span class="ord">伍</span></a></li>
+          <li><a href="#sec6"><span>能量商品</span><span class="ord">陸</span></a></li>
+        </ul>
+      </aside>
+
+      <main>
+
+        <!-- 壹 體系 -->
+        <section class="faq-section" id="sec1">
+          <div class="sec-head">
+            <span class="ord">壹</span>
+            <h2>關於體系</h2>
+            <span class="en">About the System</span>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q1</span><span class="q-text">「極心流」與一般能量療癒、靈氣或瑜伽有什麼不同？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>「極心流能量學」是由羅紹綸老師融合<strong>古法武學</strong>、<strong>中醫經絡學</strong>與<strong>量子能量物理</strong>所自創的整合性體系。它不歸屬於任何單一傳統，而是一個以「重啟自癒力」為核心目的的<strong>當代整合系統</strong>。</p>
+              <p>與其他系統最大的差異在於：</p>
+              <ul>
+                <li>不依賴外在工具或物質介入，所有引導皆透過身體本身的振動頻率完成。</li>
+                <li>採用結構化的「六階段」推進，而非單次治療。</li>
+                <li>強調「天人合一」的整體觀，並將療癒延伸至生活、寵物與財富面向（極心三元）。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q2</span><span class="q-text">需要有任何宗教信仰才能進行嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>不需要。極心流能量學以<strong>身體共振場</strong>為核心，本質上是一套整合身心靈的方法論，與任何宗教皆相容。無論您原有任何信仰背景，皆能自在參與。</p>
+              <p>過程中羅老師可能會提及「黃財神」、「藥師佛」等東方文化中的能量原型，但這些是作為「能量頻率的代稱」使用，並不涉及宗教儀軌或膜拜。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q3</span><span class="q-text">能量療癒可以取代正規醫療嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p><strong>不能，也不應該。</strong>極心流能量學是一套<strong>輔助性的身心整合方法</strong>，能協助您調整能量場、提升自癒力，但<strong>不取代正規醫療診斷與治療</strong>。</p>
+              <p>若您正接受醫療處置，我們鼓勵您將能量調理視為<strong>身心整合的補充</strong>，並與您的主治醫師保持完整溝通。在初次諮詢中，羅老師也會主動了解您目前的醫療狀況。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 貳 初次 -->
+        <section class="faq-section" id="sec2">
+          <div class="sec-head">
+            <span class="ord">貳</span>
+            <h2>初次體驗</h2>
+            <span class="en">First Visit</span>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q4</span><span class="q-text">第一次體驗應該選擇哪一個服務？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>建議從「<strong>壹式 ・ 量子能量檢測</strong>」開始。這是免費的初次體驗（限新個案），約 90 分鐘。羅老師會親自為您進行能量場掃描，並給予一份初步的「個人能量地圖」。</p>
+              <p>檢測後，您可以自行決定是否繼續進入後續的階段（貳至陸式），完全沒有壓力。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q5</span><span class="q-text">完全沒有相關經驗可以參加嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>當然可以。事實上，我們的多數學員皆是<strong>初次接觸能量療癒</strong>。整個體系的設計即是為了讓「沒有任何經驗的人」也能順利進入。您不需要預先研讀任何理論，只需保持一顆<strong>開放的心</strong>。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q6</span><span class="q-text">第一次預約我需要準備什麼？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>實體預約建議：</p>
+              <ul>
+                <li>穿著<strong>寬鬆、純棉的衣物</strong>，方便進行身體導引動作。</li>
+                <li>於預約前 2 小時避免大量飲食或濃烈氣味的食物。</li>
+                <li>提前 5-10 分鐘到達，於工作室靜坐區進行能量初步沉澱。</li>
+                <li>請在<strong>諮詢前</strong>誠實填寫您目前的身心狀況，以便羅老師為您準備。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 參 六階段 -->
+        <section class="faq-section" id="sec3">
+          <div class="sec-head">
+            <span class="ord">參</span>
+            <h2>六階段課程</h2>
+            <span class="en">Six Stages</span>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q7</span><span class="q-text">六階段一定要按順序完成嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>是的，這是體系的核心設計。從「<strong>壹式・能量檢測</strong>」到「<strong>陸式・歸元合一</strong>」，每一個階段都是下一階段的<strong>能量基礎</strong>。如同建築需要先打地基才能起樑，跳過任何一階段都將使後續推進失去支點。</p>
+              <p>羅老師會根據您個人的進度狀態，決定是否進入下一階段；我們不會強迫推進。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q8</span><span class="q-text">完整六階段需要多長時間？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>視個人能量狀態而定，一般範圍為<strong>三至九個月</strong>。一般建議的節奏是每 2-4 週進行一個階段，給予能量場充分的整合時間。</p>
+              <p>有些學員的能量場恢復較迅速，可能在較短時間內完成；有些則需要更從容的節奏，這完全是個人化的旅程。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q9</span><span class="q-text">六階段完成後就結束了嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>「完成」是這條路的起點，而非終點。第六式的「歸元合一」是指您已內化了整套能量自我調理的能力，可以在日常生活中自主維持。</p>
+              <p>之後，您可以視需求預約<strong>定期的維護調頻</strong>，或進入「<strong>極心三元</strong>」的進階服務（極感／極盛／極守）。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 肆 三元 -->
+        <section class="faq-section" id="sec4">
+          <div class="sec-head">
+            <span class="ord">肆</span>
+            <h2>極心三元</h2>
+            <span class="en">Trinity Services</span>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q10</span><span class="q-text">寵物療癒（極感）需要寵物到場嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>視服務類型而定：</p>
+              <ul>
+                <li><strong>現場療癒</strong>：寵物需親自到場，由羅老師進行深度能量重組（30 分鐘）。</li>
+                <li><strong>遠距調頻</strong>：透過量子能量調頻技術，無需到場，特別適合突發狀況或長途不便者。</li>
+              </ul>
+              <p>毛孩首次體驗建議選擇現場療癒，以建立完整的能量基準。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q11</span><span class="q-text">錢母（極盛）需要自備硬幣嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>是的。極心流的傳統認為，由<strong>個案親手準備</strong>的錢母，與其能量場有最深的連結。我們會於結緣時提供詳細清單與規格說明（如 50 元 × 14、10 元 × 190）。</p>
+              <p>若您不便準備，亦可洽詢由工作室代為備妥，但會額外計算物料服務費。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q12</span><span class="q-text">能量御守卡（極守）的效期多久？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>能量基底為<strong>永久存在</strong>，但建議按方案進行<strong>月度／季度／年度的頻率維護</strong>，以保最佳磁化狀態。如同一座精密儀器需要定期校準，能量場亦如此。</p>
+              <p>長期方案的個案，能感受到能量結界的<strong>累積效應</strong>，是我們最推薦的方向。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 伍 預約退費 -->
+        <section class="faq-section" id="sec5">
+          <div class="sec-head">
+            <span class="ord">伍</span>
+            <h2>預約與退費</h2>
+            <span class="en">Booking & Refund</span>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q13</span><span class="q-text">如何預約？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>請於<a href="booking.html">線上預約頁面</a>填寫表單，我們將於 1-2 個工作日內以您偏好的方式（電話／Email／LINE）與您確認時段。</p>
+              <p>所有預約皆由羅老師親自審視排程，確保每位學員得到完整且不被打擾的能量空間。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q14</span><span class="q-text">取消或改期的政策？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>能量場域的籌備需要提前準備，請珍惜每一席名額：</p>
+              <ul>
+                <li><strong>14 日前取消</strong>：全額退費</li>
+                <li><strong>7 日前取消</strong>：退費 70%</li>
+                <li><strong>3 日前取消</strong>：退費 50%</li>
+                <li><strong>3 日內取消</strong>：恕不退費</li>
+              </ul>
+              <p>若需「改期」（非取消），於 3 日前免費辦理一次。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q15</span><span class="q-text">可以代別人預約嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>可以代為預約，但<strong>能量檢測前的個人狀態填寫</strong>必須由本人完成（在預約後我們會以另一個方式聯繫實際參與者）。能量場的調頻無法透過第三方代理進行。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 陸 商品 -->
+        <section class="faq-section" id="sec6">
+          <div class="sec-head">
+            <span class="ord">陸</span>
+            <h2>能量商品</h2>
+            <span class="en">Products</span>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q16</span><span class="q-text">能量商品可以與其他能量物品同時使用嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>可以。極心流的能量設計<strong>溫和而開放</strong>，不會與其他正向能量物品（如水晶、護身符、宗教法器）相衝突，反而能形成<strong>互補的能量場</strong>。</p>
+              <p>但建議避免與強烈電磁場（手機、電器、藍牙裝置）長時間直接接觸，以免訊號干擾。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q17</span><span class="q-text">能量商品有實體店面可以購買嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>所有極心流能量商品皆需經過<strong>羅老師親自加持</strong>，因此不開放第三方零售。所有結緣須透過<a href="booking.html">線上預約</a>或工作室現場進行，確保每一件商品的能量純粹度。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="q"><span class="q-num">Q18</span><span class="q-text">能量商品可以送禮嗎？</span><span class="q-toggle">+</span></div>
+            <div class="a">
+              <p>可以，但建議告知您所贈與的對象，並在加持前提供其姓名與生辰，以便羅老師為其量身導引能量。極心流的能量物品<strong>因人而異</strong>，個人化的加持效果最佳。</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="faq-cta-block">
+          <h3>未找到您的答案？</h3>
+          <span class="en">Still have questions?</span>
+          <p>我們相信每個人的旅程都是獨特的。若您的疑問未在此處被回答，歡迎直接與我們聯繫。</p>
+          <div class="ctas">
+            <a href="booking.html" class="btn btn-primary">預約一對一諮詢 →</a>
+            <a href="#" class="btn btn-ghost">傳訊 LINE 客服</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<div data-mount="footer"></div>
+<script src="assets/js/partials.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', e => {
+    if (e.target.tagName === 'A') return;
+    item.classList.toggle('open');
+  });
+});
+
+// Sidebar nav active state
+const sections = document.querySelectorAll('.faq-section');
+const navLinks = document.querySelectorAll('.faq-nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY > s.offsetTop - 120) current = s.id;
+  });
+  navLinks.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+  });
+});
+
+// Search filter
+document.querySelector('.faq-search input').addEventListener('input', e => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = (!q || text.includes(q)) ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>

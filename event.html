@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>春分共振・身心靈淨化工作坊 ｜ 極心流</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+.crumb { font-family: var(--serif-en); font-style: italic; font-size: 13px; color: var(--ink-mute); letter-spacing: 0.18em; padding: 110px 0 18px; }
+.crumb a { color: var(--ink-mute); }
+
+/* Event Hero */
+.event-hero {
+  position: relative;
+  background: linear-gradient(135deg, #2b2a26 0%, #3a3933 60%, #5a4a32 100%);
+  color: var(--paper);
+  padding: 0 0 80px;
+  overflow: hidden;
+}
+.event-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(40% 60% at 80% 30%, rgba(201,169,106,0.22), transparent 60%),
+    radial-gradient(35% 50% at 20% 80%, rgba(164,77,58,0.16), transparent 60%);
+}
+.event-hero .crumb { padding-top: 110px; color: rgba(245,241,232,0.5); }
+.event-hero .crumb a { color: rgba(245,241,232,0.5); }
+.eh-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: end; padding-top: 30px; position: relative; z-index: 1; }
+@media (max-width: 900px) { .eh-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.eh-tag {
+  display: inline-block;
+  background: var(--cinnabar); color: var(--paper);
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 12px; letter-spacing: 0.2em; padding: 5px 14px;
+  margin-bottom: 22px;
+}
+.eh-info h1 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: clamp(36px, 4.5vw, 60px); letter-spacing: 0.08em;
+  color: var(--paper); line-height: 1.25; margin-bottom: 14px;
+}
+.eh-info .en {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-light); font-size: 18px;
+  letter-spacing: 0.04em; margin-bottom: 24px; display: block;
+}
+.eh-info .lead { color: rgba(245,241,232,0.85); font-size: 16px; line-height: 1.95; max-width: 560px; }
+
+.eh-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(245,241,232,0.18); border: 1px solid rgba(245,241,232,0.18); margin-top: 28px; }
+.ehm-cell { background: rgba(43,42,38,0.6); padding: 18px 22px; }
+.ehm-cell .k {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-light); font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; margin-bottom: 4px; display: block;
+}
+.ehm-cell .v { color: var(--paper); font-size: 14px; line-height: 1.5; }
+
+/* Right side reservation card */
+.eh-card {
+  background: var(--paper); color: var(--ink);
+  padding: 36px 32px;
+  border-left: 4px solid var(--cinnabar);
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.4);
+}
+.eh-card .ec-label {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 12px; letter-spacing: 0.18em;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.eh-card .ec-price {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 40px; color: var(--cinnabar); font-weight: 500;
+  margin-bottom: 4px; line-height: 1;
+}
+.eh-card .ec-price small { font-size: 14px; color: var(--ink-mute); margin-left: 4px; }
+.eh-card .ec-price-note { font-size: 12px; color: var(--ink-soft); margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+
+.eh-card .ec-progress { margin-bottom: 22px; }
+.eh-card .ec-progress .pp-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--ink-soft); margin-bottom: 8px; }
+.eh-card .ec-progress .pp-row strong { color: var(--cinnabar); font-family: var(--serif-en); font-style: italic; }
+.eh-card .ec-progress .pp-bar { height: 4px; background: var(--ivory); border: 1px solid var(--line); position: relative; }
+.eh-card .ec-progress .pp-bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--cinnabar); width: 70%; }
+
+.eh-card .ec-cta { display: block; padding: 14px; text-align: center; background: var(--ink); color: var(--paper); font-size: 14px; letter-spacing: 0.16em; margin-bottom: 10px; }
+.eh-card .ec-cta:hover { background: var(--cinnabar); }
+.eh-card .ec-secondary { display: block; padding: 12px; text-align: center; border: 1px solid var(--line); color: var(--ink-soft); font-size: 13px; letter-spacing: 0.14em; }
+.eh-card .ec-secondary:hover { color: var(--ink); border-color: var(--ink); }
+.eh-card .ec-shareLine { margin-top: 18px; padding-top: 18px; border-top: 1px dashed var(--line); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--ink-mute); font-family: var(--serif-en); font-style: italic; letter-spacing: 0.14em; }
+
+/* Tabs */
+.event-body { background: var(--paper); padding: 80px 0; }
+.eb-grid { display: grid; grid-template-columns: 1fr 320px; gap: 64px; align-items: start; }
+@media (max-width: 900px) { .eb-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.eb-section { margin-bottom: 48px; }
+.eb-section h2 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 28px; letter-spacing: 0.1em; color: var(--ink);
+  margin-bottom: 8px; line-height: 1.4;
+}
+.eb-section .en {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 14px;
+  letter-spacing: 0.1em; margin-bottom: 22px; display: block;
+}
+.eb-section p { color: var(--ink-soft); font-size: 15px; line-height: 2; margin-bottom: 14px; }
+
+/* Schedule timeline */
+.schedule { border-left: 1px solid var(--gold); padding-left: 28px; margin-left: 12px; }
+.sch-item { position: relative; padding-bottom: 28px; }
+.sch-item::before {
+  content: ''; position: absolute;
+  left: -34px; top: 6px;
+  width: 12px; height: 12px;
+  background: var(--cinnabar); border: 2px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--cinnabar);
+  transform: rotate(45deg);
+}
+.sch-item .sch-time {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 14px; color: var(--gold-deep); letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+.sch-item h4 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 17px; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.06em;
+}
+.sch-item p { color: var(--ink-soft); font-size: 14px; line-height: 1.85; }
+
+/* Bring list */
+.bring-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+@media (max-width: 600px) { .bring-list { grid-template-columns: 1fr; } }
+.bring-list .b-cell {
+  padding: 14px 16px; background: var(--paper-warm); border-left: 2px solid var(--gold);
+  font-size: 14px; color: var(--ink-soft); line-height: 1.7;
+}
+.bring-list .b-cell strong { color: var(--ink); font-weight: 500; display: block; margin-bottom: 4px; font-family: var(--serif-tc); letter-spacing: 0.06em; }
+
+/* Sidebar */
+.eb-side .side-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.eb-side .side-card h5 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 15px; color: var(--ink);
+  letter-spacing: 0.12em; margin-bottom: 14px;
+  padding-bottom: 10px; border-bottom: 1px solid var(--line);
+}
+.eb-side .side-card .info-row {
+  display: flex; justify-content: space-between;
+  padding: 8px 0; font-size: 13px; color: var(--ink-soft);
+}
+.eb-side .side-card .info-row strong { color: var(--ink); font-weight: 500; }
+
+/* Map placeholder */
+.map-block {
+  aspect-ratio: 16/10;
+  background: linear-gradient(160deg, #d8dbc6, #b8c0a3);
+  position: relative;
+  margin-bottom: 12px;
+  border: 1px solid var(--line);
+}
+.map-block::before {
+  content: ''; position: absolute;
+  left: 50%; top: 45%; transform: translate(-50%, -50%);
+  width: 14px; height: 14px;
+  background: var(--cinnabar); border-radius: 50% 50% 50% 0;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  box-shadow: 0 0 0 6px rgba(164,77,58,0.2);
+}
+
+/* Instructor block */
+.instructor-block {
+  display: grid; grid-template-columns: 100px 1fr; gap: 18px; align-items: center;
+  padding: 22px;
+  background: var(--paper-warm); border: 1px solid var(--line);
+  margin: 32px 0;
+}
+.instructor-block .ib-avatar {
+  width: 100px; height: 100px;
+  background: linear-gradient(160deg, #efe5cc, #c9a96a);
+  display: grid; place-items: center;
+  font-family: var(--serif-tc); font-size: 32px; color: rgba(43,42,38,0.85);
+  border-radius: 50%;
+}
+.instructor-block h5 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 18px; color: var(--ink); margin-bottom: 4px; letter-spacing: 0.06em;
+}
+.instructor-block .ib-tag { font-family: var(--serif-en); font-style: italic; font-size: 12px; color: var(--gold-deep); letter-spacing: 0.16em; margin-bottom: 8px; display: block; }
+.instructor-block p { font-size: 13px; color: var(--ink-soft); line-height: 1.7; }
+
+/* Other events */
+.other-events { background: var(--paper-warm); padding: 60px 0; border-top: 1px solid var(--line); }
+.oe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+@media (max-width: 800px) { .oe-grid { grid-template-columns: 1fr; } }
+.oe-card { background: var(--ivory); border: 1px solid var(--line); padding: 28px; transition: all .35s var(--ease); }
+.oe-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px -16px rgba(43,42,38,0.18); }
+.oe-card .oe-date { font-family: var(--serif-en); font-style: italic; color: var(--gold-deep); font-size: 13px; letter-spacing: 0.1em; margin-bottom: 8px; }
+.oe-card h5 { font-family: var(--serif-tc); font-weight: 500; font-size: 17px; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.06em; }
+.oe-card p { font-size: 13px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 14px; }
+.oe-card .oe-meta { font-size: 12px; color: var(--ink-mute); padding-top: 12px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body class="lang-zh">
+<div data-mount="nav"></div>
+
+<section class="event-hero">
+  <div class="container">
+    <div class="crumb"><a href="index.html">首頁</a> / <a href="index.html#events">活動行事曆</a> / <span>春分共振・身心靈淨化工作坊</span></div>
+    <div class="eh-grid">
+      <div class="eh-info">
+        <span class="eh-tag">春分節氣・限額 12 名</span>
+        <h1>春分共振<br>身心靈淨化工作坊</h1>
+        <span class="en">Spring Equinox · Whole-Being Resonance Workshop</span>
+        <p class="lead">藉天地陰陽平衡之時，由羅老師帶領，以呼吸、形意、量子能量導引三重節奏，重啟整年度的氣脈軸線。一日完整體驗極心流核心方法，並帶回個人化的居家練習地圖。</p>
+
+        <div class="eh-meta">
+          <div class="ehm-cell">
+            <span class="k">Date · 日期</span>
+            <div class="v">2026 / 03 / 21（六）<br>春分當日</div>
+          </div>
+          <div class="ehm-cell">
+            <span class="k">Time · 時間</span>
+            <div class="v">10:00 - 17:00<br>（含午茶與素食午膳）</div>
+          </div>
+          <div class="ehm-cell">
+            <span class="k">Venue · 場地</span>
+            <div class="v">極心流能量工作室<br>台北市大安區・近捷運</div>
+          </div>
+          <div class="ehm-cell">
+            <span class="k">Capacity · 名額</span>
+            <div class="v">限額 12 名<br>（已報名 8 名）</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="eh-card">
+        <div class="ec-label">EARLY BIRD · 早鳥優惠</div>
+        <div class="ec-price">NT$ 4,800 <small>/ 位</small></div>
+        <div class="ec-price-note">早鳥價至 2026.02.28 止・原價 NT$ 6,200</div>
+
+        <div class="ec-progress">
+          <div class="pp-row"><span>目前報名</span><strong>8 / 12</strong></div>
+          <div class="pp-bar"><i></i></div>
+          <div class="pp-row" style="margin-top:8px;font-size:11px;font-style:italic;font-family:var(--serif-en);letter-spacing:0.12em;color:var(--ink-mute);"><span>4 SEATS LEFT</span><span>EARLY BIRD ENDS 02.28</span></div>
+        </div>
+
+        <a href="booking.html?event=spring-equinox" class="ec-cta">立即報名</a>
+        <a href="#detail" class="ec-secondary">了解完整流程</a>
+        <div class="ec-shareLine"><span>SHARE</span><span>LINE · FB · COPY</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="event-body" id="detail">
+  <div class="container">
+    <div class="eb-grid">
+      <div>
+        <div class="eb-section">
+          <h2>節氣的能量召喚</h2>
+          <span class="en">Why Spring Equinox · 為什麼選擇春分</span>
+          <p>春分，是一年之中陰陽最為均等的節點 —— 晝夜各半、寒暑相當。在「極心流」的視角中，這是天地能量場最易共振的「磁化時刻」。</p>
+          <p>羅老師將藉此節氣的天然節奏，帶領學員進行為期一日的深度淨化與重置。我們不僅在物理層面清理冬日積累的滯氣，更在能量層面對齊未來一年的軸線方向。</p>
+          <p>這不是一場靜態的講座 —— 而是一場「身體先知道」的整合性體驗。透過六個段落的引導，您將親身走過從「掃描」到「定軸」、從「打通」到「點火」、最終回到「合一」的完整循環。</p>
+        </div>
+
+        <div class="eb-section">
+          <h2>當日完整流程</h2>
+          <span class="en">Full Day Schedule · 六段節律</span>
+          <div class="schedule">
+            <div class="sch-item">
+              <div class="sch-time">10:00 — 10:30</div>
+              <h4>晨間入定 ・ 能量先察</h4>
+              <p>到場、報到，於工作室靜坐區進行個人能量基準掃描。羅老師將為每位學員留下當日的氣場記錄，作為晚間對照的依據。</p>
+            </div>
+            <div class="sch-item">
+              <div class="sch-time">10:30 — 12:00</div>
+              <h4>壹式 ・ 量子能量檢測</h4>
+              <p>透過手部觸感與遠距感應，建立屬於您的個人能量地圖。羅老師將親自為每位學員進行一對一的初步檢測。</p>
+            </div>
+            <div class="sch-item">
+              <div class="sch-time">12:00 — 13:30</div>
+              <h4>素食午膳 ・ 五感淨化</h4>
+              <p>由「極心流」合作的小農時令蔬食套餐，搭配特調節氣花茶。用餐過程中保持靜默，是一段「吃進春天」的儀式。</p>
+            </div>
+            <div class="sch-item">
+              <div class="sch-time">13:30 — 15:00</div>
+              <h4>貳・參式 ・ 軸線校準與經絡疏通</h4>
+              <p>分組進行身體軸線整合，並進入十二經絡的能量疏導。羅老師會逐一指導每位學員找到屬於自己的「中正之軸」。</p>
+            </div>
+            <div class="sch-item">
+              <div class="sch-time">15:00 — 16:00</div>
+              <h4>肆・伍式 ・ 七輪共振與心火重生</h4>
+              <p>進入更深層的能量重組，啟動七輪平衡與內在心火的點燃。這是一日課程中能量密度最高的段落。</p>
+            </div>
+            <div class="sch-item">
+              <div class="sch-time">16:00 — 17:00</div>
+              <h4>陸式 ・ 整合與居家練習地圖</h4>
+              <p>圓滿收功、能量再次掃描比對。每位學員將獲得一份手寫的「個人能量處方箋」，包含未來一個月的居家練習建議。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="eb-section">
+          <h2>適合對象</h2>
+          <span class="en">Who is this for</span>
+          <ul style="list-style:none;">
+            <li style="padding:14px 0 14px 28px;border-top:1px dashed var(--line);position:relative;color:var(--ink-soft);font-size:14px;line-height:1.85;">
+              <span style="position:absolute;left:8px;top:24px;width:6px;height:6px;background:var(--gold);transform:rotate(45deg);"></span>
+              首次接觸極心流體系，希望在一日之內完整體驗六階段精華者
+            </li>
+            <li style="padding:14px 0 14px 28px;border-top:1px dashed var(--line);position:relative;color:var(--ink-soft);font-size:14px;line-height:1.85;">
+              <span style="position:absolute;left:8px;top:24px;width:6px;height:6px;background:var(--gold);transform:rotate(45deg);"></span>
+              長期在都市中感到能量耗竭、需要在節氣轉換點進行深度重置者
+            </li>
+            <li style="padding:14px 0 14px 28px;border-top:1px dashed var(--line);position:relative;color:var(--ink-soft);font-size:14px;line-height:1.85;">
+              <span style="position:absolute;left:8px;top:24px;width:6px;height:6px;background:var(--gold);transform:rotate(45deg);"></span>
+              已是長期學員，希望在春分節氣與其他學員一同進行群體共振者
+            </li>
+            <li style="padding:14px 0 14px 28px;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);position:relative;color:var(--ink-soft);font-size:14px;line-height:1.85;">
+              <span style="position:absolute;left:8px;top:24px;width:6px;height:6px;background:var(--gold);transform:rotate(45deg);"></span>
+              對東方節氣文化有興趣，並願意以開放心態進入身心整合練習者
+            </li>
+          </ul>
+        </div>
+
+        <div class="instructor-block">
+          <div class="ib-avatar">羅</div>
+          <div>
+            <h5>羅紹綸 老師</h5>
+            <span class="ib-tag">FOUNDING MASTER</span>
+            <p>融合古法武學、中醫經絡與量子能量學二十餘年，極心流能量學體系創辦人。本次工作坊由羅老師全程親自帶領，無第三方助教代行。</p>
+          </div>
+        </div>
+
+        <div class="eb-section">
+          <h2>建議攜帶物品</h2>
+          <span class="en">What to bring</span>
+          <div class="bring-list">
+            <div class="b-cell"><strong>寬鬆衣物</strong>純棉、亞麻等天然材質為佳，方便進行身體導引。</div>
+            <div class="b-cell"><strong>個人水杯</strong>工作室提供溫熱花茶，請自備可重複使用的水具。</div>
+            <div class="b-cell"><strong>筆記本與筆</strong>羅老師會為您留下手寫處方箋，建議自備本子記錄當日感受。</div>
+            <div class="b-cell"><strong>開放的心</strong>不必預先研讀任何理論，準備好親身感受即可。</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="eb-side">
+        <div class="side-card">
+          <h5>場地資訊</h5>
+          <div class="map-block"></div>
+          <div class="info-row"><span>地址</span><strong>台北市大安區</strong></div>
+          <div class="info-row"><span>捷運</span><strong>大安森林公園站・步行 6 分鐘</strong></div>
+          <div class="info-row"><span>停車</span><strong>鄰近付費停車場</strong></div>
+          <a href="#" style="display:block;text-align:center;padding:10px;margin-top:12px;border:1px solid var(--ink);font-size:12px;letter-spacing:0.16em;color:var(--ink);">查看 Google Maps →</a>
+        </div>
+
+        <div class="side-card">
+          <h5>退費政策</h5>
+          <div class="info-row"><span>14 日前取消</span><strong>全額退費</strong></div>
+          <div class="info-row"><span>7 日前取消</span><strong>退費 70%</strong></div>
+          <div class="info-row"><span>3 日前取消</span><strong>退費 50%</strong></div>
+          <div class="info-row"><span>3 日內取消</span><strong>不予退費</strong></div>
+          <p style="font-size:12px;color:var(--ink-mute);margin-top:12px;line-height:1.7;font-style:italic;">能量場域的籌備需要提前準備，敬請珍惜每一席名額。</p>
+        </div>
+
+        <div class="side-card">
+          <h5>常見問題</h5>
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--ink);font-family:var(--serif-tc);font-weight:500;">Q. 完全沒有經驗可以參加嗎？</strong><br>當然可以，工作坊本身就是為初學者設計。</p>
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.85;margin-bottom:10px;"><strong style="color:var(--ink);font-family:var(--serif-tc);font-weight:500;">Q. 有任何身體限制嗎？</strong><br>所有導引皆為溫和節奏，孕婦及術後恢復期請事先告知。</p>
+          <a href="faq.html" style="display:block;margin-top:14px;font-size:12px;color:var(--cinnabar);letter-spacing:0.14em;">查看完整 Q&A →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="other-events">
+  <div class="container">
+    <h3 style="font-family:var(--serif-tc);font-weight:500;font-size:24px;letter-spacing:0.12em;color:var(--ink);margin-bottom:8px;">近期其他活動</h3>
+    <p style="font-family:var(--serif-en);font-style:italic;color:var(--gold-deep);font-size:14px;letter-spacing:0.1em;margin-bottom:32px;">Upcoming Events</p>
+    <div class="oe-grid">
+      <a href="event.html" class="oe-card">
+        <div class="oe-date">2026.05.05 ・ 立夏</div>
+        <h5>立夏點火・心火重生工作坊</h5>
+        <p>進入夏季能量場前的心火校準，由羅老師帶領一日的內在點火儀式。</p>
+        <div class="oe-meta"><span>限額 12 名</span><span>NT$ 5,200</span></div>
+      </a>
+      <a href="event.html" class="oe-card">
+        <div class="oe-date">2026.06.21 ・ 夏至</div>
+        <h5>夏至深度・三日內觀靜修</h5>
+        <p>三日完整閉關，無手機、無外語，深度進入個人能量整合的轉化期。</p>
+        <div class="oe-meta"><span>限額 8 名</span><span>NT$ 26,800</span></div>
+      </a>
+      <a href="event.html" class="oe-card">
+        <div class="oe-date">2026.04.05 ・ 清明</div>
+        <h5>清明追溯・家族能量共振</h5>
+        <p>探索家族能量場域對個人的影響，並進行三代之內的能量整合儀式。</p>
+        <div class="oe-meta"><span>限額 10 名</span><span>NT$ 6,800</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div data-mount="footer"></div>
+<script src="assets/js/partials.js"></script>
+<script src="assets/js/i18n.js"></script>
+</body>
+</html>

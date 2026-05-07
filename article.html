@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>當代都市人的能量耗竭：為什麼我們需要重啟身體的共振場 ｜ 極心流</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+.crumb { font-family: var(--serif-en); font-style: italic; font-size: 13px; color: var(--ink-mute); letter-spacing: 0.18em; padding: 110px 0 18px; }
+.crumb a { color: var(--ink-mute); }
+
+.article-hero { background: var(--paper-warm); padding-bottom: 60px; }
+.ah-meta {
+  max-width: 720px; margin: 0 auto;
+  text-align: center;
+}
+.ah-cat {
+  display: inline-block;
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--cinnabar); font-size: 13px; letter-spacing: 0.22em;
+  text-transform: uppercase; margin-bottom: 16px;
+}
+.ah-cat::before, .ah-cat::after { content: '— '; opacity: 0.5; }
+.ah-cat::after { content: ' —'; }
+
+.article-hero h1 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: clamp(30px, 3.6vw, 46px); letter-spacing: 0.06em;
+  color: var(--ink); line-height: 1.5; margin-bottom: 22px;
+}
+.ah-byline {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 13px; color: var(--ink-soft);
+}
+.ah-byline .by-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(160deg, #efe5cc, #c9a96a);
+  display: grid; place-items: center;
+  font-family: var(--serif-tc); font-size: 16px; color: rgba(43,42,38,0.85);
+}
+.ah-byline strong { color: var(--ink); font-weight: 500; }
+.ah-byline span.dot { width: 3px; height: 3px; background: var(--ink-mute); border-radius: 50%; }
+.ah-byline em { font-style: italic; font-family: var(--serif-en); color: var(--gold-deep); letter-spacing: 0.1em; }
+
+.ah-cover {
+  margin-top: 48px;
+  aspect-ratio: 16/8;
+  background: linear-gradient(135deg, #1f1e1c 0%, #3a3933 50%, #5a4a32 100%);
+  position: relative; overflow: hidden;
+  display: grid; place-items: center;
+}
+.ah-cover::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(50% 70% at 70% 30%, rgba(201,169,106,0.3), transparent 60%),
+    radial-gradient(40% 50% at 25% 75%, rgba(164,77,58,0.2), transparent 60%);
+}
+.ah-cover .cover-glyph {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 200px; color: rgba(245,241,232,0.16);
+  letter-spacing: 0; position: relative; z-index: 1;
+}
+
+/* Article body layout */
+.article-body { background: var(--paper); padding: 60px 0 80px; }
+.ab-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  gap: 48px; align-items: start;
+  max-width: 1200px; margin: 0 auto;
+}
+@media (max-width: 1000px) { .ab-grid { grid-template-columns: 1fr; gap: 32px; max-width: 720px; } .ab-toc, .ab-share { display: none; } }
+
+.ab-toc {
+  position: sticky; top: 90px;
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+}
+.ab-toc .toc-label {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; margin-bottom: 14px;
+}
+.ab-toc ul { list-style: none; }
+.ab-toc ul li { margin-bottom: 12px; }
+.ab-toc ul li a {
+  font-size: 13px; color: var(--ink-soft); line-height: 1.5;
+  display: block; padding: 4px 0;
+  transition: color .25s, padding-left .25s;
+}
+.ab-toc ul li a:hover, .ab-toc ul li a.active { color: var(--cinnabar); padding-left: 6px; }
+
+.ab-share {
+  position: sticky; top: 90px;
+  text-align: center;
+}
+.ab-share .share-label {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; margin-bottom: 16px;
+}
+.ab-share a {
+  display: block; width: 40px; height: 40px;
+  margin: 0 auto 10px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--ink-soft); font-size: 13px;
+  transition: all .25s var(--ease);
+}
+.ab-share a:hover { border-color: var(--cinnabar); color: var(--cinnabar); }
+
+/* Article main content typography */
+.article-content {
+  max-width: 720px;
+  font-family: var(--serif-tc);
+}
+.article-content > p,
+.article-content > h2,
+.article-content > h3,
+.article-content > blockquote,
+.article-content > ul,
+.article-content > .pull-quote,
+.article-content > .figure,
+.article-content > .callout {
+  font-family: var(--serif-tc); font-weight: 300;
+}
+.article-content > .lede {
+  font-size: 18px; color: var(--ink); line-height: 2;
+  font-weight: 400;
+  padding-bottom: 24px; border-bottom: 1px solid var(--line); margin-bottom: 32px;
+  font-style: italic;
+}
+.article-content p {
+  font-size: 17px; color: var(--ink-soft); line-height: 2.05;
+  margin-bottom: 22px; text-wrap: pretty;
+}
+.article-content p::first-letter { /* leave default */ }
+.article-content h2 {
+  font-size: 26px; color: var(--ink); font-weight: 500;
+  letter-spacing: 0.06em; margin: 48px 0 14px; line-height: 1.4;
+}
+.article-content h2 .ord {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--cinnabar); font-size: 18px;
+  letter-spacing: 0.12em; display: block; margin-bottom: 6px;
+}
+.article-content h3 {
+  font-size: 19px; color: var(--ink); font-weight: 500;
+  letter-spacing: 0.06em; margin: 32px 0 10px;
+}
+
+.pull-quote {
+  margin: 40px -20px;
+  padding: 36px 32px;
+  border-top: 1px solid var(--cinnabar);
+  border-bottom: 1px solid var(--cinnabar);
+  text-align: center;
+}
+.pull-quote q {
+  font-family: var(--serif-tc); font-weight: 400;
+  font-size: 22px; color: var(--ink);
+  line-height: 1.7; letter-spacing: 0.04em;
+  quotes: '「' '」';
+}
+.pull-quote q::before, .pull-quote q::after { color: var(--cinnabar); font-size: 24px; }
+.pull-quote .pq-cite {
+  display: block; margin-top: 14px;
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 13px;
+  letter-spacing: 0.16em;
+}
+
+.figure {
+  margin: 36px 0;
+}
+.figure .fg-img {
+  aspect-ratio: 16/9;
+  background: linear-gradient(160deg, #efe5cc, #c9a96a);
+  display: grid; place-items: center;
+  font-family: var(--serif-tc); font-size: 80px; color: rgba(43,42,38,0.4);
+}
+.figure .fg-cap {
+  margin-top: 10px;
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--ink-mute); font-size: 13px;
+  letter-spacing: 0.04em; text-align: center;
+}
+
+.callout {
+  margin: 32px 0;
+  padding: 26px 28px;
+  background: var(--paper-warm);
+  border-left: 3px solid var(--gold);
+}
+.callout .co-label {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 12px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  margin-bottom: 10px; display: block;
+}
+.callout p { color: var(--ink); font-size: 15px; line-height: 1.95; margin-bottom: 0; }
+
+.article-content ul {
+  list-style: none; margin: 18px 0 24px; padding-left: 0;
+}
+.article-content ul li {
+  position: relative;
+  padding: 14px 0 14px 32px;
+  border-top: 1px dashed var(--line);
+  font-size: 16px; color: var(--ink-soft); line-height: 1.85;
+}
+.article-content ul li:last-child { border-bottom: 1px dashed var(--line); }
+.article-content ul li::before {
+  content: ''; position: absolute;
+  left: 8px; top: 24px; width: 7px; height: 7px;
+  background: var(--cinnabar); transform: rotate(45deg);
+}
+.article-content ul li strong { color: var(--ink); font-weight: 500; }
+
+.article-end {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  display: flex; align-items: center; gap: 16px;
+}
+.article-end .seal-mini {
+  width: 52px; height: 52px; background: var(--cinnabar);
+  display: grid; place-items: center;
+  color: var(--paper); font-family: var(--serif-tc); font-weight: 500;
+  font-size: 22px;
+}
+.article-end .end-text { color: var(--ink-soft); font-size: 14px; line-height: 1.7; }
+.article-end .end-text strong { color: var(--ink); font-weight: 500; display: block; margin-bottom: 4px; }
+
+/* Author bio */
+.author-bio {
+  max-width: 720px; margin: 60px auto 0;
+  padding: 32px;
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  display: grid; grid-template-columns: 80px 1fr; gap: 22px; align-items: center;
+}
+.author-bio .ab-avatar {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: linear-gradient(160deg, #efe5cc, #c9a96a);
+  display: grid; place-items: center;
+  font-family: var(--serif-tc); font-size: 28px; color: rgba(43,42,38,0.85);
+}
+.author-bio h4 { font-family: var(--serif-tc); font-weight: 500; font-size: 18px; color: var(--ink); margin-bottom: 4px; letter-spacing: 0.06em; }
+.author-bio .ab-tag { font-family: var(--serif-en); font-style: italic; color: var(--gold-deep); font-size: 12px; letter-spacing: 0.16em; margin-bottom: 8px; display: block; }
+.author-bio p { font-size: 13px; color: var(--ink-soft); line-height: 1.75; }
+
+/* Related articles */
+.related-articles { background: var(--paper-warm); padding: 60px 0; border-top: 1px solid var(--line); }
+.ra-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+@media (max-width: 800px) { .ra-grid { grid-template-columns: 1fr; } }
+.ra-card { background: var(--ivory); border: 1px solid var(--line); padding: 0; transition: all .35s var(--ease); }
+.ra-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px -16px rgba(43,42,38,0.18); }
+.ra-card .ra-img { aspect-ratio: 16/9; background: linear-gradient(160deg, #d6e6e1, #b8d2c9); display: grid; place-items: center; font-family: var(--serif-tc); font-size: 64px; color: rgba(43,42,38,0.4); }
+.ra-card .ra-body { padding: 22px; }
+.ra-card .ra-cat { font-family: var(--serif-en); font-style: italic; color: var(--cinnabar); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+.ra-card h5 { font-family: var(--serif-tc); font-weight: 500; font-size: 17px; color: var(--ink); margin-bottom: 8px; letter-spacing: 0.04em; line-height: 1.5; }
+.ra-card p { font-size: 13px; color: var(--ink-soft); line-height: 1.75; }
+.ra-card .ra-meta { margin-top: 14px; font-size: 12px; color: var(--ink-mute); font-family: var(--serif-en); font-style: italic; letter-spacing: 0.1em; }
+
+/* Newsletter */
+.article-cta {
+  background: var(--ink); color: var(--paper);
+  padding: 70px 0; text-align: center;
+}
+.article-cta h2 { font-family: var(--serif-tc); font-weight: 500; color: var(--paper); font-size: 26px; margin-bottom: 12px; letter-spacing: 0.08em; }
+.article-cta p { color: rgba(245,241,232,0.7); font-size: 15px; max-width: 540px; margin: 0 auto 24px; line-height: 1.85; }
+</style>
+</head>
+<body class="lang-zh">
+<div data-mount="nav"></div>
+
+<div class="container">
+  <div class="crumb"><a href="index.html">首頁</a> / <a href="index.html#articles">文章知識庫</a> / <span>當代都市人的能量耗竭</span></div>
+</div>
+
+<section class="article-hero">
+  <div class="container">
+    <div class="ah-meta">
+      <span class="ah-cat">能量哲學 · Energy Philosophy</span>
+      <h1>當代都市人的能量耗竭：<br>為什麼我們需要重啟身體的共振場</h1>
+      <div class="ah-byline">
+        <div class="by-avatar">羅</div>
+        <span><strong>羅紹綸 老師</strong></span>
+        <span class="dot"></span>
+        <em>2026.01.15</em>
+        <span class="dot"></span>
+        <span>閱讀時間 ・ 8 分鐘</span>
+      </div>
+      <div class="ah-cover">
+        <span class="cover-glyph">息</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="article-body">
+  <div class="container">
+    <div class="ab-grid">
+      <aside class="ab-toc">
+        <div class="toc-label">In this essay</div>
+        <ul>
+          <li><a href="#sec1" class="active">壹 ・ 看不見的耗竭</a></li>
+          <li><a href="#sec2">貳 ・ 共振場的脫軌</a></li>
+          <li><a href="#sec3">參 ・ 從修復到重建</a></li>
+          <li><a href="#sec4">肆 ・ 三個立即可行的練習</a></li>
+          <li><a href="#sec5">伍 ・ 給當下的你</a></li>
+        </ul>
+      </aside>
+
+      <article class="article-content">
+        <p class="lede">城市的步調，並不是讓我們更快樂的節奏。當行事曆塞滿、提醒接連響起，我們以為自己「很忙」—— 但事實上，我們是在一個又一個的高頻雜訊裡，慢慢失去了與自己身體的對話。</p>
+
+        <h2 id="sec1"><span class="ord">壹 ・ Section One</span>看不見的耗竭，比加班更傷</h2>
+        <p>我在臨床二十餘年的觀察中發現，現代人最常出現的不適，並非器官層面的病變，而是「能量場」層面的混亂。睡了八小時依然疲倦、做完瑜伽當下放鬆但隔日又緊繃 —— 這些都不是肌肉的問題，而是身體共振場已經偏離了原本的軸線。</p>
+        <p>古人說「氣不順則百病生」。今天我們可以從量子物理的角度重新理解這句話：當細胞之間的振動頻率失去同步，能量便無法在身體中順暢流動。這比任何外在的疲累都更深層、更難察覺。</p>
+
+        <div class="pull-quote">
+          <q>真正讓現代人疲倦的，不是工作，<br>而是身體共振場的「失語」。</q>
+          <span class="pq-cite">— 羅紹綸老師</span>
+        </div>
+
+        <h2 id="sec2"><span class="ord">貳 ・ Section Two</span>共振場的脫軌：三個常見訊號</h2>
+        <p>在「極心流」的視角中，能量耗竭並非突然發生，而是經年累月的訊號累積。如果你發現自己最近出現以下三種狀態，那很可能是身體共振場已經在向你發出求救：</p>
+        <ul>
+          <li><strong>第一種：身體在，心思卻不在</strong>明明坐在辦公桌前，卻無法集中精神。會議結束後，回想不起剛剛說了什麼。這是「軸線飄移」的典型表現。</li>
+          <li><strong>第二種：休息無感</strong>放假兩天、出國一週，回來依舊感到耗盡。代表身體已經失去了「自我修復」的本能。</li>
+          <li><strong>第三種：對外界訊息過度敏感</strong>看一則新聞就心情低落、聽朋友抱怨就感到沉重 —— 你的能量場已沒有了正常的邊界與緩衝層。</li>
+        </ul>
+
+        <div class="figure">
+          <div class="fg-img">場</div>
+          <div class="fg-cap">圖：能量場的三層結構 —— 物理身、情緒身、能量身</div>
+        </div>
+
+        <h2 id="sec3"><span class="ord">參 ・ Section Three</span>從修復到重建：身體會自己回家</h2>
+        <p>許多人問我：「老師，我需要做很多治療嗎？」答案恰恰相反。</p>
+        <p>身體本身擁有強大的「自癒力」。我們所做的，不是去「治療」它，而是創造一個讓它「想起自己」的環境。當外在的雜訊被剝除、當身體獲得了一個安靜的共振場，它會自己找回原本的軸線。</p>
+        <p>「極心流」的六階段體系，從第一式的「能量檢測」到第六式的「歸元合一」，本質上做的就是這件事：用一個更乾淨、更穩定的頻率，引導身體想起自己原本的樣子。</p>
+
+        <div class="callout">
+          <span class="co-label">Practitioner's Note</span>
+          <p>療癒的本質不是「加上什麼」，而是「拿掉什麼」。當我們停止為身體添加更多的雜訊與壓力，它會以遠超乎你想像的速度回到平衡。</p>
+        </div>
+
+        <h2 id="sec4"><span class="ord">肆 ・ Section Four</span>三個立即可行的練習</h2>
+        <p>如果你還沒有機會親自走進工作室，這裡有三個我最常推薦給初學者的居家練習，請挑選最適合自己的時段嘗試：</p>
+
+        <h3>一、晨間三分鐘的「靜坐定軸」</h3>
+        <p>起床後不滑手機、不看通知。在床邊或窗邊靜坐三分鐘，專注於呼吸的進出。這短短三分鐘，能為一整天的能量場定下穩定的基準線。</p>
+
+        <h3>二、午後的「五感掃描」</h3>
+        <p>每天下午選一個固定的時間，停下手邊的工作，依序感受：眼前看到什麼、耳朵聽到什麼、鼻子聞到什麼、皮膚感覺到什麼、嘴裡有什麼味道。這個練習能將你從思緒的迴圈中拉回身體。</p>
+
+        <h3>三、睡前的「卸載儀式」</h3>
+        <p>關燈後，閉上眼睛，依序「卸下」當天接收到的訊息 —— 從工作會議、社群動態，到與人對話的內容。想像它們像衣服一樣一層層脫去，讓身體進入睡眠時是「空的」。</p>
+
+        <h2 id="sec5"><span class="ord">伍 ・ Section Five</span>給當下的你</h2>
+        <p>如果你閱讀到這裡，那很可能你的身體已經在以某種方式提醒你 —— 該停下來了。我們不需要追求極致的療癒、也不需要立刻變成另一個人。</p>
+        <p>所有的轉化，都始於一個最簡單的決定：<strong style="color:var(--ink);">願意，給自己一段不被打擾的時間。</strong></p>
+        <p>不論你選擇從一個三分鐘的靜坐開始，還是預約一次完整的能量檢測 —— 重要的是，你願意開始。身體會記得，自己原本是什麼樣子的。</p>
+
+        <div class="article-end">
+          <div class="seal-mini">心</div>
+          <div class="end-text">
+            <strong>本文由羅紹綸老師親自撰寫</strong>
+            未經授權，請勿轉載。如欲引用，敬請註明出處與作者。
+          </div>
+        </div>
+      </article>
+
+      <aside class="ab-share">
+        <div class="share-label">Share</div>
+        <a href="#" title="LINE">L</a>
+        <a href="#" title="Facebook">f</a>
+        <a href="#" title="Copy">⎘</a>
+        <a href="#" title="Print">⎙</a>
+      </aside>
+    </div>
+
+    <div class="author-bio">
+      <div class="ab-avatar">羅</div>
+      <div>
+        <h4>羅紹綸 老師</h4>
+        <span class="ab-tag">FOUNDING MASTER</span>
+        <p>極心流能量學體系創辦人。融合古法武學、中醫經絡與量子能量學二十餘年，現於台北帶領一對一個案與節氣工作坊。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-articles">
+  <div class="container">
+    <h3 style="font-family:var(--serif-tc);font-weight:500;font-size:24px;letter-spacing:0.12em;color:var(--ink);margin-bottom:8px;">延伸閱讀</h3>
+    <p style="font-family:var(--serif-en);font-style:italic;color:var(--gold-deep);font-size:14px;letter-spacing:0.1em;margin-bottom:32px;">Continue Reading</p>
+    <div class="ra-grid">
+      <a href="article.html" class="ra-card">
+        <div class="ra-img">經</div>
+        <div class="ra-body">
+          <span class="ra-cat">中醫經絡 · TCM</span>
+          <h5>十二經絡是身體的高速公路：你今天讓哪一條塞車了？</h5>
+          <p>從中醫經絡的角度，理解日常生活中常被忽略的能量阻塞點。</p>
+          <div class="ra-meta">2026.01.08 ・ 6 min read</div>
+        </div>
+      </a>
+      <a href="article.html" class="ra-card">
+        <div class="ra-img" style="background: linear-gradient(160deg, #f0d6cf, #d9a597);">流</div>
+        <div class="ra-body">
+          <span class="ra-cat">心流哲學 · Flow</span>
+          <h5>豐盛不是「擁有更多」，而是「流動順暢」</h5>
+          <p>以「極心流」的觀點，重新定義何謂真正的豐盛與富足。</p>
+          <div class="ra-meta">2025.12.22 ・ 7 min read</div>
+        </div>
+      </a>
+      <a href="article.html" class="ra-card">
+        <div class="ra-img" style="background: linear-gradient(160deg, #efe5cc, #c9a96a);">節</div>
+        <div class="ra-body">
+          <span class="ra-cat">節氣養生 · Seasons</span>
+          <h5>跟著節氣調身：冬藏不只是養生，更是能量儲蓄</h5>
+          <p>進入冬季的能量場校準，從飲食、作息到內在儀式的全方位指南。</p>
+          <div class="ra-meta">2025.12.07 ・ 9 min read</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="article-cta">
+  <div class="container">
+    <h2>讓身體想起，自己原本的樣子</h2>
+    <p>若您正感受到能量場的失衡，歡迎預約一次免費的初步量子能量檢測。一切從一段不被打擾的時間開始。</p>
+    <a href="booking.html" class="btn btn-primary" style="background:var(--gold-deep);border-color:var(--gold-deep);color:var(--paper);">預約量子檢測 →</a>
+  </div>
+</section>
+
+<div data-mount="footer"></div>
+<script src="assets/js/partials.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script>
+// TOC active state on scroll
+const headings = document.querySelectorAll('.article-content h2');
+const tocLinks = document.querySelectorAll('.ab-toc a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  headings.forEach(h => {
+    if (window.scrollY > h.offsetTop - 120) current = h.id;
+  });
+  tocLinks.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>能量商品 ｜ 極心流能量工作室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+.crumb { font-family: var(--serif-en); font-style: italic; font-size: 13px; color: var(--ink-mute); letter-spacing: 0.18em; margin-bottom: 18px; padding-top: 110px; }
+.crumb a { color: var(--ink-mute); }
+
+.product-hero { padding: 0 0 80px; background: var(--paper-warm); }
+.ph-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+@media (max-width: 900px) { .ph-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.product-img {
+  aspect-ratio: 4/5;
+  background: linear-gradient(160deg, #efe5cc 0%, #c9a96a 60%, #a88440 100%);
+  position: relative;
+  overflow: hidden;
+  display: grid; place-items: center;
+}
+.product-img::before {
+  content: '極';
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 280px; color: rgba(43,42,38,0.85);
+  letter-spacing: 0;
+}
+.product-img::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(60% 50% at 30% 30%, rgba(255,250,240,0.4), transparent 70%);
+}
+.product-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+.product-thumb { aspect-ratio: 1; background: linear-gradient(160deg, #efe5cc, #c9a96a); border: 1px solid var(--line); cursor: pointer; opacity: 0.65; transition: opacity .25s; }
+.product-thumb:hover, .product-thumb.active { opacity: 1; outline: 2px solid var(--cinnabar); outline-offset: -2px; }
+
+.ph-info .label-en {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 13px;
+  letter-spacing: 0.2em; margin-bottom: 12px; text-transform: uppercase;
+}
+.ph-info h1 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: clamp(32px, 3.5vw, 44px); letter-spacing: 0.1em;
+  color: var(--ink); margin-bottom: 8px; line-height: 1.3;
+}
+.ph-info .subname {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--ink-mute); font-size: 18px; letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+
+.price-block {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0; margin-bottom: 28px;
+}
+.price-row-main {
+  display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px;
+}
+.price-now {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 42px; color: var(--cinnabar); font-weight: 500;
+}
+.price-was {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 18px; color: var(--ink-mute); text-decoration: line-through;
+}
+.price-tag {
+  display: inline-block;
+  background: var(--cinnabar); color: var(--paper);
+  font-size: 11px; letter-spacing: 0.18em;
+  padding: 3px 10px; font-family: var(--serif-tc); margin-left: 8px;
+}
+.price-note { font-size: 13px; color: var(--ink-soft); }
+
+.ph-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; }
+.meta-item {
+  padding: 12px 14px;
+  background: var(--ivory); border: 1px solid var(--line-soft);
+}
+.meta-item .k {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 11px; color: var(--gold-deep); letter-spacing: 0.16em;
+  text-transform: uppercase; margin-bottom: 4px;
+}
+.meta-item .v { font-size: 13px; color: var(--ink); font-weight: 500; }
+
+.option-group { margin-bottom: 24px; }
+.option-group .og-label {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 14px; color: var(--ink); letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+.option-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+.option-pill {
+  padding: 10px 18px;
+  border: 1px solid var(--line); background: var(--paper);
+  font-size: 13px; color: var(--ink-soft);
+  cursor: pointer; transition: all .25s var(--ease);
+  font-family: var(--sans-tc);
+}
+.option-pill:hover { border-color: var(--gold); }
+.option-pill.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.qty-and-cta { display: grid; grid-template-columns: auto 1fr; gap: 14px; margin-bottom: 14px; }
+.qty-stepper {
+  display: inline-flex; align-items: center;
+  border: 1px solid var(--line);
+}
+.qty-stepper button {
+  width: 44px; height: 44px;
+  background: transparent; border: none; font-size: 18px;
+  color: var(--ink); cursor: pointer;
+  font-family: var(--serif-tc);
+}
+.qty-stepper button:hover { background: var(--ivory); }
+.qty-stepper input {
+  width: 50px; height: 44px; border: none;
+  text-align: center; font-family: var(--serif-en);
+  font-size: 16px; color: var(--ink); background: transparent;
+}
+.qty-stepper input::-webkit-outer-spin-button, .qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.cta-row { display: flex; gap: 12px; }
+.cta-row .btn { flex: 1; }
+
+.assurance { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-top: 24px; border-top: 1px dashed var(--line); }
+.assurance .a-cell { text-align: center; font-size: 12px; color: var(--ink-soft); }
+.assurance .a-cell .a-num {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 22px; color: var(--cinnabar); margin-bottom: 4px;
+}
+
+/* Tabs */
+.detail-tabs {
+  background: var(--paper); border-top: 1px solid var(--line);
+}
+.tabs-bar {
+  display: flex; gap: 0;
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 60px; background: var(--paper); z-index: 5;
+}
+.tab-btn {
+  padding: 22px 28px;
+  background: transparent; border: none;
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 15px; color: var(--ink-soft); letter-spacing: 0.12em;
+  cursor: pointer; border-bottom: 2px solid transparent;
+  transition: all .25s var(--ease);
+}
+.tab-btn:hover { color: var(--ink); }
+.tab-btn.active { color: var(--cinnabar); border-bottom-color: var(--cinnabar); }
+
+.tab-content { padding: 60px 0 80px; display: none; }
+.tab-content.active { display: block; }
+
+.story-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; max-width: 980px; margin: 0 auto; }
+@media (max-width: 800px) { .story-grid { grid-template-columns: 1fr; gap: 32px; } }
+.story-grid h3 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 28px; letter-spacing: 0.1em; line-height: 1.4;
+  color: var(--ink); margin-bottom: 14px;
+}
+.story-grid .gold-en {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 16px;
+  letter-spacing: 0.06em; margin-bottom: 20px; display: block;
+}
+.story-grid p { color: var(--ink-soft); font-size: 15px; line-height: 2; margin-bottom: 16px; }
+
+/* Spec table */
+.spec-list { max-width: 800px; margin: 0 auto; }
+.spec-row {
+  display: grid; grid-template-columns: 220px 1fr;
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+  gap: 24px;
+}
+.spec-row .sl-key {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 14px;
+  letter-spacing: 0.14em; padding-top: 2px;
+}
+.spec-row .sl-key .sl-tc { display: block; font-family: var(--serif-tc); font-style: normal; color: var(--ink); font-size: 15px; letter-spacing: 0.1em; margin-top: 4px; }
+.spec-row .sl-val { color: var(--ink-soft); font-size: 15px; line-height: 1.85; }
+
+/* Process steps */
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); max-width: 1000px; margin: 0 auto; }
+@media (max-width: 800px) { .process-grid { grid-template-columns: 1fr 1fr; } }
+.process-cell { background: var(--ivory); padding: 32px 24px; text-align: center; }
+.process-cell .pn {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 32px; color: var(--gold-deep); margin-bottom: 12px;
+}
+.process-cell h5 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 16px; color: var(--ink); margin-bottom: 8px; letter-spacing: 0.1em;
+}
+.process-cell p { font-size: 13px; color: var(--ink-soft); line-height: 1.75; }
+
+/* FAQ inside */
+.pdetail-faq { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+  cursor: pointer;
+}
+.faq-item .q {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 16px; color: var(--ink); letter-spacing: 0.06em;
+}
+.faq-item .q::after { content: '+'; font-size: 22px; color: var(--cinnabar); transition: transform .3s; }
+.faq-item.open .q::after { transform: rotate(45deg); }
+.faq-item .a { display: none; padding-top: 14px; color: var(--ink-soft); font-size: 14px; line-height: 1.95; }
+.faq-item.open .a { display: block; }
+
+/* Reviews */
+.reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 980px; margin: 0 auto; }
+@media (max-width: 700px) { .reviews-grid { grid-template-columns: 1fr; } }
+.review-card { background: var(--ivory); border: 1px solid var(--line); padding: 28px; }
+.review-card .stars { color: var(--cinnabar); letter-spacing: 0.2em; margin-bottom: 8px; font-size: 14px; }
+.review-card .who {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--ink-mute); font-size: 12px; letter-spacing: 0.14em;
+  text-transform: uppercase; margin-bottom: 14px;
+}
+.review-card p { color: var(--ink-soft); font-size: 14px; line-height: 1.85; }
+
+/* Related */
+.related-products { background: var(--paper-warm); padding: 60px 0; border-top: 1px solid var(--line); }
+.rp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 800px) { .rp-grid { grid-template-columns: 1fr; } }
+.rp-card { background: var(--ivory); border: 1px solid var(--line); padding: 24px; transition: all .35s var(--ease); }
+.rp-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px -16px rgba(43,42,38,0.18); }
+.rp-card .rp-img { aspect-ratio: 1; background: linear-gradient(160deg, #efe5cc, #c9a96a); margin-bottom: 16px; display: grid; place-items: center; font-family: var(--serif-tc); font-size: 64px; color: rgba(43,42,38,0.7); }
+.rp-card h5 { font-family: var(--serif-tc); font-weight: 500; font-size: 16px; color: var(--ink); margin-bottom: 4px; letter-spacing: 0.08em; }
+.rp-card .rp-en { font-family: var(--serif-en); font-style: italic; color: var(--gold-deep); font-size: 12px; letter-spacing: 0.14em; margin-bottom: 10px; display: block; }
+.rp-card .rp-price { font-family: var(--serif-en); font-style: italic; font-size: 18px; color: var(--cinnabar); }
+</style>
+</head>
+<body class="lang-zh">
+
+<div data-mount="nav"></div>
+
+<div class="container">
+  <div class="crumb"><a href="index.html">首頁</a> / <a href="index.html#products">能量商品</a> / <span>極盛・財富磁化錢母</span></div>
+</div>
+
+<section class="product-hero">
+  <div class="container">
+    <div class="ph-grid">
+      <div>
+        <div class="product-img"></div>
+        <div class="product-thumbs">
+          <div class="product-thumb active"></div>
+          <div class="product-thumb" style="background: linear-gradient(160deg, #d6e6e1, #b8d2c9);"></div>
+          <div class="product-thumb" style="background: linear-gradient(160deg, #f0d6cf, #d9a597);"></div>
+          <div class="product-thumb" style="background: linear-gradient(160deg, #2b2a26, #5a584f);"></div>
+        </div>
+      </div>
+
+      <div class="ph-info">
+        <div class="label-en">JI-XIN TRINITY · ABUNDANCE</div>
+        <h1>極盛 ・ 財富磁化錢母</h1>
+        <div class="subname">Money Reiki Coin Set · 開光加持</div>
+
+        <div class="price-block">
+          <div class="price-row-main">
+            <span class="price-now">NT$ 6,800</span>
+            <span class="price-was">NT$ 8,160</span>
+            <span class="price-tag">年度方案 ・ 限量</span>
+          </div>
+          <div class="price-note">年繳特惠・等同享兩個月免費加持。包含一單位 NT$ 2,600 錢母（50元金幣 × 14、10元銀幣 × 190）+ 全年度能量導引。</div>
+        </div>
+
+        <div class="ph-meta">
+          <div class="meta-item">
+            <div class="k">Crafted by</div>
+            <div class="v">羅紹綸 老師親自加持</div>
+          </div>
+          <div class="meta-item">
+            <div class="k">Process Time</div>
+            <div class="v">能量導引 7-10 個工作日</div>
+          </div>
+          <div class="meta-item">
+            <div class="k">Edition</div>
+            <div class="v">每月限量 30 套</div>
+          </div>
+          <div class="meta-item">
+            <div class="k">Origin</div>
+            <div class="v">極心流能量工作室・台北</div>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <div class="og-label">能量方案</div>
+          <div class="option-pills">
+            <div class="option-pill">單月 NT$ 680</div>
+            <div class="option-pill">包季 NT$ 1,880</div>
+            <div class="option-pill active">年度 NT$ 6,800</div>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <div class="og-label">錢母單位數量</div>
+          <div class="option-pills">
+            <div class="option-pill active">1 單位 (NT$ 2,600)</div>
+            <div class="option-pill">2 單位 (NT$ 5,200)</div>
+            <div class="option-pill">3 單位 (NT$ 7,800)</div>
+            <div class="option-pill">客製洽詢</div>
+          </div>
+        </div>
+
+        <div class="qty-and-cta">
+          <div class="qty-stepper">
+            <button onclick="qtyAdj(-1)">−</button>
+            <input type="number" id="qty" value="1" min="1" max="9">
+            <button onclick="qtyAdj(1)">＋</button>
+          </div>
+          <div class="cta-row">
+            <a href="booking.html" class="btn btn-primary">立即預約結緣</a>
+            <a href="#story" class="btn btn-ghost">了解能量背景</a>
+          </div>
+        </div>
+
+        <div class="assurance">
+          <div class="a-cell"><div class="a-num">羅</div>羅老師親自加持</div>
+          <div class="a-cell"><div class="a-num">7+</div>七日能量養成期</div>
+          <div class="a-cell"><div class="a-num">∞</div>千百萬倍回流</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-tabs">
+  <div class="container">
+    <div class="tabs-bar">
+      <button class="tab-btn active" data-tab="story">能量故事</button>
+      <button class="tab-btn" data-tab="spec">產品規格</button>
+      <button class="tab-btn" data-tab="process">加持流程</button>
+      <button class="tab-btn" data-tab="faq">常見問題</button>
+      <button class="tab-btn" data-tab="reviews">使用見證</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="tab-content active" id="tab-story">
+      <div class="story-grid" id="story">
+        <div>
+          <div class="gold-en">The Philosophy</div>
+          <h3>金錢即流動的<br>愛與祝福</h3>
+        </div>
+        <div>
+          <p>在「極心流能量學」中，金錢本質上是一種純淨流動的能量。當我們清理了內在的匱乏與恐懼，財富便會如流水般自然匯聚成「心流」。</p>
+          <p>羅老師融合西方「金錢靈氣（Money Reiki）」、東方財施哲學與吸引力法則，為您的錢母進行三重磁化導引：</p>
+          <p><strong style="color:var(--ink);">一、清理匱乏枷鎖</strong>—— 針對個人能量場，清除潛意識中阻礙財富流動的限制性信念，解除負面的金錢契約。</p>
+          <p><strong style="color:var(--ink);">二、能量導引磁化</strong>—— 羅老師親自導引「黃財神」的無限豐盛、「藥師佛」的所願皆成，以及「金錢靈氣」的高頻能量，植入您所準備的錢母中。</p>
+          <p><strong style="color:var(--ink);">三、磁場吸引器</strong>—— 經過磁化的錢母將成為您身邊的財富吸引力中心，不僅在物質層面給予支持，更在心靈層面建立正確且慷慨的財富觀。</p>
+          <p style="margin-top:24px;padding:20px;background:var(--ivory);border-left:3px solid var(--cinnabar);font-style:italic;color:var(--ink);">當您將錢母消費出去，不僅是祝福商家的豐盛，更是啟動了一個「千百萬倍回流」的能量循環，讓財富在流動中如雪球般壯大，最終回歸自身。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-spec">
+      <div class="spec-list">
+        <div class="spec-row">
+          <div class="sl-key">Composition<span class="sl-tc">組成內容</span></div>
+          <div class="sl-val">每一單位包含：50 元硬幣 × 14 枚（NT$ 700）、10 元硬幣 × 190 枚（NT$ 1,900）。總額 NT$ 2,600 / 單位。</div>
+        </div>
+        <div class="spec-row">
+          <div class="sl-key">Symbolism<span class="sl-tc">象徵意涵</span></div>
+          <div class="sl-val">金銀比例源自古老易經吉數，金幣代表陽性能量與財富巔峰，銀幣象徵陰性能量與廣大流通。陰陽和諧成就豐盛之相。</div>
+        </div>
+        <div class="spec-row">
+          <div class="sl-key">Charging<span class="sl-tc">能量加持</span></div>
+          <div class="sl-val">由羅紹綸老師親自進行三重磁化儀式：黃財神導引、藥師佛祝福、金錢靈氣高頻校準。</div>
+        </div>
+        <div class="spec-row">
+          <div class="sl-key">Lead Time<span class="sl-tc">作業天數</span></div>
+          <div class="sl-val">能量養成期 7-10 個工作日。期間羅老師持續進行頻率穩定，不可催促或縮短。</div>
+        </div>
+        <div class="spec-row">
+          <div class="sl-key">Validity<span class="sl-tc">能量效期</span></div>
+          <div class="sl-val">能量基底永久存在，惟建議按方案進行月度／季度／年度的頻率維護以保最佳磁化狀態。</div>
+        </div>
+        <div class="spec-row">
+          <div class="sl-key">Storage<span class="sl-tc">收存方式</span></div>
+          <div class="sl-val">建議以紅色棉布或天然素材包裹，存放於皮夾、保險箱或財位。避免與電磁強場（手機、電器）長時間接觸。</div>
+        </div>
+        <div class="spec-row">
+          <div class="sl-key">Usage<span class="sl-tc">使用建議</span></div>
+          <div class="sl-val">可隨身攜帶部分錢幣作為「種子錢」進行佈施與消費，餘者作為財富磁鐵置於財位。詳細使用方法將於結緣時由顧問一對一說明。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-process">
+      <div class="process-grid">
+        <div class="process-cell">
+          <div class="pn">壹</div>
+          <h5>確認結緣</h5>
+          <p>選擇方案與單位數量，完成預約後將收到專屬訂單與作業排程。</p>
+        </div>
+        <div class="process-cell">
+          <div class="pn">貳</div>
+          <h5>能量先察</h5>
+          <p>羅老師遠距感應您的個人能量場，記錄當下的財富頻率基準。</p>
+        </div>
+        <div class="process-cell">
+          <div class="pn">參</div>
+          <h5>三重磁化</h5>
+          <p>連續七日進行黃財神、藥師佛、金錢靈氣三重能量導引儀式。</p>
+        </div>
+        <div class="process-cell">
+          <div class="pn">肆</div>
+          <h5>結緣交付</h5>
+          <p>由顧問一對一講解使用方式，並提供後續頻率維護日程。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-faq">
+      <div class="pdetail-faq">
+        <div class="faq-item">
+          <div class="q">錢母收到後可以使用嗎？</div>
+          <div class="a">可以，且鼓勵您將部分錢幣作為「種子錢」流通使用。每一次消費都是啟動「千百萬倍回流」能量循環的儀式。建議保留一部分作為「磁鐵核心」放置於財位，其餘可流動使用。</div>
+        </div>
+        <div class="faq-item">
+          <div class="q">需要自備硬幣嗎？</div>
+          <div class="a">是的。極心流的傳統認為，由個案親手準備的錢母，與其能量場有最深的連結。我們會於結緣時提供詳細清單與規格說明。若您不便準備，亦可洽詢由工作室代為備妥。</div>
+        </div>
+        <div class="faq-item">
+          <div class="q">能量加持需要多久？</div>
+          <div class="a">能量養成期為 7-10 個工作日。期間羅老師會進行三重磁化儀式並持續頻率穩定。此過程不可催促或縮短，以確保磁化品質。</div>
+        </div>
+        <div class="faq-item">
+          <div class="q">月度／季度／年度方案差異？</div>
+          <div class="a">月度方案為單一磁化加持（NT$ 680）；季度方案於 3 個月內持續維護頻率（NT$ 1,880）；年度方案則為全年度持續守護，等同享兩個月免費加持（NT$ 6,800）。長期方案建立財富慣性與深度共振。</div>
+        </div>
+        <div class="faq-item">
+          <div class="q">可否與其他能量物品同時使用？</div>
+          <div class="a">可以。極心流的能量設計溫和而開放，不會與其他正向能量物品（如水晶、護身符）相衝突，反而能形成互補的能量場。但建議避免與強烈電磁場（手機、電器）長時間接觸。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-reviews">
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="who">L 女士・科技業創辦人 · 2025.11</div>
+          <p>結緣三個月後最明顯的轉變是「決策的清明」。從前看到投資機會總是反覆糾結，磁化錢母結緣後，內在那種「我可以擁有」的篤定感很自然就升起來了。</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="who">C 先生・自由工作者 · 2025.10</div>
+          <p>用「種子錢」消費的概念很特別，把每一次付款都變成祝福。半年後接到了過去合作過的客戶轉介紹，金額剛好是當時結緣費用的數十倍。</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="who">陳小姐・行銷總監 · 2025.09</div>
+          <p>原本只是想試試看，結緣的當下就感受到掌心一陣熱流。最神奇的是錢母放在皮夾後，過去那種看到帳單就焦慮的感覺消失了，財富觀變得正向許多。</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="who">王先生・建設公司董事 · 2025.08</div>
+          <p>羅老師的解說讓我理解到「財富是流動的能量」這個觀念。年度方案進行半年，事業上幾個卡了很久的合約陸續落地。值得長期持有。</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="related-products">
+  <div class="container">
+    <h3 style="font-family:var(--serif-tc);font-weight:500;font-size:24px;letter-spacing:0.12em;color:var(--ink);margin-bottom:8px;">相關能量商品</h3>
+    <p style="font-family:var(--serif-en);font-style:italic;color:var(--gold-deep);font-size:14px;letter-spacing:0.1em;margin-bottom:32px;">You may also resonate with</p>
+    <div class="rp-grid">
+      <a href="trinity.html#guard" class="rp-card">
+        <div class="rp-img">守</div>
+        <h5>極守・三式能量御守卡</h5>
+        <span class="rp-en">Health · Wealth · Fortune Cards</span>
+        <div class="rp-price">NT$ 6,800 / 年</div>
+      </a>
+      <a href="trinity.html#sense" class="rp-card">
+        <div class="rp-img">感</div>
+        <h5>極感・寵物量子能量療癒</h5>
+        <span class="rp-en">Pet Quantum Healing</span>
+        <div class="rp-price">NT$ 8,000 / 月</div>
+      </a>
+      <a href="stages/stage-1.html" class="rp-card">
+        <div class="rp-img">壹</div>
+        <h5>壹式 ・ 量子能量檢測</h5>
+        <span class="rp-en">Stage I · Diagnostic Scan</span>
+        <div class="rp-price">免費・限初次體驗</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div data-mount="footer"></div>
+<script src="assets/js/partials.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script>
+function qtyAdj(d) {
+  const el = document.getElementById('qty');
+  let v = parseInt(el.value, 10) + d;
+  if (v < 1) v = 1; if (v > 9) v = 9;
+  el.value = v;
+}
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => item.classList.toggle('open'));
+});
+document.querySelectorAll('.option-pills').forEach(group => {
+  group.addEventListener('click', e => {
+    if (!e.target.classList.contains('option-pill')) return;
+    group.querySelectorAll('.option-pill').forEach(p => p.classList.remove('active'));
+    e.target.classList.add('active');
+  });
+});
+document.querySelectorAll('.product-thumb').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.product-thumb').forEach(p => p.classList.remove('active'));
+    t.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
