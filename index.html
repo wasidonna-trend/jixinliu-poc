@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>極心流能量工作室 ｜ 羅紹綸老師・羅氏自癒力系統</title>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<title>極心流自然療法工作室 ｜ 羅紹綸老師・羅氏自癒力療癒系統</title>
 <meta name="description" content="羅紹綸老師主持，融合古法武學、中醫經絡與量子能量學，引導個案六階段身心靈平衡轉化，重啟天賦自癒力。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,33 @@
   min-height: calc(100vh - 220px);
 }
 .hero-content { position: relative; }
+.hero-brandmark {
+  display: block;
+  margin-bottom: 28px;
+  position: relative;
+  padding-left: 52px;
+}
+.hero-brandmark::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  width: 36px; height: 1.5px;
+  background: var(--cinnabar);
+  transform: translateY(-50%);
+}
+.hero-brandmark .brand-tc {
+  font-family: var(--serif-tc);
+  font-weight: 500;
+  font-size: clamp(20px, 2.2vw, 26px);
+  letter-spacing: 0.28em;
+  color: var(--ink);
+  padding-left: 0.28em;
+}
+@media (max-width: 600px) {
+  .hero-brandmark { padding-left: 0; margin-bottom: 22px; }
+  .hero-brandmark::before { display: none; }
+  .hero-brandmark .brand-tc { font-size: 18px; letter-spacing: 0.2em; }
+}
 .hero-decoEN {
   font-family: var(--serif-en);
   font-style: italic;
@@ -152,7 +180,17 @@
 
 @media (max-width: 900px) {
   .hero .container { grid-template-columns: 1fr; gap: 40px; }
-  .hero-visual { max-width: 380px; margin: 0 auto; }
+  .hero-visual { max-width: 340px; width: 90%; margin: 0 auto; }
+  .hero-vert { top: 4%; right: 2%; font-size: 12px; letter-spacing: 0.4em; }
+  .hero-pts { font-size: 10px; letter-spacing: 0.16em; }
+  .hero-pts::before { width: 20px; }
+}
+@media (max-width: 480px) {
+  .hero { padding-top: 110px; padding-bottom: 60px; }
+  .hero-visual { max-width: 280px; }
+  .hero-seal { width: 32%; font-size: 22px; }
+  .hero-vert { font-size: 11px; letter-spacing: 0.3em; right: 0; top: 2%; }
+  .hero-pts { display: none; }
 }
 
 /* Vision */
@@ -273,19 +311,13 @@
 .master-portrait {
   aspect-ratio: 3/4;
   background:
-    linear-gradient(180deg, rgba(43,42,38,0.08), rgba(43,42,38,0.02)),
-    repeating-linear-gradient(45deg, var(--paper-deep) 0 2px, var(--ivory) 2px 8px);
+    url('assets/img/master-portrait.jpg') center top / cover no-repeat,
+    var(--ivory);
   border: 1px solid var(--line);
   position: relative;
   overflow: hidden;
 }
-.master-portrait::after {
-  content: '羅老師肖像 · Portrait';
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  font-family: var(--serif-en); font-style: italic;
-  font-size: 14px; letter-spacing: 0.2em;
-  color: var(--ink-mute);
-}
+.master-portrait::after { display: none; }
 .master-portrait .seal-overlay {
   position: absolute; bottom: 24px; right: 24px;
   width: 56px; height: 56px;
@@ -484,8 +516,8 @@
   overflow: hidden;
   display: grid; place-items: center;
 }
-.prod-img.moxa     { background: linear-gradient(160deg, #d8dbc6 0%, #b8c0a3 100%); }
-.prod-img.lavender { background: linear-gradient(160deg, #e8e2ec 0%, #d4cae0 100%); }
+.prod-img.moxa     { background: linear-gradient(160deg, #4a7a4d 0%, #2c4a2a 100%); }
+.prod-img.lavender { background: linear-gradient(160deg, #8e72b6 0%, #4a3a6a 100%); }
 .prod-img.health   { background: linear-gradient(160deg, #d6e6e1 0%, #b8d2c9 100%); }
 .prod-img.wealth   { background: linear-gradient(160deg, #f0e6c8 0%, #d9c592 100%); }
 .prod-img.fortune  { background: linear-gradient(160deg, #f0d6cf 0%, #d9a597 100%); }
@@ -922,9 +954,12 @@ section[id] { scroll-margin-top: 80px; }
 <section class="hero" id="top">
   <div class="container">
     <div class="hero-content">
+      <div class="hero-brandmark">
+        <span class="brand-tc" data-i18n="brand.full">極心流自然療法工作室</span>
+      </div>
       <span class="hero-decoEN" data-i18n="hero.deco.en">Self-Healing · Energy Medicine · Awakening</span>
       <div class="hero-eyebrow">
-        <span data-i18n="hero.eyebrow">羅氏自癒力系統 ・ 二十餘年實證傳承</span>
+        <span data-i18n="hero.eyebrow">羅氏自癒力療癒系統 ・ 二十餘年實證傳承</span>
       </div>
       <h1>
         <span data-i18n="hero.title.1">天人合一</span><br>
@@ -1049,17 +1084,15 @@ section[id] { scroll-margin-top: 80px; }
 <!-- ============== MASTER ============== -->
 <section class="master" id="master">
   <div class="container master-grid">
-    <div class="master-portrait reveal" aria-hidden="true">
-      <div class="seal-overlay">羅</div>
-    </div>
+    <div class="master-portrait reveal" aria-hidden="true"></div>
     <div class="reveal">
       <span class="eyebrow" data-i18n="master.eyebrow">About Master Lo</span>
       <h2 class="section-title" data-i18n="master.title">羅紹綸 老師</h2>
-      <div class="master-subtitle" data-i18n="master.subtitle">身心靈整合療癒導師 ｜ 極心流能量學・羅氏自癒力系統 創始人</div>
+      <div class="master-subtitle" data-i18n="master.subtitle">身心靈整合療癒導師 ｜ 極心流自然療法・羅氏自癒力療癒系統 創始人</div>
 
       <div class="master-bio">
         <p data-i18n="master.bio.1">擁有超過二十餘年修證與實踐經驗，自幼深耕東方哲學與中醫，從跌傷久治不癒的內在指引、到拜師道途，鑽研全人醫學逾三十載。曾憑古法智慧與能量醫學治癒自身癌末重症，重獲新生的切身感動，遂將這份生命的恩惠轉化為利他志業。</p>
-        <p data-i18n="master.bio.2">秉持「天人合一」的宇宙觀，透過獨創的羅氏自癒力系統，以「調形、調氣、調神」之整合教學，協助有緣人重啟天賦的自癒力量。</p>
+        <p data-i18n="master.bio.2">秉持「天人合一」的宇宙觀，透過獨創的羅氏自癒力療癒系統，以「調形、調氣、調神」之整合教學，協助有緣人重啟天賦的自癒力量。</p>
       </div>
 
       <div class="master-cred">
@@ -1106,7 +1139,6 @@ section[id] { scroll-margin-top: 80px; }
           <span data-i18n="stages.s1.benefit">立刻看見身體顯性與潛在的能量阻斷點，不再盲目保養。</span>
         </div>
         <div class="stage-foot">
-          <div class="stage-price">NT$ 1,500 <small data-i18n="stages.duration.1">/ 30 分鐘</small></div>
           <a href="stages/stage-1.html" class="stage-link"><span data-i18n="stages.detail">了解詳情</span> →</a>
         </div>
       </article>
@@ -1125,7 +1157,6 @@ section[id] { scroll-margin-top: 80px; }
           <span data-i18n="stages.s2.benefit">呼吸變得深沉、身體輕盈，感覺「腳踏實地」，重心穩定。</span>
         </div>
         <div class="stage-foot">
-          <div class="stage-price">NT$ 1,500 <small data-i18n="stages.duration.1">/ 30 分鐘</small></div>
           <a href="stages/stage-2.html" class="stage-link"><span data-i18n="stages.detail">了解詳情</span> →</a>
         </div>
       </article>
@@ -1144,7 +1175,6 @@ section[id] { scroll-margin-top: 80px; }
           <span data-i18n="stages.s3.benefit">清除濁氣、補氣排毒，平衡痠麻脹痛，釋放手腳冰冷。</span>
         </div>
         <div class="stage-foot">
-          <div class="stage-price">NT$ 1,500 <small data-i18n="stages.duration.1">/ 30 分鐘</small></div>
           <a href="stages/stage-3.html" class="stage-link"><span data-i18n="stages.detail">了解詳情</span> →</a>
         </div>
       </article>
@@ -1163,7 +1193,6 @@ section[id] { scroll-margin-top: 80px; }
           <span data-i18n="stages.s4.benefit">心靈恢復如大海般的深層平靜，平衡失眠與焦慮。</span>
         </div>
         <div class="stage-foot">
-          <div class="stage-price">NT$ 1,500 <small data-i18n="stages.duration.1">/ 30 分鐘</small></div>
           <a href="stages/stage-4.html" class="stage-link"><span data-i18n="stages.detail">了解詳情</span> →</a>
         </div>
       </article>
@@ -1182,7 +1211,6 @@ section[id] { scroll-margin-top: 80px; }
           <span data-i18n="stages.s5.benefit">徹底翻轉生命格局，開啟由內而外的吸引力與豐盛流動。</span>
         </div>
         <div class="stage-foot">
-          <div class="stage-price">NT$ 6,000 <small data-i18n="stages.duration.h">/ 1 小時</small></div>
           <a href="stages/stage-5.html" class="stage-link"><span data-i18n="stages.detail">了解詳情</span> →</a>
         </div>
       </article>
@@ -1201,7 +1229,6 @@ section[id] { scroll-margin-top: 80px; }
           <span data-i18n="stages.s6.benefit">擁有「帶得走的健康」，從被動療癒轉為主動進階。</span>
         </div>
         <div class="stage-foot">
-          <div class="stage-price">NT$ 3,000 <small data-i18n="stages.duration.h">/ 1 小時</small></div>
           <a href="stages/stage-6.html" class="stage-link"><span data-i18n="stages.detail">了解詳情</span> →</a>
         </div>
       </article>
@@ -1228,11 +1255,6 @@ section[id] { scroll-margin-top: 80px; }
           <div class="trin-tag" data-i18n="trinity.t1.tag">Cross-Species Healing</div>
         </div>
         <div class="trin-body" data-i18n="trinity.t1.body">萬物有靈，生命共振。針對家中毛孩，運用量子能量掃描精準對齊光子粒子能量場，提供現場與線上遠距療癒。</div>
-        <ul class="trin-prices">
-          <li><span data-i18n="trinity.t1.p1">單次體驗｜30 分鐘</span><span class="price">NT$ 1,200</span></li>
-          <li><span data-i18n="trinity.t1.p2">包月調理｜每週 2 次</span><span class="price">NT$ 8,000</span></li>
-          <li><span data-i18n="trinity.t1.p3">年度全能守護｜限量</span><span class="price">NT$ 88,000</span></li>
-        </ul>
         <div class="trin-foot">
           <a href="trinity.html#sense" class="btn btn-ghost" style="width:100%;justify-content:center;"><span data-i18n="trinity.detail">查看詳情</span> <span class="btn-arrow" data-icon="arrow"></span></a>
         </div>
@@ -1246,11 +1268,6 @@ section[id] { scroll-margin-top: 80px; }
           <div class="trin-tag" data-i18n="trinity.t2.tag">Abundance Resonance</div>
         </div>
         <div class="trin-body" data-i18n="trinity.t2.body">融合金錢靈氣、藥師佛願成、黃財神財富頻率調頻，磁化專屬錢母，啟動千百萬倍回流的能量循環。</div>
-        <ul class="trin-prices">
-          <li><span data-i18n="trinity.t2.p1">單月結緣方案</span><span class="price">NT$ 680</span></li>
-          <li><span data-i18n="trinity.t2.p2">包季守護專案｜3 個月</span><span class="price">NT$ 1,880</span></li>
-          <li><span data-i18n="trinity.t2.p3">年度豐盛專案｜12 個月</span><span class="price">NT$ 6,800</span></li>
-        </ul>
         <div class="trin-foot">
           <a href="trinity.html#abundance" class="btn btn-ghost" style="width:100%;justify-content:center;"><span data-i18n="trinity.detail">查看詳情</span> <span class="btn-arrow" data-icon="arrow"></span></a>
         </div>
@@ -1264,15 +1281,413 @@ section[id] { scroll-margin-top: 80px; }
           <div class="trin-tag" data-i18n="trinity.t3.tag">24-Hour Energy Shield</div>
         </div>
         <div class="trin-body" data-i18n="trinity.t3.body">福運／財運／健康能量卡，將守護能量封存於能量卡中，建立 24 小時隨身的隱形防護罩。</div>
-        <ul class="trin-prices">
-          <li><span data-i18n="trinity.t3.p1">單月體驗方案</span><span class="price">NT$ 680</span></li>
-          <li><span data-i18n="trinity.t3.p2">包季守護方案｜3 個月</span><span class="price">NT$ 1,880</span></li>
-          <li><span data-i18n="trinity.t3.p3">年度守護方案｜12 個月</span><span class="price">NT$ 6,800</span></li>
-        </ul>
         <div class="trin-foot">
           <a href="trinity.html#guard" class="btn btn-ghost" style="width:100%;justify-content:center;"><span data-i18n="trinity.detail">查看詳情</span> <span class="btn-arrow" data-icon="arrow"></span></a>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SERVICES OVERVIEW ============== -->
+<section class="services-overview" id="therapies" style="background:var(--paper); padding:96px 0; position:relative; z-index:2;">
+  <style>
+    .svc-cat {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .svc-cat:first-of-type { border-top: 1px solid var(--line); }
+    .svc-cat-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .svc-cat-grid { grid-template-columns: 1fr; gap: 24px; }
+    }
+    .svc-cat-head .svc-num {
+      font-family: var(--serif-en); font-style: italic;
+      font-size: 13px; color: var(--cinnabar);
+      letter-spacing: 0.22em; text-transform: uppercase;
+      margin-bottom: 16px; display: block;
+    }
+    .svc-cat-head .svc-num strong { color: var(--ink); font-style: normal; font-family: var(--serif-tc); font-weight: 500; margin-right: 8px; font-size: 22px; letter-spacing: 0; }
+    .svc-cat-head h3 {
+      font-family: var(--serif-tc); font-weight: 500;
+      font-size: 26px; color: var(--ink);
+      letter-spacing: 0.12em; line-height: 1.35;
+      margin-bottom: 8px;
+    }
+    .svc-cat-head .svc-en {
+      font-family: var(--serif-en); font-style: italic;
+      color: var(--gold-deep); font-size: 14px;
+      letter-spacing: 0.06em; display: block;
+      margin-bottom: 18px;
+    }
+    .svc-cat-head .svc-tagline {
+      font-size: 13px; color: var(--ink-soft); line-height: 1.85;
+      padding-left: 16px; border-left: 2px solid var(--gold);
+    }
+
+    /* Price table */
+    .svc-pricetable {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--serif-tc);
+    }
+    .svc-pricetable th {
+      text-align: left;
+      padding: 12px 16px;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--serif-en); font-style: italic;
+      font-size: 12px; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .svc-pricetable th:last-child { text-align: right; }
+    .svc-pricetable td {
+      padding: 16px 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      color: var(--ink);
+      vertical-align: middle;
+    }
+    .svc-pricetable td.price-col {
+      text-align: right;
+      font-family: var(--serif-en); font-style: italic;
+      color: var(--cinnabar);
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .svc-pricetable td.price-col small {
+      display: block; font-size: 11px; color: var(--ink-mute);
+      font-style: normal; font-family: var(--sans-tc);
+      letter-spacing: 0.06em; margin-top: 2px;
+    }
+    .svc-pricetable tr:hover td { background: rgba(160, 126, 59, 0.04); }
+    .svc-pricetable tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
+
+    /* Bullet items */
+    .svc-bullets {
+      list-style: none; padding: 0; margin: 0;
+      border-top: 1px solid var(--line);
+    }
+    .svc-bullets li {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 14px;
+      align-items: baseline;
+      padding: 14px 16px;
+      border-bottom: 1px dashed var(--line);
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      transition: background .25s var(--ease);
+    }
+    .svc-bullets li:hover { background: rgba(160, 126, 59, 0.04); }
+    .svc-bullets li .bu-no {
+      font-family: var(--serif-en); font-style: italic;
+      color: var(--gold-deep); font-size: 13px;
+      letter-spacing: 0.14em;
+    }
+    .svc-bullets li strong { color: var(--ink); font-weight: 500; }
+
+    /* Note */
+    .svc-note {
+      margin-top: 18px;
+      padding: 14px 18px;
+      background: rgba(164, 77, 58, 0.05);
+      border-left: 3px solid var(--cinnabar);
+      font-size: 13px; line-height: 1.85;
+      color: var(--ink-soft);
+    }
+    .svc-note .star {
+      color: var(--cinnabar); margin-right: 6px;
+      font-family: var(--serif-tc); font-weight: 500;
+    }
+
+    /* Bottom contact card */
+    .svc-contact-card {
+      margin-top: 56px;
+      padding: 36px 40px;
+      background: var(--paper-warm);
+      border: 1px solid var(--gold-light);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+    @media (max-width: 800px) {
+      .svc-contact-card { grid-template-columns: 1fr; gap: 20px; text-align: center; }
+    }
+    .svc-contact-card .scc-text h4 {
+      font-family: var(--serif-tc); font-weight: 500;
+      font-size: 18px; color: var(--ink);
+      letter-spacing: 0.12em; line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .svc-contact-card .scc-text p {
+      font-size: 13px; color: var(--ink-soft); line-height: 1.85;
+    }
+    .svc-contact-card .scc-info {
+      display: flex; flex-direction: column; gap: 10px;
+      font-family: var(--serif-en); font-style: italic;
+      font-size: 13px; color: var(--ink);
+      letter-spacing: 0.08em;
+    }
+    .svc-contact-card .scc-info .row {
+      display: flex; gap: 10px; align-items: baseline;
+      justify-content: flex-end;
+    }
+    @media (max-width: 800px) { .svc-contact-card .scc-info .row { justify-content: center; } }
+    .svc-contact-card .scc-info .k {
+      font-size: 10px; letter-spacing: 0.18em; color: var(--gold-deep);
+      text-transform: uppercase; min-width: 50px;
+    }
+    .svc-contact-card .scc-info strong {
+      color: var(--cinnabar); font-weight: 500; font-style: normal;
+      font-family: var(--serif-tc); letter-spacing: 0.08em;
+    }
+  </style>
+
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow" data-i18n="services.eyebrow">All Services at a Glance</span>
+      <h2 class="section-title" data-i18n="services.title">療癒服務總覽</h2>
+      <div class="divider-gold"></div>
+      <p class="section-sub" data-i18n="services.sub">從氣功點穴撥筋調理、個人完整規劃，到情緒精神體諮詢。所有方案皆依您的個人狀況彈性安排。請先以 LINE 或電話聯繫，便於為您安排合適的療癒方向與時段。</p>
+    </div>
+
+    <!-- ① 氣功點穴撥筋調理 -->
+    <div class="svc-cat reveal">
+      <div class="svc-cat-grid">
+        <div class="svc-cat-head">
+          <span class="svc-num"><strong>①</strong>BODYWORK</span>
+          <h3 data-i18n="services.a.title">氣功點穴撥筋調理</h3>
+          <span class="svc-en" data-i18n="services.a.en">Qigong · Acupressure · Fascia Release</span>
+          <p class="svc-tagline" data-i18n="services.a.tag">運動防護 ／ 關節調整 ／ 大面積筋骨處理保養 ／ 內臟養護</p>
+        </div>
+        <div>
+          <table class="svc-pricetable">
+            <thead>
+              <tr>
+                <th data-i18n="services.table.item">項目 Service</th>
+                <th data-i18n="services.table.fee">費用 Fee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="services.a1.name">運動防護 ／ 局部筋骨關節調整</td>
+                <td class="price-col">NT$ 300 – 500<small data-i18n="services.a.flex">依狀況彈性調整</small></td>
+              </tr>
+              <tr>
+                <td data-i18n="services.a2.name">內臟賦能養護工程</td>
+                <td class="price-col">NT$ 300 – 500<small data-i18n="services.a.flex">依狀況彈性調整</small></td>
+              </tr>
+              <tr>
+                <td data-i18n="services.a3.name">上半身大面積筋骨保養</td>
+                <td class="price-col">NT$ 800</td>
+              </tr>
+              <tr>
+                <td data-i18n="services.a4.name">下半身大面積筋骨保養</td>
+                <td class="price-col">NT$ 800</td>
+              </tr>
+              <tr>
+                <td data-i18n="services.a5.name">全身上下整體調理</td>
+                <td class="price-col">NT$ 1,500</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="svc-note">
+            <span class="star">★</span><span data-i18n="services.a.note">大面積問題建議先安排量子全息能量檢測，依個人狀況提供合適規劃。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ② 個人整體規劃方案 -->
+    <div class="svc-cat reveal">
+      <div class="svc-cat-grid">
+        <div class="svc-cat-head">
+          <span class="svc-num"><strong>②</strong>WHOLE-PERSON PLAN</span>
+          <h3 data-i18n="services.b.title">個人整體規劃方案</h3>
+          <span class="svc-en" data-i18n="services.b.en">Personalised Healing Programme</span>
+          <p class="svc-tagline" data-i18n="services.b.tag">久年問題 ／ 體質改造 ／ 量身訂製調理計畫</p>
+        </div>
+        <div>
+          <ul class="svc-bullets">
+            <li>
+              <span class="bu-no">B1</span>
+              <span><strong data-i18n="services.b1.t">含六階段完整轉化路徑規劃</strong><br><span data-i18n="services.b1.b">由羅老師依您的能量狀態規劃從檢測到內氣鍛鍊的完整路徑</span></span>
+            </li>
+            <li>
+              <span class="bu-no">B2</span>
+              <span><strong data-i18n="services.b2.t">依檢測結果安排第二至四階段療癒組合</strong><br><span data-i18n="services.b2.b">中軸結構歸正 ／ 經絡氣脈調和 ／ 脈輪能量療癒，依您的狀況彈性組合</span></span>
+            </li>
+            <li>
+              <span class="bu-no">B3</span>
+              <span><strong data-i18n="services.b3.t">久年問題深度調理 ・ 體質改造工程</strong><br><span data-i18n="services.b3.b">針對長期未解的根本問題，提供分階段、有節奏的整體改造</span></span>
+            </li>
+          </ul>
+          <div class="svc-note">
+            <span class="star">★</span><span data-i18n="services.b.note">初診須先安排量子全息能量檢測（初診），費用依個人狀況報價。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ③ 情緒精神體諮詢 -->
+    <div class="svc-cat reveal">
+      <div class="svc-cat-grid">
+        <div class="svc-cat-head">
+          <span class="svc-num"><strong>③</strong>EMOTIONAL · SPIRITUAL</span>
+          <h3 data-i18n="services.c.title">情緒精神體諮詢</h3>
+          <span class="svc-en" data-i18n="services.c.en">Emotional · Mental · Spiritual Counsel</span>
+          <p class="svc-tagline" data-i18n="services.c.tag">費用依個人狀況報價，歡迎先來電或 Line 諮詢</p>
+        </div>
+        <div>
+          <ul class="svc-bullets">
+            <li>
+              <span class="bu-no">C1</span>
+              <span><strong data-i18n="services.c1.t">NLP 神經語言程式諮詢</strong><br><span data-i18n="services.c1.b">透過神經語言模式釐清內在卡點，重新編碼信念與行為模式</span></span>
+            </li>
+            <li>
+              <span class="bu-no">C2</span>
+              <span><strong data-i18n="services.c2.t">量子巴哈花精情緒諮詢</strong><br><span data-i18n="services.c2.b">結合量子振動原理與英國巴哈花精系統，平衡細微情緒體</span></span>
+            </li>
+            <li>
+              <span class="bu-no">C3</span>
+              <span><strong data-i18n="services.c3.t">內在小孩療癒</strong><br><span data-i18n="services.c3.b">回到童年原始情緒場景，療癒被封存的內在小孩</span></span>
+            </li>
+            <li>
+              <span class="bu-no">C4</span>
+              <span><strong data-i18n="services.c4.t">寵物能量療癒</strong><br><span data-i18n="services.c4.b">針對寵物身心狀態的能量調頻與情緒疏導</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HEALING JOURNEY ============== -->
+<section class="healing-journey" id="journey" style="background:var(--paper-warm); padding:96px 0; position:relative; z-index:2;">
+  <style>
+    .jrn-wrap { max-width: 920px; margin: 0 auto; }
+    .jrn-list {
+      display: grid; gap: 0;
+      position: relative;
+      padding-left: 0;
+      margin-top: 8px;
+    }
+    .jrn-step {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 32px;
+      align-items: flex-start;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .jrn-step:first-child { border-top: 1px solid var(--line); }
+    .jrn-step::before {
+      content: '';
+      position: absolute;
+      left: 47px; top: 64px; bottom: -32px;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold-light), transparent);
+    }
+    .jrn-step:last-child::before { display: none; }
+    @media (max-width: 700px) {
+      .jrn-step { grid-template-columns: 60px 1fr; gap: 20px; padding: 24px 0; }
+      .jrn-step::before { left: 29px; top: 50px; }
+    }
+    .jrn-num {
+      width: 60px; height: 60px;
+      background: var(--ivory);
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      font-family: var(--serif-en); font-style: italic;
+      color: var(--cinnabar);
+      font-size: 22px; font-weight: 500;
+      letter-spacing: 0; position: relative; z-index: 1;
+      transition: all .35s var(--ease);
+    }
+    .jrn-step:hover .jrn-num {
+      background: var(--cinnabar);
+      color: var(--paper);
+      border-color: var(--cinnabar);
+      transform: scale(1.06);
+    }
+    @media (max-width: 700px) { .jrn-num { width: 44px; height: 44px; font-size: 17px; } }
+    .jrn-body h4 {
+      font-family: var(--serif-tc); font-weight: 500;
+      font-size: 20px; color: var(--ink);
+      letter-spacing: 0.1em; margin: 6px 0 8px;
+      line-height: 1.4;
+    }
+    .jrn-body h4 .step-en {
+      font-family: var(--serif-en); font-style: italic;
+      color: var(--gold-deep); font-size: 14px;
+      letter-spacing: 0.06em; margin-left: 12px;
+      font-weight: 400;
+    }
+    .jrn-body p {
+      color: var(--ink-soft); font-size: 14px;
+      line-height: 1.95; margin: 0;
+    }
+  </style>
+
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow" data-i18n="journey.eyebrow">Your Healing Journey</span>
+      <h2 class="section-title" data-i18n="journey.title">療癒旅程</h2>
+      <div class="divider-gold"></div>
+      <p class="section-sub" data-i18n="journey.sub">開啟你的療癒旅程，從第一次聯繫開始，每一步都為你的身心轉化而設計——準備好了，就踏出第一步。</p>
+    </div>
+
+    <div class="jrn-wrap">
+      <div class="jrn-list reveal">
+        <div class="jrn-step">
+          <div class="jrn-num">壹</div>
+          <div class="jrn-body">
+            <h4><span data-i18n="journey.s1.t">聯繫預約</span><span class="step-en" data-i18n="journey.s1.en">Initial Contact</span></h4>
+            <p data-i18n="journey.s1.b">透過 LINE 或電話說明需求，確認服務項目與時段。</p>
+          </div>
+        </div>
+        <div class="jrn-step">
+          <div class="jrn-num">貳</div>
+          <div class="jrn-body">
+            <h4><span data-i18n="journey.s2.t">首次諮詢 ・ 量子全息能量檢測</span><span class="step-en" data-i18n="journey.s2.en">First Consultation</span></h4>
+            <p data-i18n="journey.s2.b">到訪後進行身心狀況了解與全面能量檢測，作為後續調理的依據。</p>
+          </div>
+        </div>
+        <div class="jrn-step">
+          <div class="jrn-num">參</div>
+          <div class="jrn-body">
+            <h4><span data-i18n="journey.s3.t">制定個人調理方案</span><span class="step-en" data-i18n="journey.s3.en">Personal Plan</span></h4>
+            <p data-i18n="journey.s3.b">依檢測結果，規劃最適合您的療癒階段組合與節奏。</p>
+          </div>
+        </div>
+        <div class="jrn-step">
+          <div class="jrn-num">肆</div>
+          <div class="jrn-body">
+            <h4><span data-i18n="journey.s4.t">進行療癒工作</span><span class="step-en" data-i18n="journey.s4.en">Healing Sessions</span></h4>
+            <p data-i18n="journey.s4.b">逐步推進各階段調理，每次評估身心回應後適時調整。</p>
+          </div>
+        </div>
+        <div class="jrn-step">
+          <div class="jrn-num">伍</div>
+          <div class="jrn-body">
+            <h4><span data-i18n="journey.s5.t">自我維護與後續追蹤</span><span class="step-en" data-i18n="journey.s5.en">Self-Care & Follow-Up</span></h4>
+            <p data-i18n="journey.s5.b">視需求安排後續保養療程，提供日常自我調養功法建議。</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1287,19 +1702,53 @@ section[id] { scroll-margin-top: 80px; }
       <p class="section-sub" data-i18n="products.sub">經羅老師親自能量加持的草本貼片與隨身物件，讓守護能量延伸至您生活的每一個現場。</p>
     </div>
 
-    <div class="prod-grid">
+    <div class="prod-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 880px; margin: 0 auto;">
       <article class="prod-card reveal">
         <div class="prod-img moxa">
-          <span class="prod-tag cinnabar" data-i18n="products.tag.feature">主打</span>
-          <span data-icon="leaf"></span>
+          <span class="prod-tag cinnabar" data-i18n="products.tag.rec">推薦</span>
+          <!-- Wormwood patch: round disk with flower of life -->
+          <svg viewBox="0 0 200 200" fill="none" style="width:62%;max-width:180px;opacity:1;" aria-hidden="true">
+            <defs>
+              <radialGradient id="wpDisk" cx="38%" cy="38%" r="70%">
+                <stop offset="0%" stop-color="#8fbe8b"/>
+                <stop offset="55%" stop-color="#5a8a5d"/>
+                <stop offset="100%" stop-color="#2c4a2a"/>
+              </radialGradient>
+            </defs>
+            <!-- glow halo -->
+            <circle cx="100" cy="100" r="96" fill="none" stroke="#a8d1a5" stroke-width="0.5" opacity="0.45"/>
+            <circle cx="100" cy="100" r="90" fill="url(#wpDisk)"/>
+            <!-- inner ring -->
+            <circle cx="100" cy="100" r="82" fill="none" stroke="#d8e8d6" stroke-width="0.6" opacity="0.55"/>
+            <!-- Flower of Life (7-circle) -->
+            <g stroke="#e8f0e5" stroke-width="1" fill="none" opacity="0.78">
+              <circle cx="100" cy="100" r="26"/>
+              <circle cx="100" cy="74" r="26"/>
+              <circle cx="100" cy="126" r="26"/>
+              <circle cx="77.5" cy="87" r="26"/>
+              <circle cx="122.5" cy="87" r="26"/>
+              <circle cx="77.5" cy="113" r="26"/>
+              <circle cx="122.5" cy="113" r="26"/>
+            </g>
+            <!-- outer guard ring of small dots -->
+            <g fill="#c9a04e" opacity="0.85">
+              <circle cx="100" cy="18" r="1.6"/>
+              <circle cx="100" cy="182" r="1.6"/>
+              <circle cx="18" cy="100" r="1.6"/>
+              <circle cx="182" cy="100" r="1.6"/>
+              <circle cx="42" cy="42" r="1.4"/>
+              <circle cx="158" cy="42" r="1.4"/>
+              <circle cx="42" cy="158" r="1.4"/>
+              <circle cx="158" cy="158" r="1.4"/>
+            </g>
+          </svg>
         </div>
         <div class="prod-body">
-          <div class="prod-cat" data-i18n="products.p1.cat">Moxa Patch</div>
-          <h4 class="prod-name" data-i18n="products.p1.name">艾糾能量貼片</h4>
-          <p class="prod-desc" data-i18n="products.p1.body">融合古法艾草智慧與量子能量導引，溫養經絡、驅寒除濕，舒緩身體痠痛與氣滯點，啟動深層自癒力。</p>
+          <div class="prod-cat" data-i18n="products.p1.cat">Quantum Moxa Patch</div>
+          <h4 class="prod-name" data-i18n="products.p1.name">量子遠紅外線艾糾貼</h4>
+          <p class="prod-desc" data-i18n="products.p1.body">結合量子遠紅外線科技與古法艾草智慧，深層溫養經絡、驅寒除濕，對應酸痛部位與氣滯點，啟動細胞層級的自癒共振。</p>
           <div class="prod-foot">
-            <div class="prod-price">NT$ 880 <small>/ <span data-i18n="products.unit.box">盒</span></small></div>
-            <a href="products/aijiu-patch.html" class="prod-cta"><span data-i18n="products.detail">查看商品</span> →</a>
+            <a href="products/wormwood-patch.html" class="prod-cta"><span data-i18n="products.detail">查看商品</span> →</a>
           </div>
         </div>
       </article>
@@ -1307,79 +1756,44 @@ section[id] { scroll-margin-top: 80px; }
       <article class="prod-card reveal">
         <div class="prod-img lavender">
           <span class="prod-tag" data-i18n="products.tag.hot">熱門</span>
-          <span data-icon="lavender"></span>
+          <!-- Lavender patch: rectangular strip with flower of life -->
+          <svg viewBox="0 0 220 140" fill="none" style="width:72%;max-width:240px;opacity:1;" aria-hidden="true">
+            <defs>
+              <linearGradient id="lvPatch" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#c0a4dd"/>
+                <stop offset="55%" stop-color="#8a6cb4"/>
+                <stop offset="100%" stop-color="#4a3a6a"/>
+              </linearGradient>
+            </defs>
+            <!-- patch body (rounded rectangle) -->
+            <rect x="10" y="10" width="200" height="120" rx="14" fill="url(#lvPatch)" stroke="#d8c0f0" stroke-width="0.7" stroke-opacity="0.5"/>
+            <!-- inner border line -->
+            <rect x="18" y="18" width="184" height="104" rx="10" fill="none" stroke="#eee0fa" stroke-width="0.6" opacity="0.55"/>
+            <!-- Flower of Life centered -->
+            <g stroke="#f3e8ff" stroke-width="0.9" fill="none" opacity="0.82" transform="translate(110 70)">
+              <circle cx="0" cy="0" r="22"/>
+              <circle cx="0" cy="-22" r="22"/>
+              <circle cx="0" cy="22" r="22"/>
+              <circle cx="-19" cy="-11" r="22"/>
+              <circle cx="19" cy="-11" r="22"/>
+              <circle cx="-19" cy="11" r="22"/>
+              <circle cx="19" cy="11" r="22"/>
+            </g>
+            <!-- corner accent dots -->
+            <g fill="#d4b2e3" opacity="0.85">
+              <circle cx="24" cy="24" r="1.6"/>
+              <circle cx="196" cy="24" r="1.6"/>
+              <circle cx="24" cy="116" r="1.6"/>
+              <circle cx="196" cy="116" r="1.6"/>
+            </g>
+          </svg>
         </div>
         <div class="prod-body">
-          <div class="prod-cat" data-i18n="products.p2.cat">Lavender Patch</div>
-          <h4 class="prod-name" data-i18n="products.p2.name">薰衣草能量貼片</h4>
-          <p class="prod-desc" data-i18n="products.p2.body">薰衣草高頻香氣搭配能量加持，舒緩焦慮、改善失眠、平衡情緒體，是現代壓力族群的隨身舒心方。</p>
+          <div class="prod-cat" data-i18n="products.p2.cat">Lavender Bright Violet Patch</div>
+          <h4 class="prod-name" data-i18n="products.p2.name">薰衣草亮紫享受貼</h4>
+          <p class="prod-desc" data-i18n="products.p2.body">薰衣草高頻精萃結合亮紫光能量加持，舒緩焦慮、改善失眠、平衡情緒體，成為現代壓力族群的隨身舒心方。</p>
           <div class="prod-foot">
-            <div class="prod-price">NT$ 880 <small>/ <span data-i18n="products.unit.box">盒</span></small></div>
             <a href="products/lavender-patch.html" class="prod-cta"><span data-i18n="products.detail">查看商品</span> →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="prod-card reveal">
-        <div class="prod-img health">
-          <span class="prod-tag" data-i18n="products.tag.classic">經典</span>
-          <span class="char" style="font-size:96px;">健</span>
-        </div>
-        <div class="prod-body">
-          <div class="prod-cat" data-i18n="products.p3.cat">Health Card</div>
-          <h4 class="prod-name" data-i18n="products.p3.name">健康能量卡</h4>
-          <p class="prod-desc" data-i18n="products.p3.body">針對微細循環系統注入平衡頻率，穩定生理電磁場，協助身體重拾自然修復律動。</p>
-          <div class="prod-foot">
-            <div class="prod-price">NT$ 680 <small>/ <span data-i18n="products.unit.month">月</span></small></div>
-            <a href="products/health-card.html" class="prod-cta"><span data-i18n="products.detail">查看商品</span> →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="prod-card reveal">
-        <div class="prod-img wealth">
-          <span class="prod-tag" data-i18n="products.tag.hot">熱門</span>
-          <span class="char" style="font-size:96px;">財</span>
-        </div>
-        <div class="prod-body">
-          <div class="prod-cat" data-i18n="products.p4.cat">Wealth Card</div>
-          <h4 class="prod-name" data-i18n="products.p4.name">財運能量卡</h4>
-          <p class="prod-desc" data-i18n="products.p4.body">對齊金錢靈氣與無限豐盛頻率，優化商機感應力，維持清明的判斷與決策。</p>
-          <div class="prod-foot">
-            <div class="prod-price">NT$ 680 <small>/ <span data-i18n="products.unit.month">月</span></small></div>
-            <a href="products/wealth-card.html" class="prod-cta"><span data-i18n="products.detail">查看商品</span> →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="prod-card reveal">
-        <div class="prod-img fortune">
-          <span class="prod-tag" data-i18n="products.tag.rec">推薦</span>
-          <span class="char" style="font-size:96px;">福</span>
-        </div>
-        <div class="prod-body">
-          <div class="prod-cat" data-i18n="products.p5.cat">Fortune Card</div>
-          <h4 class="prod-name" data-i18n="products.p5.name">福運能量卡</h4>
-          <p class="prod-desc" data-i18n="products.p5.body">提升氣場的和諧度與厚度，自動排除周遭負能量干擾，讓生活回歸平穩流動的心流軌道。</p>
-          <div class="prod-foot">
-            <div class="prod-price">NT$ 680 <small>/ <span data-i18n="products.unit.month">月</span></small></div>
-            <a href="products/fortune-card.html" class="prod-cta"><span data-i18n="products.detail">查看商品</span> →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="prod-card reveal">
-        <div class="prod-img coin">
-          <span class="prod-tag cinnabar" data-i18n="products.tag.limit">限量</span>
-          <svg viewBox="0 0 100 100" style="width:60%;"><circle cx="50" cy="50" r="44" fill="none" stroke="#7a5d24" stroke-width="2"/><rect x="38" y="38" width="24" height="24" fill="none" stroke="#7a5d24" stroke-width="2"/><text x="50" y="35" text-anchor="middle" fill="#7a5d24" font-family="Noto Serif TC" font-size="12">招</text><text x="50" y="78" text-anchor="middle" fill="#7a5d24" font-family="Noto Serif TC" font-size="12">財</text><text x="35" y="56" text-anchor="middle" fill="#7a5d24" font-family="Noto Serif TC" font-size="12">進</text><text x="65" y="56" text-anchor="middle" fill="#7a5d24" font-family="Noto Serif TC" font-size="12">寶</text></svg>
-        </div>
-        <div class="prod-body">
-          <div class="prod-cat" data-i18n="products.p6.cat">Money Talisman</div>
-          <h4 class="prod-name" data-i18n="products.p6.name">磁化錢母（單位）</h4>
-          <p class="prod-desc" data-i18n="products.p6.body">融合黃財神、藥師佛與金錢靈氣加持，金銀比例源自古老易經吉數，成為財富吸引力中心。</p>
-          <div class="prod-foot">
-            <div class="prod-price">NT$ 2,600 <small>/ <span data-i18n="products.unit.unit">單位</span></small></div>
-            <a href="products/money-talisman.html" class="prod-cta"><span data-i18n="products.detail">查看商品</span> →</a>
           </div>
         </div>
       </article>
@@ -1555,75 +1969,6 @@ section[id] { scroll-margin-top: 80px; }
   </div>
 </section>
 
-<!-- ============== ARTICLES ============== -->
-<section class="articles" id="articles">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="eyebrow" data-i18n="art.eyebrow">Wisdom Journal</span>
-      <h2 class="section-title" data-i18n="art.title">能量學習 ・ 文章與洞見</h2>
-      <div class="divider-gold"></div>
-      <p class="section-sub" data-i18n="art.sub">將深奧的古法化為現代人可操作的智慧</p>
-    </div>
-
-    <div class="art-grid">
-      <a href="articles/article-1.html" class="art-card reveal">
-        <div class="art-cover c1"><span class="char">脊</span><span class="seal-mini">心</span></div>
-        <div class="art-body">
-          <div class="art-meta"><span class="cat" data-i18n="art.cat.energy">能量解析</span><span>6 <span data-i18n="art.minutes">分鐘</span></span></div>
-          <h4 data-i18n="art.a1.title">中軸一正，百脈皆通：脊椎為何是靈魂的通道？</h4>
-          <p data-i18n="art.a1.exc">脊椎不只是身體的支柱，更是能量流動的核心通道。當物理結構壓迫神經，能量便無法流動⋯⋯</p>
-          <span class="art-link"><span data-i18n="art.read">閱讀全文</span> →</span>
-        </div>
-      </a>
-      <a href="articles/article-2.html" class="art-card reveal">
-        <div class="art-cover c2"><span class="char">輪</span><span class="seal-mini">心</span></div>
-        <div class="art-body">
-          <div class="art-meta"><span class="cat" data-i18n="art.cat.chakra">脈輪指南</span><span>8 <span data-i18n="art.minutes">分鐘</span></span></div>
-          <h4 data-i18n="art.a2.title">七大脈輪與生命七大功課：身體儲存著你的生命藍圖</h4>
-          <p data-i18n="art.a2.exc">生命七大業力課題儲存在七脈輪中，並記憶在身體筋膜、心血管系統、中樞神經與細胞中⋯⋯</p>
-          <span class="art-link"><span data-i18n="art.read">閱讀全文</span> →</span>
-        </div>
-      </a>
-      <a href="articles/article-3.html" class="art-card reveal">
-        <div class="art-cover c3"><span class="char">炁</span><span class="seal-mini">心</span></div>
-        <div class="art-body">
-          <div class="art-meta"><span class="cat" data-i18n="art.cat.qigong">古法養生</span><span>7 <span data-i18n="art.minutes">分鐘</span></span></div>
-          <h4 data-i18n="art.a3.title">先天之炁與後天呼吸：練功與體操的根本差別</h4>
-          <p data-i18n="art.a3.exc">練功若練不出「先天之炁」，終究只是體操。內氣運行如何讓能量在你的經絡中真實跑動⋯⋯</p>
-          <span class="art-link"><span data-i18n="art.read">閱讀全文</span> →</span>
-        </div>
-      </a>
-      <a href="articles/article-4.html" class="art-card reveal">
-        <div class="art-cover c4"><span class="char">盛</span><span class="seal-mini">心</span></div>
-        <div class="art-body">
-          <div class="art-meta"><span class="cat" data-i18n="art.cat.abundance">豐盛心法</span><span>5 <span data-i18n="art.minutes">分鐘</span></span></div>
-          <h4 data-i18n="art.a4.title">金錢即流動的愛與祝福：從匱乏到豐盛的能量轉化</h4>
-          <p data-i18n="art.a4.exc">當我們清理了內在的匱乏與恐懼，財富便會如流水般自然匯聚成「心流」⋯⋯</p>
-          <span class="art-link"><span data-i18n="art.read">閱讀全文</span> →</span>
-        </div>
-      </a>
-      <a href="articles/article-5.html" class="art-card reveal">
-        <div class="art-cover c5"><span class="char">音</span><span class="seal-mini">心</span></div>
-        <div class="art-body">
-          <div class="art-meta"><span class="cat" data-i18n="art.cat.sound">音波療癒</span><span>6 <span data-i18n="art.minutes">分鐘</span></span></div>
-          <h4 data-i18n="art.a5.title">頌缽音波如何震碎細胞中陳舊的情緒印記？</h4>
-          <p data-i18n="art.a5.exc">運用特定頻率的頌缽音波與身體水分及細胞產生物理共鳴，精準震碎代謝積壓的能量瘀結⋯⋯</p>
-          <span class="art-link"><span data-i18n="art.read">閱讀全文</span> →</span>
-        </div>
-      </a>
-      <a href="articles/article-6.html" class="art-card reveal">
-        <div class="art-cover c6"><span class="char">艾</span><span class="seal-mini">心</span></div>
-        <div class="art-body">
-          <div class="art-meta"><span class="cat" data-i18n="art.cat.herb">草本智慧</span><span>5 <span data-i18n="art.minutes">分鐘</span></span></div>
-          <h4 data-i18n="art.a6.title">艾草與薰衣草：兩種古老植物的能量療癒密碼</h4>
-          <p data-i18n="art.a6.exc">艾溫陽、薰寧心，從中西方古老草本智慧理解貼片背後的能量原理⋯⋯</p>
-          <span class="art-link"><span data-i18n="art.read">閱讀全文</span> →</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ============== FAQ ============== -->
 <section class="faq-section" id="faq">
   <div class="container">
@@ -1631,7 +1976,7 @@ section[id] { scroll-margin-top: 80px; }
       <span class="eyebrow" data-i18n="faq.eyebrow">Frequently Asked</span>
       <h2 class="section-title" data-i18n="faq.title">常見問答 ・ Q&A</h2>
       <div class="divider-gold"></div>
-      <p class="section-sub" data-i18n="faq.sub">關於羅氏自癒力系統、療癒流程與能量商品的常見疑問</p>
+      <p class="section-sub" data-i18n="faq.sub">關於羅氏自癒力療癒系統、療癒流程與能量商品的常見疑問</p>
     </div>
 
     <div class="faq-list reveal" id="faqList">
@@ -1659,12 +2004,17 @@ section[id] { scroll-margin-top: 80px; }
           <li>
             <span class="ico" data-icon="pin"></span>
             <span class="label" data-i18n="book.label.studio">Studio</span>
-            <span class="val" data-i18n="book.studio">極心流能量工作室</span>
+            <span class="val" data-i18n="book.studio">極心流自然療法工作室</span>
           </li>
           <li>
             <span class="ico" data-icon="phone"></span>
             <span class="label" data-i18n="book.label.phone">Phone</span>
             <span class="val" data-i18n="book.phone">（敬請聯繫 LINE 預約）</span>
+          </li>
+          <li>
+            <span class="ico">@</span>
+            <span class="label" data-i18n="book.label.email">Email</span>
+            <span class="val" data-i18n="book.email">mindXXX@gmail.com</span>
           </li>
           <li>
             <span class="ico" data-icon="clock"></span>

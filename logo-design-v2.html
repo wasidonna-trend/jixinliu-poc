@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ji-Xin-Liu · Global Logo Exploration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f5f1e8;
+  --paper-warm: #ebe4d4;
+  --ivory: #faf7ef;
+  --ink: #2b2a26;
+  --ink-soft: #4a4842;
+  --ink-mute: #8a8579;
+  --line: #d4cdb8;
+  --gold: #c9a96a;
+  --gold-deep: #a88440;
+  --gold-light: #e3cfa1;
+  --cinnabar: #a44d3a;
+  --serif-tc: 'Noto Serif TC', serif;
+  --serif-en: 'Cormorant Garamond', serif;
+  --sans-tc: 'Noto Sans TC', sans-serif;
+}
+body { background: #d8d2c0; font-family: var(--sans-tc); margin: 0; }
+.frame { width:100%; height:100%; display:grid; place-items:center; padding:18px; box-sizing:border-box; }
+.frame.dark { background:var(--ink); color:var(--paper); }
+.frame.warm { background:var(--paper-warm); }
+.frame.ivory { background:var(--ivory); }
+.frame.cream { background:var(--paper); }
+
+.lockup { display:flex; align-items:center; gap:18px; }
+.lockup.stack { flex-direction:column; gap:14px; }
+.lockup .word { line-height:1.05; }
+.wm-en {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 26px; color: var(--ink);
+  letter-spacing: 0.18em; font-weight: 500;
+}
+.wm-en .amp { color: var(--cinnabar); margin: 0 4px; }
+.wm-tagline {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 11px; color: var(--gold-deep);
+  letter-spacing: 0.32em; margin-top: 4px;
+  text-transform: uppercase;
+}
+.wm-tc {
+  font-family: var(--serif-tc); font-weight: 400;
+  font-size: 12px; color: var(--ink-soft);
+  letter-spacing: 0.38em; margin-top: 6px; padding-left: 0.38em;
+}
+.dark .wm-en { color: var(--paper); }
+.dark .wm-tagline { color: var(--gold-light); }
+.dark .wm-tc { color: rgba(245,241,232,0.55); }
+
+/* Note panels */
+.note { padding:22px 24px; }
+.note h4 { font-family:var(--serif-tc); font-weight:500; font-size:16px; color:var(--ink); margin:0 0 8px; letter-spacing:0.06em; }
+.note h4 small { font-family:var(--serif-en); font-style:italic; color:var(--gold-deep); font-size:12px; margin-left:8px; letter-spacing:0.16em; }
+.note p { font-family:var(--serif-tc); font-weight:400; font-size:13px; color:var(--ink-soft); line-height:1.85; margin:0 0 8px; }
+.note .row { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+.note .tag { padding:3px 10px; background:var(--paper-warm); border:1px solid var(--line); font-family:var(--serif-en); font-style:italic; font-size:10px; color:var(--gold-deep); letter-spacing:0.16em; text-transform:uppercase; }
+
+/* Mono test grid */
+.mono-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; padding:18px; height:100%; box-sizing:border-box; }
+.mono-cell { aspect-ratio:1; display:grid; place-items:center; padding:14px; }
+.mono-cell.paper { background:var(--ivory); border:1px solid var(--line); }
+.mono-cell.dark { background:var(--ink); }
+.mono-cell.cinnabar { background:var(--cinnabar); }
+.mono-cell.gold { background:var(--gold); }
+
+/* Favicons */
+.fav-strip { display:flex; gap:14px; align-items:center; justify-content:center; padding:18px; height:100%; box-sizing:border-box; }
+.fav-strip .lbl { position:absolute; bottom:6px; font-family:var(--serif-en); font-style:italic; font-size:9px; color:var(--ink-mute); letter-spacing:0.16em; text-transform:uppercase; }
+.fav { display:grid; place-items:center; position:relative; }
+
+/* Business card */
+.bcard { width:100%; max-width:520px; aspect-ratio:91/55; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; box-shadow:0 30px 60px -25px rgba(0,0,0,0.35), 0 8px 16px -8px rgba(0,0,0,0.18); position:relative; }
+.bcard .bc-front { background:var(--paper); padding:30px; display:flex; flex-direction:column; justify-content:space-between; }
+.bcard .bc-back { background:var(--ink); padding:30px; display:grid; place-items:center; position:relative; overflow:hidden; }
+.bcard .bc-back::before { content:''; position:absolute; inset:0; background: radial-gradient(50% 70% at 70% 30%, rgba(201,169,106,0.18), transparent 60%); }
+.bcard .bc-front .bc-name h3 { font-family:var(--serif-tc); font-weight:500; font-size:17px; color:var(--ink); letter-spacing:0.1em; margin:0 0 2px; }
+.bcard .bc-front .bc-name .role { font-family:var(--serif-en); font-style:italic; color:var(--gold-deep); font-size:11px; letter-spacing:0.18em; }
+.bcard .bc-front .bc-meta { font-family:var(--serif-en); font-style:italic; color:var(--ink-soft); font-size:10px; line-height:1.7; letter-spacing:0.04em; }
+.bcard .bc-front .bc-meta .row { display:flex; gap:6px; }
+.bcard .bc-front .bc-meta .k { color:var(--gold-deep); width:50px; flex-shrink:0; letter-spacing:0.16em; text-transform:uppercase; }
+
+/* Palette */
+.palette { display:grid; grid-template-columns:repeat(5,1fr); height:100%; }
+.swatch { aspect-ratio:1; display:flex; flex-direction:column; justify-content:flex-end; padding:10px; font-family:var(--serif-en); font-style:italic; font-size:9px; letter-spacing:0.1em; }
+.swatch .hex { display:block; opacity:0.85; margin-top:2px; font-size:10px; }
+.sw1 { background:var(--paper); color:var(--ink); }
+.sw2 { background:var(--ink); color:var(--paper); }
+.sw3 { background:var(--cinnabar); color:var(--paper); }
+.sw4 { background:var(--gold); color:var(--ink); }
+.sw5 { background:var(--paper-warm); color:var(--ink); }
+</style>
+</head>
+<body>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState } = React;
+
+/* =========== SVG MARKS — designed to read globally ========== */
+/* All marks fit a 100×100 viewBox unless noted. Use prop "color" to override. */
+
+// 01 · Resonance Rings — concentric circles + central dot. Reads as: sound, ripple, energy field. Universal.
+const MarkResonance = ({ size = 88, color = 'var(--cinnabar)', accent = 'var(--gold-deep)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <circle cx="50" cy="50" r="46" stroke={accent} strokeWidth="0.6" opacity="0.5"/>
+    <circle cx="50" cy="50" r="36" stroke={accent} strokeWidth="0.8" opacity="0.7"/>
+    <circle cx="50" cy="50" r="26" stroke={color} strokeWidth="1"/>
+    <circle cx="50" cy="50" r="16" stroke={color} strokeWidth="1.2"/>
+    <circle cx="50" cy="50" r="6" fill={color}/>
+  </svg>
+);
+
+// 02 · Sun-Drop · 太極 reinterpreted — a single arc cradling a dot. Italian-readable as "rise/seed/awakening".
+const MarkSunDrop = ({ size = 88, color = 'var(--ink)', accent = 'var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <path d="M 12 60 Q 50 0 88 60" stroke={color} strokeWidth="2.4" fill="none" strokeLinecap="round"/>
+    <circle cx="50" cy="60" r="9" fill={accent}/>
+    <line x1="20" y1="78" x2="80" y2="78" stroke={color} strokeWidth="1" opacity="0.6"/>
+  </svg>
+);
+
+// 03 · Vesica Piscis — two intersecting circles, a Western sacred-geometry analogue to yin-yang.
+//      Reads to Italians as Renaissance/sacred geometry, to Chinese as 太極/陰陽.
+const MarkVesica = ({ size = 88, colorA = 'var(--cinnabar)', colorB = 'var(--ink)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <circle cx="38" cy="50" r="28" stroke={colorA} strokeWidth="1.4"/>
+    <circle cx="62" cy="50" r="28" stroke={colorB} strokeWidth="1.4"/>
+    <ellipse cx="50" cy="50" rx="14" ry="22" fill={colorA} opacity="0.18"/>
+    <circle cx="50" cy="50" r="3" fill={colorA}/>
+  </svg>
+);
+
+// 04 · Triple Wave — three flowing horizontal lines: 流 / flow / breath. Universal water + sound + chi.
+const MarkTripleWave = ({ size = 88, color = 'var(--ink)', accent = 'var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <path d="M 8 36 Q 30 18 50 36 T 92 36" stroke={accent} strokeWidth="2" fill="none" strokeLinecap="round"/>
+    <path d="M 8 50 Q 30 32 50 50 T 92 50" stroke={color} strokeWidth="2.4" fill="none" strokeLinecap="round"/>
+    <path d="M 8 64 Q 30 46 50 64 T 92 64" stroke={accent} strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.6"/>
+    <circle cx="50" cy="50" r="4" fill={accent}/>
+  </svg>
+);
+
+// 05 · Six-Petal Mandala — references the 6 stages, the lotus, and Vitruvian-Man-style Italian symmetry.
+const MarkMandala = ({ size = 88, color = 'var(--cinnabar)', accent = 'var(--gold-deep)' }) => {
+  const petals = [];
+  for (let i = 0; i < 6; i++) {
+    const a = (i * 60 - 90) * Math.PI / 180;
+    const cx = 50 + Math.cos(a) * 22;
+    const cy = 50 + Math.sin(a) * 22;
+    petals.push(<ellipse key={i} cx={cx} cy={cy} rx="6" ry="14" stroke={color} strokeWidth="1" fill="none" transform={`rotate(${i*60} ${cx} ${cy})`}/>);
+  }
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="44" stroke={accent} strokeWidth="0.6" opacity="0.5"/>
+      {petals}
+      <circle cx="50" cy="50" r="6" fill={color}/>
+    </svg>
+  );
+};
+
+// 06 · Monogram J — "Ji" / "Jixin" — wordmark monogram with cinnabar dot. Strongest for Italian / EN markets.
+const MarkMonoJ = ({ size = 88, color = 'var(--ink)', accent = 'var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <circle cx="50" cy="50" r="44" stroke={color} strokeWidth="1" fill="none"/>
+    <text x="50" y="68" textAnchor="middle" fill={color} fontFamily="Cormorant Garamond" fontStyle="italic" fontWeight="500" fontSize="56" letterSpacing="-2">J</text>
+    <circle cx="64" cy="36" r="5" fill={accent}/>
+  </svg>
+);
+
+// 07 · Heart-Lotus Hybrid — abstract heart shape made from two lotus-petal arcs. Reads as heart (心) + flower without using CJK.
+const MarkHeartLotus = ({ size = 88, color = 'var(--cinnabar)', accent = 'var(--gold-deep)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <path d="M 50 78 C 14 56, 14 26, 36 26 C 44 26, 50 32, 50 40 C 50 32, 56 26, 64 26 C 86 26, 86 56, 50 78 Z"
+      stroke={color} strokeWidth="1.6" fill="none"/>
+    <path d="M 50 40 L 50 76" stroke={accent} strokeWidth="1" opacity="0.5"/>
+    <circle cx="50" cy="40" r="3.5" fill={accent}/>
+  </svg>
+);
+
+// 08 · Compass Rose — 4 cardinal points + center, references navigation, Renaissance maps, also 四象/four elements.
+const MarkCompass = ({ size = 88, color = 'var(--ink)', accent = 'var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <circle cx="50" cy="50" r="44" stroke={color} strokeWidth="0.8"/>
+    <circle cx="50" cy="50" r="34" stroke={color} strokeWidth="0.5" opacity="0.4"/>
+    <path d="M 50 12 L 56 50 L 50 88 L 44 50 Z" fill={color}/>
+    <path d="M 12 50 L 50 44 L 88 50 L 50 56 Z" fill={color} opacity="0.3"/>
+    <circle cx="50" cy="50" r="4" fill={accent}/>
+  </svg>
+);
+
+// 09 · Phi-Spiral — golden ratio spiral. Universal sacred geometry, Italian Renaissance heritage.
+const MarkSpiral = ({ size = 88, color = 'var(--cinnabar)', accent = 'var(--ink)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <circle cx="50" cy="50" r="44" stroke={accent} strokeWidth="0.5" opacity="0.4"/>
+    <path d="M 50 50 m 0 -2 a 2 2 0 1 1 0 4 a 4 4 0 1 1 0 -8 a 8 8 0 1 1 0 16 a 16 16 0 1 1 0 -32 a 32 32 0 1 1 0 64"
+      stroke={color} strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+  </svg>
+);
+
+// 10 · Acu-Constellation — three dots + line, abstracted acupuncture/meridian map.
+const MarkConstellation = ({ size = 88, color = 'var(--ink)', accent = 'var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <line x1="22" y1="28" x2="78" y2="72" stroke={color} strokeWidth="0.8" opacity="0.5"/>
+    <line x1="22" y1="72" x2="78" y2="28" stroke={color} strokeWidth="0.8" opacity="0.5"/>
+    <circle cx="22" cy="28" r="5" fill={accent}/>
+    <circle cx="78" cy="28" r="3" fill={color}/>
+    <circle cx="50" cy="50" r="7" fill={accent}/>
+    <circle cx="22" cy="72" r="3" fill={color}/>
+    <circle cx="78" cy="72" r="5" fill={accent}/>
+    <circle cx="50" cy="50" r="14" stroke={color} strokeWidth="0.6" fill="none" opacity="0.4"/>
+  </svg>
+);
+
+/* ============= App ============= */
+function App() {
+  return (
+    <DesignCanvas
+      title="Ji-Xin-Liu · Global Logo Direction"
+      subtitle="Symbol-led marks readable to Chinese · English · Italian audiences alike. CJK glyph kept only as discreet sub-tier."
+    >
+
+      {/* ============================================== */}
+      {/*  STRATEGY                                       */}
+      {/* ============================================== */}
+      <DCSection id="strategy" title="設計策略 ・ Design Strategy">
+
+        <DCArtboard id="strategy-note" label="為什麼換方向" width={520} height={300}>
+          <div className="frame ivory" style={{alignItems:'flex-start', justifyItems:'flex-start'}}>
+            <div className="note">
+              <h4>從『心』字 → 全球符號 <small>WHY THIS PIVOT</small></h4>
+              <p>原方案的朱印「心」字對華語市場最強，但對義大利、英語受眾形成識別障礙 —— 漢字成了門檻而非橋樑。</p>
+              <p>新方向以<strong>普世共通符號</strong>為主：同心圓、波紋、太極幾何、曼陀羅、黃金螺旋。這些圖形在文藝復興、煉金術、東方氣脈三大傳統中都有共通的能量意涵。</p>
+              <p>中文字「極心流」<strong>退為輔助層</strong> —— 以小字、襯字方式存在，不再承擔主要識別。</p>
+              <div className="row">
+                <span className="tag">Symbol-First</span>
+                <span className="tag">Latin Wordmark</span>
+                <span className="tag">CJK as sub-layer</span>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="palette" label="色彩沿用" width={420} height={220}>
+          <div className="palette">
+            <div className="swatch sw1">Paper<span className="hex">#F5F1E8</span></div>
+            <div className="swatch sw5">Warm<span className="hex">#EBE4D4</span></div>
+            <div className="swatch sw3">Cinnabar<span className="hex">#A44D3A</span></div>
+            <div className="swatch sw4">Gold<span className="hex">#C9A96A</span></div>
+            <div className="swatch sw2">Ink<span className="hex">#2B2A26</span></div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="naming" label="命名系統" width={380} height={300}>
+          <div className="frame ivory" style={{alignItems:'flex-start', justifyItems:'flex-start'}}>
+            <div className="note">
+              <h4>名稱的三語呈現 <small>NAMING TIERS</small></h4>
+              <p style={{marginBottom:14}}><strong style={{fontFamily:'var(--serif-en)',fontStyle:'italic',color:'var(--cinnabar)',fontSize:18,letterSpacing:'0.1em'}}>Ji-Xin-Liu</strong><br/><span style={{fontSize:11,color:'var(--ink-mute)',fontStyle:'italic',fontFamily:'var(--serif-en)',letterSpacing:'0.14em'}}>Latin · primary wordmark</span></p>
+              <p style={{marginBottom:14}}><strong style={{fontFamily:'var(--serif-tc)',fontWeight:500,fontSize:18,letterSpacing:'0.18em'}}>極 心 流</strong><br/><span style={{fontSize:11,color:'var(--ink-mute)',fontStyle:'italic',fontFamily:'var(--serif-en)',letterSpacing:'0.14em'}}>CJK · sub-layer for ZH market</span></p>
+              <p><span style={{fontFamily:'var(--serif-en)',fontStyle:'italic',color:'var(--gold-deep)',fontSize:13,letterSpacing:'0.18em'}}>Energy · Resonance · Flow</span><br/><span style={{fontSize:11,color:'var(--ink-mute)',fontStyle:'italic',fontFamily:'var(--serif-en)',letterSpacing:'0.14em'}}>Tagline · semantic anchor</span></p>
+            </div>
+          </div>
+        </DCArtboard>
+      </DCSection>
+
+      {/* ============================================== */}
+      {/*  10 GLOBAL DIRECTIONS                           */}
+      {/* ============================================== */}
+      <DCSection id="directions" title="十個全球化方向 ・ Ten Universal Directions">
+
+        <DCArtboard id="d1" label="1 · Resonance Rings 共振場" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkResonance/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Energetics &amp; Resonance</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="d2" label="2 · Sun Drop 日種" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkSunDrop/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Body &middot; Mind &middot; Field</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="d3" label="3 · Vesica Piscis 雙圓" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkVesica/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Sacred Geometry</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="d4" label="4 · Triple Wave 三流" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkTripleWave/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Energy in Flow</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="d5" label="5 · Six-Petal Mandala 六瓣" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkMandala/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Six Stages of Healing</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="d6" label="6 · Monogram J 字徽" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkMonoJ/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Energetics Atelier</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="d7" label="7 · Heart-Lotus 心蓮" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkHeartLotus/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Heart in Bloom</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="d8" label="8 · Compass Rose 方向" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkCompass/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Inner Cardinal</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="d9" label="9 · Phi Spiral 黃金螺旋" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkSpiral/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Sectio Aurea</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="d10" label="10 · Constellation 經絡星" width={460} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkConstellation/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Meridian Map</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      {/* ============================================== */}
+      {/*  RECOMMENDATION + APPLICATION                   */}
+      {/* ============================================== */}
+      <DCSection id="recommended" title="主推薦 ・ Resonance Rings 完整應用">
+
+        <DCArtboard id="rec-why" label="為何主推薦 #1 共振場" width={520} height={320}>
+          <div className="frame ivory" style={{alignItems:'flex-start', justifyItems:'flex-start'}}>
+            <div className="note">
+              <h4>Why Resonance Rings <small>RECOMMENDATION</small></h4>
+              <p><strong>1. 跨文化解讀力最高</strong>：同心圓在西方代表音波、漣漪、宇宙場；在東方代表氣脈、共振、太極初始。義大利受眾無理解門檻。</p>
+              <p><strong>2. 縮放能力最強</strong>：從 16px favicon 到大樓招牌都能保持識別，幾何結構不依賴細節。</p>
+              <p><strong>3. 與品牌主張一致</strong>：「極心流」=「能量在共振中流動」 —— 同心圓正是共振場的視覺核心。</p>
+              <p><strong>4. 延展性高</strong>：可變奏為動態 GIF（圈圈外擴）、印章、招牌、寵物項圈、錢母貼紙。</p>
+              <div className="row">
+                <span className="tag">Cross-cultural</span>
+                <span className="tag">Scalable</span>
+                <span className="tag">Animatable</span>
+                <span className="tag">On-brand</span>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* Three lockups: horizontal, stacked, mark-only */}
+        <DCArtboard id="rec-horizontal" label="橫排主鎖定 (Horizontal)" width={520} height={200}>
+          <div className="frame cream">
+            <div className="lockup">
+              <MarkResonance size={92}/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Energetics &amp; Resonance</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-stack" label="直排集中 (Stacked)" width={320} height={300}>
+          <div className="frame cream">
+            <div className="lockup stack">
+              <MarkResonance size={88}/>
+              <div className="word" style={{textAlign:'center'}}>
+                <div className="wm-en" style={{fontSize:22}}>JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Energetics &amp; Resonance</div>
+                <div className="wm-tc" style={{textAlign:'center', paddingLeft:0, letterSpacing:'0.32em'}}>極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-markonly" label="純圖標 (Mark Only)" width={260} height={260}>
+          <div className="frame cream">
+            <MarkResonance size={140}/>
+          </div>
+        </DCArtboard>
+
+        {/* On dark */}
+        <DCArtboard id="rec-dark" label="深色背景 ・ Dark Surface" width={520} height={200}>
+          <div className="frame dark">
+            <div className="lockup">
+              <MarkResonance size={92} color="var(--gold-light)" accent="var(--gold)"/>
+              <div className="word">
+                <div className="wm-en" style={{color:'var(--paper)'}}>JI<span className="amp" style={{color:'var(--cinnabar)'}}>·</span>XIN<span className="amp" style={{color:'var(--cinnabar)'}}>·</span>LIU</div>
+                <div className="wm-tagline" style={{color:'var(--gold-light)'}}>Energetics &amp; Resonance</div>
+                <div className="wm-tc" style={{color:'rgba(245,241,232,0.55)'}}>極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-mono" label="單色測試 (Mono Tests)" width={520} height={180}>
+          <div className="mono-grid">
+            <div className="mono-cell paper"><MarkResonance size={72} color="var(--cinnabar)" accent="var(--gold-deep)"/></div>
+            <div className="mono-cell dark"><MarkResonance size={72} color="var(--paper)" accent="var(--gold-light)"/></div>
+            <div className="mono-cell cinnabar"><MarkResonance size={72} color="var(--paper)" accent="rgba(245,241,232,0.6)"/></div>
+            <div className="mono-cell paper"><MarkResonance size={72} color="var(--ink)" accent="var(--ink-soft)"/></div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-favicon" label="Favicon · 5 Sizes" width={520} height={140}>
+          <div className="fav-strip">
+            <div className="fav"><MarkResonance size={16} color="var(--cinnabar)" accent="var(--gold-deep)"/></div>
+            <div className="fav"><MarkResonance size={24} color="var(--cinnabar)" accent="var(--gold-deep)"/></div>
+            <div className="fav"><MarkResonance size={32} color="var(--cinnabar)" accent="var(--gold-deep)"/></div>
+            <div className="fav"><MarkResonance size={48} color="var(--cinnabar)" accent="var(--gold-deep)"/></div>
+            <div className="fav"><MarkResonance size={64} color="var(--cinnabar)" accent="var(--gold-deep)"/></div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-app" label="App Icon" width={260} height={260}>
+          <div className="frame warm">
+            <div style={{width:140,height:140,background:'var(--paper)',display:'grid',placeItems:'center',borderRadius:'18%',boxShadow:'0 20px 40px -20px rgba(43,42,38,0.4)', position:'relative'}}>
+              <MarkResonance size={100}/>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-bcard" label="Business Card · 名片" width={620} height={420}>
+          <div className="frame warm">
+            <div className="bcard">
+              <div className="bc-front">
+                <div className="lockup">
+                  <MarkResonance size={48}/>
+                  <div className="word">
+                    <div className="wm-en" style={{fontSize:14}}>JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                    <div className="wm-tagline" style={{fontSize:8}}>Energetics &amp; Resonance</div>
+                  </div>
+                </div>
+                <div className="bc-name">
+                  <h3>Dennis Lo / 羅 紹 綸</h3>
+                  <div className="role">FOUNDING MASTER · 創辦人</div>
+                </div>
+                <div className="bc-meta">
+                  <div className="row"><span className="k">tel</span><span>+886 (0)2 0000 · 0000</span></div>
+                  <div className="row"><span className="k">mail</span><span>master@ji-xin-liu.com</span></div>
+                  <div className="row"><span className="k">studio</span><span>Taipei · Da&rsquo;an &mdash; By Appointment</span></div>
+                </div>
+              </div>
+              <div className="bc-back">
+                <div style={{position:'relative',zIndex:1,textAlign:'center'}}>
+                  <MarkResonance size={70} color="var(--gold-light)" accent="var(--gold)"/>
+                  <div className="wm-en" style={{color:'var(--paper)',fontSize:14,marginTop:14}}>JI<span className="amp" style={{color:'var(--cinnabar)'}}>·</span>XIN<span className="amp" style={{color:'var(--cinnabar)'}}>·</span>LIU</div>
+                  <div className="wm-tagline" style={{color:'var(--gold-light)',fontSize:8,marginTop:6}}>極 心 流 ・ Resonance &middot; Flow &middot; Field</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-italian" label="義大利語境呈現 (Italian Context)" width={520} height={220}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkResonance size={88}/>
+              <div className="word">
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Studio di Energia &amp; Risonanza</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+    </DesignCanvas>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

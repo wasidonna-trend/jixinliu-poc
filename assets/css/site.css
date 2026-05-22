@@ -166,18 +166,38 @@ section { padding: 96px 0; position: relative; z-index: 2; }
 }
 .nav.scrolled { padding: 14px 0; border-bottom-color: var(--line); }
 .nav .container { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.nav-logo { display: flex; align-items: center; gap: 12px; font-weight: 500; letter-spacing: 0.08em; }
-.nav-logo .seal {
-  width: 36px; height: 36px;
-  background: var(--cinnabar);
-  color: var(--paper);
-  display: grid; place-items: center;
-  font-family: var(--serif-tc);
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0;
+.nav-logo { display: flex; align-items: center; gap: 14px; font-weight: 500; letter-spacing: 0.08em; transition: opacity .25s var(--ease); }
+.nav-logo:hover { opacity: 0.78; }
+.nav-logo .logo-mark {
+  width: 38px; height: 38px;
+  flex-shrink: 0;
 }
-.nav-logo .seal-text { font-size: 16px; color: var(--ink); }
+.nav-logo .logo-word {
+  display: flex; flex-direction: column;
+  line-height: 1.1;
+}
+.nav-logo .logo-en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+}
+.nav-logo .logo-en i { color: var(--cinnabar); font-style: normal; margin: 0 1px; }
+.nav-logo .logo-tc {
+  font-family: var(--serif-tc);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--ink-mute);
+  margin-top: 3px;
+}
+@media (max-width: 600px) {
+  .nav-logo .logo-tc { display: none; }
+  .nav-logo .logo-en { font-size: 15px; letter-spacing: 0.14em; }
+  .nav-logo .logo-mark { width: 32px; height: 32px; }
+}
 .nav-links { display: flex; gap: 28px; align-items: center; }
 .nav-links a {
   font-size: 14px;

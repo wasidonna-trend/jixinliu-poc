@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>極心流 ・ Logo V3 — 太極流動 ・ Tai Chi Flow</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Serif+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f5f1e8;
+  --paper-warm: #ebe4d4;
+  --ivory: #faf7ef;
+  --ink: #2b2a26;
+  --ink-soft: #4a4842;
+  --line: #d4cdb8;
+  --gold: #c9a96a;
+  --gold-deep: #a88440;
+  --gold-light: #e3cfa1;
+  --cinnabar: #a44d3a;
+  --bamboo: #4a6157;
+  --serif-tc: 'Noto Serif TC', serif;
+  --serif-en: 'Cormorant Garamond', serif;
+}
+body { background: #d8d2c0; font-family: var(--serif-tc); margin: 0; }
+.frame { width:100%; height:100%; display:grid; place-items:center; padding:18px; box-sizing:border-box; }
+.frame.dark { background:var(--ink); }
+.frame.warm { background:var(--paper-warm); }
+.frame.ivory { background:var(--ivory); }
+.frame.cream { background:var(--paper); }
+
+.lockup { display:flex; align-items:center; gap:20px; }
+.lockup.stack { flex-direction:column; gap:14px; text-align:center; }
+.wm-en { font-family:var(--serif-en); font-style:italic; font-size:26px; color:var(--ink); letter-spacing:0.18em; font-weight:500; }
+.wm-en .amp { color:var(--cinnabar); margin:0 4px; }
+.wm-tagline { font-family:var(--serif-en); font-style:italic; font-size:11px; color:var(--gold-deep); letter-spacing:0.32em; margin-top:4px; text-transform:uppercase; }
+.wm-tc { font-family:var(--serif-tc); font-weight:400; font-size:12px; color:var(--ink-soft); letter-spacing:0.38em; margin-top:6px; padding-left:0.38em; }
+.dark .wm-en { color:var(--paper); }
+.dark .wm-tagline { color:var(--gold-light); }
+.dark .wm-tc { color:rgba(245,241,232,0.55); }
+
+.note { padding:22px 24px; }
+.note h4 { font-family:var(--serif-tc); font-weight:500; font-size:16px; color:var(--ink); margin:0 0 8px; letter-spacing:0.06em; }
+.note h4 small { font-family:var(--serif-en); font-style:italic; color:var(--gold-deep); font-size:12px; margin-left:8px; letter-spacing:0.16em; }
+.note p { font-weight:400; font-size:13px; color:var(--ink-soft); line-height:1.85; margin:0 0 8px; }
+.note .row { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+.note .tag { padding:3px 10px; background:var(--paper-warm); border:1px solid var(--line); font-family:var(--serif-en); font-style:italic; font-size:10px; color:var(--gold-deep); letter-spacing:0.16em; text-transform:uppercase; }
+
+/* slow breathing animation for hero */
+@keyframes breathe { 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.025); } }
+.breathe { animation: breathe 6s ease-in-out infinite; transform-origin: center; }
+
+/* mono test */
+.mono-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; padding:18px; height:100%; box-sizing:border-box; }
+.mono-cell { aspect-ratio:1; display:grid; place-items:center; padding:14px; }
+.mono-cell.paper { background:var(--ivory); border:1px solid var(--line); }
+.mono-cell.dark { background:var(--ink); }
+.mono-cell.cinnabar { background:var(--cinnabar); }
+.mono-cell.gold { background:var(--gold); }
+
+.fav-strip { display:flex; gap:14px; align-items:center; justify-content:center; padding:18px; height:100%; box-sizing:border-box; }
+
+/* Business card */
+.bcard { width:100%; max-width:520px; aspect-ratio:91/55; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; box-shadow:0 30px 60px -25px rgba(0,0,0,0.35), 0 8px 16px -8px rgba(0,0,0,0.18); }
+.bcard .bc-front { background:var(--paper); padding:28px; display:flex; flex-direction:column; justify-content:space-between; }
+.bcard .bc-back { background:var(--ink); padding:28px; display:grid; place-items:center; position:relative; overflow:hidden; }
+.bcard .bc-back::before { content:''; position:absolute; inset:0; background:radial-gradient(50% 70% at 70% 30%, rgba(201,169,106,0.2), transparent 60%); }
+.bcard h3 { font-family:var(--serif-tc); font-weight:500; font-size:17px; color:var(--ink); letter-spacing:0.1em; margin:0 0 2px; }
+.bcard .role { font-family:var(--serif-en); font-style:italic; color:var(--gold-deep); font-size:11px; letter-spacing:0.18em; }
+.bcard .bc-meta { font-family:var(--serif-en); font-style:italic; color:var(--ink-soft); font-size:10px; line-height:1.7; letter-spacing:0.04em; }
+.bcard .bc-meta .r { display:flex; gap:6px; }
+.bcard .bc-meta .k { color:var(--gold-deep); width:48px; flex-shrink:0; letter-spacing:0.16em; text-transform:uppercase; }
+</style>
+</head>
+<body>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<div id="root"></div>
+
+<script type="text/babel">
+
+/* ============================================================
+   Tai-Chi / Flow marks. All built on the S-curve principle —
+   the universal symbol of 天人合一 / yin-yang interweaving.
+   Each interprets it through a different natural metaphor.
+   ============================================================ */
+
+// 01 · Pure Taiji — refined yin-yang with a soft brush feel, cinnabar dot
+const MarkTaiji = ({ size=100, light='var(--paper)', dark='var(--ink)', dot='var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="46" fill={light} stroke={dark} strokeWidth="1.2"/>
+    <path d="M 50 4 A 46 46 0 0 1 50 96 A 23 23 0 0 1 50 50 A 23 23 0 0 0 50 4 Z" fill={dark}/>
+    <circle cx="50" cy="27" r="4" fill={dot}/>
+    <circle cx="50" cy="73" r="4" fill={light}/>
+  </svg>
+);
+
+// 02 · Flowing Taiji — open S-curve, no enclosing circle, like a brush stroke caught mid-air
+const MarkFlow = ({ size=100, color='var(--ink)', accent='var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <path d="M 14 50 Q 14 14, 50 14 Q 86 14, 86 50 Q 86 86, 50 86 Q 50 50, 50 50" stroke={color} strokeWidth="6" strokeLinecap="round" fill="none"/>
+    <circle cx="50" cy="14" r="5" fill={accent}/>
+    <circle cx="50" cy="86" r="2.5" fill={color}/>
+  </svg>
+);
+
+// 03 · Two Fishes (雙魚) — taiji as two interlocking comma-fishes with soft tapered tails
+const MarkFishes = ({ size=100, dark='var(--ink)', light='var(--paper)', accent='var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <circle cx="50" cy="50" r="46" stroke={dark} strokeWidth="0.6" opacity="0.6"/>
+    <path d="M 50 8 C 75 8, 92 28, 92 50 C 92 65, 80 75, 65 75 C 55 75, 50 70, 50 60 C 50 50, 45 45, 38 45 C 28 45, 22 36, 24 25 C 28 14, 38 8, 50 8 Z" fill={dark}/>
+    <circle cx="50" cy="28" r="4" fill={accent}/>
+  </svg>
+);
+
+// 04 · Mountain-Water (山水) — taiji curve as a mountain ridge meeting reflected water
+const MarkMountainWater = ({ size=100, color='var(--ink)', accent='var(--cinnabar)', water='var(--gold-deep)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <circle cx="50" cy="50" r="46" stroke={color} strokeWidth="0.6" opacity="0.5"/>
+    <path d="M 14 50 L 32 30 L 42 42 L 56 22 L 70 38 L 86 50" stroke={color} strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
+    <circle cx="56" cy="22" r="3.5" fill={accent}/>
+    <path d="M 14 60 Q 28 66 42 60 T 70 60 T 86 60" stroke={water} strokeWidth="1.4" fill="none" strokeLinecap="round" opacity="0.8"/>
+    <path d="M 14 70 Q 28 76 42 70 T 70 70 T 86 70" stroke={water} strokeWidth="1.2" fill="none" strokeLinecap="round" opacity="0.55"/>
+  </svg>
+);
+
+// 05 · Crane Wing (鶴翼) — single elegant S sweep evoking a crane's wing in flight
+const MarkCraneWing = ({ size=100, color='var(--ink)', accent='var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <path d="M 12 78 Q 28 78 38 64 Q 48 50 50 36 Q 52 22 64 16 Q 76 12 88 18" stroke={color} strokeWidth="2.4" fill="none" strokeLinecap="round"/>
+    <path d="M 38 64 Q 36 60 32 60 M 50 36 Q 48 32 44 32 M 64 16 Q 62 12 58 12" stroke={color} strokeWidth="1.2" strokeLinecap="round" opacity="0.55"/>
+    <circle cx="88" cy="18" r="4.5" fill={accent}/>
+  </svg>
+);
+
+// 06 · Three Rivers (三流) — three nested S-curves, the literal 「流」 character abstracted
+const MarkThreeRivers = ({ size=100, color='var(--ink)', accent='var(--cinnabar)', soft='var(--gold-deep)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <path d="M 24 14 Q 56 30 24 50 Q 56 70 24 86" stroke={accent} strokeWidth="1.8" fill="none" strokeLinecap="round" opacity="0.7"/>
+    <path d="M 50 14 Q 82 30 50 50 Q 82 70 50 86" stroke={color} strokeWidth="2.4" fill="none" strokeLinecap="round"/>
+    <path d="M 76 14 Q 60 30 76 50 Q 60 70 76 86" stroke={soft} strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.55"/>
+    <circle cx="50" cy="50" r="4" fill={accent}/>
+  </svg>
+);
+
+// 07 · Cosmic Embrace — taiji curve held inside two encircling rings (天 outer / 人 inner)
+const MarkCosmicEmbrace = ({ size=100, outer='var(--gold-deep)', inner='var(--cinnabar)', dot='var(--ink)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <circle cx="50" cy="50" r="46" stroke={outer} strokeWidth="0.6" opacity="0.7"/>
+    <circle cx="50" cy="50" r="36" stroke={outer} strokeWidth="0.6" opacity="0.5"/>
+    <path d="M 22 50 Q 22 28, 50 28 Q 78 28, 78 50 Q 78 72, 50 72 Q 50 50, 50 50" stroke={inner} strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+    <circle cx="50" cy="28" r="3.5" fill={dot}/>
+    <circle cx="50" cy="72" r="2" fill={inner}/>
+  </svg>
+);
+
+// 08 · Brush Taiji — taiji rendered as one bold continuous brush stroke (calligraphic, organic)
+const MarkBrushTaiji = ({ size=100, color='var(--ink)', dot='var(--cinnabar)' }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
+    <defs>
+      <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="7"/>
+        <feDisplacementMap in="SourceGraphic" scale="0.8"/>
+      </filter>
+    </defs>
+    <g filter="url(#rough)">
+      <path d="M 50 6 A 44 44 0 1 1 50 94 A 22 22 0 0 1 50 50 A 22 22 0 0 0 50 6" fill={color}/>
+    </g>
+    <circle cx="50" cy="28" r="4" fill={dot}/>
+    <circle cx="50" cy="72" r="3" fill="var(--paper)"/>
+  </svg>
+);
+
+/* ===================== APP ===================== */
+function App() {
+  return (
+    <DesignCanvas
+      title="極心流 ・ Logo V3 — 太極流動方向"
+      subtitle="Tai Chi · Flow · Heaven-Human-Unity — eight natural interpretations of 極心流"
+    >
+      <DCSection id="brief" title="設計概念 ・ Concept">
+        <DCArtboard id="concept" label="核心概念" width={520} height={300}>
+          <div className="frame ivory" style={{alignItems:'flex-start',justifyItems:'flex-start'}}>
+            <div className="note">
+              <h4>極心流 = 極致心流 + 太極之流 <small>CONCEPT</small></h4>
+              <p>「極心流」三字隱藏著兩層意涵：心理學的「心流（Flow）」極致狀態，與太極「陰陽流轉」的天人合一。本系列以這個雙層意涵為核心。</p>
+              <p>所有 logo 都建立在「<strong>S 曲線</strong>」之上 —— 太極圖的本質，亦是自然界最普遍的流動曲線。從鶴翼、山水、雙魚、三流到宇宙環抱，每一款都是對「流動」的不同詮釋。</p>
+              <p>朱砂點為「動中之心」，呼應「極致心流時，心是定的」的禪意。</p>
+              <div className="row">
+                <span className="tag">S-Curve Foundation</span>
+                <span className="tag">Yin-Yang</span>
+                <span className="tag">Heaven · Human · Unity</span>
+                <span className="tag">Cinnabar Heart-Dot</span>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection id="flow-redux" title="『流動』表達 — 修正三案">
+
+        <DCArtboard id="flow-note" label="原案的問題" width={520} height={260}>
+          <div className="frame ivory" style={{alignItems:'flex-start',justifyItems:'flex-start'}}>
+            <div className="note">
+              <h4>為何原案『開口太極』讀起來像反 G <small>WHY IT DIDN'T WORK</small></h4>
+              <p>原本想藉「未閉合的太極」象徵「能量不停止、永遠流動」，但<strong>一條被切斷的圓圈</strong>，視覺上會讀為「不完整」，而不是「流動」。</p>
+              <p>真正表達「流動」的視覺需具備：<strong>方向性</strong>（起 → 勢 → 去）、<strong>重複韻律</strong>（如波）、或<strong>連續循環</strong>（如螺旋）。以下三案分別示範。</p>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="flow-a" label="A · 一氣呵成 (Calligraphic S)" width={400} height={260}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <svg width="92" height="92" viewBox="0 0 100 100" fill="none">
+                <path d="M 14 22 Q 32 22 42 38 Q 52 54 58 62 Q 68 78 86 78"
+                  stroke="var(--ink)" strokeWidth="5" strokeLinecap="round" fill="none"/>
+                <path d="M 14 22 Q 32 22 42 38" stroke="var(--cinnabar)" strokeWidth="5" strokeLinecap="round" fill="none" opacity="0.3"/>
+                <circle cx="14" cy="22" r="5" fill="var(--cinnabar)"/>
+                <circle cx="86" cy="78" r="3" fill="var(--ink)"/>
+              </svg>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">One Stroke · One Breath</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="flow-b" label="B · 雙線交織 (Yin-Yang Weave)" width={400} height={260}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <svg width="92" height="92" viewBox="0 0 100 100" fill="none">
+                <path d="M 12 30 Q 36 6, 50 30 T 88 30" stroke="var(--ink)" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                <path d="M 12 70 Q 36 94, 50 70 T 88 70" stroke="var(--cinnabar)" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                <path d="M 12 50 Q 36 26, 50 50 T 88 50" stroke="var(--gold-deep)" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.7"/>
+                <circle cx="50" cy="50" r="4" fill="var(--cinnabar)"/>
+              </svg>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Two Forces · One Flow</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="flow-c" label="C · 渦旋 (Spiral Eddy)" width={400} height={260}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <svg width="92" height="92" viewBox="0 0 100 100" fill="none">
+                <path d="M 50 50 m 0 -4
+                         a 4 4 0 1 1 0 8
+                         a 10 10 0 1 0 0 -20
+                         a 18 18 0 1 1 0 36
+                         a 28 28 0 1 0 0 -56
+                         a 40 40 0 1 1 -2 80"
+                  stroke="var(--ink)" strokeWidth="2.4" fill="none" strokeLinecap="round"/>
+                <circle cx="50" cy="50" r="3.5" fill="var(--cinnabar)"/>
+                <circle cx="48" cy="90" r="2" fill="var(--cinnabar)" opacity="0.6"/>
+              </svg>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Spiral into Stillness</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      <DCSection id="marks" title="八種太極流動方向">
+        <DCArtboard id="m1" label="1 · 太極 Pure Taiji" width={400} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkTaiji size={92}/>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Tai Chi · Heart · Flow</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="m2" label="2 · 流動 Flowing Taiji" width={400} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkFlow size={92}/>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Energy in Motion</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="m3" label="3 · 雙魚 Two Fishes" width={400} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkFishes size={92}/>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Yin-Yang in Motion</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="m4" label="4 · 山水 Mountain-Water" width={400} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkMountainWater size={92}/>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Heaven · Earth · Flow</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="m5" label="5 · 鶴翼 Crane Wing" width={400} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkCraneWing size={92}/>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Rising Through Stillness</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="m6" label="6 · 三流 Three Rivers" width={400} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkThreeRivers size={92}/>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Three Streams · One Source</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="m7" label="7 · 宇宙環抱 Cosmic Embrace" width={400} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkCosmicEmbrace size={92}/>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Heaven Holds the Heart</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="m8" label="8 · 筆墨太極 Brush Taiji" width={400} height={240}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkBrushTaiji size={92}/>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">One Stroke · One Breath</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+      </DCSection>
+
+      {/* RECOMMENDATION: Cosmic Embrace */}
+      <DCSection id="recommended" title="主推薦 ・ Cosmic Embrace 完整應用">
+
+        <DCArtboard id="rec-why" label="為何主推薦 #7 宇宙環抱" width={520} height={320}>
+          <div className="frame ivory" style={{alignItems:'flex-start',justifyItems:'flex-start'}}>
+            <div className="note">
+              <h4>Why Cosmic Embrace <small>RECOMMENDATION</small></h4>
+              <p><strong>1. 三層結構，三語共通</strong>：外圈 = 天，中圈 = 場域，內 S 曲線 = 太極／心流。三層分別對應「天 · 人 · 合一」。</p>
+              <p><strong>2. 義大利受眾解讀</strong>：S 曲線在歐陸是「Hogarth's line of beauty」（美之線）；同心圓是 Renaissance 神聖幾何。完全可被理解。</p>
+              <p><strong>3. 動態延伸性高</strong>：圓環可做緩慢呼吸動畫（已實作於網站 Hero），與品牌的「8 秒呼吸節律」完美呼應。</p>
+              <p><strong>4. 縮放穩定</strong>：從 16px favicon 到大型招牌，三層結構都不失辨識。</p>
+              <div className="row">
+                <span className="tag">Tai Chi Curve</span>
+                <span className="tag">Renaissance Geometry</span>
+                <span className="tag">Animatable</span>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-horiz" label="主鎖定 ・ Horizontal" width={520} height={200}>
+          <div className="frame cream">
+            <div className="lockup">
+              <div className="breathe"><MarkCosmicEmbrace size={100}/></div>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Tai Chi · Heart · Flow</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-stack" label="直排 ・ Stacked" width={320} height={320}>
+          <div className="frame cream">
+            <div className="lockup stack">
+              <div className="breathe"><MarkCosmicEmbrace size={100}/></div>
+              <div>
+                <div className="wm-en" style={{fontSize:22}}>JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Tai Chi · Heart · Flow</div>
+                <div className="wm-tc" style={{textAlign:'center', paddingLeft:0}}>極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-markonly" label="純圖標" width={280} height={280}>
+          <div className="frame cream">
+            <div className="breathe"><MarkCosmicEmbrace size={160}/></div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-dark" label="深色背景 ・ Dark" width={520} height={200}>
+          <div className="frame dark">
+            <div className="lockup">
+              <MarkCosmicEmbrace size={100} outer="var(--gold-light)" inner="var(--cinnabar)" dot="var(--paper)"/>
+              <div>
+                <div className="wm-en" style={{color:'var(--paper)'}}>JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline" style={{color:'var(--gold-light)'}}>Tai Chi · Heart · Flow</div>
+                <div className="wm-tc" style={{color:'rgba(245,241,232,0.55)'}}>極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-mono" label="單色測試" width={520} height={180}>
+          <div className="mono-grid">
+            <div className="mono-cell paper"><MarkCosmicEmbrace size={70}/></div>
+            <div className="mono-cell dark"><MarkCosmicEmbrace size={70} outer="var(--gold-light)" inner="var(--paper)" dot="var(--cinnabar)"/></div>
+            <div className="mono-cell cinnabar"><MarkCosmicEmbrace size={70} outer="rgba(245,241,232,0.6)" inner="var(--paper)" dot="var(--ink)"/></div>
+            <div className="mono-cell paper"><MarkCosmicEmbrace size={70} outer="var(--ink-soft)" inner="var(--ink)" dot="var(--cinnabar)"/></div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-fav" label="Favicon · 五尺寸" width={520} height={140}>
+          <div className="fav-strip">
+            <MarkCosmicEmbrace size={16}/>
+            <MarkCosmicEmbrace size={24}/>
+            <MarkCosmicEmbrace size={32}/>
+            <MarkCosmicEmbrace size={48}/>
+            <MarkCosmicEmbrace size={64}/>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-appicon" label="App Icon" width={260} height={260}>
+          <div className="frame warm">
+            <div style={{width:150,height:150,background:'var(--paper)',display:'grid',placeItems:'center',borderRadius:'20%',boxShadow:'0 20px 40px -20px rgba(43,42,38,0.45)'}}>
+              <MarkCosmicEmbrace size={110}/>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-bcard" label="名片 ・ Business Card" width={620} height={420}>
+          <div className="frame warm">
+            <div className="bcard">
+              <div className="bc-front">
+                <div className="lockup">
+                  <MarkCosmicEmbrace size={50}/>
+                  <div>
+                    <div className="wm-en" style={{fontSize:14}}>JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                    <div className="wm-tagline" style={{fontSize:8}}>Tai Chi · Heart · Flow</div>
+                  </div>
+                </div>
+                <div>
+                  <h3>Dennis Lo / 羅 紹 綸</h3>
+                  <div className="role">FOUNDING MASTER · 創辦人</div>
+                </div>
+                <div className="bc-meta">
+                  <div className="r"><span className="k">tel</span><span>+886 (0)2 0000 · 0000</span></div>
+                  <div className="r"><span className="k">mail</span><span>master@ji-xin-liu.com</span></div>
+                  <div className="r"><span className="k">studio</span><span>Taipei · Da&rsquo;an &mdash; By Appointment</span></div>
+                </div>
+              </div>
+              <div className="bc-back">
+                <div style={{position:'relative',zIndex:1,textAlign:'center'}}>
+                  <MarkCosmicEmbrace size={75} outer="var(--gold-light)" inner="var(--cinnabar)" dot="var(--paper)"/>
+                  <div className="wm-en" style={{color:'var(--paper)',fontSize:14,marginTop:14}}>JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                  <div className="wm-tagline" style={{color:'var(--gold-light)',fontSize:8,marginTop:6}}>極 心 流 ・ Tai Chi · Heart · Flow</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="rec-italian" label="義大利語境" width={520} height={200}>
+          <div className="frame ivory">
+            <div className="lockup">
+              <MarkCosmicEmbrace size={92}/>
+              <div>
+                <div className="wm-en">JI<span className="amp">·</span>XIN<span className="amp">·</span>LIU</div>
+                <div className="wm-tagline">Studio di Tai Chi &amp; Risonanza</div>
+                <div className="wm-tc">極 心 流</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+      </DCSection>
+    </DesignCanvas>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

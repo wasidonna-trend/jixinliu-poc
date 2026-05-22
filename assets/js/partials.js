@@ -3,24 +3,39 @@
    Inserted via JS so all pages stay in sync.
    ============================================================ */
 
+// Determine path prefix so subpages (products/*, stages/*) get "../"
+const _path = location.pathname.replace(/\/+$/, '');
+const _depth = (_path.match(/\/(products|stages|articles|events)\//) ? 1 : 0);
+const _base = '../'.repeat(_depth);
+
 const NAV_HTML = `
 <nav class="nav" aria-label="Primary">
   <div class="container">
-    <a href="index.html" class="nav-logo">
-      <span class="seal" aria-hidden="true">心</span>
-      <span class="seal-text" data-i18n="brand.name">極心流能量工作室</span>
+    <a href="${_base}index.html" class="nav-logo">
+      <svg class="logo-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="#a88440" stroke-width="0.7" opacity="0.5"/>
+        <circle cx="50" cy="50" r="36" stroke="#a88440" stroke-width="0.9" opacity="0.7"/>
+        <circle cx="50" cy="50" r="26" stroke="#a44d3a" stroke-width="1.1"/>
+        <circle cx="50" cy="50" r="16" stroke="#a44d3a" stroke-width="1.3"/>
+        <circle cx="50" cy="50" r="6" fill="#a44d3a"/>
+      </svg>
+      <span class="logo-word">
+        <span class="logo-en">JI<i>·</i>XIN<i>·</i>LIU</span>
+        <span class="logo-tc" data-i18n="brand.full">極心流自然療法工作室</span>
+      </span>
     </a>
     <button class="nav-burger" aria-label="Menu" data-i18n-aria="common.menu">
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links">
-      <a href="index.html#vision" data-i18n="nav.vision">願景</a>
-      <a href="master.html" data-i18n="nav.master">羅老師</a>
-      <a href="index.html#stages" data-i18n="nav.stages">六階段</a>
-      <a href="trinity.html" data-i18n="nav.trinity">極心三元</a>
-      <a href="index.html#products" data-i18n="nav.products">能量商品</a>
-      <a href="index.html#events" data-i18n="nav.events">活動</a>
-      <a href="faq.html" data-i18n="nav.faq">Q&A</a>
+      <a href="${_base}index.html#vision" data-i18n="nav.vision">願景</a>
+      <a href="${_base}master.html" data-i18n="nav.master">羅老師</a>
+      <a href="${_base}index.html#stages" data-i18n="nav.stages">六階段</a>
+      <a href="${_base}trinity.html" data-i18n="nav.trinity">極心三元</a>
+      <a href="${_base}index.html#therapies" data-i18n="nav.therapies">療癒服務</a>
+      <a href="${_base}index.html#products" data-i18n="nav.products">能量商品</a>
+      <a href="${_base}index.html#events" data-i18n="nav.events">活動</a>
+      <a href="${_base}faq.html" data-i18n="nav.faq">Q&A</a>
     </div>
     <div class="nav-tools">
       <div class="lang-switch" role="group" aria-label="Language">
@@ -28,7 +43,7 @@ const NAV_HTML = `
         <button data-lang="en">EN</button>
         <button data-lang="it">IT</button>
       </div>
-      <a href="booking.html" class="nav-cta" data-i18n="nav.book">預約</a>
+      <a href="${_base}booking.html" class="nav-cta" data-i18n="nav.book">預約</a>
     </div>
   </div>
 </nav>
@@ -38,43 +53,42 @@ const FOOTER_HTML = `
 <footer class="footer">
   <div class="container">
     <div>
-      <div class="brand-name" data-i18n="footer.brand">極心流能量工作室</div>
+      <div class="brand-name" data-i18n="footer.brand">極心流自然療法工作室</div>
       <p style="margin-bottom:8px;color:var(--gold-light);font-style:italic;font-family:var(--serif-en);" data-i18n="footer.brand.master">羅紹綸 老師主持</p>
       <p data-i18n="footer.brand.body">融合古法武學、中醫經絡與量子能量學，引導身心靈整合療癒，重啟您與生俱來的自癒力量。</p>
     </div>
     <div>
       <h4 data-i18n="footer.col.services">Services</h4>
       <ul>
-        <li><a href="index.html#stages" data-i18n="footer.link.stages">六階段課程</a></li>
-        <li><a href="trinity.html" data-i18n="footer.link.trinity">極心三元</a></li>
-        <li><a href="index.html#products" data-i18n="footer.link.products">能量商品</a></li>
-        <li><a href="index.html#events" data-i18n="footer.link.events">活動行事曆</a></li>
-        <li><a href="booking.html" data-i18n="footer.link.book">預約諮詢</a></li>
+        <li><a href="${_base}index.html#stages" data-i18n="footer.link.stages">六階段課程</a></li>
+        <li><a href="${_base}trinity.html" data-i18n="footer.link.trinity">極心三元</a></li>
+        <li><a href="${_base}index.html#products" data-i18n="footer.link.products">能量商品</a></li>
+        <li><a href="${_base}index.html#events" data-i18n="footer.link.events">活動行事曆</a></li>
+        <li><a href="${_base}booking.html" data-i18n="footer.link.book">預約諮詢</a></li>
       </ul>
     </div>
     <div>
       <h4 data-i18n="footer.col.about">About</h4>
       <ul>
-        <li><a href="index.html#vision" data-i18n="footer.link.vision">願景</a></li>
-        <li><a href="master.html" data-i18n="footer.link.master">羅老師簡介</a></li>
-        <li><a href="index.html#philosophy" data-i18n="footer.link.phi">核心理念</a></li>
-        <li><a href="index.html#articles" data-i18n="footer.link.articles">文章知識庫</a></li>
-        <li><a href="faq.html" data-i18n="footer.link.faq">常見問答</a></li>
+        <li><a href="${_base}index.html#vision" data-i18n="footer.link.vision">願景</a></li>
+        <li><a href="${_base}master.html" data-i18n="footer.link.master">羅老師簡介</a></li>
+        <li><a href="${_base}index.html#philosophy" data-i18n="footer.link.phi">核心理念</a></li>
+        <li><a href="${_base}index.html#articles" data-i18n="footer.link.articles">文章知識庫</a></li>
+        <li><a href="${_base}faq.html" data-i18n="footer.link.faq">常見問答</a></li>
       </ul>
     </div>
     <div>
       <h4 data-i18n="footer.col.contact">Contact</h4>
       <ul>
-        <li><a href="booking.html" data-i18n="footer.link.book">預約諮詢</a></li>
-        <li><a href="#" data-i18n="footer.link.line">LINE 官方帳號</a></li>
+        <li><a href="${_base}booking.html" data-i18n="footer.link.book">預約諮詢</a></li>
+        <li><a href="#" data-i18n="footer.link.line">LINE @mind6688</a></li>
         <li><a href="#" data-i18n="footer.link.fb">Facebook</a></li>
         <li><a href="#" data-i18n="footer.link.ig">Instagram</a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-bottom">
-    <span data-i18n="footer.copy">© 2026 極心流能量工作室・羅氏自癒力系統</span>
-    <span data-i18n="footer.tag">Crafted with 心 ・ 義 ・ 志 ・ 身</span>
+    <span data-i18n="footer.copy">© 2026 極心流自然療法工作室・羅氏自癒力療癒系統</span>
   </div>
 </footer>
 `;

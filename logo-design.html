@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>極心流 ・ Logo 探索 8 種方向</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f5f1e8;
+  --paper-warm: #ebe4d4;
+  --ivory: #faf7ef;
+  --ink: #2b2a26;
+  --ink-soft: #4a4842;
+  --ink-mute: #8a8579;
+  --line: #d4cdb8;
+  --line-soft: #e3ddc8;
+  --gold: #c9a96a;
+  --gold-deep: #a88440;
+  --gold-light: #e3cfa1;
+  --cinnabar: #a44d3a;
+  --cinnabar-deep: #7a3526;
+  --serif-tc: 'Noto Serif TC', serif;
+  --serif-en: 'Cormorant Garamond', serif;
+  --sans-tc: 'Noto Sans TC', sans-serif;
+}
+body { background: #d8d2c0; font-family: var(--sans-tc); margin: 0; }
+
+/* Logo presentation primitives */
+.logo-frame { width: 100%; height: 100%; display: grid; place-items: center; padding: 20px; box-sizing: border-box; }
+.logo-frame.dark { background: var(--ink); color: var(--paper); }
+.logo-frame.warm { background: var(--paper-warm); }
+.logo-frame.ivory { background: var(--ivory); }
+.logo-frame.cream { background: var(--paper); }
+
+/* === A · 朱印「心」 === */
+.logo-a {
+  display: flex; align-items: center; gap: 18px;
+}
+.logo-a .stamp {
+  width: 86px; height: 86px;
+  background: var(--cinnabar);
+  display: grid; place-items: center;
+  font-family: var(--serif-tc); font-weight: 500;
+  color: var(--paper); font-size: 56px;
+  letter-spacing: 0;
+  position: relative;
+}
+.logo-a .stamp::before, .logo-a .stamp::after {
+  content: ''; position: absolute;
+  background: rgba(245,241,232,0.0);
+}
+.logo-a .stamp::before { inset: 6px; border: 1px solid rgba(245,241,232,0.25); }
+.logo-a .word .tc {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 26px; color: var(--ink); letter-spacing: 0.16em;
+  line-height: 1.05;
+}
+.logo-a .word .en {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 14px; color: var(--gold-deep);
+  letter-spacing: 0.18em; margin-top: 2px;
+}
+
+/* === B · 同心圓共振 === */
+.logo-b { text-align: center; }
+.logo-b svg { display: block; margin: 0 auto 14px; }
+.logo-b .tc {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 22px; color: var(--ink); letter-spacing: 0.32em;
+  padding-left: 0.32em;
+}
+.logo-b .en {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 11px; color: var(--gold-deep);
+  letter-spacing: 0.32em; margin-top: 4px; padding-left: 0.32em;
+  text-transform: uppercase;
+}
+
+/* === C · 水墨筆觸「心」 === */
+.logo-c { text-align: center; }
+.logo-c svg { display: block; margin: 0 auto; }
+.logo-c .tc {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 14px; color: var(--ink); letter-spacing: 0.32em;
+  margin-top: 12px; padding-left: 0.32em;
+}
+
+/* === D · 古印章圓刻 === */
+.logo-d { text-align: center; }
+.logo-d .seal-circle {
+  width: 130px; height: 130px;
+  border-radius: 50%;
+  background: var(--cinnabar);
+  display: grid; place-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+.logo-d .seal-circle::before {
+  content: ''; position: absolute;
+  inset: 6px; border-radius: 50%;
+  border: 1.5px solid rgba(245,241,232,0.4);
+}
+.logo-d .seal-inner {
+  font-family: var(--serif-tc); font-weight: 500;
+  color: var(--paper); font-size: 36px;
+  letter-spacing: -0.04em;
+  line-height: 1; text-align: center;
+}
+.logo-d .seal-inner small {
+  display: block;
+  font-size: 11px; letter-spacing: 0.3em;
+  margin-top: 6px; opacity: 0.85;
+  font-weight: 400;
+}
+
+/* === E · 線描印章 + 心字 === */
+.logo-e {
+  width: 130px; height: 130px;
+  border: 1.2px solid var(--ink);
+  position: relative;
+  display: grid; place-items: center;
+  margin: 0 auto;
+}
+.logo-e::before {
+  content: ''; position: absolute;
+  inset: 5px;
+  border: 0.5px solid var(--ink);
+}
+.logo-e .e-glyph {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 56px; color: var(--ink);
+  position: relative; z-index: 1;
+}
+.logo-e .e-glyph::after {
+  content: '';
+  position: absolute; inset: -10px;
+  background: var(--cinnabar);
+  z-index: -1; opacity: 0;
+}
+/* corner ticks */
+.logo-e i { position: absolute; width: 8px; height: 8px; }
+.logo-e i.tl { top: -1px; left: -1px; border-top: 2px solid var(--cinnabar); border-left: 2px solid var(--cinnabar); }
+.logo-e i.tr { top: -1px; right: -1px; border-top: 2px solid var(--cinnabar); border-right: 2px solid var(--cinnabar); }
+.logo-e i.bl { bottom: -1px; left: -1px; border-bottom: 2px solid var(--cinnabar); border-left: 2px solid var(--cinnabar); }
+.logo-e i.br { bottom: -1px; right: -1px; border-bottom: 2px solid var(--cinnabar); border-right: 2px solid var(--cinnabar); }
+
+/* === F · 流動線條 (心流) === */
+.logo-f { text-align: center; }
+.logo-f svg { display: block; margin: 0 auto 14px; }
+.logo-f .tc {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 19px; color: var(--ink); letter-spacing: 0.28em;
+  padding-left: 0.28em;
+}
+.logo-f .en {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 12px; color: var(--gold-deep);
+  letter-spacing: 0.28em; margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* === G · 量子點陣 === */
+.logo-g { text-align: center; }
+.logo-g .quantum {
+  position: relative; width: 110px; height: 110px;
+  margin: 0 auto 12px;
+}
+.logo-g .qcore {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 44px; height: 44px;
+  background: var(--cinnabar);
+  display: grid; place-items: center;
+  font-family: var(--serif-tc); font-weight: 500;
+  color: var(--paper); font-size: 28px;
+  border-radius: 50%;
+}
+.logo-g .qring {
+  position: absolute; inset: 0;
+  border: 1px dashed var(--gold-deep);
+  border-radius: 50%;
+}
+.logo-g .qring.r2 { inset: 14px; border-style: solid; opacity: 0.6; }
+.logo-g .qdot {
+  position: absolute; width: 6px; height: 6px;
+  background: var(--gold-deep); border-radius: 50%;
+}
+.logo-g .qdot.d1 { left: 50%; top: -3px; transform: translateX(-50%); }
+.logo-g .qdot.d2 { right: -3px; top: 50%; transform: translateY(-50%); background: var(--cinnabar); }
+.logo-g .qdot.d3 { left: 50%; bottom: -3px; transform: translateX(-50%); }
+.logo-g .qdot.d4 { left: -3px; top: 50%; transform: translateY(-50%); background: var(--cinnabar); }
+.logo-g .tc {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 16px; color: var(--ink); letter-spacing: 0.28em;
+}
+
+/* === H · 縱向豎排 (古典書冊) === */
+.logo-h {
+  display: inline-grid; grid-template-columns: auto auto; gap: 16px; align-items: stretch;
+}
+.logo-h .stripe {
+  width: 4px; background: linear-gradient(180deg, var(--cinnabar) 0%, var(--gold-deep) 100%);
+}
+.logo-h .vert {
+  display: grid; grid-auto-flow: row; gap: 8px;
+  font-family: var(--serif-tc); font-weight: 500;
+  color: var(--ink); font-size: 22px; letter-spacing: 0;
+  text-align: center;
+}
+.logo-h .vert .ji {
+  width: 38px; height: 38px;
+  background: var(--cinnabar); color: var(--paper);
+  display: grid; place-items: center;
+  font-size: 22px;
+}
+.logo-h .meta {
+  align-self: end;
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 11px;
+  letter-spacing: 0.22em; writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+
+/* Mono variations */
+.mono-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 24px; }
+.mono-cell { aspect-ratio: 1; background: var(--ivory); display: grid; place-items: center; border: 1px solid var(--line); padding: 16px; }
+.mono-cell.dark { background: var(--ink); }
+.mono-cell.cinnabar { background: var(--cinnabar); }
+.mono-cell.gold { background: var(--gold); }
+
+/* Business Card */
+.bcard {
+  width: 100%; max-width: 520px; aspect-ratio: 91/55;
+  margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  box-shadow: 0 30px 60px -25px rgba(0,0,0,0.35), 0 8px 16px -8px rgba(0,0,0,0.18);
+  position: relative;
+}
+.bcard .bc-front { background: var(--paper); padding: 30px; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+.bcard .bc-back { background: var(--ink); padding: 30px; display: grid; place-items: center; position: relative; overflow: hidden; }
+.bcard .bc-back::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(50% 70% at 70% 30%, rgba(201,169,106,0.18), transparent 60%);
+}
+
+.bcard .bc-front .bc-logo {
+  display: flex; align-items: center; gap: 12px;
+}
+.bcard .bc-front .bc-logo .stamp {
+  width: 44px; height: 44px;
+  background: var(--cinnabar); color: var(--paper);
+  display: grid; place-items: center;
+  font-family: var(--serif-tc); font-weight: 500; font-size: 26px;
+}
+.bcard .bc-front .bc-logo .word { line-height: 1.1; }
+.bcard .bc-front .bc-logo .tc { font-family: var(--serif-tc); font-weight: 500; font-size: 13px; color: var(--ink); letter-spacing: 0.2em; }
+.bcard .bc-front .bc-logo .en { font-family: var(--serif-en); font-style: italic; font-size: 9px; color: var(--gold-deep); letter-spacing: 0.2em; margin-top: 2px; text-transform: uppercase; }
+
+.bcard .bc-front .bc-name { padding: 6px 0 0; }
+.bcard .bc-front .bc-name h3 { font-family: var(--serif-tc); font-weight: 500; font-size: 17px; color: var(--ink); letter-spacing: 0.1em; margin: 0 0 2px; }
+.bcard .bc-front .bc-name .role { font-family: var(--serif-en); font-style: italic; color: var(--gold-deep); font-size: 11px; letter-spacing: 0.18em; }
+
+.bcard .bc-front .bc-meta {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--ink-soft); font-size: 10px; line-height: 1.7; letter-spacing: 0.04em;
+}
+.bcard .bc-front .bc-meta .row { display: flex; gap: 6px; }
+.bcard .bc-front .bc-meta .k { color: var(--gold-deep); width: 50px; flex-shrink: 0; letter-spacing: 0.16em; text-transform: uppercase; }
+
+.bcard .bc-back .bc-seal {
+  position: relative; z-index: 1; text-align: center;
+}
+.bcard .bc-back .bc-seal .glyph {
+  font-family: var(--serif-tc); font-weight: 500; font-size: 64px; color: var(--gold-light); letter-spacing: 0; line-height: 1;
+}
+.bcard .bc-back .bc-seal .tc { font-family: var(--serif-tc); font-weight: 400; color: var(--paper); font-size: 13px; letter-spacing: 0.32em; margin-top: 14px; padding-left: 0.32em; }
+.bcard .bc-back .bc-seal .en { font-family: var(--serif-en); font-style: italic; color: var(--gold-light); font-size: 9px; letter-spacing: 0.28em; margin-top: 4px; text-transform: uppercase; }
+
+/* Favicon strip */
+.favicon-strip {
+  display: flex; gap: 12px; align-items: center; justify-content: center; padding: 16px;
+  flex-wrap: wrap;
+}
+.fav { width: 32px; height: 32px; display: grid; place-items: center; font-family: var(--serif-tc); font-weight: 500; }
+.fav.size16 { width: 16px; height: 16px; font-size: 11px; }
+.fav.size24 { width: 24px; height: 24px; font-size: 16px; }
+.fav.size32 { width: 32px; height: 32px; font-size: 20px; }
+.fav.size48 { width: 48px; height: 48px; font-size: 30px; }
+.fav.size64 { width: 64px; height: 64px; font-size: 40px; }
+.fav.cinnabar { background: var(--cinnabar); color: var(--paper); }
+
+/* Construction grid (showing geometry) */
+.construct-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 30px; align-items: center;
+}
+.construct-cell { background: var(--ivory); border: 1px dashed var(--gold); padding: 30px; position: relative; min-height: 200px; display: grid; place-items: center; }
+.construct-cell .label { position: absolute; bottom: 8px; left: 12px; font-family: var(--serif-en); font-style: italic; font-size: 10px; color: var(--gold-deep); letter-spacing: 0.16em; text-transform: uppercase; }
+
+/* Notes */
+.note-block { padding: 20px 24px; }
+.note-block h4 { font-family: var(--serif-tc); font-weight: 500; font-size: 16px; color: var(--ink); margin: 0 0 8px; letter-spacing: 0.08em; }
+.note-block p { font-family: var(--serif-tc); font-weight: 400; font-size: 13px; color: var(--ink-soft); line-height: 1.85; margin: 0 0 8px; }
+.note-block .label-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 12px; }
+.note-block .tag { padding: 3px 10px; background: var(--paper-warm); border: 1px solid var(--line); font-family: var(--serif-en); font-style: italic; font-size: 10px; color: var(--gold-deep); letter-spacing: 0.16em; text-transform: uppercase; }
+
+/* Color palette swatches */
+.palette { display: grid; grid-template-columns: repeat(5, 1fr); padding: 0; }
+.swatch { aspect-ratio: 1; display: flex; flex-direction: column; justify-content: flex-end; padding: 10px; font-family: var(--serif-en); font-style: italic; font-size: 9px; letter-spacing: 0.1em; }
+.swatch .hex { display: block; opacity: 0.85; margin-top: 2px; font-size: 10px; }
+.sw1 { background: var(--paper); color: var(--ink); }
+.sw2 { background: var(--ink); color: var(--paper); }
+.sw3 { background: var(--cinnabar); color: var(--paper); }
+.sw4 { background: var(--gold); color: var(--ink); }
+.sw5 { background: var(--paper-warm); color: var(--ink); }
+</style>
+</head>
+<body>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+function App() {
+  return (
+    <DesignCanvas
+      title="極心流能量工作室 ・ Logo 探索"
+      subtitle="Eight directions exploring 心 · 流 · 印 · 共振 — pick one to refine"
+    >
+      {/* ============================================== */}
+      {/*  SECTION 1 — 八個主要方向                        */}
+      {/* ============================================== */}
+      <DCSection id="primary" title="八個主要方向">
+
+        {/* A · 朱印「心」+ 中英橫排 */}
+        <DCArtboard id="a" label="A · 朱印『心』" width={520} height={220}>
+          <div className="logo-frame ivory">
+            <div className="logo-a">
+              <div className="stamp">心</div>
+              <div className="word">
+                <div className="tc">極心流</div>
+                <div className="en">Ji-Xin Liu Energetics</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* B · 同心圓共振 */}
+        <DCArtboard id="b" label="B · 同心圓共振" width={320} height={320}>
+          <div className="logo-frame warm">
+            <div className="logo-b">
+              <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                <circle cx="60" cy="60" r="55" stroke="#a44d3a" strokeWidth="0.8"/>
+                <circle cx="60" cy="60" r="42" stroke="#a88440" strokeWidth="0.8"/>
+                <circle cx="60" cy="60" r="29" stroke="#a88440" strokeWidth="0.8"/>
+                <circle cx="60" cy="60" r="16" fill="#a44d3a"/>
+                <text x="60" y="68" textAnchor="middle" fill="#f5f1e8" fontFamily="Noto Serif TC" fontWeight="500" fontSize="18">心</text>
+              </svg>
+              <div className="tc">極心流</div>
+              <div className="en">Resonance</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* C · 水墨筆觸「心」 */}
+        <DCArtboard id="c" label="C · 水墨筆觸" width={320} height={320}>
+          <div className="logo-frame ivory">
+            <div className="logo-c">
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <defs>
+                  <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+                    <feDisplacementMap in="SourceGraphic" scale="1.2"/>
+                  </filter>
+                </defs>
+                {/* abstract heart-stroke */}
+                <g filter="url(#rough)">
+                  <path d="M22 70 Q 32 40 56 50 Q 60 52 60 60" fill="none" stroke="#2b2a26" strokeWidth="6" strokeLinecap="round"/>
+                  <path d="M98 70 Q 88 40 64 50 Q 60 52 60 60" fill="none" stroke="#2b2a26" strokeWidth="6" strokeLinecap="round"/>
+                  <path d="M30 76 Q 60 102 90 76" fill="none" stroke="#2b2a26" strokeWidth="6" strokeLinecap="round"/>
+                  <circle cx="60" cy="32" r="5" fill="#a44d3a"/>
+                </g>
+              </svg>
+              <div className="tc">極 心 流</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* D · 古印章圓刻 */}
+        <DCArtboard id="d" label="D · 古印章圓刻" width={320} height={320}>
+          <div className="logo-frame warm">
+            <div className="logo-d">
+              <div className="seal-circle">
+                <div className="seal-inner">
+                  極<small>心 流</small>
+                </div>
+              </div>
+              <div style={{marginTop: 14, fontFamily: 'var(--serif-en)', fontStyle: 'italic', fontSize: 11, color: 'var(--gold-deep)', letterSpacing: '0.2em', textTransform: 'uppercase'}}>JI-XIN LIU · est.</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* E · 線描印章框 + 心字 */}
+        <DCArtboard id="e" label="E · 線描印章框" width={320} height={320}>
+          <div className="logo-frame ivory">
+            <div className="logo-e">
+              <i className="tl"></i><i className="tr"></i><i className="bl"></i><i className="br"></i>
+              <div className="e-glyph">心</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* F · 流動線條 */}
+        <DCArtboard id="f" label="F · 心流線條" width={420} height={300}>
+          <div className="logo-frame ivory">
+            <div className="logo-f">
+              <svg width="180" height="80" viewBox="0 0 180 80" fill="none">
+                <path d="M10 40 Q 35 10 60 40 T 110 40 T 160 40" stroke="#a88440" strokeWidth="1.2" fill="none"/>
+                <path d="M10 50 Q 35 20 60 50 T 110 50 T 160 50" stroke="#a44d3a" strokeWidth="1.5" fill="none"/>
+                <path d="M10 60 Q 35 30 60 60 T 110 60 T 160 60" stroke="#a88440" strokeWidth="1.2" fill="none" opacity="0.6"/>
+                <circle cx="90" cy="50" r="6" fill="#a44d3a"/>
+              </svg>
+              <div className="tc">極 心 流</div>
+              <div className="en">Energy in Flow</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* G · 量子點陣 */}
+        <DCArtboard id="g" label="G · 量子共振場" width={320} height={320}>
+          <div className="logo-frame ivory">
+            <div className="logo-g">
+              <div className="quantum">
+                <div className="qring"></div>
+                <div className="qring r2"></div>
+                <div className="qdot d1"></div>
+                <div className="qdot d2"></div>
+                <div className="qdot d3"></div>
+                <div className="qdot d4"></div>
+                <div className="qcore">心</div>
+              </div>
+              <div className="tc">極 心 流</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* H · 縱向書冊風 */}
+        <DCArtboard id="h" label="H · 縱向書冊" width={260} height={320}>
+          <div className="logo-frame ivory">
+            <div className="logo-h">
+              <div className="stripe"></div>
+              <div className="vert">
+                <div className="ji">極</div>
+                <div>心</div>
+                <div>流</div>
+              </div>
+              <div className="meta">JI-XIN LIU</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      {/* ============================================== */}
+      {/*  SECTION 2 — 設計理念說明                          */}
+      {/* ============================================== */}
+      <DCSection id="reasoning" title="設計理念與品牌系統">
+
+        <DCArtboard id="palette" label="品牌色彩系統" width={520} height={220}>
+          <div className="palette" style={{height:'100%', gridTemplateColumns:'repeat(5,1fr)'}}>
+            <div className="swatch sw1">紙白<span className="hex">#F5F1E8</span></div>
+            <div className="swatch sw5">米暖<span className="hex">#EBE4D4</span></div>
+            <div className="swatch sw3">朱砂<span className="hex">#A44D3A</span></div>
+            <div className="swatch sw4">沉金<span className="hex">#C9A96A</span></div>
+            <div className="swatch sw2">墨黑<span className="hex">#2B2A26</span></div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="philosophy" label="A 案 ・ 設計理念" width={420} height={280}>
+          <div className="logo-frame ivory" style={{alignItems:'flex-start'}}>
+            <div className="note-block">
+              <h4>A · 朱印『心』</h4>
+              <p>以朱砂方印框住「心」字 —— 印章是東方文化中代表「承諾與身份」的符號，朱砂則承載辟邪安神的能量意象。</p>
+              <p>橫排英文以 Cormorant Garamond 義大利斜體呈現，呼應未來歐陸市場拓展的識別需求。</p>
+              <div className="label-row">
+                <span className="tag">最推薦</span>
+                <span className="tag">識別性最高</span>
+                <span className="tag">適合主視覺</span>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        <DCArtboard id="why-symbols" label="符號 — 取捨理由" width={420} height={280}>
+          <div className="logo-frame ivory" style={{alignItems:'flex-start'}}>
+            <div className="note-block">
+              <h4>為何選擇『心』為核心字?</h4>
+              <p><strong>「極心流」三字中，「心」是體系的軸心。</strong>羅老師體系強調的「心 · 義 · 志 · 身」四維中，「心」為根。</p>
+              <p>朱砂方印框則回應「印 = 認證 = 不可替代」的東方意涵 —— 每一次能量加持皆如蓋上羅老師的私印。</p>
+              <div className="label-row">
+                <span className="tag">心為四維之根</span>
+                <span className="tag">印為東方信物</span>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+
+      {/* ============================================== */}
+      {/*  SECTION 3 — 主推薦 (A 案) 完整應用              */}
+      {/* ============================================== */}
+      <DCSection id="application" title="主推薦 ・ A 案完整應用">
+
+        {/* On dark */}
+        <DCArtboard id="a-dark" label="深色背景" width={520} height={220}>
+          <div className="logo-frame dark">
+            <div className="logo-a">
+              <div className="stamp" style={{background:'var(--cinnabar)'}}>心</div>
+              <div className="word">
+                <div className="tc" style={{color:'var(--paper)'}}>極心流</div>
+                <div className="en" style={{color:'var(--gold-light)'}}>Ji-Xin Liu Energetics</div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* Mono variations */}
+        <DCArtboard id="a-mono" label="單色版本 (印刷 / Favicon)" width={680} height={220}>
+          <div className="mono-grid" style={{height:'100%'}}>
+            <div className="mono-cell">
+              <div style={{width:50,height:50,background:'var(--cinnabar)',display:'grid',placeItems:'center',fontFamily:'var(--serif-tc)',fontWeight:500,color:'var(--paper)',fontSize:32}}>心</div>
+            </div>
+            <div className="mono-cell dark">
+              <div style={{width:50,height:50,background:'var(--paper)',display:'grid',placeItems:'center',fontFamily:'var(--serif-tc)',fontWeight:500,color:'var(--ink)',fontSize:32}}>心</div>
+            </div>
+            <div className="mono-cell cinnabar">
+              <div style={{width:50,height:50,border:'1.5px solid var(--paper)',display:'grid',placeItems:'center',fontFamily:'var(--serif-tc)',fontWeight:500,color:'var(--paper)',fontSize:32}}>心</div>
+            </div>
+            <div className="mono-cell">
+              <div style={{width:50,height:50,background:'var(--ink)',display:'grid',placeItems:'center',fontFamily:'var(--serif-tc)',fontWeight:500,color:'var(--paper)',fontSize:32}}>心</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* Favicon stack */}
+        <DCArtboard id="a-favicon" label="Favicon · 五種尺寸" width={520} height={140}>
+          <div className="favicon-strip" style={{height:'100%'}}>
+            <div className="fav fav-fluid cinnabar size16" style={{fontSize:9}}>心</div>
+            <div className="fav cinnabar size24">心</div>
+            <div className="fav cinnabar size32">心</div>
+            <div className="fav cinnabar size48">心</div>
+            <div className="fav cinnabar size64">心</div>
+          </div>
+        </DCArtboard>
+
+        {/* Mini icon (just stamp) */}
+        <DCArtboard id="a-mini" label="極簡圖標 (App Icon)" width={300} height={300}>
+          <div className="logo-frame warm">
+            <div style={{width:140,height:140,background:'var(--cinnabar)',display:'grid',placeItems:'center',position:'relative',borderRadius:'18%',boxShadow:'0 20px 40px -20px rgba(164,77,58,0.6)'}}>
+              <div style={{position:'absolute',inset:10,border:'1px solid rgba(245,241,232,0.25)',borderRadius:'14%'}}></div>
+              <div style={{fontFamily:'var(--serif-tc)',fontWeight:500,fontSize:90,color:'var(--paper)',position:'relative',zIndex:1}}>心</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* Business card front */}
+        <DCArtboard id="a-bcard-front" label="名片正面" width={620} height={400}>
+          <div className="logo-frame warm">
+            <div className="bcard">
+              <div className="bc-front">
+                <div className="bc-logo">
+                  <div className="stamp">心</div>
+                  <div className="word">
+                    <div className="tc">極心流</div>
+                    <div className="en">Ji-Xin Liu Energetics</div>
+                  </div>
+                </div>
+                <div className="bc-name">
+                  <h3>羅 紹 綸</h3>
+                  <div className="role">FOUNDING MASTER · 創辦人</div>
+                </div>
+                <div className="bc-meta">
+                  <div className="row"><span className="k">tel</span><span>+886 (0)2 0000-0000</span></div>
+                  <div className="row"><span className="k">email</span><span>master@ji-xin-liu.com</span></div>
+                  <div className="row"><span className="k">studio</span><span>台北市大安區 · By Appointment</span></div>
+                </div>
+              </div>
+              <div className="bc-back">
+                <div className="bc-seal">
+                  <div className="glyph">心</div>
+                  <div className="tc">極 心 流</div>
+                  <div className="en">Resonance · Flow · Energy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DCArtboard>
+
+        {/* Letterhead snippet */}
+        <DCArtboard id="a-letterhead" label="信箋 / 文件抬頭" width={520} height={420}>
+          <div className="logo-frame ivory" style={{alignItems:'flex-start',padding:0}}>
+            <div style={{width:'100%',height:'100%',background:'var(--paper)',padding:'40px 36px',boxSizing:'border-box',display:'flex',flexDirection:'column',gap:20}}>
+              <div className="logo-a">
+                <div className="stamp" style={{width:62,height:62,fontSize:38}}>心</div>
+                <div className="word">
+                  <div className="tc" style={{fontSize:20}}>極心流能量工作室</div>
+                  <div className="en">Ji-Xin Liu Energy Studio</div>
+                </div>
+              </div>
+              <div style={{height:1,background:'var(--line)',margin:'4px 0'}}></div>
+              <div style={{fontFamily:'var(--serif-en)',fontStyle:'italic',color:'var(--gold-deep)',fontSize:11,letterSpacing:'0.18em',textTransform:'uppercase'}}>能量處方箋 · ENERGY PRESCRIPTION</div>
+              <div style={{fontFamily:'var(--serif-tc)',color:'var(--ink-soft)',fontSize:13,lineHeight:1.85}}>
+                敬啟者 · _______________ <br/>
+                日期 · 2026.__.__ &nbsp;&nbsp;&nbsp; 階段 · _______
+              </div>
+              <div style={{flexGrow:1,borderTop:'1px dashed var(--line)',marginTop:8}}></div>
+              <div style={{fontFamily:'var(--serif-en)',fontStyle:'italic',fontSize:10,color:'var(--ink-mute)',letterSpacing:'0.18em',textAlign:'right',textTransform:'uppercase'}}>Crafted with 心 ・ 義 ・ 志 ・ 身</div>
+            </div>
+          </div>
+        </DCArtboard>
+
+      </DCSection>
+    </DesignCanvas>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+</body>
+</html>
