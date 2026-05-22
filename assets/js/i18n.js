@@ -334,7 +334,7 @@ const I18N = {
     "common.related": "延伸閱讀",
     "common.share": "分享",
     "common.lang": "Language",
-    "price.consult": "依個人狀況報價",
+    "price.consult": "費用詳洽",
     "price.consult.note": "歡迎先以 LINE 或電話諮詢，依您的需求量身規劃",
   },
 
@@ -667,7 +667,7 @@ const I18N = {
     "common.related": "Further Reading",
     "common.share": "Share",
     "common.lang": "Language",
-    "price.consult": "Quote on consultation",
+    "price.consult": "Inquire for details",
     "price.consult.note": "Please contact us via LINE or phone for a tailored plan",
   },
 
@@ -1000,7 +1000,7 @@ const I18N = {
     "common.related": "Letture correlate",
     "common.share": "Condividi",
     "common.lang": "Lingua",
-    "price.consult": "Su consulenza personalizzata",
+    "price.consult": "Su richiesta",
     "price.consult.note": "Contattaci via LINE o telefono per un piano su misura",
   },
 };
