@@ -65,7 +65,7 @@ const I18N = {
     "master.eyebrow": "About Master Lo",
     "master.title": "羅紹綸 老師",
     "master.subtitle": "身心靈整合療癒導師 ｜ 極心流自然療法・羅氏自癒力療癒系統 創始人",
-    "master.bio.1": "擁有超過二十餘年修證與實踐經驗，自幼深耕東方哲學與中醫，從跌傷久治不癒的內在指引、到拜師道途，鑽研全人醫學逾三十載。曾憑古法智慧與能量醫學治癒自身癌末重症，重獲新生的切身感動，遂將這份生命的恩惠轉化為利他志業。",
+    "master.bio.1": "擁有超過二十餘年修證與實踐經驗，自幼深耕東方哲學與中醫，從跌傷久治不癒的內在指引、到拜師道途，鑽研全人醫學逾三十載。曾親歷重大病症試煉，透過古法智慧與能量醫學找回生命的流動，遂將這份生命的恩惠轉化為利他志業。",
     "master.bio.2": "秉持「天人合一」的宇宙觀，透過獨創的羅氏自癒力療癒系統，以「調形、調氣、調神」之整合教學，協助有緣人重啟天賦的自癒力量。",
     "master.cred.title": "專業資歷",
     "master.cred.1": "董氏奇穴針法 第三代真傳傳人（師承李國政教授）",
@@ -326,6 +326,7 @@ const I18N = {
     "footer.link.fb": "Facebook",
     "footer.link.ig": "Instagram",
     "footer.copy": "© 2026 極心流自然療法工作室",
+    "footer.disclaimer": "本工作室提供之服務為身心靈養生指導，非醫療行為，不替代專業醫療診斷與治療。",
     "footer.tag": "Crafted with 心 ・ 義 ・ 志 ・ 身",
 
     /* Detail pages — common */
@@ -660,6 +661,7 @@ const I18N = {
     "footer.link.fb": "Facebook",
     "footer.link.ig": "Instagram",
     "footer.copy": "© 2026 JixinLiu Energy Studio",
+    "footer.disclaimer": "This studio provides body-mind-spirit wellness guidance — not medical services. It does not replace professional medical diagnosis or treatment.",
     "footer.tag": "Crafted with Heart · Honor · Will · Body",
 
     "common.back": "Back to Home",
@@ -993,6 +995,7 @@ const I18N = {
     "footer.link.fb": "Facebook",
     "footer.link.ig": "Instagram",
     "footer.copy": "© 2026 JixinLiu Studio dell'Energia",
+    "footer.disclaimer": "Questo studio offre orientamento per il benessere corpo-mente-spirito, non servizi medici. Non sostituisce diagnosi o trattamenti medici professionali.",
     "footer.tag": "Realizzato con Cuore · Onore · Volontà · Corpo",
 
     "common.back": "Torna alla Home",

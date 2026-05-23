@@ -87,8 +87,9 @@ const FOOTER_HTML = `
       </ul>
     </div>
   </div>
-  <div class="container footer-bottom">
-    <span data-i18n="footer.copy">© 2026 極心流自然療法工作室・羅氏自癒力療癒系統</span>
+  <div class="container footer-bottom" style="flex-direction: column; gap: 14px; align-items: center; text-align: center; padding-top: 28px; margin-top: 40px;">
+    <span data-i18n="footer.copy" style="font-size: 12px; color: rgba(245,241,232,0.55); letter-spacing: 0.14em;">© 2026 極心流自然療法工作室・羅氏自癒力療癒系統</span>
+    <p data-i18n="footer.disclaimer" style="max-width: 620px; font-size: 11px; color: rgba(245,241,232,0.3); letter-spacing: 0.08em; line-height: 1.7; margin: 0; font-style: italic;">本工作室提供之服務為身心靈養生指導，非醫療行為，不替代專業醫療診斷與治療。</p>
   </div>
 </footer>
 `;
