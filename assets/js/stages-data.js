@@ -6,7 +6,7 @@
 window.STAGES_DATA = [
   // ===== Stage 1 =====
   {
-    title: "量子全息能量諮詢檢測",
+    title: "量子全息能量場解讀",
     enTitle: "Quantum Holographic Diagnosis",
     shortLabel: "深度健康大掃描",
     vert: "深度・精準・全息",
@@ -88,8 +88,8 @@ window.STAGES_DATA = [
     enTitle: "Chakra Cleansing & Sound Healing",
     shortLabel: "心靈與能量體清理掃毒",
     vert: "頌缽・脈輪・靈氣",
-    lead: "頌缽音波頻率共振 + 神聖靈氣與 Prana 能量導引，瓦解陳舊的情緒與能量印記，掃除焦慮與精神耗損，平衡失眠與焦慮，使心靈恢復如大海般的深層平靜。",
-    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "失眠焦慮・情緒卡頓・精神耗損者" },
+    lead: "頌缽音波頻率共振 + 神聖靈氣與 Prana 能量導引，瓦解陳舊的情緒與能量印記，釋放身心緊繃與能量耗竭，回歸深層放鬆與安定，使心靈恢復如大海般的深層平靜。",
+    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "身心緊繃・情緒卡頓・能量耗竭者" },
     service: `
       <p><strong>頌缽音波頻率共振：</strong>運用特定頻率的頌缽音波與身體水分及細胞產生物理共鳴。透過音頻震盪，精準「震碎」代謝積壓在細胞、筋膜與七大脈輪間的陳舊情緒印記與能量瘀結。</p>
       <p><strong>神聖靈氣與 Prana 能量導引：</strong>導引高頻生命能量（Prana）與神聖場域能量，直接對個案的能量體進行清理與賦能。</p>
@@ -102,8 +102,8 @@ window.STAGES_DATA = [
       <div class="proc-step"><div class="step-num">03</div><div><h4>靈氣賦能</h4><p>導引神聖靈氣與 Prana 能量，補足虛損的能量場，回歸深層平靜。</p></div><div class="dur">10 min</div></div>
     `,
     benefits: `
-      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>掃除焦慮</h4><p>音波震盪即時鬆解神經系統，緊繃感與焦慮逐步褪去</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>失眠改善</h4><p>清理累積在細胞中的情緒印記，深層放鬆是好眠的根本</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>釋放緊繃</h4><p>音波震盪即時鬆解神經系統，緊繃感逐步褪去</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>放鬆改善</h4><p>清理累積在細胞中的情緒印記，深層放鬆是好眠的根本</p></div>
       <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>心靈回歸</h4><p>從「生存」回到「生活」、昇華「生命」，開啟靈性潛能</p></div>
     `,
   },
