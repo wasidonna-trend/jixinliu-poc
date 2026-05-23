@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<title>極心流自然療法工作室 ｜ 羅紹綸老師・羅氏自癒力療癒系統</title>
+<title>極心流工作室 ｜ 羅紹綸老師・羅氏自癒力療癒系統</title>
 <meta name="description" content="羅紹綸老師主持，融合古法武學、中醫經絡與量子能量學，引導個案六階段身心靈平衡轉化，重啟天賦自癒力。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -145,17 +145,20 @@
   position: relative; z-index: 2;
   width: 28%; aspect-ratio: 1;
   display: grid; place-items: center;
+}
+.hero-seal .seal-disc {
+  width: 100%; height: 100%;
   background: var(--cinnabar);
-  color: var(--paper);
-  font-family: var(--serif-tc);
-  font-weight: 700;
-  font-size: clamp(24px, 3.5vw, 48px);
-  letter-spacing: 0.1em;
+  display: grid; place-items: center;
+  border-radius: 50%;
   box-shadow: 0 8px 30px -10px rgba(164, 77, 58, 0.5);
-  /* texture */
   background-image:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05), transparent 50%),
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08), transparent 50%),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><filter id='n'><feTurbulence baseFrequency='1.2' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.16'/></svg>");
+}
+.hero-seal .seal-disc svg {
+  width: 70%; height: 70%;
+  opacity: 0.92;
 }
 .hero-vert {
   position: absolute;
@@ -188,7 +191,7 @@
 @media (max-width: 480px) {
   .hero { padding-top: 110px; padding-bottom: 60px; }
   .hero-visual { max-width: 280px; }
-  .hero-seal { width: 32%; font-size: 22px; }
+  .hero-seal { width: 32%; }
   .hero-vert { font-size: 11px; letter-spacing: 0.3em; right: 0; top: 2%; }
   .hero-pts { display: none; }
 }
@@ -955,7 +958,7 @@ section[id] { scroll-margin-top: 80px; }
   <div class="container">
     <div class="hero-content">
       <div class="hero-brandmark">
-        <span class="brand-tc" data-i18n="brand.full">極心流自然療法工作室</span>
+        <span class="brand-tc" data-i18n="brand.full">極心流工作室</span>
       </div>
       <span class="hero-decoEN" data-i18n="hero.deco.en">Self-Healing · Energy Medicine · Awakening</span>
       <div class="hero-eyebrow">
@@ -986,7 +989,22 @@ section[id] { scroll-margin-top: 80px; }
       <div class="ring r2"></div>
       <div class="ring r3"></div>
       <div class="ring r4"></div>
-      <div class="hero-seal" data-i18n="hero.deco.seal">極心</div>
+      <div class="hero-seal" aria-hidden="true">
+        <div class="seal-disc">
+          <!-- Flower of Life (Seed of Life · 7-circle pattern) — echoes the brand mark & patches -->
+          <svg viewBox="0 0 100 100" fill="none" stroke="#f5f1e8" stroke-width="0.9" stroke-linecap="round">
+            <circle cx="50" cy="50" r="14" opacity="0.95"/>
+            <circle cx="50" cy="36" r="14" opacity="0.9"/>
+            <circle cx="50" cy="64" r="14" opacity="0.9"/>
+            <circle cx="37.88" cy="43" r="14" opacity="0.9"/>
+            <circle cx="62.12" cy="43" r="14" opacity="0.9"/>
+            <circle cx="37.88" cy="57" r="14" opacity="0.9"/>
+            <circle cx="62.12" cy="57" r="14" opacity="0.9"/>
+            <circle cx="50" cy="50" r="28" opacity="0.55" stroke-width="0.6"/>
+            <circle cx="50" cy="50" r="2.6" fill="#f5f1e8" stroke="none"/>
+          </svg>
+        </div>
+      </div>
       <div class="hero-vert" data-i18n="hero.deco.vert">調形・調氣・調神</div>
       <div class="hero-pts">
         <span style="display:block;">FORM</span>
@@ -1029,7 +1047,7 @@ section[id] { scroll-margin-top: 80px; }
       <article class="card vision-card reveal">
         <div class="icon-wrap" data-icon="seed"></div>
         <h3 data-i18n="vision.c3.title">身心重建工程</h3>
-        <p data-i18n="vision.c3.body">從「內臟去角質」開始，徹底排除累積的身心阻塞，開啟天賦，創造更多生命的可能性。</p>
+        <p data-i18n="vision.c3.body">從「深層能量去角質」開始，徹底排除累積的身心阻塞，開啟天賦，創造更多生命的可能性。</p>
       </article>
     </div>
 
@@ -1061,13 +1079,13 @@ section[id] { scroll-margin-top: 80px; }
         <div class="ico" data-icon="physical"></div>
         <div class="zh-char" data-i18n="phi.2.zh">形</div>
         <div class="en-tag" data-i18n="phi.2.en">Physical</div>
-        <p data-i18n="phi.2.body">中軸結構、骨架筋膜與血液循環的物理層校正</p>
+        <p data-i18n="phi.2.body">中軸結構、骨架筋膜與血液循環的物理層調整與疏通</p>
       </div>
       <div class="phi-cell">
         <div class="ico" data-icon="energetic"></div>
         <div class="zh-char" data-i18n="phi.3.zh">氣</div>
         <div class="en-tag" data-i18n="phi.3.en">Energetic</div>
-        <p data-i18n="phi.3.body">經絡氣血、七大脈輪與生物光子的能量場流動</p>
+        <p data-i18n="phi.3.body">經絡氣血、七大脈輪與生物能量場的自然流動</p>
       </div>
       <div class="phi-cell">
         <div class="ico" data-icon="spiritual"></div>
@@ -1098,12 +1116,12 @@ section[id] { scroll-margin-top: 80px; }
       <div class="master-cred">
         <h4 data-i18n="master.cred.title">專業資歷</h4>
         <ol>
-          <li data-i18n="master.cred.1">董氏奇穴針法 第三代真傳傳人（師承李國政教授）</li>
-          <li data-i18n="master.cred.2">南宗少林 第九代傳人親傳弟子｜白鶴拳第四代親傳</li>
-          <li data-i18n="master.cred.3">安徽中醫藥大學 中醫專業｜大陸中醫執照</li>
-          <li data-i18n="master.cred.4">日本臼井靈氣 資深導師｜頌缽音灸專業教師</li>
-          <li data-i18n="master.cred.5">日本遠絡醫學專業課程結業｜MCT 全息能量導引講師</li>
-          <li data-i18n="master.cred.6">2014 年印度應邀受邀為十七世大寶法王進行能量調理，獲賜法名「噶瑪寶醫」</li>
+          <li data-i18n="master.cred.1">董氏奇穴 ｜ 第三代真傳傳人（師承李國政教授）</li>
+          <li data-i18n="master.cred.2">南宗少林第九代傳人親傳弟子 ｜ 白鶴拳第四代親傳</li>
+          <li data-i18n="master.cred.3">安徽中醫藥大學 ｜ 深研傳統經絡與氣脈養生哲學</li>
+          <li data-i18n="master.cred.4">日本臼井靈氣資深導師 ｜ 頌缽音療專業教師</li>
+          <li data-i18n="master.cred.5">日本遠絡學說專業課程研修結業 ｜ MCT 全息能量導引講師</li>
+          <li data-i18n="master.cred.6">2014 年與十七世大寶法王結緣，親賜珍貴法名</li>
         </ol>
       </div>
 
@@ -1151,7 +1169,7 @@ section[id] { scroll-margin-top: 80px; }
         </div>
         <h3 data-i18n="stages.s2.zh">核心中軸歸正・結構平衡</h3>
         <span class="en" data-i18n="stages.s2.en">Core Axis Realignment</span>
-        <p data-i18n="stages.s2.body">針對中軸結構、脊椎、骨架與整體能量場，進行物理與能量的雙重校正。中軸一正，百脈皆通。</p>
+        <p data-i18n="stages.s2.body">針對中軸結構與整體能量場，透過能量導引與姿勢覺察，協助身體回到自然平衡狀態。中軸一正，百脈皆通。</p>
         <div class="stage-benefit">
           <strong data-i18n="stages.benefit">實踐效益</strong>
           <span data-i18n="stages.s2.benefit">呼吸變得深沉、身體輕盈，感覺「腳踏實地」，重心穩定。</span>
@@ -1169,7 +1187,7 @@ section[id] { scroll-margin-top: 80px; }
         </div>
         <h3 data-i18n="stages.s3.zh">陰陽五行氣脈調和</h3>
         <span class="en" data-i18n="stages.s3.en">Meridian Energy Balancing</span>
-        <p data-i18n="stages.s3.body">結合氣功、能量指針點穴與遠絡療法，不需侵入，直接對五臟六腑進行能量補充與釋放，導入生物光子、電子。</p>
+        <p data-i18n="stages.s3.body">結合氣功、能量穴位導引與遠絡療法，以非侵入方式協助疏通氣脈、調和身心能量場，引導整體能量回歸自然流動狀態。</p>
         <div class="stage-benefit">
           <strong data-i18n="stages.benefit">實踐效益</strong>
           <span data-i18n="stages.s3.benefit">清除濁氣、補氣排毒，平衡痠麻脹痛，釋放手腳冰冷。</span>
@@ -1949,7 +1967,7 @@ section[id] { scroll-margin-top: 80px; }
     </div>
 
     <div style="text-align:center;margin-top:48px;" class="reveal">
-      <a href="faq.html" class="btn btn-ghost"><span data-i18n="faq.title">常見問答 ・ Q&A</span> <span class="btn-arrow" data-icon="arrow"></span></a>
+      <span data-i18n="faq.title">常見問答 ・ Q&A</span> <span class="btn-arrow" data-icon="arrow"></span>
     </div>
   </div>
 </section>
@@ -1969,7 +1987,7 @@ section[id] { scroll-margin-top: 80px; }
           <li>
             <span class="ico" data-icon="pin"></span>
             <span class="label" data-i18n="book.label.studio">Studio</span>
-            <span class="val" data-i18n="book.studio">極心流自然療法工作室</span>
+            <span class="val" data-i18n="book.studio">極心流工作室</span>
           </li>
           <li>
             <span class="ico" data-icon="phone"></span>
@@ -2043,11 +2061,11 @@ section[id] { scroll-margin-top: 80px; }
 (function () {
   const list = document.getElementById('faqList');
   if (!list) return;
-  const items = [1,2,3,4,5,6,7,8].map(i => {
+  const items = [1,2,3,5,6,7,8].map((i, idx) => {
     return `
       <div class="faq-item">
         <button class="faq-q" type="button">
-          <span class="num">${String(i).padStart(2,'0')}</span>
+          <span class="num">${String(idx+1).padStart(2,'0')}</span>
           <span class="txt" data-i18n="faq.q${i}">問題 ${i}</span>
           <span class="ico" data-icon="plus"></span>
         </button>
