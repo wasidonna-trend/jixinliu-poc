@@ -8,19 +8,20 @@ window.STAGES_DATA = [
   {
     title: "量子全息能量場解讀",
     enTitle: "Quantum Holographic Diagnosis",
-    shortLabel: "深度健康大掃描",
+    shortLabel: "個人能量諮詢",
     vert: "深度・精準・全息",
-    lead: "羅老師運用「量子場掃描技術」，不只看到表層徵兆，直接深入核心中脈與神經系統電位，捕捉細微能量阻滯，進行一次「深度健康大掃描」。所有的身體不適，皆源於能量場的「資訊錯誤」。",
+    lead: "羅老師運用「量子場掃描技術」，不只看到表層徵兆，直接深入中軸與整體能量場，捕捉細微能量阻滯，進行一次個人能量諮詢與身心狀態評估晤談。所有的身體不適，皆源於能量場的「資訊錯誤」。",
     meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "初次到訪必備" },
     service: `
-      <p>羅老師運用獨創的「量子場掃描技術」，不只看到表層徵兆，<strong>直接深入「核心中脈」與「神經系統電位」、全身能量</strong>，捕捉細微的能量阻滯。透過 30 分鐘的深度健康大掃描，看見您的身體真正在說的話。</p>
+      <p>羅老師運用獨創的「量子場掃描技術」，不只看到表層徵兆，<strong>直接深入中軸與整體能量場</strong>，捕捉細微的能量阻滯。透過 30 分鐘的個人能量諮詢，看見您的身體真正在說的話。</p>
       <p>檢測過程中，羅老師將為您解碼<strong>結構、能量、臟腑與內在能量斷點</strong>之間的關聯性，讓您不只看到「身體哪裡不舒服」，更能理解「為什麼這裡會不舒服」。</p>
       <p>這是進入羅氏自癒力系統的第一道門檻——也是初次到訪的個案必備的奠基階段。</p>
+      <p style="margin-top:16px;padding:14px 18px;background:rgba(164,77,58,0.05);border-left:3px solid var(--cinnabar);font-size:13px;color:var(--ink-soft);line-height:1.85;"><strong style="color:var(--cinnabar);">服務性質聲明：</strong>本服務為能量調理諮詢，非醫療診斷，不取代醫師之診斷與治療。</p>
     `,
     masterView: `所有的身體不適，皆源於能量場的「資訊錯誤」。我們不是要去「治病」，而是要重新校準你體內那張早已存在的「健康藍圖」。`,
     process: `
       <div class="proc-step"><div class="step-num">01</div><div><h4>初談・了解狀態</h4><p>羅老師將與您簡短對談，理解您目前的身心狀態、近期困擾與生命課題。</p></div><div class="dur">5 min</div></div>
-      <div class="proc-step"><div class="step-num">02</div><div><h4>量子場掃描</h4><p>運用量子全息掃描技術，深入核心中脈與神經系統電位，捕捉細微能量阻滯點。</p></div><div class="dur">15 min</div></div>
+      <div class="proc-step"><div class="step-num">02</div><div><h4>量子場掃描</h4><p>運用量子全息掃描技術，深入中軸與整體能量場，捕捉細微能量阻滯點。</p></div><div class="dur">15 min</div></div>
       <div class="proc-step"><div class="step-num">03</div><div><h4>能量解讀・諮詢</h4><p>羅老師為您解讀檢測結果，說明結構、能量、臟腑與內在能量斷點的關聯，並建議後續轉化方向。</p></div><div class="dur">10 min</div></div>
     `,
     benefits: `
