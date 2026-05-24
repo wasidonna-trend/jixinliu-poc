@@ -7,27 +7,27 @@ window.STAGES_DATA = [
   // ===== Stage 1 =====
   {
     title: "量子全息能量場解讀",
-    enTitle: "Quantum Holographic Diagnosis",
+    enTitle: "Quantum Holographic Reading",
     shortLabel: "個人能量諮詢",
     vert: "深度・精準・全息",
-    lead: "羅老師運用「量子場掃描技術」，不只看到表層徵兆，直接深入中軸與整體能量場，捕捉細微能量阻滯，進行一次個人能量諮詢與身心狀態評估晤談。所有的身體不適，皆源於能量場的「資訊錯誤」。",
+    lead: "以量子場為概念基礎，透過能量感知引導，深入中軸與整體能量場，覺察細微能量滯留，進行一次個人能量諮詢。所有的身心失衡，皆源於能量場的「資訊錯誤」。",
     meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "初次到訪必備" },
     service: `
-      <p>羅老師運用獨創的「量子場掃描技術」，不只看到表層徵兆，<strong>直接深入中軸與整體能量場</strong>，捕捉細微的能量阻滯。透過 30 分鐘的個人能量諮詢，看見您的身體真正在說的話。</p>
-      <p>檢測過程中，羅老師將為您解碼<strong>結構、能量、臟腑與內在能量斷點</strong>之間的關聯性，讓您不只看到「身體哪裡不舒服」，更能理解「為什麼這裡會不舒服」。</p>
+      <p>羅老師運用獨創的「量子場能量感知引導」，不只關注表層徵兆，<strong>直接深入中軸與整體能量場</strong>，覺察細微的能量滯留。透過 30 分鐘的個人能量諮詢，感知您當下的能量流動狀態。</p>
+      <p>引導過程中，羅老師將為您解讀<strong>結構、能量、內在能量核心與能量斷點</strong>之間的關聯性，讓您不只感知到「哪裡的能量感覺沉重或停滯」，更能理解「為什麼這裡會失衡」。</p>
       <p>這是進入羅氏自癒力系統的第一道門檻——也是初次到訪的個案必備的奠基階段。</p>
-      <p style="margin-top:16px;padding:14px 18px;background:rgba(164,77,58,0.05);border-left:3px solid var(--cinnabar);font-size:13px;color:var(--ink-soft);line-height:1.85;"><strong style="color:var(--cinnabar);">服務性質聲明：</strong>本服務為能量調理諮詢，非醫療診斷，不取代醫師之診斷與治療。</p>
+      <p style="margin-top:16px;padding:14px 18px;background:rgba(164,77,58,0.05);border-left:3px solid var(--cinnabar);font-size:13px;color:var(--ink-soft);line-height:1.85;"><strong style="color:var(--cinnabar);">服務性質聲明：</strong>本服務為身心靈能量調理諮詢，不涉及任何醫療儀器或科學檢測設備，不具醫療診斷效能，亦不取代醫師之專業診斷與治療。</p>
     `,
-    masterView: `所有的身體不適，皆源於能量場的「資訊錯誤」。我們不是要去「治病」，而是要重新校準你體內那張早已存在的「健康藍圖」。`,
+    masterView: `所有的身心失衡，皆源於能量場的「資訊錯誤」。本服務的目的，是協助您重新校準體內那張早已存在的「健康藍圖」，回歸自然的能量秩序。`,
     process: `
       <div class="proc-step"><div class="step-num">01</div><div><h4>初談・了解狀態</h4><p>羅老師將與您簡短對談，理解您目前的身心狀態、近期困擾與生命課題。</p></div><div class="dur">5 min</div></div>
-      <div class="proc-step"><div class="step-num">02</div><div><h4>量子場掃描</h4><p>運用量子全息掃描技術，深入中軸與整體能量場，捕捉細微能量阻滯點。</p></div><div class="dur">15 min</div></div>
-      <div class="proc-step"><div class="step-num">03</div><div><h4>能量解讀・諮詢</h4><p>羅老師為您解讀檢測結果，說明結構、能量、臟腑與內在能量斷點的關聯，並建議後續轉化方向。</p></div><div class="dur">10 min</div></div>
+      <div class="proc-step"><div class="step-num">02</div><div><h4>量子場能量引導</h4><p>以量子場能量感知技法，深入中軸與整體能量場，覺察細微能量滯留點。</p></div><div class="dur">15 min</div></div>
+      <div class="proc-step"><div class="step-num">03</div><div><h4>能量解讀・諮詢</h4><p>羅老師為您解讀能量共振狀態，說明結構、能量、內在能量核心與能量斷點的關聯，並建議後續轉化方向。</p></div><div class="dur">10 min</div></div>
     `,
     benefits: `
-      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>看見潛在炸彈</h4><p>立刻看見身體顯性（如疲勞、疼痛）與潛在能量阻斷點的核心問題</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>不再盲目保養</h4><p>跳脫「症狀打地鼠」式的保養，從能量根源找到對的方向</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>建立轉化地圖</h4><p>為後續六階段轉化課程，量身規劃最適合您的療癒路徑</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>覺察能量盲點</h4><p>清晰感知身體顯性（如疲勞、緊繃）與潛在能量阻斷點的核心狀態</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>找到根源方向</h4><p>跳脫頭痛醫頭、腳痛醫腳的片段式保養，從能量根源找到對的方向</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>建立轉化地圖</h4><p>為後續六階段轉化課程，量身規劃最適合您的能量調整路徑</p></div>
     `,
   },
 

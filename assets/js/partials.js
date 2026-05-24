@@ -53,7 +53,7 @@ const FOOTER_HTML = `
   <div class="container">
     <div>
       <div class="brand-name" data-i18n="footer.brand">極心流工作室</div>
-      <p style="margin-bottom:8px;color:var(--gold-light);font-style:italic;font-family:var(--serif-en);" data-i18n="footer.brand.master">羅紹綸 老師主持</p>
+      <p style="margin-bottom:8px;color:var(--gold-light);font-style:italic;font-family:var(--serif-en);" data-i18n="footer.brand.master">羅老師主持</p>
       <p data-i18n="footer.brand.body">融合古法武學、中醫經絡與量子能量學，引導身心靈整合療癒，重啟您與生俱來的自癒力量。</p>
     </div>
     <div>
@@ -87,7 +87,7 @@ const FOOTER_HTML = `
   </div>
   <div class="container footer-bottom" style="flex-direction: column; gap: 14px; align-items: center; text-align: center; padding-top: 28px; margin-top: 40px;">
     <span data-i18n="footer.copy" style="font-size: 12px; color: rgba(245,241,232,0.55); letter-spacing: 0.14em;">© 2026 極心流工作室・羅氏自癒力療癒系統</span>
-    <p data-i18n="footer.disclaimer" style="max-width: 620px; font-size: 11px; color: rgba(245,241,232,0.3); letter-spacing: 0.08em; line-height: 1.7; margin: 0; font-style: italic;">本工作室提供之服務為身心靈養生指導，非醫療行為，不替代專業醫療診斷與治療。</p>
+    <p data-i18n="footer.disclaimer" style="max-width: 620px; font-size: 11px; color: rgba(245,241,232,0.3); letter-spacing: 0.08em; line-height: 1.7; margin: 0; font-style: italic;">本工作室提供之服務屬民間傳統養生與身心靈能量調理範疇，非醫療行為，不替代專業醫療診斷與治療。</p>
   </div>
 </footer>
 `;
