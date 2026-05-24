@@ -157,8 +157,8 @@
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><filter id='n'><feTurbulence baseFrequency='1.2' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.16'/></svg>");
 }
 .hero-seal .seal-disc svg {
-  width: 70%; height: 70%;
-  opacity: 0.92;
+  width: 96%; height: 96%;
+  opacity: 0.95;
 }
 .hero-vert {
   position: absolute;
@@ -991,17 +991,30 @@ section[id] { scroll-margin-top: 80px; }
       <div class="ring r4"></div>
       <div class="hero-seal" aria-hidden="true">
         <div class="seal-disc">
-          <!-- Flower of Life (Seed of Life · 7-circle pattern) — echoes the brand mark & patches -->
-          <svg viewBox="0 0 100 100" fill="none" stroke="#f5f1e8" stroke-width="0.9" stroke-linecap="round">
-            <circle cx="50" cy="50" r="14" opacity="0.95"/>
-            <circle cx="50" cy="36" r="14" opacity="0.9"/>
-            <circle cx="50" cy="64" r="14" opacity="0.9"/>
-            <circle cx="37.88" cy="43" r="14" opacity="0.9"/>
-            <circle cx="62.12" cy="43" r="14" opacity="0.9"/>
-            <circle cx="37.88" cy="57" r="14" opacity="0.9"/>
-            <circle cx="62.12" cy="57" r="14" opacity="0.9"/>
-            <circle cx="50" cy="50" r="28" opacity="0.55" stroke-width="0.6"/>
-            <circle cx="50" cy="50" r="2.6" fill="#f5f1e8" stroke="none"/>
+          <!-- Flower of Life (19-circle full pattern) -->
+          <svg viewBox="0 0 100 100" fill="none" stroke="#f5f1e8" stroke-width="0.7" stroke-linecap="round">
+            <!-- 19 circles on hex lattice (radius 15, spacing 15) -->
+            <circle cx="50" cy="50" r="15"/>
+            <circle cx="35" cy="50" r="15"/>
+            <circle cx="65" cy="50" r="15"/>
+            <circle cx="42.5" cy="37.01" r="15"/>
+            <circle cx="57.5" cy="37.01" r="15"/>
+            <circle cx="42.5" cy="62.99" r="15"/>
+            <circle cx="57.5" cy="62.99" r="15"/>
+            <circle cx="20" cy="50" r="15"/>
+            <circle cx="80" cy="50" r="15"/>
+            <circle cx="27.5" cy="37.01" r="15"/>
+            <circle cx="72.5" cy="37.01" r="15"/>
+            <circle cx="27.5" cy="62.99" r="15"/>
+            <circle cx="72.5" cy="62.99" r="15"/>
+            <circle cx="35" cy="24.02" r="15"/>
+            <circle cx="65" cy="24.02" r="15"/>
+            <circle cx="35" cy="75.98" r="15"/>
+            <circle cx="65" cy="75.98" r="15"/>
+            <circle cx="50" cy="24.02" r="15"/>
+            <circle cx="50" cy="75.98" r="15"/>
+            <!-- Outer enclosing ring -->
+            <circle cx="50" cy="50" r="45" stroke-width="0.9"/>
           </svg>
         </div>
       </div>
@@ -1106,7 +1119,7 @@ section[id] { scroll-margin-top: 80px; }
     <div class="reveal">
       <span class="eyebrow" data-i18n="master.eyebrow">About Master Lo</span>
       <h2 class="section-title" data-i18n="master.title">羅老師</h2>
-      <div class="master-subtitle" data-i18n="master.subtitle">身心靈整合療癒導師 ｜ 極心流自然療法・羅氏自癒力療癒系統 創始人</div>
+      <div class="master-subtitle" data-i18n="master.subtitle">身心靈整合療癒導師 ｜ 羅氏自癒力療癒系統 創始人</div>
 
       <div class="master-bio">
         <p data-i18n="master.bio.1">擁有超過二十餘年修證與實踐經驗，自幼深耕東方哲學與中醫，從跌傷久治不癒的內在指引、到拜師道途，鑽研全人醫學逾三十載。曾親歷重大病症試煉，透過古法智慧與能量醫學找回生命的流動，遂將這份生命的恩惠轉化為利他志業。</p>
@@ -1998,6 +2011,11 @@ section[id] { scroll-margin-top: 80px; }
             <span class="val" data-i18n="book.email">mindXXX@gmail.com</span>
           </li>
           <li>
+            <span class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4C5.13 4 2 6.69 2 10c0 1.83 1 3.46 2.55 4.55L4 17l2.7-1.4c.74.17 1.51.27 2.3.27.39 0 .77-.02 1.14-.07C9.4 16.39 9 15.46 9 14.5 9 11.46 11.92 9 15.5 9c.39 0 .77.03 1.14.09C16.04 6.13 12.85 4 9 4Z"/><path d="M22 14.5c0 1.39-.76 2.62-1.92 3.43L20.5 20l-2.13-1.1c-.6.14-1.22.22-1.87.22-3.58 0-6.5-2.46-6.5-5.5S12.92 8 16.5 8 22 10.46 22 13.5v1Z"/><circle cx="6.5" cy="9.5" r=".6" fill="currentColor"/><circle cx="11.5" cy="9.5" r=".6" fill="currentColor"/><circle cx="14.5" cy="13" r=".5" fill="currentColor"/><circle cx="18.5" cy="13" r=".5" fill="currentColor"/></svg></span>
+            <span class="label" data-i18n="book.label.wechat">WeChat</span>
+            <span class="val" data-i18n="book.wechat">mind6688</span>
+          </li>
+          <li>
             <span class="ico" data-icon="clock"></span>
             <span class="label" data-i18n="book.label.hours">Hours</span>
             <span class="val" data-i18n="book.hours">採完全預約制 ・ 每位個案專屬時段</span>
@@ -2027,15 +2045,16 @@ section[id] { scroll-margin-top: 80px; }
           <label><span data-i18n="book.f.service">預約項目 Service</span><span class="req" data-i18n="book.f.required">必填</span></label>
           <select name="service" required>
             <option value="" data-i18n="book.f.select">請選擇預約項目</option>
-            <option data-i18n="stages.s1.zh">第一階段：量子全息能量場解讀（首次必備）</option>
-            <option data-i18n="stages.s2.zh">第二階段：核心中軸歸正・結構平衡</option>
-            <option data-i18n="stages.s3.zh">第三階段：陰陽五行氣脈調和</option>
-            <option data-i18n="stages.s4.zh">第四階段：脈輪清理・音波能量修復</option>
-            <option data-i18n="stages.s5.zh">第五階段：光體開啟・拙火轉化課程</option>
-            <option data-i18n="stages.s6.zh">第六階段：自癒力內功功法班</option>
-            <option data-i18n="trinity.t1.title">極感｜寵物身心靈療癒</option>
-            <option data-i18n="trinity.t2.title">極盛｜豐盛心流・錢母磁化</option>
-            <option data-i18n="trinity.t3.title">極守｜護身御守能量卡</option>
+            <option value="bodywork">氣功點穴撥筋調理</option>
+            <option value="plan">個人整體規劃方案</option>
+            <option data-i18n="stages.s5.zh">光體開啟・拙火轉化課程</option>
+            <option data-i18n="stages.s6.zh">自癒力內功功法班</option>
+            <option value="emotional">情緒精神體諮詢</option>
+            <option value="trinity-sense">寵物量子能量療癒</option>
+            <option value="trinity-abundance">豐盛心流・錢母結緣</option>
+            <option value="trinity-guard">三式能量御守卡</option>
+            <option value="event">節氣工作坊報名</option>
+            <option value="other">其他諮詢</option>
           </select>
         </div>
         <div class="field">
