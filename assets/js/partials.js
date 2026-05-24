@@ -31,7 +31,6 @@ const NAV_HTML = `
       <a href="${_base}index.html#vision" data-i18n="nav.vision">願景</a>
       <a href="${_base}master.html" data-i18n="nav.master">羅老師</a>
       <a href="${_base}index.html#stages" data-i18n="nav.stages">六階段</a>
-      <a href="${_base}trinity.html" data-i18n="nav.trinity">極心三元</a>
       <a href="${_base}index.html#therapies" data-i18n="nav.therapies">療癒服務</a>
       <a href="${_base}index.html#products" data-i18n="nav.products">能量商品</a>
       <a href="${_base}index.html#events" data-i18n="nav.events">活動</a>
@@ -61,7 +60,6 @@ const FOOTER_HTML = `
       <h4 data-i18n="footer.col.services">Services</h4>
       <ul>
         <li><a href="${_base}index.html#stages" data-i18n="footer.link.stages">六階段課程</a></li>
-        <li><a href="${_base}trinity.html" data-i18n="footer.link.trinity">極心三元</a></li>
         <li><a href="${_base}index.html#products" data-i18n="footer.link.products">能量商品</a></li>
         <li><a href="${_base}index.html#events" data-i18n="footer.link.events">活動行事曆</a></li>
         <li><a href="${_base}booking.html" data-i18n="footer.link.book">預約諮詢</a></li>

@@ -11,14 +11,14 @@ window.STAGES_DATA = [
     shortLabel: "個人能量諮詢",
     vert: "深度・精準・全息",
     lead: "以量子場為概念基礎，透過能量感知引導，深入中軸與整體能量場，覺察細微能量滯留，進行一次個人能量諮詢。所有的身心失衡，皆源於能量場的「資訊錯誤」。",
-    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "初次到訪必備" },
+    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "初次到訪推薦" },
     service: `
       <p>羅老師運用獨創的「量子場能量感知引導」，不只關注表層徵兆，<strong>直接深入中軸與整體能量場</strong>，覺察細微的能量滯留。透過 30 分鐘的個人能量諮詢，感知您當下的能量流動狀態。</p>
       <p>引導過程中，羅老師將為您解讀<strong>結構、能量、內在能量核心與能量斷點</strong>之間的關聯性，讓您不只感知到「哪裡的能量感覺沉重或停滯」，更能理解「為什麼這裡會失衡」。</p>
-      <p>這是進入羅氏自癒力系統的第一道門檻——也是初次到訪的個案必備的奠基階段。</p>
+      <p>這是進入羅氏六階段轉化課程的第一道門檻——也是初次到訪的個案推薦的奠基階段。</p>
       <p style="margin-top:16px;padding:14px 18px;background:rgba(164,77,58,0.05);border-left:3px solid var(--cinnabar);font-size:13px;color:var(--ink-soft);line-height:1.85;"><strong style="color:var(--cinnabar);">服務性質聲明：</strong>本服務為身心靈能量調理諮詢，不涉及任何醫療儀器或科學檢測設備，不具醫療診斷效能，亦不取代醫師之專業診斷與治療。</p>
     `,
-    masterView: `所有的身心失衡，皆源於能量場的「資訊錯誤」。本服務的目的，是協助您重新校準體內那張早已存在的「健康藍圖」，回歸自然的能量秩序。`,
+    masterView: `所有的身心失衡，皆源於能量場的「資訊錯誤」。本服務的目的，是協助您重新校準體內那張早已存在的「生命藍圖」，回歸自然的能量秩序。`,
     process: `
       <div class="proc-step"><div class="step-num">01</div><div><h4>初談・了解狀態</h4><p>羅老師將與您簡短對談，理解您目前的身心狀態、近期困擾與生命課題。</p></div><div class="dur">5 min</div></div>
       <div class="proc-step"><div class="step-num">02</div><div><h4>量子場能量引導</h4><p>以量子場能量感知技法，深入中軸與整體能量場，覺察細微能量滯留點。</p></div><div class="dur">15 min</div></div>
@@ -33,7 +33,7 @@ window.STAGES_DATA = [
 
   // ===== Stage 2 =====
   {
-    title: "核心中軸歸正・結構平衡工程",
+    title: "核心中軸對位・結構能量調和",
     enTitle: "Core Axis Energy Attunement",
     shortLabel: "重建生命的基石",
     vert: "中軸・歸正・歸位",

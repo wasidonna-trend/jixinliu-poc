@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>極心三元 ・ 內部交流資料 ｜ 極心流工作室</title>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f5f1e8;
+  --ivory: #faf7ef;
+  --ink: #2b2a26;
+  --ink-soft: #4a4842;
+  --ink-mute: #7a7670;
+  --line: #d4cdb8;
+  --gold: #c9a96a;
+  --gold-deep: #a88440;
+  --cinnabar: #a44d3a;
+  --serif-tc: 'Noto Serif TC', serif;
+  --serif-en: 'Cormorant Garamond', serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--serif-tc);
+  font-weight: 400;
+  color: var(--ink);
+  background: #d8d2c0;
+  line-height: 1.85;
+  font-size: 14px;
+}
+
+/* Print sheet (A4) */
+.sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 30px auto;
+  background: var(--paper);
+  padding: 22mm 18mm 18mm;
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.3);
+  position: relative;
+  page-break-after: always;
+}
+.sheet:last-of-type { page-break-after: auto; }
+
+/* Print toolbar */
+.toolbar {
+  position: sticky;
+  top: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 14px 24px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+.toolbar button {
+  background: var(--cinnabar);
+  color: var(--paper);
+  border: none;
+  padding: 10px 22px;
+  font-family: var(--serif-tc);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  transition: opacity .25s;
+}
+.toolbar button:hover { opacity: 0.85; }
+.toolbar .meta { font-family: var(--serif-en); font-style: italic; opacity: 0.7; }
+
+/* Cover page */
+.cover { text-align: center; padding: 60mm 18mm 0; }
+.cover .seal-mark {
+  width: 88px; height: 88px;
+  margin: 0 auto 32px;
+}
+.cover .doc-tag {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--cinnabar); font-size: 13px;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.cover h1 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 56px; letter-spacing: 0.28em;
+  margin-bottom: 14px; padding-left: 0.28em;
+  color: var(--ink);
+}
+.cover .subtitle-en {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 22px; letter-spacing: 0.18em;
+  color: var(--gold-deep); margin-bottom: 60px;
+}
+.cover .desc {
+  max-width: 420px; margin: 0 auto 80px;
+  color: var(--ink-soft);
+  font-size: 15px; line-height: 2;
+}
+.cover .three-pillars {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; max-width: 580px; margin: 0 auto 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--gold);
+}
+.cover .pillar .en {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 11px; color: var(--gold-deep);
+  letter-spacing: 0.14em;
+}
+.cover .pillar {
+  text-align: center;
+}
+.cover .pillar .ico {
+  width: 44px; height: 44px;
+  margin: 0 auto 10px;
+  color: var(--cinnabar);
+}
+.cover .pillar .ord {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 28px; color: var(--cinnabar);
+  margin-bottom: 8px; letter-spacing: 0.1em;
+}
+.cover .pillar .name {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 15px; letter-spacing: 0.12em;
+  color: var(--ink); margin-top: 12px; margin-bottom: 4px;
+}
+.cover .pillar .en {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 11px; color: var(--gold-deep);
+  letter-spacing: 0.14em;
+}
+.cover .footer-info {
+  position: absolute; bottom: 18mm; left: 18mm; right: 18mm;
+  text-align: center;
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 11px; color: var(--ink-mute);
+  letter-spacing: 0.18em;
+  padding-top: 14px;
+}
+.cover .footer-info .brand {
+  font-family: var(--serif-tc); font-style: normal;
+  font-size: 13px; color: var(--ink);
+  letter-spacing: 0.2em; margin-bottom: 4px;
+}
+
+/* Content page header */
+.page-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+.page-head .brand-mini {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 12px; letter-spacing: 0.18em;
+  color: var(--ink-mute);
+}
+.page-head .page-num {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 12px; color: var(--ink-mute);
+  letter-spacing: 0.18em;
+}
+
+/* Section stamp */
+.svc-stamp {
+  display: flex; align-items: center; gap: 18px;
+  margin-bottom: 22px;
+}
+.svc-stamp .num {
+  width: 56px; height: 56px;
+  background: var(--cinnabar);
+  color: var(--paper);
+  display: grid; place-items: center;
+  font-family: var(--serif-tc); font-weight: 600;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+.svc-stamp .svc-icon {
+  width: 48px; height: 48px;
+  color: var(--cinnabar);
+  flex-shrink: 0;
+  margin-left: -4px;
+}
+.svc-stamp .stamp-label {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 13px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+}
+.svc-stamp .stamp-label strong {
+  display: block; font-family: var(--serif-tc);
+  font-style: normal; font-weight: 500;
+  font-size: 15px; color: var(--ink);
+  letter-spacing: 0.16em; margin-top: 3px;
+}
+
+h2.svc-title {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 36px; letter-spacing: 0.12em;
+  color: var(--ink); margin-bottom: 8px; line-height: 1.3;
+}
+.svc-en-title {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 16px;
+  letter-spacing: 0.06em; margin-bottom: 32px;
+}
+
+/* Creed callout */
+.creed {
+  padding: 22px 28px;
+  background: var(--ivory);
+  border-left: 3px solid var(--cinnabar);
+  margin-bottom: 32px;
+}
+.creed h3 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 15px; color: var(--cinnabar);
+  letter-spacing: 0.18em; margin-bottom: 10px;
+}
+.creed p {
+  color: var(--ink-soft); font-size: 14px; line-height: 1.95;
+  margin-bottom: 8px;
+}
+.creed p:last-child { margin-bottom: 0; }
+
+/* Two-column layout for content */
+.svc-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px; margin-bottom: 24px;
+}
+.svc-grid.single { grid-template-columns: 1fr; }
+.svc-col h4 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 16px; letter-spacing: 0.14em;
+  color: var(--ink); margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--line);
+}
+.svc-col h4 .en {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 11px;
+  letter-spacing: 0.16em; margin-left: 8px;
+  font-weight: 400; text-transform: uppercase;
+}
+.svc-col p, .svc-col li {
+  color: var(--ink-soft); font-size: 13px; line-height: 1.95;
+  margin-bottom: 8px;
+}
+.svc-col ul { list-style: none; padding: 0; }
+.svc-col ul li {
+  padding: 6px 0 6px 16px;
+  position: relative;
+  border-bottom: 1px dotted var(--line);
+}
+.svc-col ul li:last-child { border-bottom: none; }
+.svc-col ul li::before {
+  content: ''; position: absolute; left: 4px; top: 14px;
+  width: 5px; height: 5px;
+  background: var(--gold); transform: rotate(45deg);
+}
+.svc-col strong { color: var(--ink); font-weight: 500; }
+
+/* Pricing — internal: include all numbers */
+.pricing-block {
+  margin-top: 24px;
+  border: 1px solid var(--line);
+}
+.pricing-block .ph {
+  background: var(--ink); color: var(--paper);
+  padding: 10px 16px;
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 12px; letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.pricing-block .ph strong {
+  font-family: var(--serif-tc); font-style: normal;
+  margin-right: 10px; letter-spacing: 0.14em;
+}
+.tier-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.tier {
+  padding: 18px 18px 22px;
+  border-right: 1px solid var(--line);
+  background: var(--ivory);
+}
+.tier:last-child { border-right: none; }
+.tier .t-name {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 14px; color: var(--ink); letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.tier .t-en {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 11px;
+  letter-spacing: 0.16em; margin-bottom: 10px;
+}
+.tier .t-price {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 22px; color: var(--cinnabar);
+  font-weight: 500; letter-spacing: 0;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 10px;
+}
+.tier .t-price small {
+  font-size: 11px; color: var(--ink-mute);
+  font-style: normal; font-family: var(--sans-tc);
+  margin-left: 4px; letter-spacing: 0.06em;
+}
+.tier .t-note {
+  font-size: 11px; color: var(--gold-deep);
+  margin-bottom: 8px;
+  font-family: var(--serif-en); font-style: italic;
+}
+.tier .t-body { font-size: 12px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 6px; }
+.tier .t-suit {
+  margin-top: 10px; padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  font-size: 11px; color: var(--ink-mute); line-height: 1.6;
+}
+.tier .t-suit strong {
+  display: block; color: var(--gold-deep);
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; margin-bottom: 3px;
+}
+
+/* Coin breakdown */
+.coin-block {
+  margin: 20px 0;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #f5ecd3, #e8d5a3);
+  border: 1px solid var(--gold);
+}
+.coin-block h4 {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 14px; letter-spacing: 0.14em;
+  color: var(--ink); margin-bottom: 12px;
+}
+.coin-block .coin-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.coin-block .coin-item {
+  text-align: center;
+}
+.coin-block .coin-item .k {
+  font-family: var(--serif-en); font-style: italic;
+  font-size: 10px; color: var(--gold-deep);
+  letter-spacing: 0.16em; text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.coin-block .coin-item .v {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: 16px; color: var(--ink);
+}
+.coin-block .coin-item .v strong { color: var(--cinnabar); font-size: 18px; }
+.coin-block .coin-item .desc {
+  font-size: 10px; color: var(--ink-soft);
+  margin-top: 4px; line-height: 1.5;
+}
+
+/* Internal note */
+.internal-note {
+  margin-top: 24px;
+  padding: 14px 18px;
+  background: rgba(164,77,58,0.06);
+  border: 1px dashed var(--cinnabar);
+  font-size: 12px; color: var(--ink-soft); line-height: 1.85;
+}
+.internal-note strong {
+  display: block;
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--cinnabar); font-size: 11px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* Print styles */
+@media print {
+  body { background: #fff; }
+  .toolbar { display: none; }
+  .sheet { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 18mm 14mm; }
+  @page { size: A4; margin: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div>
+    <span style="font-family:var(--serif-tc);font-weight:500;letter-spacing:0.18em;">極心三元 ・ 內部交流資料</span>
+    <span class="meta" style="margin-left:14px;">Trinity of Resonance · Internal Reference</span>
+  </div>
+  <div>
+    <button onclick="window.print()">列印 / 另存為 PDF →</button>
+  </div>
+</div>
+
+<!-- ==================== COVER PAGE ==================== -->
+<section class="sheet cover">
+  <svg class="seal-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+    <circle cx="50" cy="50" r="46" stroke="#a88440" stroke-width="0.7" opacity="0.5"/>
+    <circle cx="50" cy="50" r="36" stroke="#a88440" stroke-width="0.9" opacity="0.7"/>
+    <circle cx="50" cy="50" r="26" stroke="#a44d3a" stroke-width="1.1"/>
+    <circle cx="50" cy="50" r="16" stroke="#a44d3a" stroke-width="1.3"/>
+    <circle cx="50" cy="50" r="6" fill="#a44d3a"/>
+  </svg>
+  <div class="doc-tag">Internal Reference Document</div>
+  <h1>極 心 三 元</h1>
+  <div class="subtitle-en">Trinity of Resonance · Specialty Energy Services</div>
+  <p class="desc">
+    在「極心流」的療癒哲學中，我們深信「天人合一」並非僅止於個人，而是萬物之間皆存在著細微且深遠的能量連結。<br><br>
+    極心三元 — 將平衡與豐盛延伸至生活的每一個角落。
+  </p>
+
+  <div class="three-pillars">
+    <div class="pillar">
+      <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><ellipse cx="20" cy="22" rx="4.5" ry="6"/><ellipse cx="32" cy="16" rx="4.5" ry="6"/><ellipse cx="44" cy="22" rx="4.5" ry="6"/><ellipse cx="50" cy="36" rx="4" ry="5.5"/><ellipse cx="14" cy="36" rx="4" ry="5.5"/><path d="M22 44c0-6 4-10 10-10s10 4 10 10c0 8-6 12-10 12s-10-4-10-12z"/></svg>
+      <div class="ord" style="display:none;">壹</div>
+      <div class="name">極感 ・ 萬物共振</div>
+      <div class="en">Cross-Species Healing</div>
+    </div>
+    <div class="pillar">
+      <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="32" cy="32" r="22"/><rect x="26" y="26" width="12" height="12"/><path d="M32 10v8M32 46v8M10 32h8M46 32h8" stroke-linecap="round"/></svg>
+      <div class="ord" style="display:none;">貳</div>
+      <div class="name">極盛 ・ 豐盛心流</div>
+      <div class="en">Abundance Resonance</div>
+    </div>
+    <div class="pillar">
+      <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M32 6l20 6v18c0 12-8 22-20 28-12-6-20-16-20-28V12l20-6z"/><path d="M22 32l8 8 12-14"/></svg>
+      <div class="ord" style="display:none;">參</div>
+      <div class="name">極守 ・ 護身御守</div>
+      <div class="en">24-Hour Energy Shield</div>
+    </div>
+  </div>
+
+  <div class="footer-info">
+    <div class="brand">極 心 流 工 作 室</div>
+    <div>Donna-ZiXinLiu · INTERNAL USE ONLY · Edition 2026.05</div>
+  </div>
+</section>
+
+<!-- ==================== 極感 ==================== -->
+<section class="sheet">
+  <div class="page-head">
+    <span class="brand-mini">極心三元 ・ 內部交流資料</span>
+    <span class="page-num">壹 / 參 ・ Sense</span>
+  </div>
+
+  <div class="svc-stamp">
+    <span class="num">壹</span>
+    <svg class="svc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><ellipse cx="20" cy="22" rx="4.5" ry="6"/><ellipse cx="32" cy="16" rx="4.5" ry="6"/><ellipse cx="44" cy="22" rx="4.5" ry="6"/><ellipse cx="50" cy="36" rx="4" ry="5.5"/><ellipse cx="14" cy="36" rx="4" ry="5.5"/><path d="M22 44c0-6 4-10 10-10s10 4 10 10c0 8-6 12-10 12s-10-4-10-12z"/></svg>
+    <span class="stamp-label">極心一 · SENSE<strong>萬物共振 ・ 寵物身心靈療癒</strong></span>
+  </div>
+  <h2 class="svc-title">萬物共振 ・ 寵物身心靈療癒</h2>
+  <div class="svc-en-title">Cross-Species Healing · On-site & Remote Sessions for Pets</div>
+
+  <div class="creed">
+    <h3>核心理念｜萬物有靈，生命共振</h3>
+    <p>羅老師運用其深厚的能量導引功力，不僅療癒人，也將慈悲延展至生靈，針對家中的毛孩提供全方位療癒。</p>
+    <p>這不僅是針對毛孩的療癒，更是一份「最愛寵物的時尚養生」。讓專業的能量護理成為當代寵物生活的新標配，達成靈魂與靈魂間最純粹的安適共感。</p>
+  </div>
+
+  <div class="svc-grid">
+    <div class="svc-col">
+      <h4>現場療癒 <span class="en">In-person</span></h4>
+      <p>透過羅老師獨創的量子能量掃描，精準對齊寵物能量層次的「光子與粒子能量場」。藉由高頻能量共振，以量子觸撫滲透物理結構與臟腑深處，直接疏導氣滯點與能量阻塞。</p>
+      <p>針對因老化、受傷或手術引起的生理不適，以及長期積壓的深層情緒卡點，進行全方位重塑。</p>
+    </div>
+    <div class="svc-col">
+      <h4>線上遠距 <span class="en">Remote</span></h4>
+      <p>運用獨家量子能量調頻技術，打破空間束縛。無論是慢性病後的虛弱，或是突發性的生理失衡，皆能遠端進行精準的頻率校準與養生導引。</p>
+      <p>讓守護能量跨越距離限制，即時護持毛孩的生命品質。</p>
+    </div>
+  </div>
+
+  <div class="pricing-block">
+    <div class="ph"><strong>內部報價</strong>Pricing · Internal</div>
+    <div class="tier-grid">
+      <div class="tier">
+        <div class="t-name">單次體驗方案</div>
+        <div class="t-en">Single Session</div>
+        <div class="t-price">NT$ 1,200 <small>/ 30 分鐘</small></div>
+        <div class="t-body"><strong>10 min 淨化解鎖：</strong>能量掃描並清理負面滯氣、深層情緒卡積。</div>
+        <div class="t-body"><strong>20 min 能量補修：</strong>光子能量導入，針對結構與臟腑進行量子修復。</div>
+        <div class="t-suit"><strong>SUITABLE</strong>急性生理不適、手術前後能量加持、初次體驗。</div>
+      </div>
+      <div class="tier">
+        <div class="t-name">包月調理養生方案</div>
+        <div class="t-en">Monthly Care · 8 sessions</div>
+        <div class="t-price">NT$ 8,000 <small>/ 月</small></div>
+        <div class="t-note">每週 2 次 · 共 8 次 · 換算單次 NT$ 1,000</div>
+        <div class="t-body">定期清理寵物體內積累的城市雜訊及電磁毒素與情緒壓力。透過密集的頻率校準，將能量平衡「定型」，由內而外改善體質。</div>
+        <div class="t-suit"><strong>SUITABLE</strong>慢性病調理、老化照護、行為糾正期的心理能量加持。</div>
+      </div>
+      <div class="tier">
+        <div class="t-name">年度全能守護方案</div>
+        <div class="t-en">Annual Premier · Limited</div>
+        <div class="t-price">NT$ 88,000 <small>/ 年</small></div>
+        <div class="t-note">年繳特惠 · 原價逾 NT$ 100,000</div>
+        <div class="t-body"><strong>年度調頻：</strong>全年共 96 次能量調理（每週固定 2 次）。</div>
+        <div class="t-body"><strong>極守加持：</strong>贈送專屬「寵物健康能量卡」乙張。</div>
+        <div class="t-body"><strong>緊急應援：</strong>享有突發狀況下的優先「遠距量子調頻」權利。</div>
+        <div class="t-suit"><strong>SUITABLE</strong>把寵物視為核心家人、追求頂級長效養生的飼主。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="internal-note">
+    <strong>Special Inquiry · 特殊專案洽詢</strong>
+    針對多寵家庭、嚴重頑疾、或需配合整體居家能量場調整（環境淨化）之需求。由羅老師親自進行全方位檢測後，提供量身定制的客製化報價。
+  </div>
+</section>
+
+<!-- ==================== 極盛 ==================== -->
+<section class="sheet">
+  <div class="page-head">
+    <span class="brand-mini">極心三元 ・ 內部交流資料</span>
+    <span class="page-num">貳 / 參 ・ Abundance</span>
+  </div>
+
+  <div class="svc-stamp">
+    <span class="num">貳</span>
+    <svg class="svc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="32" cy="32" r="22"/><rect x="26" y="26" width="12" height="12"/><path d="M32 10v8M32 46v8M10 32h8M46 32h8" stroke-linecap="round"/></svg>
+    <span class="stamp-label">極心二 · ABUNDANCE<strong>豐盛心流 ・ 錢母磁化</strong></span>
+  </div>
+  <h2 class="svc-title">豐盛心流 ・ 錢母磁化</h2>
+  <div class="svc-en-title">Money Reiki · Abundance Frequency</div>
+
+  <div class="creed">
+    <h3>核心理念｜金錢即流動的愛與祝福</h3>
+    <p>在「極心流」中，金錢本質上是一種純淨流動的能量。當我們清理了內在的匱乏與恐懼，財富便會如流水般自然匯聚成「心流」。</p>
+    <p>羅老師融合西方「金錢靈氣」、東方財施哲學與吸引力法則，透過磁化錢母，引導金錢能量的正向循環。</p>
+  </div>
+
+  <div class="svc-grid">
+    <div class="svc-col">
+      <h4>服務內容 <span class="en">Service</span></h4>
+      <ul>
+        <li><strong>清理匱乏枷鎖：</strong>針對個人能量場，清除潛意識中阻礙財富流動的限制性信念。</li>
+        <li><strong>能量導引磁化：</strong>羅老師親自導引「黃財神」的無限豐盛、「藥師佛」的所願皆成，以及「金錢靈氣」的高頻能量，植入您所準備的錢母中。</li>
+        <li><strong>磁場吸引器：</strong>經過磁化的錢母將成為您身邊的財富吸引力中心，在物質與心靈層面同步建立正確且慷慨的財富觀。</li>
+      </ul>
+    </div>
+    <div class="svc-col">
+      <h4>能量循環哲學 <span class="en">Philosophy</span></h4>
+      <p>當您將錢母消費出去，不僅是祝福商家的豐盛，更是引導金錢能量的正向循環，讓財富在流動中如雪球般壯大，最終回歸自身。</p>
+      <p style="margin-top:14px;padding:12px 14px;background:rgba(164,77,58,0.05);border-left:2px solid var(--cinnabar);font-size:12px;color:var(--ink-soft);">
+        <strong>服務性質聲明：</strong>本服務為能量儀式體驗，實際財務結果依個人因素而異，不構成財務建議或保證。
+      </p>
+    </div>
+  </div>
+
+  <div class="coin-block">
+    <h4>錢母組成 ・ 金銀比例的能量鍊金術（源自古老易經吉數）</h4>
+    <div class="coin-grid">
+      <div class="coin-item">
+        <div class="k">Total per Unit</div>
+        <div class="v">NT$ <strong>2,600</strong></div>
+        <div class="desc">每單位總額</div>
+      </div>
+      <div class="coin-item">
+        <div class="k">50元 金幣 × 14</div>
+        <div class="v">NT$ <strong>700</strong></div>
+        <div class="desc">陽性能量與財富巔峰</div>
+      </div>
+      <div class="coin-item">
+        <div class="k">10元 銀幣 × 190</div>
+        <div class="v">NT$ <strong>1,900</strong></div>
+        <div class="desc">陰性能量與廣大流通</div>
+      </div>
+      <div class="coin-item">
+        <div class="k">Process</div>
+        <div class="v" style="font-size:13px;line-height:1.4;">個案備妥<br>羅老師親自磁化</div>
+        <div class="desc">作業天數約 7–10 工作日</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-block">
+    <div class="ph"><strong>內部報價</strong>Pricing · Internal</div>
+    <div class="tier-grid">
+      <div class="tier">
+        <div class="t-name">單月結緣方案</div>
+        <div class="t-en">Monthly Initiation</div>
+        <div class="t-price">NT$ 680 <small>/ 月</small></div>
+        <div class="t-note">每一單位 2,600 元錢母之加持費</div>
+        <div class="t-body">若需加持更高額度之錢母（如 5,200 元、7,800 元），則依 2,600 元為倍數計價，每單位加持費均為 680 元。</div>
+        <div class="t-suit"><strong>SUITABLE</strong>初次接觸豐盛心流者・短期能量校準。</div>
+      </div>
+      <div class="tier">
+        <div class="t-name">包季守護專案</div>
+        <div class="t-en">Quarterly · 3 Months</div>
+        <div class="t-price">NT$ 1,880</div>
+        <div class="t-note">季繳特惠 · 原價 NT$ 2,040</div>
+        <div class="t-body">連續三個月的能量護持，協助建立穩固的財富磁場。</div>
+        <div class="t-suit"><strong>SUITABLE</strong>欲轉換工作或創業初期之個案。</div>
+      </div>
+      <div class="tier">
+        <div class="t-name">年度豐盛專案</div>
+        <div class="t-en">Annual · 12 Months</div>
+        <div class="t-price">NT$ 6,800</div>
+        <div class="t-note">年繳特惠 · 等同享兩個月免費加持</div>
+        <div class="t-body">羅老師全年度的財富頻率護持，隨時維持在「極盛」狀態，在每一筆消費中實踐佈施與倍增的奇蹟。</div>
+        <div class="t-suit"><strong>SUITABLE</strong>追求長期穩定豐盛、實踐佈施培福者。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 極守 ==================== -->
+<section class="sheet">
+  <div class="page-head">
+    <span class="brand-mini">極心三元 ・ 內部交流資料</span>
+    <span class="page-num">參 / 參 ・ Guard</span>
+  </div>
+
+  <div class="svc-stamp">
+    <span class="num">參</span>
+    <svg class="svc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M32 6l20 6v18c0 12-8 22-20 28-12-6-20-16-20-28V12l20-6z"/><path d="M22 32l8 8 12-14"/></svg>
+    <span class="stamp-label">極心三 · GUARD<strong>護身御守 ・ 24 小時隨身能量場</strong></span>
+  </div>
+  <h2 class="svc-title">護身御守 ・ 24 小時隨身能量場</h2>
+  <div class="svc-en-title">Health · Wealth · Fortune Energy Cards</div>
+
+  <div class="creed">
+    <h3>核心理念｜實體化的守護，隨身攜帶的能量場</h3>
+    <p>「御守」象徵守護，「護身」展現力量。羅老師結合二十餘年修煉所得的氣場能量與導引頻率，將抽象的宇宙能量「實體化」與「隨身化」，為您建立一道不分晝夜、無處不在的隱形防護罩。</p>
+    <p>這不僅是一張卡片，更是羅老師為您量身打造的「能量保鏢」，確保您的個人電磁場始終維持在「極心流」的和諧狀態。</p>
+  </div>
+
+  <div class="svc-grid">
+    <div class="svc-col">
+      <h4>三大守護面向 <span class="en">Three Cards</span></h4>
+      <ul>
+        <li><strong>健康能量卡：</strong>針對微細循環系統注入平衡頻率，穩定生理電磁場，協助身體重拾自然修復律動。<br><span style="color:var(--ink-mute);font-size:11px;">適合：病後補養、長期高壓、睡眠品質不佳者</span></li>
+        <li><strong>財運能量卡：</strong>對齊金錢靈氣與無限豐盛頻率，優化商機感應力，維持清明的判斷與決策。<br><span style="color:var(--ink-mute);font-size:11px;">適合：創業者、投資者、業務開發者</span></li>
+        <li><strong>福運能量卡：</strong>提升氣場的和諧度與厚度，自動排除周遭負能量干擾。<br><span style="color:var(--ink-mute);font-size:11px;">適合：體質敏感、職場人際複雜者</span></li>
+      </ul>
+    </div>
+    <div class="svc-col">
+      <h4>實踐效益 <span class="en">Outcome</span></h4>
+      <p>「極守」服務讓療育、調頻不再侷限於工作室的空間。透過能量卡的共振，羅老師將守護能量延伸至您的每一個生命現場。</p>
+      <p>無論身處何地，只要隨身配戴，便能穩定個人的生理與心理電磁場，讓您隨時隨地，皆在心流之中。</p>
+    </div>
+  </div>
+
+  <div class="pricing-block">
+    <div class="ph"><strong>內部報價</strong>Pricing · Internal</div>
+    <div class="tier-grid">
+      <div class="tier">
+        <div class="t-name">單月體驗方案</div>
+        <div class="t-en">Monthly Trial</div>
+        <div class="t-price">NT$ 680 <small>/ 月</small></div>
+        <div class="t-note">結緣優惠</div>
+        <div class="t-body">初步校準個人磁場，感受能量卡對環境雜訊的過濾作用。</div>
+        <div class="t-suit"><strong>SUITABLE</strong>初次體驗、想感受能量卡效果的個案。</div>
+      </div>
+      <div class="tier">
+        <div class="t-name">包季守護方案</div>
+        <div class="t-en">Quarterly · 3 Months</div>
+        <div class="t-price">NT$ 1,880</div>
+        <div class="t-note">季繳特惠</div>
+        <div class="t-body">經過一季的持續共振，能量場將產生記憶與慣性。</div>
+        <div class="t-suit"><strong>SUITABLE</strong>針對特定目標（健康恢復、財運衝刺）短期強化者。</div>
+      </div>
+      <div class="tier">
+        <div class="t-name">年度守護方案</div>
+        <div class="t-en">Annual · 12 Months</div>
+        <div class="t-price">NT$ 6,800</div>
+        <div class="t-note">年繳特惠 · 等同享兩個月免費加持</div>
+        <div class="t-body">羅老師全年度針對您的能量卡進行頻率維護與更新，建立堅不可摧的長期能量結界。</div>
+        <div class="t-suit"><strong>SUITABLE</strong>追求長期穩定守護、徹底落實「天人合一」者。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="internal-note">
+    <strong>Internal Notes</strong>
+    本資料為極心流工作室內部交流使用，包含完整定價與方案細節。對外溝通時，請依公開頁面之「費用詳洽」原則進行報價諮詢。
+  </div>
+</section>
+
+<script>
+// Auto-prompt print on dedicated query
+if (location.search.includes('print=1')) {
+  setTimeout(() => window.print(), 500);
+}
+</script>
+</body>
+</html>
