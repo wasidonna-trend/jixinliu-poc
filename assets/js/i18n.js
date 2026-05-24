@@ -790,7 +790,7 @@ const I18N = {
     "common.lang": "Language",
     "price.consult": "费用详洽",
     "price.consult.note": "欢迎先以 LINE 或电话諮詢，依您的需求量身规劃",
-  },,
+  },
 
   "en": {
     /* Nav */
