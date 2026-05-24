@@ -34,78 +34,81 @@ window.STAGES_DATA = [
   // ===== Stage 2 =====
   {
     title: "核心中軸歸正・結構平衡工程",
-    enTitle: "Core Axis Realignment",
+    enTitle: "Core Axis Energy Attunement",
     shortLabel: "重建生命的基石",
     vert: "中軸・歸正・歸位",
-    lead: "針對人體最重要的「中軸電磁場」、核心中脈、脊椎、骨架結構與自律神經，進行物理與能量的雙重校正。這不只是骨架調整，而是結構與頻率的雙重對位。",
-    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "結構失衡・呼吸淺・腰背緊繃者" },
+    lead: "針對人體最重要的「中軸能量場」、核心中脈與整體結構，進行身體層面與能量層面的雙重對位引導。這不只是身體層面的調整，而是結構與頻率的雙重對位。",
+    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "身體沉重・呼吸不順・想提升整體能量狀態者" },
     service: `
-      <p>針對人體最重要的「中軸電磁場」，進行<strong>核心中脈、脊椎、骨架結構與自律神經</strong>的物理與能量雙重校正。這不只是骨架調整，而是結構與頻率的雙重對位。</p>
-      <p>透過獨創的「核心歸位校正技術」，讓歪斜的結構「歸位」。當中脈能量、脊椎與自律神經得到釋放，最直觀的感受就是<strong>身體重心穩定、呼吸變深、身體變輕盈</strong>，那些長年的緊繃感會逐漸消融。</p>
-      <p>個案常反饋：做完後感覺「腳踏實地」，呼吸變得深沉。</p>
+      <p>針對人體最重要的「中軸能量場」，進行<strong>核心中脈與整體結構</strong>在身體層面與能量層面的雙重對位引導。這不只是身體層面的調整，而是結構與頻率的雙重對位。</p>
+      <p>透過獨創的「核心中軸能量引導」，協助身體找回中心對位感。當中脈能量流動更順暢，身體會自然回到平衡狀態，最直觀的感受就是<strong>身體重心穩定、呼吸變深、身體變輕盈</strong>，那些長年的沉重感會逐漸消融。</p>
+      <p>個案常反饋：感受到「腳踏實地」的踏實感，呼吸更為順暢。</p>
+      <p style="margin-top:16px;padding:14px 18px;background:rgba(164,77,58,0.05);border-left:3px solid var(--cinnabar);font-size:13px;color:var(--ink-soft);line-height:1.85;"><strong style="color:var(--cinnabar);">服務性質聲明：</strong>本服務為身心靈能量調理引導，不涉及任何徒手整復、推拿、按摩、結構矯正或物理治療行為，不涉及醫療儀器或科學檢測設備，不具醫療診斷效能，亦不取代醫師之專業診斷與治療。</p>
     `,
-    masterView: `中軸一正，百脈皆通。脊椎是靈魂的通道。當物理結構壓迫神經，能量便無法流動。我們透過核心歸位校正技術，讓您的身體找回支撐點。`,
+    masterView: `中軸一正，百脈皆通。中軸是能量流動的通道。當身體結構失去對位，能量便難以順暢流動。我們透過核心中軸能量引導，協助您的身體找回內在的支撐點。`,
     process: `
-      <div class="proc-step"><div class="step-num">01</div><div><h4>結構檢測</h4><p>透過站立、坐姿與動作觀察，定位中軸偏移與結構代償點。</p></div><div class="dur">5 min</div></div>
-      <div class="proc-step"><div class="step-num">02</div><div><h4>能量・物理雙重歸正</h4><p>羅老師施行核心歸位校正技術，鬆解骨架壓迫並引導中脈能量歸位。</p></div><div class="dur">20 min</div></div>
-      <div class="proc-step"><div class="step-num">03</div><div><h4>自律神經整合</h4><p>透過呼吸引導，讓自律神經系統與新的結構頻率穩定對齊。</p></div><div class="dur">5 min</div></div>
+      <div class="proc-step"><div class="step-num">01</div><div><h4>姿態覺察</h4><p>透過站立、坐姿與動作觀察，感知中軸狀態與身體能量分布。</p></div><div class="dur">5 min</div></div>
+      <div class="proc-step"><div class="step-num">02</div><div><h4>能量・身體層面雙重對位</h4><p>羅老師運用核心中軸能量引導，協助身體釋放結構張力，引導中脈能量回到順暢流動。</p></div><div class="dur">20 min</div></div>
+      <div class="proc-step"><div class="step-num">03</div><div><h4>呼吸與能量整合</h4><p>透過呼吸引導，讓身體與新的能量頻率穩定對齊。</p></div><div class="dur">5 min</div></div>
     `,
     benefits: `
-      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>呼吸深沉</h4><p>中軸校正後，橫膈膜釋放、肺活量增加，呼吸自然變深</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>腳踏實地</h4><p>身體重心穩定，行走站立都更踏實，緊繃感消融</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>能量高效傳輸</h4><p>「天線」校正後，生命能量才能高效傳輸至全身細胞</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>呼吸深沉</h4><p>中軸對位後，胸口感覺開闊，呼吸自然變深，氣的流動更順暢</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>重心穩定</h4><p>身體重心更穩定，行走站立都更踏實，沉重感逐漸消融</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>能量高效傳輸</h4><p>「中軸天線」對位後，生命能量得以順暢流動至全身</p></div>
     `,
   },
 
   // ===== Stage 3 =====
   {
-    title: "陰陽五行氣脈調和",
-    enTitle: "Meridian Energy Balancing",
+    title: "陰陽五行能量調和",
+    enTitle: "Five-Element Energy Harmonization",
     shortLabel: "五臟六腑的能量修復",
     vert: "經絡・補氣・排毒",
     lead: "結合氣功、能量指針點穴與遠絡療法，不需侵入，直接對五臟六腑進行能量補充與釋放。排除堆積的「濁氣」，為虛損的臟腑精準補充生物光子、電子。",
-    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "氣血失衡・痠麻脹痛・手腳冰冷者" },
+    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "身心能量失衡・日常易感沉重緊繃・想重拾溫暖活力者" },
     service: `
       <p>結合<strong>氣功、能量指針點穴、能量氣功點穴與遠絡療法</strong>及能量導入，不需侵入，直接對五臟六腑進行「能量補充與釋放」。排除堆積的「濁氣」，為虛損的臟腑精準補充生物光子、電子。</p>
       <p>經絡是人體的能量高速公路。在此階段我們排除「能量濁氣」，並針對虛損的臟腑導入「生物光子、電子」，達成<strong>氣血與神經系統的動態平衡</strong>。</p>
-      <p>這是一個幫身體補氣、排毒的過程。</p>
+      <p>這是一個為身體注入能量、淨化身心能量場的過程。</p>
+      <p style="margin-top:16px;padding:14px 18px;background:rgba(164,77,58,0.05);border-left:3px solid var(--cinnabar);font-size:13px;color:var(--ink-soft);line-height:1.85;"><strong style="color:var(--cinnabar);">服務性質聲明：</strong>本服務為身心靈能量調理引導，不涉及任何中醫診療、針灸、推拿、點穴、按摩或徒手治療行為，不涉及醫療儀器或科學檢測設備，不具醫療診斷效能，亦不取代醫師之專業診斷與治療。</p>
     `,
-    masterView: `經絡是人體的能量高速公路。當高速公路堵塞，營養與訊息便無法到達細胞。補氣不是塞進更多東西，而是先把濁氣排出，讓乾淨的能量自然湧入。`,
+    masterView: `能量在身體中如同川流不息的河道。當河道阻塞，能量便無法順暢流動。能量的滋養不是塞進更多東西，而是先讓沉滯的能量釋放，乾淨清新的能量自然湧入。`,
     process: `
-      <div class="proc-step"><div class="step-num">01</div><div><h4>五行氣脈評估</h4><p>判讀五臟六腑當前的虛實寒熱，鎖定需要疏通與補益的經絡。</p></div><div class="dur">5 min</div></div>
-      <div class="proc-step"><div class="step-num">02</div><div><h4>濁氣釋放</h4><p>運用能量指針點穴與氣功點穴，將堆積在臟腑與經絡中的濁氣排出。</p></div><div class="dur">12 min</div></div>
-      <div class="proc-step"><div class="step-num">03</div><div><h4>生物光子導入</h4><p>結合遠絡療法，為虛損臟腑導入生物光子與電子，補充微細能量。</p></div><div class="dur">13 min</div></div>
+      <div class="proc-step"><div class="step-num">01</div><div><h4>五行能量感知</h4><p>感知五行能量中心當前的流動狀態，鎖定需要引導與滋養的能量區域。</p></div><div class="dur">5 min</div></div>
+      <div class="proc-step"><div class="step-num">02</div><div><h4>沉滯能量釋放</h4><p>運用能量觸點與養生引導，協助堆積在能量通道中的沉滯能量釋放。</p></div><div class="dur">12 min</div></div>
+      <div class="proc-step"><div class="step-num">03</div><div><h4>生命能量滋養</h4><p>結合微細能量共振，以生物光能概念為基礎，為需要呵護的能量核心引導滋養。</p></div><div class="dur">13 min</div></div>
     `,
     benefits: `
-      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>補氣排毒</h4><p>清除體內淤積的「濁氣」，臟腑運作效能即時提升</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>能量淨化</h4><p>引導體內沉滯能量的釋放，內在能量核心運作更為順暢</p></div>
       <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>痠麻緩解</h4><p>協助平衡各類痠、麻、脹、痛，能量通暢時症狀自然鬆動</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>氣色改善</h4><p>蘋果肌回來了、手腳不再冰冷，由內透出來的紅潤健康</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>氣色明亮</h4><p>重拾溫暖的生命活力，氣色明亮、展現由內透出的好狀態</p></div>
     `,
   },
 
   // ===== Stage 4 =====
   {
-    title: "脈輪清理與音波能量修復",
+    title: "脈輪淨化與音波能量滋養",
     enTitle: "Chakra Cleansing & Sound Healing",
     shortLabel: "心靈與能量體清理掃毒",
     vert: "頌缽・脈輪・靈氣",
-    lead: "頌缽音波頻率共振 + 神聖靈氣與 Prana 能量導引，瓦解陳舊的情緒與能量印記，釋放身心緊繃與能量耗竭，回歸深層放鬆與安定，使心靈恢復如大海般的深層平靜。",
-    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "身心緊繃・情緒卡頓・能量耗竭者" },
+    lead: "頌缽音波頻率共振，結合神聖靈氣與 Prana 能量引導，協助釋放陳舊的能量印記，引導身心回到放鬆與安定，使心靈感受到如大海般的深層平靜。",
+    meta: { duration: "30 分鐘", fee: "預約諮詢", suit: "身心緊繃・能量阻滯・身心疲憊感重者" },
     service: `
-      <p><strong>頌缽音波頻率共振：</strong>運用特定頻率的頌缽音波與身體水分及細胞產生物理共鳴。透過音頻震盪，精準「震碎」代謝積壓在細胞、筋膜與七大脈輪間的陳舊情緒印記與能量瘀結。</p>
-      <p><strong>神聖靈氣與 Prana 能量導引：</strong>導引高頻生命能量（Prana）與神聖場域能量，直接對個案的能量體進行清理與賦能。</p>
-      <p>這是一個從「生存」回歸「生活」與「生命」的過程，讓心靈恢復如大海般的深層平靜，並開啟靈性潛能。</p>
+      <p><strong>頌缽音波頻率共振：</strong>運用特定頻率的頌缽音波與身心場域產生和諧共振。透過音頻共鳴，溫和協助釋放積壓在身心層面與七大脈輪間的陳舊能量印記與沉滯。</p>
+      <p><strong>神聖靈氣與 Prana 能量引導：</strong>引導高頻生命能量（Prana）與神聖場域能量，協助個案的能量場進行淨化與滋養。</p>
+      <p>這是一個從「生存」回歸「生活」與「生命」的過程，讓心靈感受到如大海般的深層平靜，探索內在的靈性潛能。</p>
+      <p style="margin-top:16px;padding:14px 18px;background:rgba(164,77,58,0.05);border-left:3px solid var(--cinnabar);font-size:13px;color:var(--ink-soft);line-height:1.85;"><strong style="color:var(--cinnabar);">服務性質聲明：</strong>本服務為身心靈能量調理與靜心引導，不涉及任何醫學治療、心理諮商、心理治療、精神科治療或物理治療行為，不涉及醫療儀器或科學檢測設備，不具醫療診斷效能，亦不取代醫師、心理師之專業診斷與治療。</p>
     `,
-    masterView: `每一個細胞都是微型發電站。當情緒、能量卡住時，細胞供能就會中斷。我們透過特定頻率的震盪，瓦解陳舊的情緒與能量印記。`,
+    masterView: `每個生命都是微型的能量場域。當能量流動受阻時，內在的活力流動就會減緩。我們透過特定頻率的共振，協助釋放陳舊的能量印記。`,
     process: `
-      <div class="proc-step"><div class="step-num">01</div><div><h4>能量體掃描</h4><p>羅老師為您快速掃描七大脈輪的失衡點與情緒印記累積處。</p></div><div class="dur">5 min</div></div>
-      <div class="proc-step"><div class="step-num">02</div><div><h4>頌缽音波震盪</h4><p>運用特定頻率的頌缽，與身體水分共振，震碎陳舊的情緒印記與能量瘀結。</p></div><div class="dur">15 min</div></div>
-      <div class="proc-step"><div class="step-num">03</div><div><h4>靈氣賦能</h4><p>導引神聖靈氣與 Prana 能量，補足虛損的能量場，回歸深層平靜。</p></div><div class="dur">10 min</div></div>
+      <div class="proc-step"><div class="step-num">01</div><div><h4>脈輪能量感知</h4><p>羅老師為您感知七大脈輪的能量流動狀態與能量沉滯處。</p></div><div class="dur">5 min</div></div>
+      <div class="proc-step"><div class="step-num">02</div><div><h4>頌缽音波共振</h4><p>運用特定頻率的頌缽，與身心場域共振，協助釋放與消融陳舊的能量印記與沉滯。</p></div><div class="dur">15 min</div></div>
+      <div class="proc-step"><div class="step-num">03</div><div><h4>靈氣滋養</h4><p>引導神聖靈氣與 Prana 能量，滋養需要呵護的能量場，回到深層平靜。</p></div><div class="dur">10 min</div></div>
     `,
     benefits: `
-      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>釋放緊繃</h4><p>音波震盪即時鬆解神經系統，緊繃感逐步褪去</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>放鬆改善</h4><p>清理累積在細胞中的情緒印記，深層放鬆是好眠的根本</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>心靈回歸</h4><p>從「生存」回到「生活」、昇華「生命」，開啟靈性潛能</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>釋放緊繃</h4><p>音波共振協助引導身心深層放鬆，沉重感逐步褪去</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>內在平靜</h4><p>協助釋放累積在身心層面的能量印記，找回內在的深層平靜</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>心靈回歸</h4><p>從「生存」回到「生活」、昇華「生命」，探索靈性潛能</p></div>
     `,
   },
 
@@ -115,24 +118,25 @@ window.STAGES_DATA = [
     enTitle: "Light Body & Kundalini Awakening",
     shortLabel: "改寫命運頻率",
     vert: "光體・拙火・改命",
-    lead: "生命七大業力課題，儲存在七脈輪中並記憶在身體筋膜、心血管系統、中樞與神經系統及細胞中。透過「光體開啟」與「拙火開啟」，釋放轉化累世傷痕，校準豐盛頻率。",
-    meta: { duration: "60 分鐘", fee: "預約諮詢", suit: "靈性成長・突破瓶頸・有緣之人" },
+    lead: "生命七大業力課題儲存於七脈輪中，並印記於深層潛意識、精微能量體與身心的精微記憶中。透過「光體探索引導」與「拙火探索引導」，協助釋放累世印記，對齊豐盛意識。",
+    meta: { duration: "60 分鐘", fee: "預約諮詢", suit: "追求靈性成長・探索內在豐盛・有緣之人" },
     service: `
-      <p>透過「光體開啟」與「拙火開啟」，釋放轉化累世傷痕，校準豐盛頻率。不僅是身體的療癒，更是<strong>命運能量的翻轉</strong>。</p>
-      <p>每次 1 小時的深度對接，啟動體內「拙火」深度清理：累世傷痕、情緒、阻礙財富根本原因、原生家庭負能、祖先議題、親密關係與愛的能量場。重新編碼您的生命場，啟動內在財富與由內而外的吸引力。</p>
-      <p>這是針對<strong>「生命頻率」的調教</strong>，此服務等待的即是有緣之人。適合追求靈性成長、想突破人生瓶頸（如財富或感情）的學員，讓您的生命頻率與宇宙豐盛連結。</p>
+      <p>透過「光體探索引導」與「拙火探索引導」，協助釋放累世印記，對齊豐盛意識。不僅是身心的內在覺察，更是<strong>與生命能量的全新連結</strong>。</p>
+      <p>每次 1 小時的深度引導，協助探索體內「拙火」能量的覺察：累世印記、能量沉滯、與豐盛相關的內在課題、家族能量、生命傳承議題、人際與愛的能量場。協助對齊您的生命能量場與內在豐盛意識，探索由內而外的覺察與感受。</p>
+      <p>這是對<strong>「生命頻率」的探索引導</strong>，此服務等待的即是有緣之人。適合追求靈性成長、想探索人生課題（如豐盛意識或關係課題）的學員，協助您的生命頻率與宇宙意識產生連結。</p>
+      <p style="margin-top:16px;padding:14px 18px;background:rgba(164,77,58,0.05);border-left:3px solid var(--cinnabar);font-size:13px;color:var(--ink-soft);line-height:1.85;"><strong style="color:var(--cinnabar);">服務性質聲明：</strong>本服務為身心靈能量調理與靈性成長引導，屬個人探索與內在覺察課程，不涉及任何醫學治療、心理諮商、心理治療、精神科治療、財務諮詢、投資建議或命理算命行為，亦不保證任何具體效果。所有內在的覺察與轉化，皆為個案自身的探索歷程。本服務不取代醫師、心理師之專業診斷與治療。</p>
     `,
-    masterView: `專業的療育不應只停留在身體，更應涵蓋「深層情緒、原生家庭、親密關係、財富能量」。透過七脈輪的生命七大功課深度清理與啟動，解除您被封印的潛能。`,
+    masterView: `深度的身心轉化引導不應只停留在表面，更應涵蓋「深層覺察、家族能量、人際關係、豐盛意識」。透過七脈輪的生命七大課題引導，協助您探索內在的可能性。`,
     process: `
-      <div class="proc-step"><div class="step-num">01</div><div><h4>七脈輪深度檢視</h4><p>逐一掃描七大脈輪所對應的生命七大業力課題與封印點。</p></div><div class="dur">10 min</div></div>
-      <div class="proc-step"><div class="step-num">02</div><div><h4>光體開啟</h4><p>導引高頻光能滲入光體層，建立與宇宙豐盛頻率的連結通道。</p></div><div class="dur">20 min</div></div>
-      <div class="proc-step"><div class="step-num">03</div><div><h4>拙火轉化</h4><p>啟動體內拙火，由海底輪向上深度清理累世傷痕與情緒能量。</p></div><div class="dur">25 min</div></div>
-      <div class="proc-step"><div class="step-num">04</div><div><h4>生命場重編碼</h4><p>將清理後的能量場與新的生命藍圖對齊，啟動由內而外的吸引力。</p></div><div class="dur">5 min</div></div>
+      <div class="proc-step"><div class="step-num">01</div><div><h4>七脈輪能量觀照</h4><p>逐一感知七大脈輪所對應的生命七大業力課題與內在課題點。</p></div><div class="dur">10 min</div></div>
+      <div class="proc-step"><div class="step-num">02</div><div><h4>光體探索引導</h4><p>引導高頻光能與光體層的覺察，協助建立與宇宙意識的連結。</p></div><div class="dur">20 min</div></div>
+      <div class="proc-step"><div class="step-num">03</div><div><h4>拙火探索引導</h4><p>引導體內拙火能量的覺察，由海底輪向上協助釋放累世印記與沉滯能量。</p></div><div class="dur">25 min</div></div>
+      <div class="proc-step"><div class="step-num">04</div><div><h4>生命場意識對齊</h4><p>將釋放後的能量場與新的生命意識對齊，協助探索由內而外的覺察。</p></div><div class="dur">5 min</div></div>
     `,
     benefits: `
-      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>生命格局翻轉</h4><p>內在和平、人際與親密關係感受到前所未有的突破</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>事業決策清明</h4><p>清理掉雜訊後，事業與財富決策變得清晰、流暢</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>豐盛由內而外</h4><p>生命頻率對齊宇宙豐盛，吸引力法則開始真實運作</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>生命格局擴展</h4><p>內在感受到更深的平靜，在人際與親密關係中有新的覺察與理解</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>內在覺察清晰</h4><p>協助釋放內在雜訊後，對自身選擇與方向有更清晰的覺察</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>豐盛意識覺醒</h4><p>生命頻率與宇宙豐盛意識連結，探索吸引力法則的內在運作</p></div>
     `,
   },
 
@@ -143,25 +147,26 @@ window.STAGES_DATA = [
     shortLabel: "成為生命的主人",
     vert: "得氣・行氣・養氣",
     lead: "得氣、行氣、養氣、益智。羅老師親授太極內功、白鶴拳古式氣功、易筋經、八段錦、道家六字訣與週天靜功，將「氣」從理論轉化為體感，練出先天之炁。",
-    meta: { duration: "60 分鐘", fee: "預約諮詢", suit: "想擁有帶得走的健康・由被動轉主動者" },
+    meta: { duration: "60 分鐘", fee: "預約諮詢", suit: "想學習傳統養生功法・由被動轉主動者" },
     service: `
-      <p>透過不同的功法，由粗到精細能量的轉化，改善身心靈慧的整體階段：</p>
+      <p>透過不同的功法，由粗到精細能量的轉化，促進身心整體和諧：</p>
       <p><strong>太極內功：</strong>以週天運轉協助身心的能量提昇。<br>
       <strong>動態內功：</strong>白鶴拳古式氣功、易筋經、八段錦、道家六字訣。<br>
-      <strong>週天靜功：</strong>進入深層意識，練出先天之炁。</p>
-      <p>依學員喜好及根性，羅老師<strong>親授傳承指導</strong>如何將「氣」從理論轉化為體感。教您如何練出「先天之炁」，並收歸己用，以炁行功。</p>
+      <strong>週天靜功：</strong>進入深層意識，體會先天之炁的流動。</p>
+      <p>依學員喜好及根性，羅老師<strong>親授傳承指導</strong>如何將「氣」從理論轉化為體感。引導您體會「先天之炁」的流動，將氣的覺察融入日常習練。</p>
+      <p style="margin-top:16px;padding:14px 18px;background:rgba(164,77,58,0.05);border-left:3px solid var(--cinnabar);font-size:13px;color:var(--ink-soft);line-height:1.85;"><strong style="color:var(--cinnabar);">服務性質聲明：</strong>本服務為傳統養生氣功與民間功法傳授教學，屬體育運動與個人修養鍛鍊範疇，非醫療行為，不涉及任何醫療診療、復健治療或處方行為，亦不具醫療診斷效能。</p>
     `,
-    masterView: `練功若練不出「先天之炁」，終究只是體操。我教的是「內氣運行」，讓能量在你的經絡中真實跑動。授人以魚不如授人以漁。`,
+    masterView: `練功的核心在於體會「先天之炁」的流動，這是內功與單純外形動作最大的差別。我傳授的是「內氣運行」的傳統心法，引導您感受能量在經絡中的自然流動。授人以魚不如授人以漁。`,
     process: `
-      <div class="proc-step"><div class="step-num">01</div><div><h4>根性評估</h4><p>羅老師依您的身體狀態與興趣，挑選最契合的功法路徑。</p></div><div class="dur">10 min</div></div>
+      <div class="proc-step"><div class="step-num">01</div><div><h4>根性了解</h4><p>羅老師依您的身體狀態與興趣，了解您與功法的契合度，挑選最契合的習練路徑。</p></div><div class="dur">10 min</div></div>
       <div class="proc-step"><div class="step-num">02</div><div><h4>動態內功</h4><p>白鶴拳古式氣功、易筋經、八段錦或道家六字訣，由動入靜。</p></div><div class="dur">25 min</div></div>
-      <div class="proc-step"><div class="step-num">03</div><div><h4>週天靜功</h4><p>進入深層意識，引導內氣循經絡走小週天，練出先天之炁。</p></div><div class="dur">20 min</div></div>
+      <div class="proc-step"><div class="step-num">03</div><div><h4>週天靜功</h4><p>進入深層意識，引導內氣循經絡走小週天，體會先天之炁的流動。</p></div><div class="dur">20 min</div></div>
       <div class="proc-step"><div class="step-num">04</div><div><h4>每日功課</h4><p>羅老師為您建立每日 15 分鐘的居家練功清單，讓能量持續累積。</p></div><div class="dur">5 min</div></div>
     `,
     benefits: `
-      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>帶得走的健康</h4><p>東方硬核智慧，掌握帶得走、用一輩子的自癒技術</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>主動進階</h4><p>從被動療癒轉為主動進階，確保生命轉化成果長久維持</p></div>
-      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>身體的主人</h4><p>讓體內能量如同潮汐般生生不息，真正成為自己身體的主人</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 01</div><h4>帶得走的健康</h4><p>東方硬核智慧，掌握帶得走、可融入日常實踐的傳統養生功法</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 02</div><h4>主動進階</h4><p>從被動調理轉為主動鍛鍊，讓身心狀態的轉變得以長久延續</p></div>
+      <div class="benefit-cell"><div class="ben-num">B · 03</div><h4>與身體深度連結</h4><p>讓體內能量如同潮汐般生生不息，與自己的身體建立更深的連結</p></div>
     `,
   },
 ];

@@ -144,6 +144,7 @@ const ICONS = {
 function icon(name) {
   return ICONS[name] || "";
 }
+window.ICONS = ICONS;
 
 function injectIcons() {
   document.querySelectorAll("[data-icon]").forEach(el => {
