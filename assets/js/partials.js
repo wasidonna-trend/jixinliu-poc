@@ -31,9 +31,9 @@ const NAV_HTML = `
       <a href="${_base}index.html#vision" data-i18n="nav.vision">願景</a>
       <a href="${_base}master.html" data-i18n="nav.master">羅老師</a>
       <a href="${_base}index.html#stages" data-i18n="nav.stages">六階段</a>
-      <a href="${_base}index.html#therapies" data-i18n="nav.therapies">療癒服務</a>
-      <a href="${_base}index.html#products" data-i18n="nav.products">能量商品</a>
-      <a href="${_base}index.html#events" data-i18n="nav.events">活動</a>
+      <a href="${_base}index.html#therapies" data-i18n="nav.therapies">服務總覽</a>
+      <a href="${_base}index.html#events" data-i18n="nav.events">活動行事曆</a>
+      <a href="${_base}index.html#faq" data-i18n="nav.faq">FAQ</a>
     </div>
     <div class="nav-tools">
       <div class="lang-switch" role="group" aria-label="Language">
@@ -54,15 +54,15 @@ const FOOTER_HTML = `
     <div>
       <div class="brand-name" data-i18n="footer.brand">極心流工作室</div>
       <p style="margin-bottom:8px;color:var(--gold-light);font-style:italic;font-family:var(--serif-en);" data-i18n="footer.brand.master">羅老師主持</p>
-      <p data-i18n="footer.brand.body">融合古法武學、中醫經絡與量子能量學，引導身心靈整合療癒，重啟您與生俱來的自癒力量。</p>
+      <p data-i18n="footer.brand.body">融合古法武學、東方經絡與量子能量學，引導身心靈整合轉化，協助您探索內在的能量流動。</p>
     </div>
     <div>
       <h4 data-i18n="footer.col.services">Services</h4>
       <ul>
-        <li><a href="${_base}index.html#stages" data-i18n="footer.link.stages">六階段課程</a></li>
-        <li><a href="${_base}index.html#products" data-i18n="footer.link.products">能量商品</a></li>
+        <li><a href="${_base}index.html#stages" data-i18n="footer.link.stages">六階段轉化課程</a></li>
+        <li><a href="${_base}index.html#therapies" data-i18n="footer.link.therapies">全部轉化服務</a></li>
         <li><a href="${_base}index.html#events" data-i18n="footer.link.events">活動行事曆</a></li>
-        <li><a href="${_base}booking.html" data-i18n="footer.link.book">預約諮詢</a></li>
+        <li><a href="${_base}index.html#faq" data-i18n="footer.link.faq">常見問答</a></li>
       </ul>
     </div>
     <div>
@@ -71,7 +71,6 @@ const FOOTER_HTML = `
         <li><a href="${_base}index.html#vision" data-i18n="footer.link.vision">願景</a></li>
         <li><a href="${_base}master.html" data-i18n="footer.link.master">羅老師簡介</a></li>
         <li><a href="${_base}index.html#philosophy" data-i18n="footer.link.phi">核心理念</a></li>
-        <li><a href="${_base}index.html#articles" data-i18n="footer.link.articles">文章知識庫</a></li>
       </ul>
     </div>
     <div>
