@@ -38,7 +38,8 @@ const NAV_HTML = `
     </div>
     <div class="nav-tools">
       <div class="lang-switch" role="group" aria-label="Language">
-        <button data-lang="zh-TW">中</button>
+        <button data-lang="zh-TW">繁</button>
+        <button data-lang="zh-CN">简</button>
         <button data-lang="en">EN</button>
         <button data-lang="it">IT</button>
       </div>
