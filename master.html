@@ -125,26 +125,87 @@ body.lang-en .page-hero h1, body.lang-it .page-hero h1 {
 body.lang-en .tl-title, body.lang-it .tl-title { font-family: var(--serif-en); letter-spacing: 0; }
 /* Media coverage */
 .media-coverage { background: var(--paper-warm); padding: 96px 0; }
-.media-grid {
-  display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px;
-  max-width: 1100px; margin: 0 auto; align-items: center;
+.coverage-stack { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 72px; }
+
+.coverage-row {
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: center;
 }
-@media (max-width: 900px) { .media-grid { grid-template-columns: 1fr; gap: 36px; } }
-.media-photo img {
+@media (max-width: 900px) { .coverage-row { grid-template-columns: 1fr; gap: 32px; } }
+
+.coverage-photo { margin: 0; }
+.coverage-photo img {
   width: 100%; aspect-ratio: 4/3; object-fit: cover;
-  border: 1px solid var(--line);
+  border-radius: 5px;
+  border: 1px solid rgba(156, 124, 60, 0.25);
   box-shadow: 0 24px 50px -28px rgba(43,42,38,0.3);
+  transition: box-shadow .45s var(--ease), transform .45s var(--ease);
 }
-.media-text .media-h {
+.coverage-photo img:hover { box-shadow: 0 32px 60px -24px rgba(43,42,38,0.4); transform: translateY(-3px); }
+.coverage-photo figcaption {
+  margin-top: 14px; font-size: 13px; color: var(--ink-soft);
+  letter-spacing: 0.08em; font-family: var(--serif-en); font-style: italic;
+}
+.coverage-photo figcaption .cap-tc {
+  font-family: var(--serif-tc); font-style: normal;
+  color: var(--ink); letter-spacing: 0.1em; margin-right: 10px;
+}
+
+.coverage-text .media-h {
   font-family: var(--serif-tc); font-weight: 500;
   font-size: clamp(22px, 2.4vw, 28px);
   color: var(--ink); letter-spacing: 0.08em;
   line-height: 1.45; margin-bottom: 22px;
   padding-bottom: 16px; border-bottom: 1px solid var(--gold);
 }
-.media-text p {
-  font-size: 15px; color: var(--ink-soft);
-  line-height: 2.05; margin: 0;
+.coverage-text p { font-size: 15px; color: var(--ink-soft); line-height: 2.05; margin: 0; }
+
+/* Press row: newspaper photo + quote */
+.coverage-press {
+  display: grid; grid-template-columns: 0.85fr 1fr; gap: 56px; align-items: center;
+  padding-top: 56px; border-top: 1px dashed rgba(156,124,60,0.35);
+}
+@media (max-width: 1023px) { .coverage-press { grid-template-columns: 1fr; gap: 32px; padding-top: 48px; } }
+.press-clip { margin: 0; max-width: 380px; }
+@media (max-width: 1023px) { .press-clip { max-width: 100%; margin: 0 auto; } }
+.press-clip img {
+  width: 100%; aspect-ratio: 3/4; object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(156, 124, 60, 0.25);
+  box-shadow: 0 22px 44px -26px rgba(43,42,38,0.35);
+  transition: box-shadow .45s var(--ease), transform .45s var(--ease);
+}
+.press-clip img:hover { box-shadow: 0 30px 56px -24px rgba(43,42,38,0.45); transform: translateY(-3px); }
+.press-clip figcaption {
+  margin-top: 12px; font-size: 12px; color: var(--ink-soft);
+  letter-spacing: 0.08em; font-family: var(--serif-en); font-style: italic;
+}
+.press-clip figcaption .cap-tc {
+  font-family: var(--serif-tc); font-style: normal;
+  color: var(--ink); letter-spacing: 0.1em; margin-right: 10px;
+}
+
+.coverage-quote { margin: 0; padding: 0; }
+.coverage-quote .q-headline {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: clamp(24px, 2.6vw, 32px);
+  color: var(--cinnabar); letter-spacing: 0.16em;
+  line-height: 1.4; margin: 0 0 12px 0;
+  position: relative; padding-left: 22px;
+}
+.coverage-quote .q-headline::before {
+  content: "“"; position: absolute; left: -4px; top: -16px;
+  font-size: 56px; color: var(--gold); font-family: var(--serif-en);
+  line-height: 1; opacity: 0.75;
+}
+.coverage-quote .q-source {
+  font-family: var(--serif-en); font-style: italic;
+  color: var(--gold-deep); font-size: 14px; letter-spacing: 0.18em;
+  margin: 0 0 24px 22px;
+}
+.coverage-quote .q-desc {
+  font-size: 14px; color: var(--ink-soft);
+  line-height: 2.0; margin: 0 0 0 22px;
+  max-width: 480px;
 }
 </style>
 </head>
@@ -290,13 +351,36 @@ body.lang-en .tl-title, body.lang-it .tl-title { font-family: var(--serif-en); l
       <div class="divider-gold"></div>
     </div>
 
-    <div class="media-grid">
-      <div class="media-photo">
-        <img src="assets/img/italy-qigong.jpg" alt="義大利蒙扎・氣功公開教學現場">
+    <div class="coverage-stack">
+      <!-- Row 1: teaching photo + narrative -->
+      <div class="coverage-row">
+        <figure class="coverage-photo">
+          <img src="assets/img/italy-qigong-warm.jpg" loading="lazy" alt="羅老師於義大利蒙扎公園的氣功教學交流現場，多位學員一同練習">
+          <figcaption>
+            <span class="cap-tc" data-i18n="masterPage.media.cap1.tc">義大利蒙扎・氣功教學交流</span>
+            <span data-i18n="masterPage.media.cap1.en">Monza, Italy 2024</span>
+          </figcaption>
+        </figure>
+        <div class="coverage-text">
+          <h3 class="media-h" data-i18n="masterPage.media.h">2024 · 義大利蒙扎・氣功教學交流現場</h3>
+          <p data-i18n="masterPage.media.body">受邀至米蘭近郊蒙扎（Monza）公園，進行為期兩個月的氣養生教學交流。獲當地報紙《il Cittadino》以「東方平衡之術」為題進行專題報導，吸引義大利各地民眾參與，讓華人傳承的氣脈智慧，在歐洲土地上自然延伸。</p>
+        </div>
       </div>
-      <div class="media-text">
-        <h3 class="media-h" data-i18n="masterPage.media.h">2024 · 義大利蒙扎・氣功公開教學現場</h3>
-        <p data-i18n="masterPage.media.body">受邀至米蘭近郊蒙扎（Monza）公園，進行為期兩個月的氣功養生公開教學交流。獲當地報紙《il Cittadino》以「東方平衡之術」為題進行專題報導，吸引義大利各地民眾參與，讓東方傳統養生智慧，與西方文化產生深刻的共鳴。</p>
+
+      <!-- Row 2: press clipping + quote -->
+      <div class="coverage-press">
+        <figure class="press-clip">
+          <img src="assets/img/italy-news-warm.jpg" loading="lazy" alt="義大利《il Cittadino》報紙對羅老師氣功教學的專題報導版面">
+          <figcaption>
+            <span class="cap-tc" data-i18n="masterPage.media.cap2.tc">義大利《il Cittadino》專題報導</span>
+            <span data-i18n="masterPage.media.cap2.en">Italian Press Coverage</span>
+          </figcaption>
+        </figure>
+        <blockquote class="coverage-quote">
+          <p class="q-headline" data-i18n="masterPage.media.q.headline">「東方平衡之術」</p>
+          <p class="q-source" data-i18n="masterPage.media.q.source">Italian Press · il Cittadino</p>
+          <p class="q-desc" data-i18n="masterPage.media.q.desc">義大利《il Cittadino》以「東方平衡之術」為題，記錄這場跨文化的氣養生交流，讓華人傳承的氣脈智慧，在歐洲土地上自然延伸。</p>
+        </blockquote>
       </div>
     </div>
   </div>
