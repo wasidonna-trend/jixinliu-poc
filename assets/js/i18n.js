@@ -419,7 +419,7 @@ const I18N = {
     "masterPage.lineage.title": "師承 ・ 真傳法脈",
     "masterPage.l1.title": "董氏奇穴",
     "masterPage.l1.en": "Tung's Lineage · 3rd Generation Heritage",
-    "masterPage.l1.body": "第三代傳承，師承<span class=\"master-name\">李國政教授</span>。董氏奇穴以其深厚的東方能量導引心法著稱，是東方傳統養生智慧的重要傳承脈絡。",
+    "masterPage.l1.body": "第三代傳承，師承李國政教授。董氏奇穴以其深厚的東方能量導引心法著稱，是東方傳統養生智慧的重要傳承脈絡。",
     "masterPage.l2.title": "南宗少林・白鶴拳",
     "masterPage.l2.en": "Southern Shaolin · 9th Generation",
     "masterPage.l2.body": "第九代傳人親傳弟子，白鶴拳第四代親傳。武學內功不只是技擊，更是體會先天之炁、引導內在能量流動的根本功法。",
@@ -992,7 +992,7 @@ const I18N = {
     "masterPage.lineage.title": "师承 ・ 真传法脉",
     "masterPage.l1.title": "董氏奇穴",
     "masterPage.l1.en": "Tung's Lineage · 3rd Generation Heritage",
-    "masterPage.l1.body": "第三代传承，师承<span class=\"master-name\">李国政教授</span>。董氏奇穴以其深厚的東方能量導引心法著称，是東方传统养生智慧的重要传承脉络。",
+    "masterPage.l1.body": "第三代传承，师承李国政教授。董氏奇穴以其深厚的東方能量導引心法著称，是東方传统养生智慧的重要传承脉络。",
     "masterPage.l2.title": "南宗少林・白鹤拳",
     "masterPage.l2.en": "Southern Shaolin · 9th Generation",
     "masterPage.l2.body": "第九代传人亲传弟子，白鹤拳第四代亲传。武学内功不只是技擊，更是体會先天之炁、引導内在能量流动的根本功法。",
@@ -1209,7 +1209,7 @@ const I18N = {
 
     /* Master */
     "master.eyebrow": "About Master Lo",
-    "master.title": "Master Lo Shao-Lun",
+    "master.title": "Master Dennis Lo",
     "master.subtitle": "Integrative Body-Mind-Spirit Healer · Founder of the Lo Self-Healing System",
     "master.bio.1": "With over two decades of practice and personal cultivation, Master Lo has studied Eastern philosophy and traditional Chinese medicine since childhood. From an old injury that resisted treatment, to discipleship under masters of the lineage, he has devoted thirty-plus years to whole-person medicine. Having healed his own terminal illness through ancestral wisdom and energy medicine, he turned that gratitude into a lifelong vocation of service.",
     "master.bio.2": "Holding the cosmology of “Heaven and humanity as one,” the Lo Self-Healing System teaches the integration of form, qi, and spirit — supporting those drawn to it in restoring their innate capacity to heal.",
@@ -1455,7 +1455,7 @@ const I18N = {
 
     /* Footer */
     "footer.brand": "JiXinLiu Energy Studio",
-    "footer.brand.master": "Hosted by Master Lo Shao-Lun",
+    "footer.brand.master": "Hosted by Master Dennis Lo",
     "footer.brand.body": "Classical martial arts, Eastern meridian wisdom, and quantum energy science — guiding body-mind-spirit integration, supporting you in exploring the inner flow of energy.",
     "footer.col.services": "Services",
     "footer.col.about": "About",
@@ -1565,7 +1565,7 @@ const I18N = {
     "masterPage.lineage.title": "Lineage · Heritage Transmissions",
     "masterPage.l1.title": "Tung's Lineage",
     "masterPage.l1.en": "Tung's Lineage · 3rd Generation Heritage",
-    "masterPage.l1.body": "Third-generation heritage holder under <span class=\"master-name\">Prof. Lee Kuo-Cheng</span>. The Tung tradition is renowned for its profound Eastern energy guidance — a vital lineage of Eastern traditional wellness wisdom.",
+    "masterPage.l1.body": "Third-generation heritage holder under Prof. Lee Kuo-Cheng. The Tung tradition is renowned for its profound Eastern energy guidance — a vital lineage of Eastern traditional wellness wisdom.",
     "masterPage.l2.title": "Southern Shaolin · White Crane",
     "masterPage.l2.en": "Southern Shaolin · 9th Generation",
     "masterPage.l2.body": "Ninth-generation disciple of Southern Shaolin, fourth-generation transmission of White Crane Boxing. Martial internal cultivation goes beyond combat — it is the foundational practice for sensing prenatal qi and guiding inner energetic flow.",
@@ -1782,7 +1782,7 @@ const I18N = {
 
     /* Master */
     "master.eyebrow": "Il Maestro Lo",
-    "master.title": "Maestro Lo Shao-Lun",
+    "master.title": "Maestro Dennis Lo",
     "master.subtitle": "Guida all'integrazione corpo-mente-spirito · Custode delle arti interne ancestrali",
     "master.bio.1": "Con oltre vent'anni di pratica e coltivazione personale, il Maestro Lo studia da bambino filosofia orientale e benessere tradizionale. Da un infortunio prolungato, al discepolato con maestri della tradizione, ha dedicato oltre trent'anni alla saggezza ancestrale orientale. Avendo attraversato una prova profonda che ha portato il corpo al limite della vita, attraverso la saggezza antica e la coltivazione energetica ha ritrovato l'armonia corpo-mente e il rinnovato flusso vitale — trasformando quella realizzazione in una vita di servizio.",
     "master.bio.2": "Tenendo viva la cosmologia di «Cielo e umanità come uno», il Sistema Lo insegna l'integrazione di forma, qi e spirito — sostenendo chi vi si avvicina nel ritrovare la propria innata capacità di guarire.",
@@ -2026,7 +2026,7 @@ const I18N = {
 
     /* Footer */
     "footer.brand": "JiXinLiu Studio dell'Energia",
-    "footer.brand.master": "Diretto dal Maestro Lo Shao-Lun",
+    "footer.brand.master": "Diretto dal Maestro Dennis Lo",
     "footer.brand.body": "Arti marziali classiche, saggezza orientale dei meridiani ed energetica quantistica — guidando l'integrazione corpo-mente-spirito, accompagnandoti nell'esplorazione del flusso interiore di energia.",
     "footer.col.services": "Servizi",
     "footer.col.about": "Chi siamo",
@@ -2136,7 +2136,7 @@ const I18N = {
     "masterPage.lineage.title": "Lignaggio · Trasmissioni di patrimonio",
     "masterPage.l1.title": "Lignaggio di Tung",
     "masterPage.l1.en": "Tung's Lineage · 3rd Generation Heritage",
-    "masterPage.l1.body": "Detentore di lignaggio di terza generazione sotto il <span class=\"master-name\">Prof. Lee Kuo-Cheng</span>. La tradizione di Tung è rinomata per la sua profonda guida energetica orientale — un lignaggio vitale della saggezza orientale tradizionale.",
+    "masterPage.l1.body": "Detentore di lignaggio di terza generazione sotto il Prof. Lee Kuo-Cheng. La tradizione di Tung è rinomata per la sua profonda guida energetica orientale — un lignaggio vitale della saggezza orientale tradizionale.",
     "masterPage.l2.title": "Shaolin del Sud · Gru Bianca",
     "masterPage.l2.en": "Southern Shaolin · 9th Generation",
     "masterPage.l2.body": "Discepolo di nona generazione dello Shaolin del Sud, trasmissione di quarta generazione della Boxe della Gru Bianca. La coltivazione interna marziale va oltre il combattimento — è la pratica fondamentale per percepire il qi prenatale e guidare il flusso energetico interiore.",
