@@ -149,7 +149,7 @@
   position: relative;
 }
 .quote-callout::before {
-  content: '羅老師觀點';
+  content: attr(data-label);
   position: absolute; top: -10px; left: 24px;
   background: var(--paper); padding: 0 12px;
   font-family: var(--serif-en); font-style: italic;
@@ -366,21 +366,25 @@ body.lang-en .two-col h2, body.lang-it .two-col h2 { font-family: var(--serif-en
 // Stage page renderer.
 // Reads ?id=N from URL, then loads content from STAGES_DATA[N-1].
 // ============================================================
-(function () {
+const STAGE_LABELS = {"zh-TW":{"stageNumPrefix":"第","stageNumSuffix":"階段","masterViewLabel":"羅老師觀點","prev":"← PREVIOUS STAGE","next":"NEXT STAGE →","digits":["一","二","三","四","五","六"]},"zh-CN":{"stageNumPrefix":"第","stageNumSuffix":"阶段","masterViewLabel":"罗老师观点","prev":"← PREVIOUS STAGE","next":"NEXT STAGE →","digits":["一","二","三","四","五","六"]},"en":{"stageNumPrefix":"Stage ","stageNumSuffix":"","masterViewLabel":"MASTER'S VIEW","prev":"← PREVIOUS STAGE","next":"NEXT STAGE →","digits":["I","II","III","IV","V","VI"]},"it":{"stageNumPrefix":"Fase ","stageNumSuffix":"","masterViewLabel":"VISIONE DEL MAESTRO","prev":"← FASE PRECEDENTE","next":"FASE SUCCESSIVA →","digits":["I","II","III","IV","V","VI"]}};
+function renderStage() {
+  // Update masterView label
+  const lang = (typeof CURRENT_LANG !== 'undefined') ? CURRENT_LANG : 'zh-TW';
+  const L = STAGE_LABELS[lang] || STAGE_LABELS['zh-TW'];
   const id = 6;
   const idx = Math.max(0, Math.min(5, id - 1));
   const data = window.STAGES_DATA[idx];
   if (!data) return;
 
   // Title
-  document.title = `第${['一','二','三','四','五','六'][idx]}階段・${data.title} ｜ 極心流工作室`;
+  document.title = `${L.stageNumPrefix}${L.digits[idx]}${L.stageNumSuffix}・${data.title} ｜ 極心流工作室`;
 
   // Stage number
   document.querySelectorAll('[data-stage-num]').forEach(el => el.textContent = String(idx + 1).padStart(2, '0'));
 
-  // Direct text fields (data-stage-i18n with key)
+  // Direct text fields
   const textMap = {
-    number: `第${['一','二','三','四','五','六'][idx]}階段`,
+    number: `${L.stageNumPrefix}${L.digits[idx]}${L.stageNumSuffix}`,
     title: data.title,
     enTitle: data.enTitle,
     lead: data.lead,
@@ -396,23 +400,25 @@ body.lang-en .two-col h2, body.lang-it .two-col h2 { font-family: var(--serif-en
   });
 
   // HTML fields
+  const qc = document.querySelector('.quote-callout');
+  if (qc) qc.setAttribute('data-label', (typeof STAGE_LABELS !== 'undefined' ? STAGE_LABELS[(typeof CURRENT_LANG !== 'undefined' ? CURRENT_LANG : 'zh-TW')] || STAGE_LABELS['zh-TW'] : {masterViewLabel:'羅老師觀點'}).masterViewLabel);
   document.querySelectorAll('[data-stage-html]').forEach(el => {
     const k = el.getAttribute('data-stage-html');
     if (data[k]) el.innerHTML = data[k];
   });
 
-  // Stage graphic — choose based on stage
+  // Stage graphic
   const icons = ['scan','axis','meridian','chakra','flame','yinyang'];
   const gw = document.getElementById('stageGraphic');
   if (gw && window.ICONS && window.ICONS[icons[idx]]) {
     gw.innerHTML = window.ICONS[icons[idx]];
   } else if (gw) {
-    // Fallback inline icon
     gw.innerHTML = `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="14"/><circle cx="32" cy="32" r="6"/></svg>`;
   }
 
   // Pager
   const pager = document.getElementById('pager');
+  if (!pager) return;
   const prevIdx = idx - 1;
   const nextIdx = idx + 1;
   let html = '<div class="container">';
@@ -420,8 +426,8 @@ body.lang-en .two-col h2, body.lang-it .two-col h2 { font-family: var(--serif-en
     const p = window.STAGES_DATA[prevIdx];
     html += `
       <a class="pager-card prev" href="stage-${prevIdx + 1}.html">
-        <div class="dir">← PREVIOUS STAGE</div>
-        <div class="stage-num-text">第${['一','二','三','四','五','六'][prevIdx]}階段</div>
+        <div class="dir">${L.prev}</div>
+        <div class="stage-num-text">${L.stageNumPrefix}${L.digits[prevIdx]}${L.stageNumSuffix}</div>
         <h4>${p.title}</h4>
       </a>`;
   } else {
@@ -431,14 +437,22 @@ body.lang-en .two-col h2, body.lang-it .two-col h2 { font-family: var(--serif-en
     const n = window.STAGES_DATA[nextIdx];
     html += `
       <a class="pager-card next" href="stage-${nextIdx + 1}.html">
-        <div class="dir">NEXT STAGE →</div>
-        <div class="stage-num-text">第${['一','二','三','四','五','六'][nextIdx]}階段</div>
+        <div class="dir">${L.next}</div>
+        <div class="stage-num-text">${L.stageNumPrefix}${L.digits[nextIdx]}${L.stageNumSuffix}</div>
         <h4>${n.title}</h4>
       </a>`;
   }
   html += '</div>';
   pager.innerHTML = html;
-})();
+}
+window.__renderStage = renderStage;
+renderStage();
+window.addEventListener('langchange', () => {
+  // small delay to ensure CURRENT_LANG is updated
+  setTimeout(renderStage, 0);
+});
+// expose ICONS globally so stage script can read after partials.js loads
+window.ICONS = window.ICONS || {};
 // expose ICONS globally so stage script can read after partials.js loads
 window.ICONS = window.ICONS || {};
 </script>

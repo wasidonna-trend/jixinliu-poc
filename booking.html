@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<title>預約諮詢 ｜ 極心流工作室</title>
+<title data-i18n="booking.pageTitle">預約諮詢 ｜ 極心流工作室</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -307,31 +307,26 @@
 
 <section class="bk-hero">
   <div class="container">
-    <div class="crumb"><a href="index.html">首頁</a> / <span>預約諮詢</span></div>
-    <h1>預約諮詢</h1>
-    <span class="en">Reserve Your Session · Begin the Resonance</span>
-    <p>請填寫以下資訊，預約您的首次到訪或進階療癒。每一場預約由羅老師親自確認，將於 3–7 個工作日內回覆您，敬請耐心等候。</p>
+    <div class="crumb"><a href="index.html" data-i18n="crumb.home">首頁</a> / <span data-i18n="booking.crumb">預約諮詢</span></div>
+    <h1 data-i18n="booking.h1">預約諮詢</h1>
+    <span class="en" data-i18n="booking.subtitleEn">Reserve Your Session · Begin the Resonance</span>
+    <p data-i18n="booking.lead">請填寫以下資訊，預約您的首次到訪或進階療癒。每一場預約由羅老師親自確認，將於 3–7 個工作日內回覆您，敬請耐心等候。</p>
 
-    <div class="bk-stepper">
+    <div class="bk-stepper" style="grid-template-columns: repeat(3, 1fr);">
       <div class="bk-step active">
-        <div class="num">壹</div>
+        <div class="num" data-i18n="booking.step.num1">壹</div>
         <div class="lbl-en">SERVICE</div>
-        <div class="lbl-tc">選擇服務</div>
+        <div class="lbl-tc" data-i18n="booking.step.service">選擇服務</div>
       </div>
       <div class="bk-step active">
-        <div class="num">貳</div>
-        <div class="lbl-en">DATE</div>
-        <div class="lbl-tc">選擇時段</div>
-      </div>
-      <div class="bk-step active">
-        <div class="num">參</div>
+        <div class="num" data-i18n="booking.step.num2">貳</div>
         <div class="lbl-en">DETAILS</div>
-        <div class="lbl-tc">填寫資訊</div>
+        <div class="lbl-tc" data-i18n="booking.step.details">填寫資訊</div>
       </div>
       <div class="bk-step">
-        <div class="num">肆</div>
+        <div class="num" data-i18n="booking.step.num3">參</div>
         <div class="lbl-en">CONFIRM</div>
-        <div class="lbl-tc">確認送出</div>
+        <div class="lbl-tc" data-i18n="booking.step.confirm">確認送出</div>
       </div>
     </div>
   </div>
@@ -344,219 +339,158 @@
 
         <!-- 1. Service -->
         <div class="fs-section">
-          <h3>壹 ・ 選擇服務類型</h3>
+          <h3><span data-i18n="booking.sec1.num">壹</span> ・ <span data-i18n="booking.sec1.title">選擇服務類型</span></h3>
           <span class="fs-en">Step 1 · Select Service</span>
           <div class="svc-grid">
             <label class="svc-radio selected">
               <input type="radio" name="service" value="bodywork" checked>
-              <span class="svc-tag">Therapy · 點穴</span>
-              <h5>氣功點穴撥筋調理</h5>
-              <p>運動防護・筋骨關節・三焦養護等彈性調理。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
+              <span class="svc-tag" data-i18n="service.bodywork.tag">Therapy · 引導</span>
+              <h5 data-i18n="service.bodywork.title">氣功能量調和引導</h5>
+              <p data-i18n="service.bodywork.desc">透過氣功與能量導引，協助身心放鬆、舒緩日常緊繃，回歸自然律動。</p>
+              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">費用詳洽</span></span>
             </label>
             <label class="svc-radio">
               <input type="radio" name="service" value="plan">
-              <span class="svc-tag">Therapy · 深度</span>
-              <h5>個人整體規劃方案</h5>
-              <p>含量子全息能量場解讀・久年問題・體質改造・量身訂製調理計畫。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
+              <span class="svc-tag" data-i18n="service.plan.tag">Therapy · 深度</span>
+              <h5 data-i18n="service.plan.title">個人整體規劃方案</h5>
+              <p data-i18n="service.plan.desc">含量子全息能量場解讀・量身訂製六階段身心調和路徑。</p>
+              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">費用詳洽</span></span>
             </label>
             <label class="svc-radio">
               <input type="radio" name="service" value="stage5">
-              <span class="svc-tag">Stage V · 光體</span>
-              <h5>光體開啟・拙火轉化課程</h5>
-              <p>釋放累世印記・校準豐盛頻率・改寫命運頻率。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
+              <span class="svc-tag" data-i18n="service.stage5.tag">Stage V · 光體</span>
+              <h5 data-i18n="service.stage5.title">光體開啟・拙火轉化課程</h5>
+              <p data-i18n="service.stage5.desc">釋放深層印記・校準豐盛頻率・重新編碼生命場。</p>
+              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">費用詳洽</span></span>
             </label>
             <label class="svc-radio">
               <input type="radio" name="service" value="stage6">
-              <span class="svc-tag">Stage VI · 內功</span>
-              <h5>自癒力內功功法班</h5>
-              <p>太極內功・白鶴氣功・八段錦・道家六字訣親授。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
+              <span class="svc-tag" data-i18n="service.stage6.tag">Stage VI · 內功</span>
+              <h5 data-i18n="service.stage6.title">自癒力內功功法班</h5>
+              <p data-i18n="service.stage6.desc">太極內功・白鶴氣功・八段錦・道家六字訣親授。</p>
+              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">費用詳洽</span></span>
             </label>
             <label class="svc-radio">
-              <input type="radio" name="service" value="emotional">
-              <span class="svc-tag">Therapy · 情緒</span>
-              <h5>情緒精神體諮詢</h5>
-              <p>NLP・巴哈花精・內在小孩・寵物能量療癒。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
-            </label>
-            <label class="svc-radio">
-              <input type="radio" name="service" value="trinity-sense">
-              <span class="svc-tag">Trinity · 極感</span>
-              <h5>寵物量子能量療癒</h5>
-              <p>現場或遠距・單次 30 分鐘起。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
-            </label>
-            <label class="svc-radio">
-              <input type="radio" name="service" value="trinity-abundance">
-              <span class="svc-tag">Trinity · 極盛</span>
-              <h5>豐盛心流・錢母結緣</h5>
-              <p>金錢靈氣磁化・每月、季、年度方案。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
-            </label>
-            <label class="svc-radio">
-              <input type="radio" name="service" value="trinity-guard">
-              <span class="svc-tag">Trinity · 極守</span>
-              <h5>三式能量御守卡</h5>
-              <p>健康／財運／福運能量卡訂購與加持。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
+              <input type="radio" name="service" value="inner">
+              <span class="svc-tag" data-i18n="service.inner.tag">Therapy · 內在</span>
+              <h5 data-i18n="service.inner.title">內在覺察引導</h5>
+              <p data-i18n="service.inner.desc">NLP・巴哈花精・內在小孩陪伴・身心靈探索引導・寵物能量場安撫。</p>
+              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">費用詳洽</span></span>
             </label>
             <label class="svc-radio">
               <input type="radio" name="service" value="event">
-              <span class="svc-tag">Workshop</span>
-              <h5>節氣工作坊報名</h5>
-              <p>春分／立夏／夏至等節氣群體共振活動。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
+              <span class="svc-tag" data-i18n="service.event.tag">Workshop</span>
+              <h5 data-i18n="service.event.title">工作室活動報名</h5>
+              <p data-i18n="service.event.desc">春分、立夏、夏至等節氣群體共振活動。</p>
+              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">費用詳洽</span></span>
             </label>
             <label class="svc-radio">
               <input type="radio" name="service" value="other">
-              <span class="svc-tag">Other</span>
-              <h5>其他諮詢</h5>
-              <p>不確定方向？歡迎留下您的需求，由羅老師為您建議。</p>
-              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">依個人狀況報價</span></span>
+              <span class="svc-tag" data-i18n="service.other.tag">Other</span>
+              <h5 data-i18n="service.other.title">其他諮詢</h5>
+              <p data-i18n="service.other.desc">不確定方向？歡迎留下您的需求，由羅老師為您建議。</p>
+              <span class="svc-price" style="font-style:normal;letter-spacing:0.1em;color:var(--gold-deep);"><span data-i18n="price.consult">費用詳洽</span></span>
             </label>
-          </div>
-        </div>
-
-        <!-- 2. Calendar -->
-        <div class="fs-section">
-          <h3>貳 ・ 選擇預約時段</h3>
-          <span class="fs-en">Step 2 · Pick a Time</span>
-          <div class="cal-wrap">
-            <div class="cal-head">
-              <h4>2026 二月 <small>FEBRUARY 2026</small></h4>
-              <div>
-                <button type="button" class="nav-btn">‹</button>
-                <button type="button" class="nav-btn">›</button>
-              </div>
-            </div>
-            <div class="cal-grid">
-              <div class="dh">Sun</div><div class="dh">Mon</div><div class="dh">Tue</div><div class="dh">Wed</div><div class="dh">Thu</div><div class="dh">Fri</div><div class="dh">Sat</div>
-              <div class="day muted">26</div><div class="day muted">27</div><div class="day muted">28</div><div class="day muted">29</div><div class="day muted">30</div><div class="day muted">31</div><div class="day">1</div>
-              <div class="day">2</div><div class="day unavailable">3</div><div class="day">4</div><div class="day">5</div><div class="day unavailable">6</div><div class="day">7</div><div class="day">8</div>
-              <div class="day">9</div><div class="day">10</div><div class="day unavailable">11</div><div class="day today">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div>
-              <div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day selected">20</div><div class="day">21</div><div class="day unavailable">22</div>
-              <div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day muted">1</div>
-            </div>
-            <div class="cal-legend">
-              <div class="lg"><span class="sw av"></span>可預約</div>
-              <div class="lg"><span class="sw un"></span>已額滿</div>
-              <div class="lg"><span class="sw sel"></span>已選擇</div>
-            </div>
-          </div>
-
-          <div class="time-slots">
-            <div class="time-slot">10:00</div>
-            <div class="time-slot unavailable">11:30</div>
-            <div class="time-slot selected">14:00</div>
-            <div class="time-slot">15:30</div>
-            <div class="time-slot">17:00</div>
-            <div class="time-slot unavailable">18:30</div>
-            <div class="time-slot">20:00</div>
-            <div class="time-slot">21:30</div>
           </div>
         </div>
 
         <!-- 3. Personal info -->
         <div class="fs-section">
-          <h3>參 ・ 填寫個人資訊</h3>
-          <span class="fs-en">Step 3 · Your Information</span>
+          <h3><span data-i18n="booking.sec2.num">貳</span> ・ <span data-i18n="booking.sec2.title">填寫個人資訊</span></h3>
+          <span class="fs-en">Step 2 · Your Information</span>
 
           <div class="form-row">
             <div class="field">
-              <label>姓名 <span class="req">*</span></label>
-              <input type="text" placeholder="請輸入您的真實姓名" required>
+              <label><span data-i18n="booking.f.name">姓名</span> <span class="req">*</span></label>
+              <input type="text" placeholder="請輸入您的真實姓名" data-i18n-placeholder="booking.f.namePh" required>
             </div>
             <div class="field">
-              <label>性別 <small>選填</small></label>
+              <label><span data-i18n="booking.f.gender">性別</span> <small data-i18n="booking.f.optional">選填</small></label>
               <select>
-                <option>請選擇</option>
-                <option>女</option>
-                <option>男</option>
-                <option>其他</option>
-                <option>不揭露</option>
+                <option data-i18n="booking.f.gender.choose">請選擇</option>
+                <option data-i18n="booking.f.gender.f">女</option>
+                <option data-i18n="booking.f.gender.m">男</option>
+                <option data-i18n="booking.f.gender.other">其他</option>
+                <option data-i18n="booking.f.gender.na">不揭露</option>
               </select>
             </div>
           </div>
 
           <div class="form-row">
             <div class="field">
-              <label>聯絡電話 <span class="req">*</span></label>
+              <label><span data-i18n="booking.f.phone">聯絡電話</span> <span class="req">*</span></label>
               <input type="tel" placeholder="0912 345 678" required>
             </div>
             <div class="field">
-              <label>電子郵件 <span class="req">*</span></label>
+              <label><span data-i18n="booking.f.email">電子郵件</span> <span class="req">*</span></label>
               <input type="email" placeholder="your@email.com" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="field">
-              <label>偏好聯絡方式 <small>勾選所有適合的方式</small></label>
-              <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--ink-soft);padding-top:6px;">
-                <label style="display:flex;align-items:center;gap:6px;"><input type="checkbox" checked> 電話</label>
-                <label style="display:flex;align-items:center;gap:6px;"><input type="checkbox"> Email</label>
-                <label style="display:flex;align-items:center;gap:6px;"><input type="checkbox" checked> LINE</label>
-              </div>
+              <label><span data-i18n="booking.f.line">LINE ID</span> <small data-i18n="booking.f.lineHint">若選擇 LINE</small></label>
+              <input type="text" placeholder="@your_line_id">
             </div>
             <div class="field">
-              <label>LINE ID <small>若選擇 LINE</small></label>
-              <input type="text" placeholder="@your_line_id">
+              <label><span data-i18n="booking.f.wechat">WeChat 微信 ID</span> <small data-i18n="booking.f.wechatHint">若選擇 WeChat</small></label>
+              <input type="text" placeholder="your_wechat_id">
             </div>
           </div>
 
           <div class="form-row single">
             <div class="field">
-              <label>您是如何認識我們的？ <small>選填</small></label>
+              <label><span data-i18n="booking.f.prefer">偏好聯絡方式</span> <small data-i18n="booking.f.preferHint">勾選所有適合的方式</small></label>
+              <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--ink-soft);padding-top:6px;">
+                <label style="display:flex;align-items:center;gap:6px;"><input type="checkbox" checked> <span data-i18n="booking.f.phone">電話</span></label>
+                <label style="display:flex;align-items:center;gap:6px;"><input type="checkbox"> Email</label>
+                <label style="display:flex;align-items:center;gap:6px;"><input type="checkbox" checked> LINE</label>
+                <label style="display:flex;align-items:center;gap:6px;"><input type="checkbox"> <span data-i18n="booking.f.wechatShort">WeChat 微信</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row single">
+            <div class="field">
+              <label><span data-i18n="booking.f.howKnow">您是如何認識我們的？</span> <small data-i18n="booking.f.optional">選填</small></label>
               <select>
-                <option>請選擇</option>
-                <option>朋友推薦</option>
-                <option>Google 搜尋</option>
-                <option>Facebook / Instagram</option>
-                <option>羅老師講座／課程</option>
-                <option>合作品牌介紹</option>
-                <option>其他</option>
+                <option data-i18n="booking.f.howKnow.choose">請選擇</option>
+                <option data-i18n="booking.f.howKnow.friend">朋友推薦</option>
+                <option data-i18n="booking.f.howKnow.google">Google 搜尋</option>
+                <option data-i18n="booking.f.howKnow.social">Facebook / Instagram</option>
+                <option data-i18n="booking.f.howKnow.master">羅老師講座／課程</option>
+                <option data-i18n="booking.f.howKnow.brand">合作品牌介紹</option>
+                <option data-i18n="booking.f.howKnow.other">其他</option>
               </select>
             </div>
           </div>
 
           <div class="form-row single">
             <div class="field">
-              <label>關於您此刻的狀態 <span class="req">*</span> <small>請真實分享，這將協助羅老師為您準備</small></label>
-              <textarea placeholder="例如：最近長期夜間放鬆、經常感到能量耗竭、希望調整事業或人際的某個面向⋯⋯" required></textarea>
+              <label><span data-i18n="booking.f.state">關於您此刻的狀態</span> <span class="req">*</span> <small data-i18n="booking.f.stateHint">請真實分享，這將協助羅老師為您準備</small></label>
+              <textarea data-i18n-placeholder="booking.f.statePh" placeholder="例如：最近長期夜間放鬆、經常感到能量耗竭、希望調整事業或人際的某個面向⋯⋯" required></textarea>
             </div>
           </div>
 
-          <p style="padding: 14px 16px; background: var(--paper-warm); border: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 18px;">我已了解本工作室提供之能量調理服務為輔助性身心整合，不取代醫療診斷與治療。</p>
+          <label class="disclaimer-row" style="display:flex; gap:12px; align-items:flex-start; padding: 18px 20px; background: rgba(164,77,58,0.05); border: 1.5px solid var(--cinnabar); margin-bottom: 18px; cursor: pointer; font-size: 13px; color: var(--ink); line-height: 1.7;">
+            <input type="checkbox" id="disclaimerCheck" required style="margin-top:3px;flex-shrink:0;width:16px;height:16px;">
+            <span><strong style="color:var(--cinnabar);" data-i18n="booking.disclaimer.label">我已了解並同意：</strong><span data-i18n="booking.disclaimer.text">本工作室提供之服務屬民間傳統養生與身心靈能量調和範疇，為輔助性身心整合，非醫療行為，不取代專業醫療診斷與治療。</span></span>
+          </label>
 
           <div class="submit-row">
-            <button type="submit" class="btn btn-primary">送出預約申請 →</button>
-            <span class="submit-note">We respond within 1-2 business days</span>
+            <button type="submit" class="btn btn-primary" id="submitBtn" disabled style="opacity:0.5; pointer-events:none;" data-i18n="booking.submit">送出預約申請 →</button>
+            <span class="submit-note">We respond within 3-7 business days</span>
           </div>
         </div>
       </form>
 
       <aside class="bk-side">
         <div class="bk-summary">
-          <h4>預約摘要 <small>SUMMARY</small></h4>
-          <div class="sm-row"><span>服務類型</span><strong>量子全息能量場解讀</strong></div>
+          <h4><span data-i18n="booking.summary.title">預約摘要</span> <small>SUMMARY</small></h4>
+          <div class="sm-row"><span data-i18n="booking.summary.svc">服務類型</span><strong data-i18n="service.bodywork.title">氣功能量調和引導</strong></div>
           <div class="sm-row">
-            <span>選定日期</span>
-            <strong>2026.02.20（五）</strong>
-          </div>
-          <div class="sm-row">
-            <span>選定時段</span>
-            <strong>14:00 - 15:30</strong>
-          </div>
-          <div class="sm-row">
-            <span>預估時長</span>
-            <strong>約 90 分鐘</strong>
-          </div>
-          <div class="sm-row">
-            <span>場地</span>
-            <strong>台北・極心流工作室</strong>
+            <span data-i18n="booking.summary.venue">場地</span>
+            <strong data-i18n="booking.summary.venueVal">台中・極心流工作室</strong>
           </div>
           <div class="sm-row total">
             <span>金額</span>
@@ -565,13 +499,13 @@
         </div>
 
         <div class="bk-promise">
-          <h5>我們的承諾</h5>
+          <h5 data-i18n="booking.promise.title">我們的承諾</h5>
           <ul>
-            <li>每位個案皆由羅老師親自進行</li>
-            <li>能量場域於每次預約間進行淨化</li>
-            <li>個人資料嚴格保密、不對外透露</li>
-            <li>回覆時間約需 3–7 個工作日，敬請耐心等候</li>
-            <li>如需取消，請於 2 日前告知；未於時限內通知者，將影響後續預約資格</li>
+            <li data-i18n="booking.promise.1">每位個案皆由羅老師親自進行</li>
+            <li data-i18n="booking.promise.2">能量場域於每次預約間進行淨化</li>
+            <li data-i18n="booking.promise.3">個人資料嚴格保密、不對外透露</li>
+            <li data-i18n="booking.promise.4">回覆時間約需 3–7 個工作日，敬請耐心等候</li>
+            <li data-i18n="booking.promise.5">如需取消，請於 2 日前告知；未於時限內通知者，將影響後續預約資格</li>
           </ul>
         </div>
       </aside>
@@ -591,14 +525,22 @@ document.querySelectorAll('.svc-radio').forEach(r => {
     r.querySelector('input').checked = true;
   });
 });
-// Calendar day selection
-document.querySelectorAll('.cal-grid .day').forEach(d => {
-  if (d.classList.contains('muted') || d.classList.contains('unavailable')) return;
-  d.addEventListener('click', () => {
-    document.querySelectorAll('.cal-grid .day').forEach(x => x.classList.remove('selected'));
-    d.classList.add('selected');
+// Disclaimer checkbox controls submit button
+const dCheck = document.getElementById('disclaimerCheck');
+const sBtn = document.getElementById('submitBtn');
+if (dCheck && sBtn) {
+  dCheck.addEventListener('change', () => {
+    if (dCheck.checked) {
+      sBtn.removeAttribute('disabled');
+      sBtn.style.opacity = '1';
+      sBtn.style.pointerEvents = 'auto';
+    } else {
+      sBtn.setAttribute('disabled', 'disabled');
+      sBtn.style.opacity = '0.5';
+      sBtn.style.pointerEvents = 'none';
+    }
   });
-});
+}
 // Time slot
 document.querySelectorAll('.time-slot').forEach(t => {
   if (t.classList.contains('unavailable')) return;
