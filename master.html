@@ -123,6 +123,29 @@ body.lang-en .page-hero h1, body.lang-it .page-hero h1 {
   font-family: var(--serif-en); letter-spacing: 0; font-weight: 500;
 }
 body.lang-en .tl-title, body.lang-it .tl-title { font-family: var(--serif-en); letter-spacing: 0; }
+/* Media coverage */
+.media-coverage { background: var(--paper-warm); padding: 96px 0; }
+.media-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px;
+  max-width: 1100px; margin: 0 auto; align-items: center;
+}
+@media (max-width: 900px) { .media-grid { grid-template-columns: 1fr; gap: 36px; } }
+.media-photo img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 50px -28px rgba(43,42,38,0.3);
+}
+.media-text .media-h {
+  font-family: var(--serif-tc); font-weight: 500;
+  font-size: clamp(22px, 2.4vw, 28px);
+  color: var(--ink); letter-spacing: 0.08em;
+  line-height: 1.45; margin-bottom: 22px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--gold);
+}
+.media-text p {
+  font-size: 15px; color: var(--ink-soft);
+  line-height: 2.05; margin: 0;
+}
 </style>
 </head>
 <body class="lang-zh">
@@ -170,7 +193,7 @@ body.lang-en .tl-title, body.lang-it .tl-title { font-family: var(--serif-en); l
         <p class="tl-body" data-i18n="masterPage.j4.body">2014 年與十七世大寶法王結緣，並親賜法名，是羅老師多年身心整合學習路上一段深具意義的緣分。</p>
       </article>
       <article class="tl-item">
-        <span class="tl-year" data-i18n="masterPage.j5.year">2025・義大利</span>
+        <span class="tl-year" data-i18n="masterPage.j5.year">2024・義大利</span>
         <h3 class="tl-title" data-i18n="masterPage.j5.title">義大利巡迴交流｜兩個月・服務逾 40 人次</h3>
         <p class="tl-body" data-i18n="masterPage.j5.body">受邀於義大利進行為期兩個月的身心能量巡迴。陪伴來自不同背景的個案，在能量引導後感受深度放鬆與內在平靜。當地多位個案體驗後分享身心狀態的覺察與轉變，重新找回對自身節奏的感知。能量的共鳴，跨越了語言與文化。</p>
       </article>
@@ -254,6 +277,26 @@ body.lang-en .tl-title, body.lang-it .tl-title { font-family: var(--serif-en); l
           <li data-i18n="masterPage.col3.5">豐盛能量意識訓練</li>
           <li data-i18n="masterPage.col3.6">2014 年與十七世大寶法王結緣，獲親賜珍貴法名</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="media-coverage">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow" data-i18n="masterPage.media.eyebrow">International Coverage</span>
+      <h2 class="section-title" data-i18n="masterPage.media.title">國際媒體曝光</h2>
+      <div class="divider-gold"></div>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-photo">
+        <img src="assets/img/italy-qigong.jpg" alt="義大利蒙扎・氣功公開教學現場">
+      </div>
+      <div class="media-text">
+        <h3 class="media-h" data-i18n="masterPage.media.h">2024 · 義大利蒙扎・氣功公開教學現場</h3>
+        <p data-i18n="masterPage.media.body">受邀至米蘭近郊蒙扎（Monza）公園，進行為期兩個月的氣功養生公開教學交流。獲當地報紙《il Cittadino》以「東方平衡之術」為題進行專題報導，吸引義大利各地民眾參與，讓東方傳統養生智慧，與西方文化產生深刻的共鳴。</p>
       </div>
     </div>
   </div>
